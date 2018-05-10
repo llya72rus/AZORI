@@ -1,0 +1,253 @@
+.main-footer {
+  &__middle {
+    padding: 13px 0;
+    background-color: $white;
+
+    .container {
+      @include flex($align-items: flex-start);
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__bottom {
+    padding: 13px 0;
+    background-color: #f5f6f6;
+    letter-spacing: 0.7px;
+    .container {
+      @include flex();
+    }
+  }
+
+  &__logo {
+    margin-right: 25px;
+    img {
+      display: block;
+    }
+  }
+
+  &__nav {
+    padding-top: 74px;
+  }
+
+  &__nav-list {
+    @include flex($just-cont: flex-start);
+    @include reset-list();
+  }
+
+  &__nav-item {
+    margin-right: 47px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      color: $primary-color;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+    color: $primary-color;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__madeby {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: #252525;
+    font-size: 14px;
+    font-weight: 400;
+    a {
+      display: flex;
+      margin-left: 9px;
+      color: #252525;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 14px;
+      text-transform: uppercase;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .main-footer {
+    .container {
+      align-items: center;
+    }
+    &__nav {
+      padding-top: 0;
+    }
+
+    &__middle {
+      padding: 20px 0;
+    }
+
+    &__logo {
+      width: 97px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-footer {
+
+    &__middle {
+      padding-bottom: 14px;
+    }
+
+    &__bottom {
+      padding-top: 11px;
+    }
+
+    &__nav {
+      padding-top: 25px;
+    }
+
+    &__logo {
+      flex-shrink: 0;
+      margin-right: 27px;
+    }
+
+    &__nav-item {
+      width: 35%;
+      margin-right: 10px;
+      margin-bottom: 26px;
+
+      &:nth-child(4) {
+        order: 1;
+      }
+
+      &:nth-child(5) {
+        order: 2;
+        width: auto;
+      }
+
+      &:nth-child(2) {
+        order: 3;
+        margin-bottom: 0;
+      }
+
+      &:nth-child(3) {
+        order: 4;
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        order: 5;
+        margin-bottom: 0;
+        width: auto;
+      }
+    }
+  }
+
+  .main-footer__middle .container {
+    align-items: flex-start;
+  }
+  .main-footer__madeby a {
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 650px) {
+  .main-footer {
+    &__middle {
+      .container {
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    &__logo {
+      width: 23%;
+    }
+
+    &__nav {
+      padding-top: 0;
+    }
+
+    &__nav-item {
+      width: 42%;
+      margin-right: 10px;
+      margin-bottom: 26px;
+    }
+    
+  }
+
+  .main-footer__nav-item:nth-child(2),
+  .main-footer__nav-item:nth-child(5) {
+    width: 42%;
+    margin-right: 10px;
+    margin-bottom: 26px;
+  }
+  .main-footer__nav-item:nth-child(3),
+  .main-footer__nav-item:last-child {
+    width: 42%;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-footer__nav-item a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main-footer {
+    &__logo {
+      width: 64px;
+      margin-right: 12px;
+    }
+
+    &__middle {
+      padding-top: 11px;
+      padding-bottom: 0;
+      .container {
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+    }
+
+    &__nav-list {
+      justify-content: space-between;
+    }
+
+    &__nav-item {
+      width: auto !important;
+      margin-bottom: 14px !important;
+    }
+
+    &__madeby {
+      flex-direction: column;
+      a {
+        margin-top: 6px;
+        margin-left: 0;
+        letter-spacing: -1px;
+      }
+    }
+
+    &__copyright span {
+      display: block;
+      margin-top: 8px;
+    }
+
+    &__bottom {
+      padding-top: 5px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.vertical-panel {
+  position: absolute;
+  top: 109px;
+  right: 16.5%;
+  @include reset-list();
+
+  &__item {
+    margin-bottom: 25px;
+    text-align: center; 
+  }
+}
+
+@media (max-width: 1300px) {
+  .vertical-panel {
+    right: 13%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .vertical-panel {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+      margin-bottom: 0;
+      margin-right: 15px;
+      opacity: 0.6;
+    }
+  }
+}

@@ -1,0 +1,199 @@
+extends ../layout/main
+
+block content
+  header.main-header
+    .main-header__top-header
+      .mobile-header
+        .menu-toggle
+         span
+         span
+         span
+         span
+        a.mobile-header__logo(href="javascript:void(0);") Вдохновляйся. Мечтай. Созидай.
+        span.mobile-header__language-option En
+        a.mobile-header__search(href="javascript:void(0);")
+          img(src="img/search-icon.png", alt="Поиск по сайту")
+      nav.main-nav
+        a.main-nav__logo(href="javascript:void(0);") Вдохновляйся. Мечтай. Созидай.
+        ul.main-nav__list.main-nav__list--left
+          li.main-nav__item
+            a.main-nav__link(href="javascript:void(0);") О бренде
+          li.main-nav__item
+            a.main-nav__link(href="javascript:void(0);") Коллекции
+          li.main-nav__item.main-nav__item--no-mr
+            a.main-nav__link(href="javascript:void(0);") Где купить
+        ul.main-nav__list.main-nav__list--right
+          li.main-nav__item
+            a.main-nav__link(href="javascript:void(0);") Новости
+          li.main-nav__item
+            a.main-nav__link(href="javascript:void(0);") Контакты
+          li.main-nav__item.main-nav__item--no-mr
+            a.main-nav__link(href="javascript:void(0);") Партнерам
+          li.main-nav__item.main-nav__item--no-mr
+            span.main-nav__language-option En
+        ul.main-nav__vertical-panel.vertical-panel
+          li.vertical-panel__item
+            a(href="javascript:voil(0);", aria-label="")
+              img(src="img/search-icon.png", alt="")
+          li.vertical-panel__item
+            a(href="javascript:voil(0);", aria-label="")
+              img(src="img/mail-icon-vertical-panel.png", alt="")
+          li.vertical-panel__item
+            a(href="javascript:voil(0);", aria-label="")
+              img(src="img/vk-icon-vertical-panel.png", alt="")
+          li.vertical-panel__item
+            a(href="javascript:voil(0);", aria-label="")
+              img(src="img/fb-icon-vertical-panel.png", alt="")
+          li.vertical-panel__item
+            a(href="javascript:voil(0);", aria-label="")
+              img(src="img/insta-icon-vertical-panel.png", alt="")
+    .main-header__slick
+      .main-header__slider
+        img(src="img/top-slider-1.jpg", alt="")
+      .main-header__slider
+        img(src="img/top-slider-1.jpg", alt="")
+      .main-header__slider
+        img(src="img/top-slider-1.jpg", alt="")
+      .main-header__slider
+        img(src="img/top-slider-1.jpg", alt="")
+    .main-header__promo.promo
+      .container
+        span.promo__top-text Коллекция
+        b.promo__main-text eclipse ochra
+        button.promo__btn.page-btn Посмотреть
+  main
+    section.collections
+      h2.visually-hidden Коллекции керамической плитки Azori
+      .container
+        ul.collections__list
+          li.collections__item.collections__item--all
+            .collections__title-wrapper
+              a.collections__title(href="javascript:void(0);") Все коллекции
+          li.collections__item.collections__item--new
+            .collections__title-wrapper
+              a.collections__title(href="javascript:void(0);") Новые коллекции
+          li.collections__item.collections__item--ceramic3d
+            .collections__title-wrapper
+              a.collections__title(href="javascript:void(0);") Ceramic 3d
+    section.advantages
+      .container
+        h2.advantages__main-title.section-title Наши преимущества
+        ul.advantages__list
+          li.advantages__item.advantages__item--production
+            h3.advantages__title Производство
+            p.advantages__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet
+          li.advantages__item.advantages__item--values
+            h3.advantages__title Ценности
+            p.advantages__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet
+          li.advantages__item.advantages__item--history
+            h3.advantages__title История
+            p.advantages__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet
+    section.about
+      .container
+        .about__top-info
+          img.about__logo(src="img/about-logo.png")
+          .about__desc
+            p Мир красок, где каждый покупатель сможет найти коллекцию, которая сделает ванную комнату оригинальной и неповторимой. Комплектация коллекций разными форматами декоративных элементов позволяет выстраивать рисунок стен как вертикально, так и горизонтально, создавая в ванной комнате особый мир уюта и хорошего настроения.
+            p Коллекции керамической плитки AZORI (АЗОРИ) созданы итальянскими и российскими дизайнерами. В них находят отражение самые последние тенденции “керамической моды”: имитация натуральных материалов — дерева , камня и текстиля; широкое присутствие цветочных мотивов и геометрии в декоративных элементах; богатство цветовой палитры.
+        ul.about__stats
+          li.about__stats-item
+            b.about__stats-number 3,5
+            span.about__stats-transcript млн. в год
+            span.about__stats-extra-info объем производства
+          li.about__stats-item
+            b.about__stats-number 30
+            span.about__stats-transcript тысяч
+            span.about__stats-extra-info коллекций
+          li.about__stats-item
+            b.about__stats-number 108
+            span.about__stats-transcript магазинов
+            span.about__stats-extra-info по всей России
+      .about__slick
+        .about__slick-item
+          img.about__slick-img(src="img/about-slick-img-1.jpg", alt="Azori")
+        .about__slick-item
+          img.about__slick-img(src="img/about-slick-img-2.jpg", alt="Azori")
+        .about__slick-item
+          img.about__slick-img(src="img/about-slick-img-3.jpg", alt="Azori")
+        .about__slick-item
+          img.about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
+        .about__slick-item
+          img.about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
+        .about__slick-item
+          img.about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
+        .about__slick-item
+          img.about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
+        .about__slick-item
+          img.about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
+      a.about__more.page-btn.page-btn--hollow(href="javascript:void(0);") Подробнее о компании
+    section.news
+      .container
+        h2.news__main-title.section-title Новости и акции
+        ul.news__list
+          li.news__item
+            img.news__img(src="img/news-img-1.jpg", alt="Выставка Design & Decor St.Petersburg 2017")
+            .news__info
+              h3.news__title Выставка Design & Decor St.Petersburg 2017
+              span.news__time 21.01.2018
+              p.news__desc С 13 по 15 сентября в Санкт-Петер&shy;бурге прошла  5-я международная выставка Design&Decor St.Petersburg – центральное событие для людей, работающих в сфере дизайна и декорирования.
+          li.news__item
+            img.news__img(src="img/news-img-2.jpg", alt="Тренды в дизайне интерьера 2017")
+            .news__info
+              h3.news__title Тренды в дизайне интерьера 2017
+              span.news__time 21.01.2018
+              p.news__desc В рамках DesignWeek2017 в Санкт-Петербурге состоялась лекция Ирины Бириловой  «Тренды в дизайне интерьера 2017».
+          li.news__item
+            img.news__img(src="img/news-img-3.jpg", alt="Игра структуры и цвета - новые коллекции Batimat 2017")
+            .news__info
+              h3.news__title Игра структуры и цвета - новые коллекции Batimat 2017
+              span.news__time 21.01.2018
+              p.news__desc Презентуем коллекции, представленные на выставке Batimat 2017.
+      button.page-btn.page-btn--hollow Все новости
+  footer.main-footer
+    .main-footer__subscribe.subscribe
+      .container
+        h2.subscribe__title Подписка на новости
+        p.subscribe__desc Всегда свежая информация о скидках, акциях, полезные статьи и новости компании
+        .subscribe__bottom-wrapper
+          form.subscribe__form(action="#" method="post")
+            input.subscribe__input(type="email" required placeholder="Ваш e-mail")
+            button.subscribe__btn.page-btn(type="submit") Подписаться
+          ul.subscribe__social.bottom-social
+            li.bottom-social__item
+              a.bottom-social__link(href="javascript:void(0);" aria-label="Профиль компании \"Azori\" ВКонтакте")
+                img(src="img/vk-icon-bottom-social.png", alt="Профиль компании \"Azori\" ВКонтакте")
+            li.bottom-social__item
+              a.bottom-social__link(href="javascript:void(0);" aria-label="Профиль компании \"Azori\" в Фейсбуке")
+                img(src="img/fb-icon-bottom-social.png" alt="Профиль компании \"Azori\" в Фейсбуке")
+            li.bottom-social__item
+              a.bottom-social__link(href="javascript:void(0);" aria-label="Профиль компании \"Azori\" в Инстаграмме")
+                img(src="img/insta-icon-bottom-social.png" alt="Профиль компании \"Azori\" в Инстаграмме")
+          small.subscribe__agreement Нажимая кнопку "Подписаться" вы соглашаетесь с  #[a(href="javascript:void(0);") Политикой обработки персональных данных]
+    .main-footer__middle
+      .container
+        a.main-footer__logo(href="javascript:void(0);")
+          img(src="img/footer-logo.png" alt="Логотип компании \"Azori\"")
+        nav.main-footer__nav
+          ul.main-footer__nav-list
+            li.main-footer__nav-item
+              a(href="javascript:void(0);") О бренде
+            li.main-footer__nav-item
+              a(href="javascript:void(0);") Коллекции
+            li.main-footer__nav-item
+              a(href="javascript:void(0);") Где купить
+            li.main-footer__nav-item
+              a(href="javascript:void(0);") Новости
+            li.main-footer__nav-item
+              a(href="javascript:void(0);") Контакты
+            li.main-footer__nav-item
+              a(href="javascript:void(0);") Партнерам
+    .main-footer__bottom
+      .container
+        p.main-footer__copyright Azori 
+          span © 2017
+        p.main-footer__madeby Разработка сайта:
+          a(href="http://dev.trinet.ru/" target="_blank")
+            img(src="img/trinet-logo.png", alt="Логотип компании \"Trinet Development\"")
+            |  Trinet
+            br
+            | Development

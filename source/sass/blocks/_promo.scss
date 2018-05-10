@@ -1,0 +1,65 @@
+.promo {
+
+  &__top-text {
+    display: block;
+    margin-bottom: 5px;
+    color: #252525;
+    font-family: "Century Gothic";
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 1.5px
+  }
+
+  &__main-text {
+    display: block;
+    margin-left: -5px;
+    margin-bottom: 25px;
+    color: #262525;
+    font-family: "Century Gothic";
+    font-size: 78px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.95px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .promo {
+    &__top-text {
+      margin-bottom: 3px;
+      letter-spacing: 1px;
+    }
+
+    &__main-text {
+      letter-spacing: 1.9px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .promo {
+    &__top-text {
+      font-size: 30px;
+    }
+
+    &__main-text {
+      font-size: 55px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .promo {
+    &__top-text {
+      margin-bottom: 0;
+      font-size: 24px;
+    }
+
+    &__main-text {
+      margin-bottom: 22px;
+      margin-left: -2px;
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
+  }
+}

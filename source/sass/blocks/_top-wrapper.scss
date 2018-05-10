@@ -1,0 +1,17 @@
+.top-wrapper {
+  background: $grey url("../img/body-bg.jpg") no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1366px) {
+  .top-wrapper {
+    background-size: 100% 100%;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .top-wrapper {
+    background: url("../img/grey-bg.png") no-repeat;
+    background-size: cover;
+  }
+}

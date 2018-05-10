@@ -1,0 +1,146 @@
+.main-nav {
+  @include flex($align-items: flex-start, $just-cont: flex-start);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  color: #252525;
+
+  &__list {
+    @include flex($just-cont: flex-start);
+    margin: 0;
+    padding: 30px 0;
+    list-style: none;
+
+    &--left {
+      order: 0;
+      padding-right: 32px;
+    }
+
+    &--right {
+      order: 2;
+      position: relative;
+      padding-left: 25px;
+      padding-right: 18px;
+    }
+  }
+
+  &__logo {
+    order: 1;
+    width: 293px;
+    min-height: 114px;
+    padding: 92px 25px 7px 33px;
+    background-color: #676c73;
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+    color: #ffffff;
+    font-family: $century;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  &__item {
+    margin-right: 50px;
+  }
+
+  &__item--no-mr {
+    margin-right: 0;
+  }
+
+  &__link {
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__language-option {
+    position: absolute;
+    top: 24px;
+    right: -62px;
+    color: #252525;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .main-nav {
+    justify-content: space-between;
+
+    &__list {
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    &__item {
+      margin-right: 0;
+    }
+
+    &__link {
+      font-size: 14px;
+    }
+
+    &__language-option {
+      right: -10px;
+    }
+
+    &__logo {
+      width: 270px;
+      padding-left: 10px;
+      padding-right: 10px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-nav {
+    display: none;
+    position: fixed;
+    padding: 50px 0;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100vh;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: -2px 0 43px $primary-color;
+
+    &__logo {
+      display: none;
+    }
+
+    &__list {
+      display: block;
+      padding: 0;
+
+      &--right {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__language-option { 
+      display: none;
+    }
+
+    &__item {
+      margin-bottom: 20px;
+      padding: 0 50px;
+      text-align: center;
+    }
+
+    &--show {
+      display: block;
+    }
+  }
+
+}
+
+@media (max-width: 767px) {
+  
+}

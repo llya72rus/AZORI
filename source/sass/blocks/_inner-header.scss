@@ -1,0 +1,29 @@
+.inner-header {
+  padding: 11px 0 20px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    max-width: 620px;
+    margin: 0;
+    color: #424141;
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  &__btn-wrapper {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .inner-header {
+    padding-bottom: 23px;
+  }
+}

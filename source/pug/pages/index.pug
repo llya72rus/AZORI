@@ -1,5 +1,6 @@
 extends ../layout/main
-
+block title
+  | Компания AZORI
 block content
   header.main-header
     .main-header__top-header
@@ -29,24 +30,24 @@ block content
             a.main-nav__link(href="javascript:void(0);") Контакты
           li.main-nav__item.main-nav__item--no-mr
             a.main-nav__link(href="javascript:void(0);") Партнерам
-          li.main-nav__item.main-nav__item--no-mr
-            span.main-nav__language-option En
-        ul.main-nav__vertical-panel.vertical-panel
-          li.vertical-panel__item
+          li.main-nav__language-option
+            a(href="javascript:void(0);") En
+        ul.main-nav__top-icons-panel.top-icons-panel
+          li.top-icons-panel__item.top-icons-panel__item--search
             a(href="javascript:voil(0);", aria-label="")
-              img(src="img/search-icon.png", alt="")
-          li.vertical-panel__item
+              img(src="img/search-top-icons.png", alt="")
+          li.top-icons-panel__item.top-icons-panel__item--mail
             a(href="javascript:voil(0);", aria-label="")
-              img(src="img/mail-icon-vertical-panel.png", alt="")
-          li.vertical-panel__item
+              img(src="img/mail-top-icons.png", alt="")
+          li.top-icons-panel__item.top-icons-panel__item--vk
             a(href="javascript:voil(0);", aria-label="")
-              img(src="img/vk-icon-vertical-panel.png", alt="")
-          li.vertical-panel__item
+              img(src="img/vk-top-icons.png", alt="")
+          li.top-icons-panel__item.top-icons-panel__item--fb
             a(href="javascript:voil(0);", aria-label="")
-              img(src="img/fb-icon-vertical-panel.png", alt="")
-          li.vertical-panel__item
+              img(src="img/fb-top-icons.png", alt="")
+          li.top-icons-panel__item.top-icons-panel__item--insta
             a(href="javascript:voil(0);", aria-label="")
-              img(src="img/insta-icon-vertical-panel.png", alt="")
+              img(src="img/insta-top-icons.png", alt="")
     .main-header__slick
       .main-header__slider
         img(src="img/top-slider-1.jpg", alt="")
@@ -149,51 +150,5 @@ block content
               span.news__time 21.01.2018
               p.news__desc Презентуем коллекции, представленные на выставке Batimat 2017.
       button.page-btn.page-btn--hollow Все новости
-  footer.main-footer
-    .main-footer__subscribe.subscribe
-      .container
-        h2.subscribe__title Подписка на новости
-        p.subscribe__desc Всегда свежая информация о скидках, акциях, полезные статьи и новости компании
-        .subscribe__bottom-wrapper
-          form.subscribe__form(action="#" method="post")
-            input.subscribe__input(type="email" required placeholder="Ваш e-mail")
-            button.subscribe__btn.page-btn(type="submit") Подписаться
-          ul.subscribe__social.bottom-social
-            li.bottom-social__item
-              a.bottom-social__link(href="javascript:void(0);" aria-label="Профиль компании \"Azori\" ВКонтакте")
-                img(src="img/vk-icon-bottom-social.png", alt="Профиль компании \"Azori\" ВКонтакте")
-            li.bottom-social__item
-              a.bottom-social__link(href="javascript:void(0);" aria-label="Профиль компании \"Azori\" в Фейсбуке")
-                img(src="img/fb-icon-bottom-social.png" alt="Профиль компании \"Azori\" в Фейсбуке")
-            li.bottom-social__item
-              a.bottom-social__link(href="javascript:void(0);" aria-label="Профиль компании \"Azori\" в Инстаграмме")
-                img(src="img/insta-icon-bottom-social.png" alt="Профиль компании \"Azori\" в Инстаграмме")
-          small.subscribe__agreement Нажимая кнопку "Подписаться" вы соглашаетесь с  #[a(href="javascript:void(0);") Политикой обработки персональных данных]
-    .main-footer__middle
-      .container
-        a.main-footer__logo(href="javascript:void(0);")
-          img(src="img/footer-logo.png" alt="Логотип компании \"Azori\"")
-        nav.main-footer__nav
-          ul.main-footer__nav-list
-            li.main-footer__nav-item
-              a(href="javascript:void(0);") О бренде
-            li.main-footer__nav-item
-              a(href="javascript:void(0);") Коллекции
-            li.main-footer__nav-item
-              a(href="javascript:void(0);") Где купить
-            li.main-footer__nav-item
-              a(href="javascript:void(0);") Новости
-            li.main-footer__nav-item
-              a(href="javascript:void(0);") Контакты
-            li.main-footer__nav-item
-              a(href="javascript:void(0);") Партнерам
-    .main-footer__bottom
-      .container
-        p.main-footer__copyright Azori 
-          span © 2017
-        p.main-footer__madeby Разработка сайта:
-          a(href="http://dev.trinet.ru/" target="_blank")
-            img(src="img/trinet-logo.png", alt="Логотип компании \"Trinet Development\"")
-            |  Trinet
-            br
-            | Development
+  include ../modules/footer
+  <button type="button" class="back-to-top" title="Back to top">&uarr;</button>

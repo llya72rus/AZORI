@@ -1,5 +1,5 @@
 .advantages {
-  padding-bottom: 41px;
+  padding-bottom: 27px;
   background-image:
   linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, #ffffff 84%, #ffffff 100%),url("../img/advantages-bottom-bg.jpg");
   background-size: auto, contain;
@@ -7,8 +7,12 @@
   background-repeat: no-repeat, no-repeat;
 
   &__list {
-    @include flex($align-items: flex-start);
-    @include reset-list();
+    @include flex($just-cont: space-around, $align-items: flex-start);
+    margin: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 0;
+    list-style: none;
   }
 
   &__item {
@@ -17,6 +21,7 @@
     background-position: center top;
     background-repeat: no-repeat;
     text-align: center;
+    margin-bottom: 30px;
 
     &--production {
       background-image: url("../img/production-icon.png");
@@ -65,6 +70,11 @@
       margin-bottom: 29px;
     }
 
+    &__list {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     &__item {
       padding-top: 78px;
     }
@@ -83,7 +93,7 @@
     }
 
     &__item {
-      width: 70%;
+      width: 60%;
       margin-bottom: 30px;
     }
   }

@@ -43,6 +43,20 @@
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/montserrat-600.eot'); /* IE9 Compat Modes */
+  src:
+       url('../fonts/montserrat-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-600.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url('../fonts/montserrat-700.eot'); /* IE9 Compat Modes */

@@ -11,24 +11,24 @@
     right: 0;
     z-index: 0;
     width: 21.2%;
-    height: 100%;
+    height: 70%;
     background: url('../img/overlay-img.png') no-repeat center;
     background-size: cover;
     opacity: 0.8;
-    box-shadow: -10px 0 20px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: -10px -10px 20px 2px rgba(0, 0, 0, 0.4);
   }
 
   &__top-header {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    z-index: 10;
+    z-index: 12;
 
     &::before {
       content: "";
       position: absolute;
       z-index: -1;
       width: 100%;
-      height: 80px;
+      height: 70.2%;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
       background-color: rgba(255, 255, 255, 0.7);
     }
@@ -45,13 +45,20 @@
   }
 }
 
+@media (max-width: 1500px) {
+  .main-header {
+    &::after {
+      width: 15%;
+    }
+  }
+}
+
 @media (max-width: 1300px) {
   .main-header {
     &::after {
       width: 12%;
     }
   }
-
 }
 
 @media (max-width: 1024px) {
@@ -88,8 +95,12 @@
       display: none;
     }
 
-    &__top-header {
-      position: static;
+    &__top-header::before {
+      background-color: $white;
+    }
+
+    &__slick {
+      margin-top: 60px;
     }
 
     &__promo {
@@ -107,6 +118,10 @@
 @media (max-width: 480px) {
   .main-header__top-header::before {
     height: 40px;
+  }
+
+  .main-header__slick {
+    margin-top: 40px;
   }
 }
 

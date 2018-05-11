@@ -1,0 +1,14 @@
+.top-menu-social {
+  @include reset-list();
+  @include flex($just-cont: center);
+
+  &__item {
+    margin-right: 15px;
+    opacity: 0.6;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+}

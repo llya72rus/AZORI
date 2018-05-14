@@ -1,0 +1,16 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  height: 100vh;
+  width: 100%;
+  z-index: 15;
+  background: rgba(0, 0, 0, 0.5);
+
+  &--show {
+    @include flex($just-cont: center);
+  }
+}

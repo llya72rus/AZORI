@@ -1,0 +1,48 @@
+@mixin flex ($just-cont: space-between, $align-items: center) {
+  display: flex;
+  justify-content: $just-cont;
+  align-items: $align-items;
+  flex-wrap: wrap;
+}
+
+@mixin reset-list($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+  list-style: none;
+}
+
+@mixin desktop-centerer ($max-width: 1170px, $margin: 0 auto) {
+  max-width: $max-width;
+  margin: $margin;
+}
+
+@mixin pseudo-elem-centerer () {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+@mixin reset-button() {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+@mixin font-params-tablet() {
+  font-size: 17px;
+  line-height: 1.76;
+}
+
+@mixin zigzag-line() {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: url("#{$imgDir}/bg-zigzag-line.svg") repeat-x;
+}
+
+@mixin ie-only() {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}

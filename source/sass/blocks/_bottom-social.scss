@@ -1,0 +1,9 @@
+.bottom-social {
+  @include flex();
+  @include reset-list();
+  width: 134px;
+
+  &__link {
+    display: block;
+  }
+}

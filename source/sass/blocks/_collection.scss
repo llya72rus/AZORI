@@ -25,7 +25,7 @@
   }
 
   &__colors-item {
-    width: 11.9658%;
+    width: 140px;
     margin-right: 30px;
     margin-bottom: 10px;
 
@@ -92,6 +92,7 @@
 
   &__desc {
     width: 47.094%;
+    margin-right: 20px;
   }
 
   &__params {
@@ -210,11 +211,87 @@
   }
 
   &__where-to-buy {
+    min-width: 195px;
     margin: 30px auto 0;
   }
 }
 
-.collection  .container:first-child {
+.collection .container:first-child {
   margin-bottom: 35px;
   background: linear-gradient(to bottom, $white 8%, #f5f6f6 8%, #f5f6f6 93%, #ffffff 93%);
+}
+
+.collection__colors-list .slick-slide {
+  width: 140px !important;
+  margin-right: 10px;
+}
+
+@media (max-width: 1366px) {
+  .collection {
+    &__desc {
+      width: 35%;
+    }
+
+    &__params {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .collection {
+
+    &__gallery {
+      padding-left: 4.445%;
+      padding-right: 4.445%;
+    }
+
+    &__info {
+      display: block;
+      text-align: center;
+    }
+
+    &__desc {
+      width: 100%;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    &__params {
+      width: 100%;
+      text-align-last: left;
+    }
+
+    &__params-type {
+      width: 44.878%;
+      text-align: left;
+    }
+  }
+  .collection__params-type:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .collection {
+    &__params-types {
+      
+    }
+
+    &__params-type {
+      width: auto;
+    }
+  }
+
+  .collection__params-type:nth-child(odd) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .collection {
+    &__colors-title {
+      font-size: 16px;
+    }
+  }
 }

@@ -1,0 +1,44 @@
+.viewed {
+  padding: 40px 0;
+  background-color: #f5f6f6;
+
+  &__wrapper {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .viewed {
+    &__wrapper {
+      width: auto;
+      margin: 0 -15px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .viewed {
+    &__wrapper {
+      margin: 0 -8px;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .viewed {
+    &__wrapper {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .viewed {
+    &__wrapper {
+      width: auto;
+      margin: 0 -10px;
+    }
+  }
+}

@@ -27,12 +27,19 @@
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    padding: 0 15px;
     width: 31.63%;
-    margin-bottom: 30px;
+    height: 100%;
     border-radius: 5px;
+
+    a {
+      display: flex;
+      flex-direction: column;
+    }
   }
+
+
 
   &__img {
     display: block;
@@ -102,7 +109,7 @@
 
     &__title {
       line-height: 1.5;
-    } 
+    }
 
     &__img {
       width: 100%;
@@ -173,7 +180,7 @@
 @media (max-width: 375px) {
   .news {
     padding-bottom: 31px;
-    
+
     &::before {
       width: 100%;
     }

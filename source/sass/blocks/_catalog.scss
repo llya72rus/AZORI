@@ -492,7 +492,7 @@
   .catalog {
     &__item {
       width: 48.7%;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
   }
 }
@@ -506,9 +506,10 @@
 
     &__item {
       width: 80%;
+      margin-bottom: 20px;
 
       &:nth-last-child(2) {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
       }
     }
   }

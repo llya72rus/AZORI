@@ -1,5 +1,267 @@
 $(document).ready(function() {
 
+  /*
+    Очень-очень плохой код
+  */
+
+  $('#card-1 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-1 .card__colors'
+  });
+
+  $('#card-1 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-1 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-2 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-2 .card__colors'
+  });
+
+  $('#card-2 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-2 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-3 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-3 .card__colors'
+  });
+
+  $('#card-3 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-3 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-4 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-4 .card__colors'
+  });
+
+  $('#card-4 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-4 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-5 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-5 .card__colors'
+  });
+
+  $('#card-5 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-5 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-6 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-6 .card__colors'
+  });
+
+  $('#card-6 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-6 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-7 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-7 .card__colors'
+  });
+
+  $('#card-7 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-7 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-8 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-8 .card__colors'
+  });
+
+  $('#card-8 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-8 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-9 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-9 .card__colors'
+  });
+
+  $('#card-9 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-9 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-10 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-10 .card__colors'
+  });
+
+  $('#card-10 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-10 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-11 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-11 .card__colors'
+  });
+
+  $('#card-11 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-11 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-12 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-12 .card__colors'
+  });
+
+  $('#card-12 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-12 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-13 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-13 .card__colors'
+  });
+
+  $('#card-13 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-13 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-14 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-14 .card__colors'
+  });
+
+  $('#card-14 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-14 .card__images',
+    focusOnSelect: true,
+  });
+
+  /*
+      Конец  очень-очень плохого кода
+  */
+
+  // Слайдеры
+
   $('.about__slick').slick({
     dots: false,
     arrows: true,
@@ -20,7 +282,7 @@ $(document).ready(function() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           centerMode: true,
           centerPadding: '20%',
           arrows: false,
@@ -93,15 +355,19 @@ $(document).ready(function() {
 
 
   $('.news__list').slick({
-    mobileFirst: true,
     arrows: false,
-    dots: true,
-    adaptiveHeight: true,
+    dots: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+
     responsive: [
 
       {
         breakpoint: 767,
-        settings: 'unslick',
+        settings: {
+          dots: true,
+          adaptiveHeight: true
+        }
 
       }
     ]
@@ -112,25 +378,6 @@ $(document).ready(function() {
     useTransform: false,
     nextArrow: '<button type="button" class="catalog-top-slider__next">Next</button>',
     prevArrow: '<button type="button" class="catalog-top-slider__prev">Previous</button>',
-  });
-
-  $('.card__images').slick({
-    speed: 500,
-    arrows: false,
-    asNavFor: '.card__colors'
-  });
-
-  $('.card__colors').slick({
-    speed: 500,
-    slidesToShow:  8,
-    slidesToScroll: 1,
-    infinite: false,
-    draggable: false,
-    arrows: true,
-    asNavFor: '.card__images',
-    focusOnSelect: true,
-    nextArrow: '<button type="button" class="card__color-next">Next</button>',
-    prevArrow: '<button type="button" class="card__color-prev">Previous</button>'
   });
 
   $('.collection__gallery').slick({
@@ -150,8 +397,126 @@ $(document).ready(function() {
     infinite: true,
     arrows: true,
     nextArrow: '<button type="button" class="coll-examples__slide-next">Next</button>',
-    prevArrow: '<button type="button" class="coll-examples__slide-prev">Previous</button>'
+    prevArrow: '<button type="button" class="coll-examples__slide-prev">Previous</button>',
+    responsive: [
+
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+          arrows: false
+        }
+      },
+
+      {
+        breakpoint: 670,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+        }
+      }
+
+    ]
   });
+
+  $('.recommended__wrapper').slick({
+    speed: 500,
+    slidesToShow:  3,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: true,
+    nextArrow: '<button type="button" class="orange-rounded-btn-next">Next</button>',
+    prevArrow: '<button type="button" class="orange-rounded-btn-prev">Previous</button>',
+    responsive: [
+
+      {
+        breakpoint: 1366,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 2,
+          arrows: false,
+          dots: true
+        }
+      },
+
+      {
+        breakpoint: 670,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+        }
+      }
+
+    ]
+  });
+
+  $('.viewed__wrapper').slick({
+    speed: 500,
+    slidesToShow:  2,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: true,
+    nextArrow: '<button type="button" class="orange-rounded-btn-next">Next</button>',
+    prevArrow: '<button type="button" class="orange-rounded-btn-prev">Previous</button>',
+    responsive: [
+
+      {
+        breakpoint: 1366,
+        settings: {
+          variableWidth: false,
+          arrows: false,
+          dots: true
+        }
+      },
+
+      {
+        breakpoint: 670,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+        }
+      }
+    ]
+  });
+
+
+  $('.collection__colors-list').slick({
+    speed: 500,
+    slidesToShow:  4,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+    dots: true,
+
+    responsive: [
+
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+          variableWidth: true,
+          infinite: true
+        }
+
+      }
+    ]
+  });
+
+
+   // Мобильное меню
 
   (function () {
 
@@ -159,12 +524,6 @@ $(document).ready(function() {
       $(this).toggleClass('open');
       $('.main-nav').toggleClass('main-nav--show');
       $('.mobile-header').toggleClass('mobile-header--menu-opened');
-      // active = true;
-      // if (active) {
-      //   $(window).click(function() {
-      //     $('.main-nav').removeClass('main-nav--show');
-      //   });
-      // }
 
     });
 
@@ -174,6 +533,13 @@ $(document).ready(function() {
       $('.page-nav').toggleClass('page-nav--menu-opened');
       $('.page-nav__list').toggleClass('page-nav__list--show');
     });
+
+  })();
+
+
+  // Аккордион
+
+  (function () {
 
     var showFilter = document.querySelector(".catalog__collapse-filter");
     $(".catalog__collapse-filter").click(function() {
@@ -186,23 +552,6 @@ $(document).ready(function() {
           panel.style.display = "block";
       }
     });
-
-    // showFilter.addEventListener("click", function() {
-    //     this.classList.toggle("catalog__collapse-filter--active");
-
-    //     var panel = this.nextElementSibling;
-    //     if (panel.style.display === "block") {
-    //         panel.style.display = "none";
-    //     } else {
-    //         panel.style.display = "block";
-    //     }
-    // });
-
-
-  })();
-
-
-  (function () {
 
     var acc = document.querySelectorAll(".acc-toggle");
 
@@ -219,6 +568,8 @@ $(document).ready(function() {
     }
   })();
 
+  // Замена текста кнопки скрыть/раскрыть фильтр при клике на нее
+
   $('.catalog__collapse-filter').click(function () {
     if ($(this).hasClass('catalog__collapse-filter--active')) {
       $(this).text('Скрыть текст')
@@ -227,13 +578,33 @@ $(document).ready(function() {
     }
   });
 
-  // document.querySelector('.catalog__collapse-filter').addEventListener('click', function () {
-  //   if (this.classList.contains('catalog__collapse-filter--active')) {
-  //     this.textContent = 'Скрыть фильтр';
-  //   } else {
-  //     this.textContent = 'Раскрыть фильтр';
-  //   }
-  // })
+  // Убираем свойство 'overflow', когда наводим на один из примеров готовых решений:
+
+  // $('.coll-examples .slick-slide').hover(function () {
+  //   $('.coll-examples .slick-list').css('overflow', 'visible');
+  // });
+
+  // Закрываем всплывающее окно на странице отдельной коллекции
+
+  var collModal = $('.modal')
+  var closeCollModalBtn = $('.coll-popup__close-btn');
+  var collForm = $('.coll-popup');
+
+  closeCollModalBtn.click(function () {
+    collModal.removeClass('modal--show');
+  });
+
+  $('body').mouseup(function() {
+    if ((!$(this.target).is('.coll-popup')) && (collModal.hasClass('modal--show'))) {
+      $(collModal).removeClass('modal--show');
+    }
+  });
+
+  $('.coll-elems__item').click(function () {
+    collModal.addClass('modal--show');
+  })
+
+  // Функционал кнопки "Наверх"
 
   if ($('.back-to-top').length) {
     var scrollTrigger = 800, // px
@@ -256,6 +627,8 @@ $(document).ready(function() {
         }, 700);
     });
 }
+
+// Белый непрозрачный фон шапки при скролле > 80px
 
 $(window).scroll(function() {
   var top = $(document).scrollTop();

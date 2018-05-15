@@ -56,6 +56,15 @@
   }
 }
 
+@media (max-width: 1600px) {
+  .page-nav {
+    &__top-icons-panel {
+      right: 3%;
+    }
+  }
+}
+
+
 
 @media (max-width: 1300px) {
   .page-nav {
@@ -72,6 +81,10 @@
     &__link {
       padding: 5px;
       font-size: 15px;
+    }
+
+    &__top-icons-panel {
+      right: 2%;
     }
   }
 }

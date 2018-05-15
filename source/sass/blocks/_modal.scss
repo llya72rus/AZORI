@@ -8,7 +8,7 @@
   height: 100vh;
   width: 100%;
   z-index: 15;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.8);
 
   &--show {
     @include flex($just-cont: center);

@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet"/>
     <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16"/>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/custom.js"></script>
     <title>Коллекция Eclipse
     </title>
@@ -57,13 +58,21 @@
       </header>
       <section class="collection">
         <div class="container">
-          <div class="collection__gallery"><img src="../img/collection-gallery-img-1.jpg"/><img src="../img/collection-gallery-img-2.jpg"/><img src="../img/collection-gallery-img-3.jpg"/></div>
+          <div class="collection__gallery"><a href="../img/collection-gallery-img-1.jpg" data-fancybox="images"><img src="../img/collection-gallery-img-1.jpg"/></a><a href="../img/collection-gallery-img-2.jpg" data-fancybox="images"><img src="../img/collection-gallery-img-2.jpg"/></a><a href="../img/collection-gallery-img-3.jpg" data-fancybox="images"><img src="../img/collection-gallery-img-3.jpg"/></a></div>
           <h3 class="collection__colors-title">Цвета коллекции</h3>
           <ul class="collection__colors-list">
             <li class="collection__colors-item"><a class="collection__colors-link collection__colors-link--current" href="javascript:void(0);">
                 <div class="collection__colors-square collection__colors-square--gray"></div><span>Grey</span></a></li>
             <li class="collection__colors-item"><a class="collection__colors-link" href="javascript:void(0);">
                 <div class="collection__colors-square collection__colors-square--biege"></div><span>Biege</span></a></li>
+            <li class="collection__colors-item"><a class="collection__colors-link" href="javascript:void(0);">
+                <div class="collection__colors-square collection__colors-square--brown"></div><span>Brown</span></a></li>
+            <li class="collection__colors-item"><a class="collection__colors-link" href="javascript:void(0);">
+                <div class="collection__colors-square collection__colors-square--brown"></div><span>Brown</span></a></li>
+            <li class="collection__colors-item"><a class="collection__colors-link" href="javascript:void(0);">
+                <div class="collection__colors-square collection__colors-square--brown"></div><span>Brown</span></a></li>
+            <li class="collection__colors-item"><a class="collection__colors-link" href="javascript:void(0);">
+                <div class="collection__colors-square collection__colors-square--brown"></div><span>Brown</span></a></li>
             <li class="collection__colors-item"><a class="collection__colors-link" href="javascript:void(0);">
                 <div class="collection__colors-square collection__colors-square--brown"></div><span>Brown</span></a></li>
             <li class="collection__colors-item"><a class="collection__colors-link" href="javascript:void(0);">
@@ -385,7 +394,8 @@
     </footer>
     <div class="modal">
       <div class="coll-popup">
-        <button class="coll-popup__close-btn"></button><img class="coll-popup__img" src="img/popup-img-desktop.png" alt="Img"/>
+        <button class="coll-popup__close-btn"></button>
+        <div class="coll-popup__img-wrapper"><img class="coll-popup__img" src="img/popup-img-desktop.png" alt="Img"/></div>
         <div class="coll-popup__info">
           <h3 class="coll-popup__item-title">Плитка настенная Eclipse Biege Arabesco</h3>
           <ul class="coll-popup__charcs charcs">
@@ -395,7 +405,7 @@
           </ul>
           <div class="coll-popup__color-square color-square"></div><a class="coll-popup__link" href="javascript:void(0);">Коллекция <strong>&laquo;Eclipse&raquo;</strong></a>
           <div class="coll-popup__price-wrapper">
-            <div class="coll-popup__left"><span class="coll-popup__price-name">Цена в магазине</span>
+            <div class="coll-popup__price-text-wrapper"><span class="coll-popup__price-name">Цена в магазине</span>
               <p class="coll-popup__price">от <span class="coll-popup__price-number">705</span> руб/м<sup>2</sup></p>
             </div><a class="page-btn page-btn--hollow" href="javascript:void(0);">Где купить</a>
           </div>

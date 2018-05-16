@@ -63,6 +63,9 @@
     padding-right: 22px;
     padding-left: 22px;
 
+    &:active {
+      opacity: 1;
+    }
   }
 
   &__social {

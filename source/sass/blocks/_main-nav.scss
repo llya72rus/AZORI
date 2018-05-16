@@ -1,5 +1,5 @@
 .main-nav {
-  @include flex($align-items: flex-start, $just-cont: flex-start);
+  @include flex($align-items: stretch, $just-cont: flex-start);
   flex-wrap: nowrap;
   max-width: 1200px;
   margin: 0 auto;
@@ -11,27 +11,29 @@
     flex-wrap: nowrap;
     width: 37.5%;
     margin: 0;
-    padding: 30px 0;
     list-style: none;
 
     &--left {
       order: 0;
-      padding-right: 30px;
+      padding-right: 25px;
+      padding-left: 0;
     }
 
     &--right {
-      order: 2;
+      order: 1;
+      margin-left: auto;
       position: relative;
-      padding-left: 30px;
+      padding-left: 25px;
       padding-right: 18px;
     }
   }
 
   &__logo {
-    order: 1;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
     width: 293px;
     min-height: 114px;
-    margin: auto;
     padding: 92px 25px 7px 33px;
     background-color: #676c73;
     background-image: url("../img/logo.png");
@@ -46,7 +48,7 @@
   }
 
   &__item {
-    margin-right: 50px;
+    margin-right: 10px;
   }
 
   &__item--no-mr {
@@ -54,9 +56,16 @@
   }
 
   &__link {
+    display: block;
+    padding: 31px 5px;
     font-weight: 500;
-    line-height: 1;
     text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+      background-color: $orange;
+      color: $white;
+    }
   }
 
   &__language-option {
@@ -76,6 +85,13 @@
   position: absolute;
   top: 109px;
   right: 16.3%;
+}
+
+@media (max-width: 1600px) {
+
+  .main-nav__top-icons-panel {
+    right: 8%;
+  }
 }
 
 @media (max-width: 1500px) {
@@ -157,6 +173,12 @@
 
     &__link {
       font-size: 18px;
+      padding: 0;
+
+      &:hover {
+        color: $orange;
+        background-color: unset;
+      }
     }
 
     &--show {

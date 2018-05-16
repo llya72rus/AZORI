@@ -284,18 +284,29 @@ $(document).ready(function() {
         settings: {
           slidesToShow: 2,
           centerMode: true,
-          centerPadding: '20%',
+          centerPadding: '10%',
           arrows: false,
           dots: true
         }
       },
 
       {
-        breakpoint: 480,
+        breakpoint: 670,
         settings: {
           slidesToShow: 1,
           centerMode: true,
-          centerPadding: '30px',
+          centerPadding: '50px',
+          arrows: false,
+          dots: true
+        }
+      },
+
+      {
+        breakpoint: 375,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: '25px',
           arrows: false,
           dots: true
         }
@@ -316,7 +327,7 @@ $(document).ready(function() {
     prevArrow: '<button type="button" class="main-header__slick-prev">Previous</button>',
     responsive: [
       {
-        breakpoint: 1500,
+        breakpoint: 1600,
         settings: {
           centerPadding: '15%'
         }
@@ -355,20 +366,16 @@ $(document).ready(function() {
 
 
   $('.news__list').slick({
+    mobileFirst: true,
     arrows: false,
-    dots: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-
+    dots: true,
+    // fade: true,
+    // adaptiveHeight: true,
     responsive: [
 
       {
         breakpoint: 767,
-        settings: {
-          dots: true,
-          adaptiveHeight: true
-        }
-
+        settings: 'unslick'
       }
     ]
   });
@@ -500,6 +507,7 @@ $(document).ready(function() {
     infinite: true,
     arrows: false,
     dots: true,
+    focusOnSelect: true,
 
     responsive: [
 
@@ -507,7 +515,6 @@ $(document).ready(function() {
         breakpoint: 767,
         settings: {
           slidesToShow: 3,
-          variableWidth: true,
           infinite: true
         }
 
@@ -578,31 +585,74 @@ $(document).ready(function() {
     }
   });
 
-  // Убираем свойство 'overflow', когда наводим на один из примеров готовых решений:
-
-  // $('.coll-examples .slick-slide').hover(function () {
-  //   $('.coll-examples .slick-list').css('overflow', 'visible');
-  // });
-
   // Закрываем всплывающее окно на странице отдельной коллекции
 
-  var collModal = $('.modal')
-  var closeCollModalBtn = $('.coll-popup__close-btn');
+  function openModal () {
+    collModal.classList.add('modal--show');
+  }
+
+  function closeModal () {
+    collModal.classList.remove('modal--show');
+  }
+
+  var collModal = document.querySelector('.modal');
+  var closeCollModalBtn = document.querySelector('.coll-popup__close-btn');
   var collForm = $('.coll-popup');
+  var collElems = document.querySelectorAll('.coll-elems__item');
 
-  closeCollModalBtn.click(function () {
-    collModal.removeClass('modal--show');
-  });
+  if (closeCollModalBtn && collModal) {
+    closeCollModalBtn.addEventListener('click', function () {
+      collModal.classList.remove('modal--show');
+    });
+  }
 
-  $('body').mouseup(function() {
-    if ((!$(this.target).is('.coll-popup')) && (collModal.hasClass('modal--show'))) {
-      $(collModal).removeClass('modal--show');
+  for (var i = 0; i < collElems.length; i++) {
+    if (collElems && closeCollModalBtn) {
+      collElems[i].addEventListener('click', function (evt) {
+        evt.preventDefault();
+        openModal();
+      });
+    }
+  }
+
+  window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+      if (collModal.classList.contains('modal--show')) {
+        closeModal();
+      }
     }
   });
 
-  $('.coll-elems__item').click(function () {
-    collModal.addClass('modal--show');
-  })
+  window.addEventListener('click', function (evt) {
+    if (evt.target === collModal) {
+      closeModal();
+    }
+  });
+
+  $('.search-input-wrap a').on('click', function(e) {
+    e.preventDefault();
+    var par = $(this).parents('.search-nav');
+    var input = par.find('input[type="text"]');
+    if (par.hasClass('focused') && input.val().length>0){
+      input.parents('form').submit();
+    } else {
+      par.toggleClass('focused');
+      input.focus();
+    }
+  });
+
+
+  // $('.coll-elems__item').click(function () {
+  //   collModal.addClass('modal--show');
+  // })
+
+  // $('body').mouseup(function() {
+  //   if ((!$(this.target).is('.coll-popup')) && (collModal.hasClass('modal--show'))) {
+  //     $(collModal).removeClass('modal--show');
+  //   }
+  // });
+
+
 
   // Функционал кнопки "Наверх"
 

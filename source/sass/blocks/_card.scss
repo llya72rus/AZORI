@@ -1,6 +1,9 @@
 .card {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
   width: 48.2758%;
-  box-shadow: 0 5px 20px rgba(17, 17, 17, 0.1);
+  box-shadow: 0 5px 15px rgba(17, 17, 17, 0.1);
   border-radius: 5px;
   background-color: $white;
 
@@ -26,6 +29,10 @@
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
+  }
+
+  &__info-left {
+    margin-right: 10px;
   }
 
   &__info-right {

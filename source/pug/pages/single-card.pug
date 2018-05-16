@@ -70,9 +70,12 @@ block content
     section.collection
       .container
         .collection__gallery
-          img(src="../img/collection-gallery-img-1.jpg")
-          img(src="../img/collection-gallery-img-2.jpg")
-          img(src="../img/collection-gallery-img-3.jpg")
+          a(href="../img/collection-gallery-img-1.jpg" data-fancybox="images")
+            img(src="../img/collection-gallery-img-1.jpg")
+          a(href="../img/collection-gallery-img-2.jpg" data-fancybox="images")
+            img(src="../img/collection-gallery-img-2.jpg")
+          a(href="../img/collection-gallery-img-3.jpg" data-fancybox="images")
+            img(src="../img/collection-gallery-img-3.jpg")
         h3.collection__colors-title Цвета коллекции
         ul.collection__colors-list
           li.collection__colors-item
@@ -83,6 +86,22 @@ block content
             a.collection__colors-link(href="javascript:void(0);")
               .collection__colors-square.collection__colors-square--biege
               span Biege
+          li.collection__colors-item
+            a.collection__colors-link(href="javascript:void(0);")
+              .collection__colors-square.collection__colors-square--brown
+              span Brown
+          li.collection__colors-item
+            a.collection__colors-link(href="javascript:void(0);")
+              .collection__colors-square.collection__colors-square--brown
+              span Brown
+          li.collection__colors-item
+            a.collection__colors-link(href="javascript:void(0);")
+              .collection__colors-square.collection__colors-square--brown
+              span Brown
+          li.collection__colors-item
+            a.collection__colors-link(href="javascript:void(0);")
+              .collection__colors-square.collection__colors-square--brown
+              span Brown
           li.collection__colors-item
             a.collection__colors-link(href="javascript:void(0);")
               .collection__colors-square.collection__colors-square--brown
@@ -391,7 +410,8 @@ block content
   .modal
     .coll-popup
       button.coll-popup__close-btn
-      img.coll-popup__img(src="img/popup-img-desktop.png", alt="Img")
+      .coll-popup__img-wrapper
+        img.coll-popup__img(src="img/popup-img-desktop.png", alt="Img")
       .coll-popup__info
         h3.coll-popup__item-title Плитка настенная Eclipse Biege Arabesco
         ul.coll-popup__charcs.charcs
@@ -401,7 +421,7 @@ block content
         .coll-popup__color-square.color-square
         a.coll-popup__link(href="javascript:void(0);") Коллекция #[strong &laquo;Eclipse&raquo;]
         .coll-popup__price-wrapper
-          .coll-popup__left
+          .coll-popup__price-text-wrapper
             span.coll-popup__price-name Цена в магазине
             p.coll-popup__price от #[span.coll-popup__price-number 705] руб/м#[sup 2]
           a.page-btn.page-btn--hollow(href="javascript:void(0);") Где купить

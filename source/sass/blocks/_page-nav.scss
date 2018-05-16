@@ -1,18 +1,21 @@
 .page-nav {
   @include flex();
+  flex-wrap: nowrap;
   max-width: 1170px;
   margin: 0 auto;
 
   &__list {
     @include flex();
+    flex-wrap: nowrap;
     @include reset-list();
     flex-grow: 1;
   }
 
   &__logo {
+    flex-shrink: 0;
     width: 209px;
     height: 80px;
-    margin-right: 10px;
+    margin-right: 16px;
     padding: 62px 2px 10px 5px;
     background: #676c73 url('../img/logo.png') no-repeat center 5px;
     background-size: 180px 60px;
@@ -25,17 +28,20 @@
   }
 
   &__link {
-    padding: 5px 10px;
-    color: #424141;
-    font-size: 16px;
+    display: block;
+    padding: 31px 5px;
     font-weight: 500;
-    line-height: 16px;
     text-transform: uppercase;
-    letter-spacing: 0.4px;
+    text-align: center;
 
     &:hover {
-      opacity: 0.75;
+      background-color: $orange;
+      color: $white;
     }
+  }
+
+  &__item {
+    margin-right: 10px;
   }
 
   &__lang-opt {
@@ -100,6 +106,11 @@
     &__link {
       padding: 5px 10px;
       font-size: 18px;
+      
+      &:hover {
+        color: $orange;
+        background-color: unset;
+      }
     }
 
     &__item {

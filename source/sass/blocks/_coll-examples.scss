@@ -100,6 +100,10 @@
   display: flex;
 }
 
+.coll-examples__slick-list--overflow-vis {
+  overflow: visible;
+}
+
 @media (max-width: 1366px) {
   .coll-examples {
     &__bottom-item {

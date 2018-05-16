@@ -537,6 +537,15 @@
       margin-right: 0;
     }
 
+    &__filter-bottom-panel {
+      flex-direction: column;
+    }
+
+    &__reset-filters {
+      margin-left: 0;
+      margin-top: 0;
+    }
+
     aside {
       left: 10px;
       right: 10px;

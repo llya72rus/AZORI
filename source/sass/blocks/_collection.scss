@@ -293,6 +293,18 @@
   }
 }
 
+@media (max-width: 576px) {
+  .collection {
+    &__colors-list {
+      width: 315px;
+    }
+
+    &__colors-square {
+      height: 70px;
+    }
+  }
+}
+
 @media (max-width: 480px) {
   .collection {
     &__gallery {
@@ -306,6 +318,14 @@
 
   .collection .container:first-child {
     padding: 0 10px;
-    margin: 0;
+    margin: 0 0 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  .collection {
+    &__colors-list {
+      width: 100%;
+    }
   }
 }

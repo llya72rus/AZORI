@@ -1,4 +1,4 @@
-.collections {
+.front-p-collections {
   margin-bottom: 35px;
 
   &__list {
@@ -28,7 +28,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
+
     &::before {
       transition: 0.6s ease;
       display: none;
@@ -44,19 +44,19 @@
       width: 100%;
       height: 100%;
       background: rgba(255, 255, 255, 0.6);
-      
+
     }
 
     &--all {
-      background-image: url("../img/collections-all-bg.jpg");
+      background-image: url("../img/front-p-collections-all-bg.jpg");
     }
 
     &--new {
-      background-image: url("../img/collections-new-bg.jpg");
+      background-image: url("../img/front-p-collections-new-bg.jpg");
     }
 
     &--ceramic3d {
-      background-image: url("../img/collections-ceramic3d-bg.jpg");
+      background-image: url("../img/front-p-collections-ceramic3d-bg.jpg");
     }
   }
 
@@ -98,7 +98,7 @@
 }
 
 @media (max-width: 1024px) {
-  .collections {
+  .front-p-collections {
     &__item {
       z-index: 1;
       padding: 65px 1.6%;
@@ -107,7 +107,7 @@
 }
 
 @media (max-width: 768px) {
-  .collections {
+  .front-p-collections {
     margin-bottom: 52px;
     &__list {
       margin: 0;
@@ -135,7 +135,7 @@
 
 
 @media (max-width: 767px) {
-  .collections {
+  .front-p-collections {
     &__list {
       flex-direction: column;
       align-items: center;
@@ -149,7 +149,7 @@
 }
 
 @media (max-width: 480px) {
-  .collections__item {
+  .front-p-collections__item {
     width: 100%;
     padding-right: 19%;
     padding-left: 19%;
@@ -157,15 +157,15 @@
 }
 
 @media (max-width: 375px) {
-  .collections {
+  .front-p-collections {
     margin-bottom: 34px;
   }
 
-  .collections__item {
+  .front-p-collections__item {
     margin-bottom: 16px;
   }
 
-  .collections__item:last-child {
+  .front-p-collections__item:last-child {
     margin-bottom: 0;
   }
 }

@@ -370,11 +370,11 @@ $(document).ready(function() {
     arrows: false,
     dots: true,
     // fade: true,
-    // adaptiveHeight: true,
+    adaptiveHeight: true,
     responsive: [
 
       {
-        breakpoint: 767,
+        breakpoint: 670,
         settings: 'unslick'
       }
     ]
@@ -543,7 +543,18 @@ $(document).ready(function() {
 
   })();
 
+  // $('.news__desc').readmore({
+  //   speed: 75,
+  //   collapsedHeight: 150,
+  //   moreLink: '<a class="news__readmore" href="#">Читать полностью</a>',
+  // });
 
+$('.news__desc').each(function() {
+    var ths = $(this);
+   if(ths.height()>130){
+       ths.addClass('news__desc--ellipsis');
+   }
+});
   // Аккордион
 
   (function () {
@@ -642,7 +653,7 @@ $(document).ready(function() {
     }
   });
 
-  var pageHeight = $(document).height();
+var pageHeight = $(document).height();
 
 $('.modal').css('height', pageHeight);
 
@@ -652,15 +663,21 @@ var topScroll;
 
 $(document).scroll(function() {
   var topScroll = $(document).scrollTop();
-  console.log(topScroll);
 });
 
-  $('.coll-elems__item').click(function () {
-    $('.modal').addClass('modal--show');
-    var topScroll = $(document).scrollTop() + ($(window).height() / 2) ;
-    $('.coll-popup').css('top', topScroll);
-  });
+$('.coll-elems__item').click(function () {
+  $('.modal').addClass('modal--show');
+  var topScroll = $(document).scrollTop() + ($(window).height() / 2) ;
+  $('.coll-popup').css('top', topScroll);
+});
 
+var innerHeaderHeight = $('.page-header').height();
+$('.inner-body').css('padding-top', innerHeaderHeight);
+
+$(window).resize(function() {
+  innerHeaderHeight = $('.page-header').height();
+  $('.inner-body').css('padding-top', innerHeaderHeight);
+});
 
 
 
@@ -673,6 +690,10 @@ $(document).scroll(function() {
   //     $(collModal).removeClass('modal--show');
   //   }
   // });
+
+
+  var newsParagraph = $('.news__desc');
+  var newsParagraphHeig
 
 
 

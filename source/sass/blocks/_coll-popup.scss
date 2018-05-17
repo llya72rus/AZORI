@@ -122,9 +122,6 @@
 
   .coll-popup {
     justify-content: space-between;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
 
     &__info {
       width: 55.555%;
@@ -142,6 +139,11 @@
 
 @media (max-width: 767px) {
   .coll-popup {
+    transform: none;
+    transform: translateY(-30%);
+    left: 0;
+    right: 0;
+
     &__info {
       display: flex;
       flex-wrap: wrap;
@@ -181,6 +183,7 @@
     &__img-wrapper {
       width: 100%;
       margin-bottom: 20px;
+      margin-right: 0;
     }
 
     &__info {

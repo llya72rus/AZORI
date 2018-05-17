@@ -157,5 +157,9 @@
 @media (max-width: 480px) {
   .coll-examples {
     padding: 0 10px;
+
+    &__tooltip {
+      font-size: 14px;
+    }
   }
 }

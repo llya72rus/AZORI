@@ -12,6 +12,8 @@
     <script src="js/slick.min.js"></script>
     <script src="js/readmore.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/polyfill.js"></script>
+    <script>svg4everybody();</script>
     <script src="js/custom.js"></script>
     <title>Компания AZORI
     </title>
@@ -19,7 +21,13 @@
       <header class="main-header">
         <div class="main-header__top-header">
           <div class="mobile-header">
-            <div class="menu-toggle"></div><span></span><span></span><span></span><span></span><a class="mobile-header__logo" href="javascript:void(0);">Вдохновляйся. Мечтай. Созидай.</a><span class="mobile-header__language-option">En</span><a class="mobile-header__search" href="javascript:void(0);"><img src="img/search-icon.png" alt="Поиск по сайту"/></a>
+            <div class="menu-toggle"><span></span><span></span><span></span><span></span></div><a class="mobile-header__logo" href="javascript:void(0);">Вдохновляйся. Мечтай. Созидай.</a><span class="mobile-header__language-option">En</span><a class="mobile-header__search" href="javascript:void(0);"><img src="img/search-icon.png" alt="Поиск по сайту"/></a>
+            <div class="mobile-search">
+              <form action="javascript:void(0);">
+                <input class="mobile-search__form" type="text" placeholder="Найти..."/>
+                <button class="mobile-search__btn"><img src="img/search-icon.png" alt="Поиск по сайту"/></button>
+              </form>
+            </div>
           </div>
           <nav class="main-nav"><a class="main-nav__logo" href="javascript:void(0);">Вдохновляйся. Мечтай. Созидай.</a>
             <ul class="main-nav__list main-nav__list--left">
@@ -33,13 +41,20 @@
               <li class="main-nav__item main-nav__item--no-mr"><a class="main-nav__link" href="javascript:void(0);">Партнерам</a></li>
               <li class="main-nav__language-option"><a href="javascript:void(0);">En</a></li>
             </ul>
-            <ul class="main-nav__top-icons-panel top-icons-panel">
-              <li class="top-icons-panel__item top-icons-panel__item--search"><a href="javascript:void(0);" aria-label=""><img src="img/search-top-icons.png" alt=""/></a></li>
-              <li class="top-icons-panel__item top-icons-panel__item--mail"><a href="javascript:void(0);" aria-label=""><img src="img/mail-top-icons.png" alt=""/></a></li>
-              <li class="top-icons-panel__item top-icons-panel__item--vk"><a href="javascript:void(0);" aria-label=""><img src="img/vk-top-icons.png" alt=""/></a></li>
-              <li class="top-icons-panel__item top-icons-panel__item--fb"><a href="javascript:void(0);" aria-label=""><img src="img/fb-top-icons.png" alt=""/></a></li>
-              <li class="top-icons-panel__item top-icons-panel__item--insta"><a href="javascript:void(0);" aria-label=""><img src="img/insta-top-icons.png" alt=""/></a></li>
-            </ul>
+            <div class="main-nav__top-icons-panel top-icons-panel">
+              <div class="top-icons-panel__item top-icons-panel__item--search"><a href="javascript:void(0);" aria-label=""><img src="img/search-top-icons.png" alt=""/></a>
+                <div class="top-icons-panel__input-wrapper">
+                  <form>
+                    <input type="text" placeholder="Найти..."/>
+                    <button class="top-icons-panel__search-btn" type="button"><img src="img/search-top-icons.png" alt=""/></button>
+                  </form>
+                </div>
+              </div>
+              <div class="top-icons-panel__item top-icons-panel__item--mail"><a href="javascript:void(0);" aria-label=""><img src="img/mail-top-icons.png" alt=""/></a></div>
+              <div class="top-icons-panel__item top-icons-panel__item--vk"><a href="javascript:void(0);" aria-label=""><img src="img/vk-top-icons.png" alt=""/></a></div>
+              <div class="top-icons-panel__item top-icons-panel__item--fb"><a href="javascript:void(0);" aria-label=""><img src="img/fb-top-icons.png" alt=""/></a></div>
+              <div class="top-icons-panel__item top-icons-panel__item--insta"><a href="javascript:void(0);" aria-label=""><img src="img/insta-top-icons.png" alt=""/></a></div>
+            </div>
           </nav>
         </div>
         <div class="main-header__slick">
@@ -155,7 +170,7 @@
               </li>
             </ul>
           </div>
-          <button class="page-btn page-btn--hollow">Все новости</button>
+          <button class="page-btn page-btn--hollow news__bottom-btn">Все новости</button>
         </section>
       </main>
       <footer class="main-footer">
@@ -169,9 +184,21 @@
                 <button class="subscribe__btn page-btn" type="submit">Подписаться</button>
               </form>
               <ul class="subscribe__social bottom-social">
-                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; ВКонтакте"><img src="img/vk-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; ВКонтакте"/></a></li>
-                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Фейсбуке"><img src="img/fb-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; в Фейсбуке"/></a></li>
-                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Инстаграмме"><img src="img/insta-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; в Инстаграмме"/></a></li>
+                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; ВКонтакте">
+                    <svg width="100%" height="100%" role="img">
+                      <title>Профиль компании "Azori" в Фейсбуке</title>
+                      <use xlink:href="img/sprite.svg#vk_white"></use>
+                    </svg></a></li>
+                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Фейсбуке">
+                    <svg width="100%" height="100%" role="img">
+                      <title>Профиль компании "Azori" в Фейсбуке</title>
+                      <use xlink:href="img/sprite.svg#fb_white"></use>
+                    </svg></a></li>
+                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Инстаграмме">
+                    <svg width="100%" height="100%" role="img">
+                      <title>Профиль компании "Azori" в Фейсбуке</title>
+                      <use xlink:href="img/sprite.svg#instagram_white"></use>
+                    </svg></a></li>
               </ul><small class="subscribe__agreement">Нажимая кнопку "Подписаться" вы соглашаетесь с  <a href="javascript:void(0);">Политикой обработки персональных данных</a></small>
             </div>
           </div>

@@ -112,6 +112,7 @@
   }
 
   &__params-type-name {
+    margin-bottom: 15px;
     color: #252525;
     font-size: 16px;
     font-weight: 500;
@@ -247,6 +248,10 @@
       text-align: center;
     }
 
+    &__where-to-buy {
+      margin-top: 0;
+    }
+
     &__desc {
       width: 100%;
       margin-bottom: 30px;
@@ -299,6 +304,10 @@
       width: 315px;
     }
 
+    &__colors-link span {
+      padding: 8px 6px;
+    }
+
     &__colors-square {
       height: 70px;
     }
@@ -307,6 +316,8 @@
 
 @media (max-width: 480px) {
   .collection {
+    padding-bottom: 30px;
+
     &__gallery {
       padding: 0;
     }

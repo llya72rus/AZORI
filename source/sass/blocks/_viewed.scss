@@ -40,6 +40,11 @@
 
 @media (max-width: 480px) {
   .viewed {
+
+    &__sect-title {
+      padding: 0 10px;
+    }
+    
     &__wrapper {
       width: auto;
       margin: 0 -10px;

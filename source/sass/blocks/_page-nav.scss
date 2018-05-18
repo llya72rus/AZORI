@@ -144,7 +144,7 @@
     }
 
     &__lang-opt {
-      margin-left: 0;
+      margin-left: auto;
     }
 
     &__logo {
@@ -167,6 +167,14 @@
 
 @media (max-width: 767px) {
   .page-nav {
+
+    &--menu-opened {
+      .page-nav__lang-opt,
+      .page-nav__search {
+        opacity: 0;
+      }
+    }
+
     &__list--show {
       width: 100%;
       box-shadow: none;

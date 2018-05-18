@@ -88,7 +88,7 @@
 
   &__slick {
     // margin: 0 -5px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   &__more {
@@ -105,7 +105,7 @@
 @media (max-width: 1024px) {
   .about {
     &__slick .slick-list {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
   
       &::before {
         content: "";
@@ -139,6 +139,10 @@
       height: 204px;
     }
 
+    &__stats {
+      margin-bottom: 5px;
+    }
+
     &__stats-item {
       width: 30.7%;
     }
@@ -157,7 +161,6 @@
         width: 9.3%;
       }
     }
-    
   
     &__top-info {
       margin-bottom: 53px;
@@ -175,6 +178,7 @@
     &__desc {
       width: 74%;
       padding-top: 0;
+
       p {
         letter-spacing: 0.8px;
         line-height: 1.7;
@@ -182,10 +186,6 @@
           margin-bottom: 3px;
         }
       }
-    }
-
-    &__stats {
-      margin-bottom: 38px;
     }
 
     &__stats-item {
@@ -230,26 +230,13 @@
 @media (max-width: 670px) {
   .about {
     &__slick .slick-list {
+
       &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 9.3%;
-        height: 98.5%;
-        z-index: 1;
-        background-color: rgba(0, 0, 0, 0.25);
+        width: 45px;
       }
   
       &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 9.3%;
-        height: 98.5%;
-        z-index: 1;
-        background-color: rgba(0, 0, 0, 0.25);
+        width: 45px;
       }
     }
   }
@@ -258,7 +245,7 @@
 @media (max-width: 480px) {
   .about {
     &__slick .slick-list {
-      margin-bottom: 20px;
+      margin-bottom: 5px;
     }
   }
 }

@@ -1,7 +1,7 @@
 .card {
   display: flex !important;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 48.2758%;
   box-shadow: 0 5px 15px rgba(17, 17, 17, 0.1);
   border-radius: 5px;
@@ -26,18 +26,21 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    margin-top: auto;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
   }
 
   &__info-left {
+    flex-grow: 1;
     margin-right: 10px;
   }
 
   &__info-right {
-    flex-basis: 30%;
+    flex-basis: 26%;
     text-align: right;
+    flex-shrink: 0;
   }
 
 
@@ -46,6 +49,8 @@
     font-size: 32px;
     font-weight: 500;
     letter-spacing: 0.8px;
+    word-break: break-all;
+    // word-wrap: break-word;
   }
 
   &__sale {
@@ -84,8 +89,7 @@
   }
 
   &__color {
-    width: 40px !important;
-    height: 40px !important;
+    height: 40px;
     cursor: pointer;
 
     &--blue {
@@ -104,11 +108,25 @@
 
 .card__colors .slick-slide {
   width: 40px !important;
-  margin-right: 10px;
+  margin: 0 3px;
 }
 
 .card__colors .slick-slide:last-of-type {
   margin-right: 0;
+  margin-left: 6px;
+}
+
+.card__colors .slick-slide.slick-current:first-of-type {
+  margin-right: 2px;
+}
+
+.card__colors .slick-slide.slick-current:last-of-type {
+  margin-left: 2px;
+}
+
+.card__colors .slick-slide:first-of-type {
+  margin-left: 0;
+  margin-right: 6px;
 }
 
 .card__colors .slick-list {
@@ -122,14 +140,15 @@
 }
 
 .card__colors .slick-slide > div {
-  height: 40px !important;
+  height: 100%;
 }
 
-.card__colors .slick-current .card__color {
+.card__colors .slick-current {
   position: relative;
   top: -2px;
-  width: 45px !important;
-  height: 45px !important;
+  width: 44px !important;
+  height: 44px !important;
+  margin: 0 1px;
   border: 2px solid #ff7f00;
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.7) 0%, rgba(231, 219, 198, 0.5) 100%);
 }
@@ -148,6 +167,10 @@
     &__info {
       padding-left: 10px;
       padding-right: 10px;
+    }
+
+    &__info-right {
+      flex-basis: 20%;
     }
 
     &__title {

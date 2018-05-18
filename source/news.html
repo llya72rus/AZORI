@@ -12,6 +12,8 @@
     <script src="js/slick.min.js"></script>
     <script src="js/readmore.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/polyfill.js"></script>
+    <script>svg4everybody();</script>
     <script src="js/custom.js"></script>
     <title>Новости
     </title>
@@ -52,7 +54,7 @@
             </ul>
             <div class="inner-header__bottom-wrapper inner-header__bottom-wrapper--catalog">
               <h1 class="inner-header__title">Новости</h1>
-              <div class="inner-header__btn-wrapper inner-header__btn-wrapper--catalog"><a class="page-btn page-btn--download-catalog" href="javascript:void(0);">Архив новостей</a></div>
+              <div class="inner-header__btn-wrapper inner-header__btn-wrapper--catalog"><a class="page-btn" href="javascript:void(0);">Архив новостей</a></div>
             </div>
           </div>
         </header>
@@ -83,7 +85,7 @@
               </li>
             </ul>
           </div>
-          <button class="page-btn page-btn--hollow">Все новости</button>
+          <button class="page-btn page-btn--hollow news__bottom-btn">Узнать больше</button>
         </section>
         <section class="news-row">
           <div class="container">
@@ -112,7 +114,7 @@
               </li>
             </ul>
           </div>
-          <button class="page-btn page-btn--hollow">Все новости</button>
+          <button class="page-btn page-btn--hollow news__bottom-btn">Узнать больше</button>
         </section>
         <section class="news-row news-row--gray">
           <div class="container">
@@ -141,7 +143,7 @@
               </li>
             </ul>
           </div>
-          <button class="page-btn page-btn--hollow">Все новости</button>
+          <button class="page-btn page-btn--hollow news__bottom-btn">Узнать больше</button>
         </section>
       </main>
       <footer class="main-footer">
@@ -155,9 +157,21 @@
                 <button class="subscribe__btn page-btn" type="submit">Подписаться</button>
               </form>
               <ul class="subscribe__social bottom-social">
-                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; ВКонтакте"><img src="img/vk-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; ВКонтакте"/></a></li>
-                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Фейсбуке"><img src="img/fb-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; в Фейсбуке"/></a></li>
-                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Инстаграмме"><img src="img/insta-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; в Инстаграмме"/></a></li>
+                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; ВКонтакте">
+                    <svg width="100%" height="100%" role="img">
+                      <title>Профиль компании "Azori" в Фейсбуке</title>
+                      <use xlink:href="img/sprite.svg#vk_white"></use>
+                    </svg></a></li>
+                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Фейсбуке">
+                    <svg width="100%" height="100%" role="img">
+                      <title>Профиль компании "Azori" в Фейсбуке</title>
+                      <use xlink:href="img/sprite.svg#fb_white"></use>
+                    </svg></a></li>
+                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Инстаграмме">
+                    <svg width="100%" height="100%" role="img">
+                      <title>Профиль компании "Azori" в Фейсбуке</title>
+                      <use xlink:href="img/sprite.svg#instagram_white"></use>
+                    </svg></a></li>
               </ul><small class="subscribe__agreement">Нажимая кнопку "Подписаться" вы соглашаетесь с  <a href="javascript:void(0);">Политикой обработки персональных данных</a></small>
             </div>
           </div>

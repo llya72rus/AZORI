@@ -92,6 +92,15 @@ block content
                   p.catalog__chboxes-color.catalog__chboxes-color--dark-grey
                     input.visually-hidden.catalog__color-input(type="checkbox", name="dark-grey" id="dark-grey")
                     label.catalog__color-label(for="dark-grey")
+                  p.catalog__chboxes-color.catalog__chboxes-color--red
+                    input.visually-hidden.catalog__color-input(type="checkbox", name="red" id="red")
+                    label.catalog__color-label(for="red")
+                  p.catalog__chboxes-color.catalog__chboxes-color--gold
+                    input.visually-hidden.catalog__color-input(type="checkbox", name="gold" id="gold")
+                    label.catalog__color-label(for="gold")
+                  p.catalog__chboxes-color.catalog__chboxes-color--violet
+                    input.visually-hidden.catalog__color-input(type="checkbox", name="violet" id="violet")
+                    label.catalog__color-label(for="violet")
                   p.catalog__chboxes-color.catalog__chboxes-color--blue
                     input.visually-hidden.catalog__color-input(type="checkbox", name="blue" id="blue")
                     label.catalog__color-label(for="blue")
@@ -180,8 +189,9 @@ block content
                   .card__color.card__color--beige
                 .card__info
                   .card__info-left
-                    h3.card__title Eclipse
-                    p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-extra руб/м#[sup 2]]
+                    h3.card__title 
+                      a(href="javascript:void(0);") Eclipse
+                    p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-extra руб./ м#[sup 2]]
                   .card__info-right
                     span.card__new.tag-new Новинка!
 
@@ -199,8 +209,9 @@ block content
                   .card__color.card__color--beige
                 .card__info
                   .card__info-left
-                    h3.card__title Pandora
-                    p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб/м#[sup 2]]
+                    h3.card__title 
+                      a(href="javascript:void(0);") Pandora
+                    p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб./ м#[sup 2]]
               li.catalog__item.card#card-3
                 .card__images
                   a.card__image-link(href="javascript:void(0);")
@@ -215,8 +226,9 @@ block content
                   .card__color.card__color--beige
                 .card__info
                   .card__info-left
-                    h3.card__title Futuro
-                    p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-old 2000] #[span.card__price-extra руб/м#[sup 2]]
+                    h3.card__title 
+                      a(href="javascript:void(0);") Futuro
+                    p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-old 2000] #[span.card__price-extra руб./ м#[sup 2]]
                   .card__info-right
                     span.card__sale
                 li.catalog__item.card#card-4
@@ -233,8 +245,9 @@ block content
                     .card__color.card__color--beige
                   .card__info
                     .card__info-left
-                      h3.card__title Mallorca
-                      p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб/м#[sup 2]]
+                      h3.card__title 
+                        a(href="javascript:void(0);") Mallorca
+                      p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб./ м#[sup 2]]
                 li.catalog__item.card#card-5
                   .card__images
                     a.card__image-link(href="javascript:void(0);")
@@ -249,8 +262,9 @@ block content
                     .card__color.card__color--beige
                   .card__info
                     .card__info-left
-                      h3.card__title Eclipse
-                      p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-old 2000] #[span.card__price-extra руб/м#[sup 2]]
+                      h3.card__title 
+                        a(href="javascript:void(0);") Eclipse
+                      p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-old 2000] #[span.card__price-extra руб./ м#[sup 2]]
 
                 li.catalog__item.card#card-6
                   .card__images
@@ -266,8 +280,9 @@ block content
                     .card__color.card__color--beige
                   .card__info
                     .card__info-left
-                      h3.card__title Pandora
-                      p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб/м#[sup 2]]
+                      h3.card__title 
+                        a(href="javascript:void(0);") Pandora
+                      p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб./ м#[sup 2]]
             button.catalog__show-more.page-btn.page-btn--hollow Показать еще
             ul.catalog__pagination.pagination
               li.pagination__left-btn

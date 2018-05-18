@@ -12,6 +12,8 @@
     <script src="js/slick.min.js"></script>
     <script src="js/readmore.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/polyfill.js"></script>
+    <script>svg4everybody();</script>
     <script src="js/custom.js"></script>
     <title>Коллекция Eclipse
     </title>
@@ -85,7 +87,7 @@
               <p>Воздушность и прозрачность, лёгкость в новой своей интерпретации, удивит вас орнаментальными решениями декоративных элементов - Aurora, Selena, и заставит творить, следуя правилам цифрового искусства.</p>
             </div>
             <div class="collection__params">
-              <h3 class="collection__params-main-title">Параметры</h3>
+              <h3 class="collection__params-main-title">Параметры:</h3>
               <ul class="collection__params-types">
                 <li class="collection__params-type collection__params-type--wall">
                   <h4 class="collection__params-type-name">Настенная</h4>
@@ -213,14 +215,14 @@
               <div class="coll-examples__tooltip">Плитка в большой ванной</div></a><a class="coll-examples__slide" href="javascript:void(0);"><img src="img/coll-examples-img-2.jpg" alt=""/>
               <div class="coll-examples__tooltip">Плитка в большой ванной</div></a></div>
           <div class="coll-examples__bottom">
-            <div class="coll-examples__bottom-item coll-examples__bottom-item--opts"><a href="javascript:void(0);"><span class="coll-examples__bottom-main-text">Варианты выкладки плитки</span></a></div>
+            <div class="coll-examples__bottom-item coll-examples__bottom-item--opts"><a href="javascript:void(0);"><span class="coll-examples__bottom-main-text">Варианты выкладки плитки</span><span class="coll-examples__go-to-page">Перейти</span></a></div>
             <div class="coll-examples__bottom-item coll-examples__bottom-item--create-template"><a href="javascript:void(0);"><span class="coll-examples__bottom-main-text">Создать макет</span>
-                <p class="coll-examples__bottom-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a></div>
+                <p class="coll-examples__bottom-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p><span class="coll-examples__go-to-page">Перейти</span></a></div>
           </div>
         </section>
         <article class="recommended">
           <div class="container">
-            <h2 class="inner-sect-title">Рекомендуем посмотреть</h2>
+            <h2 class="inner-sect-title">Рекомендуем посмотреть:</h2>
             <div class="recommended__wrapper">
               <div class="recommended__item card" id="card-7">
                 <div class="card__images"><a class="card__image-link" href="javascript:void(0);"><img src="img/first-card-img-1.png" alt="Плиточка"/></a><a class="card__image-link" href="javascript:void(0);"><img src="img/first-card-img-2.png" alt="Плиточка"/></a><a class="card__image-link" href="javascript:void(0);"><img src="img/first-card-img-3.png" alt="Плиточка"/></a></div>
@@ -232,7 +234,7 @@
                 <div class="card__info">
                   <div class="card__info-left">
                     <h3 class="card__title"><a href="javascript:void(0);">Eclipse</a></h3>
-                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                   </div>
                   <div class="card__info-right"><span class="card__new tag-new">Новинка!</span></div>
                 </div>
@@ -247,7 +249,7 @@
                 <div class="card__info">
                   <div class="card__info-left">
                     <h3 class="card__title"><a href="javascript:void(0);">Eclipse</a></h3>
-                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                   </div>
                   <div class="card__info-right"><span class="card__new tag-new">Новинка!</span></div>
                 </div>
@@ -262,7 +264,7 @@
                 <div class="card__info">
                   <div class="card__info-left">
                     <h3 class="card__title"><a href="javascript:void(0);">Eclipse</a></h3>
-                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                   </div>
                   <div class="card__info-right"><span class="card__new tag-new">Новинка!</span></div>
                 </div>
@@ -277,7 +279,7 @@
                 <div class="card__info">
                   <div class="card__info-left">
                     <h3 class="card__title"><a href="javascript:void(0);">Eclipse</a></h3>
-                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                   </div>
                   <div class="card__info-right"><span class="card__new tag-new">Новинка!</span></div>
                 </div>
@@ -286,7 +288,7 @@
           </div>
         </article>
         <article class="viewed">
-          <h2 class="inner-sect-title">Вы уже смотрели</h2>
+          <h2 class="inner-sect-title viewed__sect-title">Вы уже смотрели:</h2>
           <div class="container">
             <div class="viewed__wrapper">
               <div class="viewed__item card" id="card-11">
@@ -299,7 +301,7 @@
                 <div class="card__info">
                   <div class="card__info-left">
                     <h3 class="card__title"><a href="javascript:void(0);">Eclipse</a></h3>
-                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                   </div>
                   <div class="card__info-right"><span class="card__new tag-new">Новинка!</span></div>
                 </div>
@@ -314,7 +316,7 @@
                 <div class="card__info">
                   <div class="card__info-left">
                     <h3 class="card__title"><a href="javascript:void(0);">Eclipse</a></h3>
-                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                   </div>
                   <div class="card__info-right"><span class="card__new tag-new">Новинка!</span></div>
                 </div>
@@ -329,7 +331,7 @@
                 <div class="card__info">
                   <div class="card__info-left">
                     <h3 class="card__title"><a href="javascript:void(0);">Eclipse</a></h3>
-                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                   </div>
                   <div class="card__info-right"><span class="card__new tag-new">Новинка!</span></div>
                 </div>
@@ -344,7 +346,7 @@
                 <div class="card__info">
                   <div class="card__info-left">
                     <h3 class="card__title"><a href="javascript:void(0);">Eclipse</a></h3>
-                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                    <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                   </div>
                   <div class="card__info-right"><span class="card__new tag-new">Новинка!</span></div>
                 </div>
@@ -364,9 +366,21 @@
                 <button class="subscribe__btn page-btn" type="submit">Подписаться</button>
               </form>
               <ul class="subscribe__social bottom-social">
-                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; ВКонтакте"><img src="img/vk-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; ВКонтакте"/></a></li>
-                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Фейсбуке"><img src="img/fb-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; в Фейсбуке"/></a></li>
-                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Инстаграмме"><img src="img/insta-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; в Инстаграмме"/></a></li>
+                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; ВКонтакте">
+                    <svg width="100%" height="100%" role="img">
+                      <title>Профиль компании "Azori" в Фейсбуке</title>
+                      <use xlink:href="img/sprite.svg#vk_white"></use>
+                    </svg></a></li>
+                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Фейсбуке">
+                    <svg width="100%" height="100%" role="img">
+                      <title>Профиль компании "Azori" в Фейсбуке</title>
+                      <use xlink:href="img/sprite.svg#fb_white"></use>
+                    </svg></a></li>
+                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Инстаграмме">
+                    <svg width="100%" height="100%" role="img">
+                      <title>Профиль компании "Azori" в Фейсбуке</title>
+                      <use xlink:href="img/sprite.svg#instagram_white"></use>
+                    </svg></a></li>
               </ul><small class="subscribe__agreement">Нажимая кнопку "Подписаться" вы соглашаетесь с  <a href="javascript:void(0);">Политикой обработки персональных данных</a></small>
             </div>
           </div>

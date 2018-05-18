@@ -76,6 +76,10 @@
       width: 9%;
     }
 
+    &__slick {
+      max-height: unset;
+    }
+
     &__promo {
       z-index: 1;
     }

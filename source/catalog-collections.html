@@ -12,6 +12,8 @@
     <script src="js/slick.min.js"></script>
     <script src="js/readmore.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/polyfill.js"></script>
+    <script>svg4everybody();</script>
     <script src="js/custom.js"></script>
     <title>Каталог
     </title>
@@ -140,6 +142,18 @@
                       <input class="visually-hidden catalog__color-input" type="checkbox" name="dark-grey" id="dark-grey"/>
                       <label class="catalog__color-label" for="dark-grey"></label>
                     </p>
+                    <p class="catalog__chboxes-color catalog__chboxes-color--red">
+                      <input class="visually-hidden catalog__color-input" type="checkbox" name="red" id="red"/>
+                      <label class="catalog__color-label" for="red"></label>
+                    </p>
+                    <p class="catalog__chboxes-color catalog__chboxes-color--gold">
+                      <input class="visually-hidden catalog__color-input" type="checkbox" name="gold" id="gold"/>
+                      <label class="catalog__color-label" for="gold"></label>
+                    </p>
+                    <p class="catalog__chboxes-color catalog__chboxes-color--violet">
+                      <input class="visually-hidden catalog__color-input" type="checkbox" name="violet" id="violet"/>
+                      <label class="catalog__color-label" for="violet"></label>
+                    </p>
                     <p class="catalog__chboxes-color catalog__chboxes-color--blue">
                       <input class="visually-hidden catalog__color-input" type="checkbox" name="blue" id="blue"/>
                       <label class="catalog__color-label" for="blue"></label>
@@ -247,8 +261,8 @@
                   </div>
                   <div class="card__info">
                     <div class="card__info-left">
-                      <h3 class="card__title">Eclipse</h3>
-                      <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                      <h3 class="card__title"> <a href="javascript:void(0);">Eclipse</a></h3>
+                      <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                     </div>
                     <div class="card__info-right"><span class="card__new tag-new">Новинка!</span></div>
                   </div>
@@ -262,8 +276,8 @@
                   </div>
                   <div class="card__info">
                     <div class="card__info-left">
-                      <h3 class="card__title">Pandora</h3>
-                      <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">2 500</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                      <h3 class="card__title"> <a href="javascript:void(0);">Pandora</a></h3>
+                      <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">2 500</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                     </div>
                   </div>
                 </li>
@@ -276,8 +290,8 @@
                   </div>
                   <div class="card__info">
                     <div class="card__info-left">
-                      <h3 class="card__title">Futuro</h3>
-                      <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-old">2000</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                      <h3 class="card__title"> <a href="javascript:void(0);">Futuro</a></h3>
+                      <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-old">2000</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                     </div>
                     <div class="card__info-right"><span class="card__sale"></span></div>
                   </div>
@@ -290,8 +304,8 @@
                     </div>
                     <div class="card__info">
                       <div class="card__info-left">
-                        <h3 class="card__title">Mallorca</h3>
-                        <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">2 500</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                        <h3 class="card__title"> <a href="javascript:void(0);">Mallorca</a></h3>
+                        <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">2 500</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                       </div>
                     </div>
                   </li>
@@ -304,8 +318,8 @@
                     </div>
                     <div class="card__info">
                       <div class="card__info-left">
-                        <h3 class="card__title">Eclipse</h3>
-                        <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-old">2000</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                        <h3 class="card__title"> <a href="javascript:void(0);">Eclipse</a></h3>
+                        <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">1 500</span> <span class="card__price-old">2000</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                       </div>
                     </div>
                   </li>
@@ -318,8 +332,8 @@
                     </div>
                     <div class="card__info">
                       <div class="card__info-left">
-                        <h3 class="card__title">Pandora</h3>
-                        <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">2 500</span> <span class="card__price-extra">руб/м<sup>2</sup></span></p>
+                        <h3 class="card__title"> <a href="javascript:void(0);">Pandora</a></h3>
+                        <p class="card__price-block"><span class="card__price-from">от</span> <span class="card__price">2 500</span> <span class="card__price-extra">руб./ м<sup>2</sup></span></p>
                       </div>
                     </div>
                   </li>
@@ -353,9 +367,21 @@
                 <button class="subscribe__btn page-btn" type="submit">Подписаться</button>
               </form>
               <ul class="subscribe__social bottom-social">
-                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; ВКонтакте"><img src="img/vk-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; ВКонтакте"/></a></li>
-                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Фейсбуке"><img src="img/fb-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; в Фейсбуке"/></a></li>
-                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Инстаграмме"><img src="img/insta-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; в Инстаграмме"/></a></li>
+                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; ВКонтакте">
+                    <svg width="100%" height="100%" role="img">
+                      <title>Профиль компании "Azori" в Фейсбуке</title>
+                      <use xlink:href="img/sprite.svg#vk_white"></use>
+                    </svg></a></li>
+                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Фейсбуке">
+                    <svg width="100%" height="100%" role="img">
+                      <title>Профиль компании "Azori" в Фейсбуке</title>
+                      <use xlink:href="img/sprite.svg#fb_white"></use>
+                    </svg></a></li>
+                <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Инстаграмме">
+                    <svg width="100%" height="100%" role="img">
+                      <title>Профиль компании "Azori" в Фейсбуке</title>
+                      <use xlink:href="img/sprite.svg#instagram_white"></use>
+                    </svg></a></li>
               </ul><small class="subscribe__agreement">Нажимая кнопку "Подписаться" вы соглашаетесь с  <a href="javascript:void(0);">Политикой обработки персональных данных</a></small>
             </div>
           </div>

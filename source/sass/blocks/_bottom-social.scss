@@ -5,5 +5,19 @@
 
   &__link {
     display: block;
+    width: 30px;
+    height: 30px;
   }
+}
+
+.bottom-social__link svg {
+  fill: $white;
+}
+
+.bottom-social__link:hover svg {
+  fill: $orange !important;
+}
+
+.bottom-social__link svg {
+  pointer-events: none;
 }

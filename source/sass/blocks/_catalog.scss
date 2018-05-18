@@ -78,36 +78,55 @@
     height: 40px;
     margin-right: 7px;
     margin-bottom: 7px;
+    
+    label {
+      border-radius: 3px;
+    }
 
     &--white {
       background-color: $white;
+      label {
+        border: 1px solid #252525;
+      }
     }
 
-    &--beige {
+    &--beige label {
       background-color: #f6c595;
     }
 
-    &--brown {
+    &--brown label {
       background-color: #cfb282;
     }
 
-    &--green {
+    &--green label {
       background-color: #a3d39c;
     }
 
-    &--dark-grey {
+    &--dark-grey label {
       background-color: #aeb3b8;
     }
 
-    &--blue {
+    &--blue label {
       background-color: #196a90;
     }
 
-    &--light-blue {
+    &--gold label {
+      background-color: gold;
+    }
+
+    &--red label {
+      background-color: red;
+    }
+
+    &--violet label {
+      background-color: violet;
+    }
+
+    &--light-blue label {
       background-color: #7da7d9;
     }
 
-    &--pink {
+    &--pink label {
       background-color: #e7e4e7;
     }
   }

@@ -7,14 +7,19 @@ block content
       .main-header__top-header
         .mobile-header
           .menu-toggle
-          span
-          span
-          span
-          span
+            span
+            span
+            span
+            span
           a.mobile-header__logo(href="javascript:void(0);") Вдохновляйся. Мечтай. Созидай.
           span.mobile-header__language-option En
           a.mobile-header__search(href="javascript:void(0);")
             img(src="img/search-icon.png", alt="Поиск по сайту")
+          .mobile-search
+            form(action="javascript:void(0);")
+              input(type="text" placeholder="Найти...").mobile-search__form
+              button.mobile-search__btn
+                img(src="img/search-icon.png", alt="Поиск по сайту")
         nav.main-nav
           a.main-nav__logo(href="javascript:void(0);") Вдохновляйся. Мечтай. Созидай.
           ul.main-nav__list.main-nav__list--left
@@ -33,20 +38,25 @@ block content
               a.main-nav__link(href="javascript:void(0);") Партнерам
             li.main-nav__language-option
               a(href="javascript:void(0);") En
-          ul.main-nav__top-icons-panel.top-icons-panel
-            li.top-icons-panel__item.top-icons-panel__item--search
+          .main-nav__top-icons-panel.top-icons-panel
+            .top-icons-panel__item.top-icons-panel__item--search
               a(href="javascript:void(0);", aria-label="")
                 img(src="img/search-top-icons.png", alt="")
-            li.top-icons-panel__item.top-icons-panel__item--mail
+              .top-icons-panel__input-wrapper
+                form
+                  input(type="text" placeholder="Найти...")
+                  button(type="button").top-icons-panel__search-btn
+                    img(src="img/search-top-icons.png", alt="")
+            .top-icons-panel__item.top-icons-panel__item--mail
               a(href="javascript:void(0);", aria-label="")
                 img(src="img/mail-top-icons.png", alt="")
-            li.top-icons-panel__item.top-icons-panel__item--vk
+            .top-icons-panel__item.top-icons-panel__item--vk
               a(href="javascript:void(0);", aria-label="")
                 img(src="img/vk-top-icons.png", alt="")
-            li.top-icons-panel__item.top-icons-panel__item--fb
+            .top-icons-panel__item.top-icons-panel__item--fb
               a(href="javascript:void(0);", aria-label="")
                 img(src="img/fb-top-icons.png", alt="")
-            li.top-icons-panel__item.top-icons-panel__item--insta
+            .top-icons-panel__item.top-icons-panel__item--insta
               a(href="javascript:void(0);", aria-label="")
                 img(src="img/insta-top-icons.png", alt="")
       .main-header__slick
@@ -170,6 +180,6 @@ block content
                   a(href="javascript:void(0);") Игра структуры и цвета - новые коллекции Batimat 2017
                 span.news__time 21.01.2018
                 p.news__desc Презентуем коллекции, представленные на выставке Batimat 2017.
-        button.page-btn.page-btn--hollow Все новости
+        button.page-btn.page-btn--hollow.news__bottom-btn Все новости
     include ../modules/footer
     button(type="button" class="back-to-top" title="Back to top") &uarr;

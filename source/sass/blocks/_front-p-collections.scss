@@ -97,6 +97,12 @@
   }
 }
 
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .front-p-collections__title-wrapper {
+    padding-top: 50px;
+  }
+}
+
 @media (max-width: 1024px) {
   .front-p-collections {
     &__item {
@@ -108,13 +114,13 @@
 
 @media (max-width: 768px) {
   .front-p-collections {
-    margin-bottom: 52px;
+    margin-bottom: 22px;
+
     &__list {
-      margin: 0;
-      margin-top: -66px;
+      margin: -66px -15px 0 -15px;
     }
     &__item {
-      width: 30%;
+      width: 28.645%;
       min-height: 260px;
       padding: 65px 2.15%;
     }

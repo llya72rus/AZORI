@@ -3,69 +3,20 @@ block title
   | Новости
 block content
   body.inner-body
-    header.page-header
-      nav.page-nav
-        .menu-toggle
-          span
-          span
-          span
-          span
-        a.page-nav__logo(href="/") Вдохновляйся. Мечтай. Созидай.
-        ul.page-nav__list
-          li.page-nav__item
-            a.page-nav__link(href="javasctipt:void(0);") О бренде
-          li.page-nav__item
-            a.page-nav__link(href="javasctipt:void(0);") Коллекции
-          li.page-nav__item
-            a.page-nav__link(href="javasctipt:void(0);") Где купить
-          li.page-nav__item
-            a.page-nav__link(href="javasctipt:void(0);") Новости
-          li.page-nav__item
-            a.page-nav__link(href="javasctipt:void(0);") Контакты
-          li.page-nav__item
-            a.page-nav__link(href="javasctipt:void(0);") Партнерам
-          li.tablet-show
-            ul.top-menu-social
-              li.top-menu-social__item
-                a(href="javascript:void(0);")
-                  img(src="img/mail-top-icons.png", alt="")
-              li.top-menu-social__item
-                a(href="javascript:void(0);")
-                  img(src="img/vk-top-icons.png", alt="")
-              li.top-menu-social__item
-                a(href="javascript:void(0);")
-                  img(src="img/fb-top-icons.png", alt="")
-              li.top-menu-social__item
-                a(href="javascript:void(0);")
-                  img(src="img/insta-top-icons.png", alt="")
-        a.page-nav__lang-opt(href="javascript:void(0);") EN
-        a.page-nav__search(href="javascript:void(0);")
-          img(src="img/search-top-icons.png" alt="Поиск по сайту")
-        ul.page-nav__top-icons-panel.top-icons-panel
-          li.top-icons-panel__item.top-icons-panel__item--mail
-            a(href="javascript:voil(0);", aria-label="")
-              img(src="img/mail-top-icons.png", alt="")
-          li.top-icons-panel__item.top-icons-panel__item--vk
-            a(href="javascript:voil(0);", aria-label="")
-              img(src="img/vk-top-icons.png", alt="")
-          li.top-icons-panel__item.top-icons-panel__item--fb
-            a(href="javascript:voil(0);", aria-label="")
-              img(src="img/fb-top-icons.png", alt="")
-          li.top-icons-panel__item.top-icons-panel__item--insta
-            a(href="javascript:voil(0);", aria-label="")
-              img(src="img/insta-top-icons.png", alt="")
+    include ../modules/page-header
+
     main.inner-main
-      header.inner-header.inner-header--catalog
+      header.inner-header
         .container
-          ul.breadcrumbs.breadcrumbs--catalog
+          ul.breadcrumbs
             li.breadcrumbs__item
               a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
             li.breadcrumbs__item
               a.breadcrumbs__link.breadcrumbs__link--current Новости
-          .inner-header__bottom-wrapper.inner-header__bottom-wrapper--catalog
+          .inner-header__bottom-wrapper.inner-header__bottom-wrapper
             h1.inner-header__title Новости
-            .inner-header__btn-wrapper.inner-header__btn-wrapper--catalog
-              a.page-btn(href="javascript:void(0);") Архив новостей
+            .inner-header__btn-wrapper.inner-header__btn-wrapper
+              a.page-btn.page-btn--hollow(href="javascript:void(0);") Архив новостей
       section.news-row.news-row--gray
         .container
           h2.news__main-title.inner-sect-title Последние новости
@@ -96,7 +47,7 @@ block content
                   a(href="javascript:void(0);") Игра структуры и цвета - новые коллекции Batimat 2017
                 span.news__time 21.01.2018
                 p.news__desc Презентуем коллекции, представленные на выставке Batimat 2017.
-        button.page-btn.page-btn--hollow.news__bottom-btn Узнать больше
+          button.page-btn.page-btn--hollow.news__bottom-btn Узнать больше
       section.news-row
         .container
           h2.news__main-title.inner-sect-title Интервью
@@ -133,33 +84,39 @@ block content
             h2.news__main-title.inner-sect-title Видео
             ul.news__list
               li.news__item
-                a(href="javascript:void(0);")
+                a(data-fancybox href="https://www.youtube.com/watch?v=a-GQDCtt1Vk")
                   img.news__img(src="img/news-img-1.jpg", alt="Выставка Design & Decor St.Petersburg 2017")
+                  svg(height="62" width="62" aria-hidden="true")
+                    use(xlink:href="img/sprite.svg#play-button")
                 .news__info
                   h3.news__title
                     a(href="javascript:void(0);") Выставка Design & Decor St.Petersburg 2017
                   span.news__time 21.01.2018
                   p.news__desc С 13 по 15 сентября в Санкт-Петер&shy;бурге прошла  5-я международная выставка Design&Decor St.Petersburg – центральное событие для людей, работающих в сфере дизайна и декорирования.
               li.news__item
-                a(href="javascript:void(0);")
+                a(data-fancybox href="https://www.youtube.com/watch?v=lsH2M6OcS_g")
                   img.news__img(src="img/news-img-2.jpg", alt="Тренды в дизайне интерьера 2017")
+                  svg(height="62" width="62" aria-hidden="true")
+                    use(xlink:href="img/sprite.svg#play-button")
                 .news__info
                   h3.news__title
                     a(href="javascript:void(0);") Тренды в дизайне интерьера 2017
                   span.news__time 21.01.2018
                   p.news__desc В рамках DesignWeek2017 в Санкт-Петербурге состоялась лекция Ирины Бириловой  «Тренды в дизайне интерьера 2017».
               li.news__item
-                a(href="javascript:void(0);")
+                a(data-fancybox href="https://www.youtube.com/watch?v=fwfjsDsMuz8")
                   picture
                     source(media="(max-width: 1024px)" srcset="img/news-img-3-tablet.jpg")
                     img.news__img(src="img/news-img-3.jpg", alt="Игра структуры и цвета - новые коллекции Batimat 2017")
+                  svg(height="62" width="62" aria-hidden="true")
+                    use(xlink:href="img/sprite.svg#play-button")
                 .news__info
                   h3.news__title
                     a(href="javascript:void(0);") Игра структуры и цвета - новые коллекции Batimat 2017
                   span.news__time 21.01.2018
                   p.news__desc Презентуем коллекции, представленные на выставке Batimat 2017.
-          button.page-btn.page-btn--hollow.news__bottom-btn Узнать больше
-        
+            button.page-btn.page-btn--hollow.news__bottom-btn Узнать больше
+
 
 
 

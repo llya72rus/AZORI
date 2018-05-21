@@ -1,5 +1,5 @@
 .coll-examples {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   overflow: hidden;
 
   &__slider {
@@ -166,7 +166,7 @@
       align-items: stretch;
       width: 100%;
       margin-right: 0;
-      
+
       a {
         height: auto;
       }
@@ -180,7 +180,7 @@
   .coll-examples__bottom-item a:hover .coll-examples__go-to-page {
     display: block;
   }
-  
+
   .coll-examples__bottom-item a:hover .coll-examples__bottom-main-text {
     padding-top: 48px;
   }

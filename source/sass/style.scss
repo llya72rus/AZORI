@@ -6,7 +6,9 @@
 @import "global";
 @import "atomic";
 @import "blocks/page-btn";
-@import "blocks/about";
+@import "blocks/pagination";
+@import "blocks/f-about";
+@import "blocks/about/about";
 @import "blocks/advantages";
 @import "blocks/bottom-social";
 @import "blocks/breadcrumbs";
@@ -27,14 +29,18 @@
 @import "blocks/mobile-header";
 @import "blocks/modal";
 @import "blocks/news";
+@import "blocks/news-archive";
 @import "blocks/page-header";
 @import "blocks/page-nav";
 @import "blocks/page-text";
-@import "blocks/pagination";
+@import "blocks/preview";
 @import "blocks/promo";
-@import "blocks/recommended";
 @import "blocks/section-title";
+@import "blocks/social";
+@import "blocks/single-new";
 @import "blocks/subscribe";
 @import "blocks/top-menu-social";
 @import "blocks/top-icons-panel";
+@import "blocks/top-gallery";
 @import "blocks/viewed";
+

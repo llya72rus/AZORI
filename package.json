@@ -49,6 +49,7 @@
     "node": "8.9"
   },
   "dependencies": {
-    "moment": "^2.22.1"
+    "moment": "^2.22.1",
+    "npm": "^6.0.1"
   }
 }

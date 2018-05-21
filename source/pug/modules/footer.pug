@@ -48,7 +48,9 @@ footer.main-footer
         span © 2017
       p.main-footer__madeby Разработка сайта:
         a(href="http://dev.trinet.ru/" target="_blank")
-          img(src="img/trinet-logo.png", alt="Логотип компании \"Trinet Development\"")
+          svg(height="28" width="28" aria-hidden="true")
+            title Компания "Тринет"
+            use(xlink:href="img/sprite.svg#trinet")
           |  Trinet
           br
           | Development

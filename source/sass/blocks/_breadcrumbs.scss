@@ -9,8 +9,8 @@
     margin-bottom: 34px;
   }
 
-  &__item:not(:first-child) {
-    padding-left: 30px;
+  &__item:not(:last-child) {
+    padding-right: 30px;
   }
 
   &__link {
@@ -27,14 +27,14 @@
     }
   }
 }
-.breadcrumbs__link:not(.breadcrumbs__link--home) {
+.breadcrumbs__link:not(.breadcrumbs__link--current) {
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
     top: 5px;
-    left: -21px;
+    right: -19px;
     width: 10px;
     height: 10px;
     border: 2px solid #ed8c2b;

@@ -41,44 +41,54 @@ block content
           .main-nav__top-icons-panel.top-icons-panel
             .top-icons-panel__item.top-icons-panel__item--search
               a(href="javascript:void(0);", aria-label="")
-                img(src="img/search-top-icons.png", alt="")
+                svg(width="20" height="20")
+                  title Поиск по сайту
+                  use(xlink:href="img/sprite.svg#search")
               .top-icons-panel__input-wrapper
                 form
                   input(type="text" placeholder="Найти...")
                   button(type="button").top-icons-panel__search-btn
                     img(src="img/search-top-icons.png", alt="")
-            .top-icons-panel__item.top-icons-panel__item--mail
+            .top-icons-panel__item
               a(href="javascript:void(0);", aria-label="")
-                img(src="img/mail-top-icons.png", alt="")
-            .top-icons-panel__item.top-icons-panel__item--vk
+                svg(width="20" height="20")
+                  title Отправить сообщение
+                  use(xlink:href="img/sprite.svg#mail")
+            .top-icons-panel__item
               a(href="javascript:void(0);", aria-label="")
-                img(src="img/vk-top-icons.png", alt="")
-            .top-icons-panel__item.top-icons-panel__item--fb
+                svg(width="20" height="20")
+                  title Профиль компании "AZORI" ВКонтакте
+                  use(xlink:href="img/sprite.svg#vk")
+            .top-icons-panel__item
               a(href="javascript:void(0);", aria-label="")
-                img(src="img/fb-top-icons.png", alt="")
-            .top-icons-panel__item.top-icons-panel__item--insta
+                svg(width="20" height="20")
+                  title Профиль компании "AZORI" в Фейсбуке
+                  use(xlink:href="img/sprite.svg#fb")
+            .top-icons-panel__item
               a(href="javascript:void(0);", aria-label="")
-                img(src="img/insta-top-icons.png", alt="")
+                svg(width="20" height="20")
+                  title Профиль компании "AZORI" в Инстаграме
+                  use(xlink:href="img/sprite.svg#instagram")
       .main-header__slick
         .main-header__slider
           picture
-            source(media="(max-width: 768px)" srcset="img/top-slider-1-tablet.jpg")
             source(media="(max-width: 480px)" srcset="img/top-slider-1-phone.jpg")
+            source(media="(max-width: 768px)" srcset="img/top-slider-1-tablet.jpg")
             img(src="img/top-slider-1.jpg", alt="")
         .main-header__slider
           picture
-            source(media="(max-width: 768px)" srcset="img/top-slider-1-tablet.jpg")
             source(media="(max-width: 480px)" srcset="img/top-slider-1-phone.jpg")
+            source(media="(max-width: 768px)" srcset="img/top-slider-1-tablet.jpg")
             img(src="img/top-slider-1.jpg", alt="")
         .main-header__slider
           picture
-            source(media="(max-width: 768px)" srcset="img/top-slider-1-tablet.jpg")
             source(media="(max-width: 480px)" srcset="img/top-slider-1-phone.jpg")
+            source(media="(max-width: 768px)" srcset="img/top-slider-1-tablet.jpg")
             img(src="img/top-slider-1.jpg", alt="")
         .main-header__slider
           picture
-            source(media="(max-width: 768px)" srcset="img/top-slider-1-tablet.jpg")
             source(media="(max-width: 480px)" srcset="img/top-slider-1-phone.jpg")
+            source(media="(max-width: 768px)" srcset="img/top-slider-1-tablet.jpg")
             img(src="img/top-slider-1.jpg", alt="")
       .main-header__promo.promo
         .container
@@ -112,44 +122,44 @@ block content
             li.advantages__item.advantages__item--history
               h3.advantages__title История
               p.advantages__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet
-      section.about
+      section.f-about
         .container
-          .about__top-info
-            img.about__logo(src="img/about-logo.png")
-            .about__desc
+          .f-about__top-info
+            img.f-about__logo(src="img/about-logo.png")
+            .f-about__desc
               p Мир красок, где каждый покупатель сможет найти коллекцию, которая сделает ванную комнату оригинальной и неповторимой. Комплектация коллекций разными форматами декоративных элементов позволяет выстраивать рисунок стен как вертикально, так и горизонтально, создавая в ванной комнате особый мир уюта и хорошего настроения.
               p Коллекции керамической плитки AZORI (АЗОРИ) созданы итальянскими и российскими дизайнерами. В них находят отражение самые последние тенденции “керамической моды”: имитация натуральных материалов — дерева , камня и текстиля; широкое присутствие цветочных мотивов и геометрии в декоративных элементах; богатство цветовой палитры.
-          ul.about__stats
-            li.about__stats-item
-              b.about__stats-number 3,5
-              span.about__stats-transcript млн. в год
-              span.about__stats-extra-info объем производства
-            li.about__stats-item
-              b.about__stats-number 30
-              span.about__stats-transcript тысяч
-              span.about__stats-extra-info коллекций
-            li.about__stats-item
-              b.about__stats-number 108
-              span.about__stats-transcript магазинов
-              span.about__stats-extra-info по всей России
-        .about__slick
-          .about__slick-item
-            img.about__slick-img(src="img/about-slick-img-1.jpg", alt="Azori")
-          .about__slick-item
-            img.about__slick-img(src="img/about-slick-img-2.jpg", alt="Azori")
-          .about__slick-item
-            img.about__slick-img(src="img/about-slick-img-3.jpg", alt="Azori")
-          .about__slick-item
-            img.about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
-          .about__slick-item
-            img.about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
-          .about__slick-item
-            img.about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
-          .about__slick-item
-            img.about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
-          .about__slick-item
-            img.about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
-        a.about__more.page-btn.page-btn--hollow(href="javascript:void(0);") Подробнее о компании
+          ul.f-about__stats
+            li.f-about__stats-item
+              b.f-about__stats-number 3,5
+              span.f-about__stats-transcript млн. в год
+              span.f-about__stats-extra-info объем производства
+            li.f-about__stats-item
+              b.f-about__stats-number 30
+              span.f-about__stats-transcript тысяч
+              span.f-about__stats-extra-info коллекций
+            li.f-about__stats-item
+              b.f-about__stats-number 108
+              span.f-about__stats-transcript магазинов
+              span.f-about__stats-extra-info по всей России
+        .f-about__slick
+          .f-about__slick-item
+            img.f-about__slick-img(src="img/about-slick-img-1.jpg", alt="Azori")
+          .f-about__slick-item
+            img.f-about__slick-img(src="img/about-slick-img-2.jpg", alt="Azori")
+          .f-about__slick-item
+            img.f-about__slick-img(src="img/about-slick-img-3.jpg", alt="Azori")
+          .f-about__slick-item
+            img.f-about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
+          .f-about__slick-item
+            img.f-about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
+          .f-about__slick-item
+            img.f-about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
+          .f-about__slick-item
+            img.f-about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
+          .f-about__slick-item
+            img.f-about__slick-img(src="img/about-slick-img-4.jpg", alt="Azori")
+        a.f-about__more.page-btn.page-btn--hollow(href="javascript:void(0);") Подробнее о компании
       section.news
         .container
           h2.news__main-title.section-title Новости и акции
@@ -180,6 +190,6 @@ block content
                   a(href="javascript:void(0);") Игра структуры и цвета - новые коллекции Batimat 2017
                 span.news__time 21.01.2018
                 p.news__desc Презентуем коллекции, представленные на выставке Batimat 2017.
-        button.page-btn.page-btn--hollow.news__bottom-btn Все новости
+          button.page-btn.page-btn--hollow.news__bottom-btn Все новости
     include ../modules/footer
     button(type="button" class="back-to-top" title="Back to top") &uarr;

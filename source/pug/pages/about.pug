@@ -1,0 +1,50 @@
+extends ../layout/main
+block title
+  | О бренде
+block content
+  body.inner-body
+    include ../modules/page-header
+
+    main.inner-main
+      header.inner-header
+        .container
+          ul.breadcrumbs.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current О бренде
+          .inner-header__bottom-wrapper.inner-header__bottom-wrapper
+            h1.inner-header__title О бренде
+      section.about-sect.about-sect--history
+        .container
+          h2.inner-sect-title.about-sect__title.about-sect__title--history История
+          img.about-sect__logo(src="img/about-history-2-logo.png" width="267" height="347" alt="Логотип компании \"AZORI\"")
+          .about-sect__text-wrapper
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+          a.page-btn.history__learn-more(href="javascript:void(0);") Узнать больше
+      section.about-sect.about-sect--philosophy
+        .container
+          .about-sect__text-wrapper
+            h3.inner-sect-title.about-sect__title Философия
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus
+          a.page-btn.about-sect__learn-more(href="javascript:void(0);") Узнать больше
+      section.about-sect.about-sect--production
+        .container
+          .about-sect__text-wrapper
+            h3.inner-sect-title.about-sect__title Производство
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus
+          a.page-btn.page-btn--hollow.about-sect__learn-more(href="javascript:void(0);") Узнать больше
+
+
+
+
+
+
+    include ../modules/footer
+    button(type="button" class="back-to-top" title="Back to top") &uarr;
+
+
+

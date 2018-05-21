@@ -1,0 +1,16 @@
+.social {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__link {
+    width: 20px;
+    height: 20px;
+    &--orange {
+      svg {
+        fill: #ffbf80;
+      }
+    }
+  }
+}

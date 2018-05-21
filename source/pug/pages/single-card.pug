@@ -16,12 +16,12 @@ block content
               a.breadcrumbs__link(href="javascript:void(0);") Коллекции
             li.breadcrumbs__item
               a.breadcrumbs__link.breadcrumbs__link--current Eclipse
-          .inner-header__bottom-wrapper
+          .inner-header__bottom-wrapper.inner-header__bottom-wrapper--collection
             h1.inner-header__title Eclipse
             span.inner-header__tag-new.tag-new Новинка
       section.collection
-        .container
-          .collection__gallery
+        .container.container--slipping-bg
+          .collection__gallery.top-gallery
             a(href="../img/collection-gallery-img-1.jpg" data-fancybox="images")
               img(src="../img/collection-gallery-img-1.jpg")
             a(href="../img/collection-gallery-img-2.jpg" data-fancybox="images")
@@ -198,11 +198,11 @@ block content
                 span.coll-examples__bottom-main-text Создать макет
                 p.coll-examples__bottom-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 span.coll-examples__go-to-page Перейти
-      article.recommended
+      article.preview
         .container
           h2.inner-sect-title Рекомендуем посмотреть:
-          .recommended__wrapper
-            .recommended__item.card#card-7
+          .preview__slider
+            .preview__item.card#card-7
               .card__images
                 a.card__image-link(href="javascript:void(0);")
                   img(src="img/first-card-img-1.png", alt="Плиточка")
@@ -221,7 +221,7 @@ block content
                   p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-extra руб./ м#[sup 2]]
                 .card__info-right
                   span.card__new.tag-new Новинка!
-            .recommended__item.card#card-8
+            .preview__item.card#card-8
               .card__images
                 a.card__image-link(href="javascript:void(0);")
                   img(src="img/first-card-img-1.png", alt="Плиточка")
@@ -240,7 +240,7 @@ block content
                   p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-extra руб./ м#[sup 2]]
                 .card__info-right
                   span.card__new.tag-new Новинка!
-            .recommended__item.card#card-9
+            .preview__item.card#card-9
               .card__images
                 a.card__image-link(href="javascript:void(0);")
                   img(src="img/first-card-img-1.png", alt="Плиточка")
@@ -259,7 +259,7 @@ block content
                   p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-extra руб./ м#[sup 2]]
                 .card__info-right
                   span.card__new.tag-new Новинка!
-            .recommended__item.card#card-10
+            .preview__item.card#card-10
               .card__images
                 a.card__image-link(href="javascript:void(0);")
                   img(src="img/first-card-img-1.png", alt="Плиточка")
@@ -279,8 +279,8 @@ block content
                 .card__info-right
                   span.card__new.tag-new Новинка!
       article.viewed
-        h2.inner-sect-title.viewed__sect-title Вы уже смотрели:
         .container
+          h2.inner-sect-title.viewed__sect-title Вы уже смотрели:
           .viewed__wrapper
             .viewed__item.card#card-11
               .card__images

@@ -1,0 +1,93 @@
+extends ../layout/main
+block title
+  | Последние новости
+block content
+  body.inner-body
+    main.inner-main
+      include ../modules/page-header
+
+      header.inner-header.inner-header
+        .container
+          ul.breadcrumbs.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link Новости
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current Последние новости
+          .inner-header__bottom-wrapper.inner-header__bottom-wrapper
+            h1.inner-header__title Последние новости
+            .inner-header__btn-wrapper.inner-header__btn-wrapper
+              a.page-btn.page-btn--hollow(href="javascript:void(0);") Архив новостей
+      section.news-sect
+        .container
+          ul.news__list.news__list--full
+            li.news__item
+              a(href="javascript:void(0);")
+                img.news__img(src="img/news-img-1.jpg", alt="Выставка Design & Decor St.Petersburg 2017")
+              .news__info
+                h3.news__title
+                  a(href="javascript:void(0);") Выставка Design & Decor St.Petersburg 2017
+                span.news__time 21.01.2018
+                p.news__desc С 13 по 15 сентября в Санкт-Петер&shy;бурге прошла  5-я международная выставка Design&Decor St.Petersburg – центральное событие для людей, работающих в сфере дизайна и декорирования.
+            li.news__item
+              a(href="javascript:void(0);")
+                img.news__img(src="img/news-img-2.jpg", alt="Тренды в дизайне интерьера 2017")
+              .news__info
+                h3.news__title
+                  a(href="javascript:void(0);") Тренды в дизайне интерьера 2017
+                span.news__time 21.01.2018
+                p.news__desc В рамках DesignWeek2017 в Санкт-Петербурге состоялась лекция Ирины Бириловой  «Тренды в дизайне интерьера 2017».
+            li.news__item
+              a(href="javascript:void(0);")
+                picture
+                  source(media="(max-width: 1024px)" srcset="img/news-img-3-tablet.jpg")
+                  img.news__img(src="img/news-img-3.jpg", alt="Игра структуры и цвета - новые коллекции Batimat 2017")
+              .news__info
+                h3.news__title
+                  a(href="javascript:void(0);") Игра структуры и цвета - новые коллекции Batimat 2017
+                span.news__time 21.01.2018
+                p.news__desc Презентуем коллекции, представленные на выставке Batimat 2017.
+            li.news__item
+              a(href="javascript:void(0);")
+                img.news__img(src="img/news-img-1.jpg", alt="Выставка Design & Decor St.Petersburg 2017")
+              .news__info
+                h3.news__title
+                  a(href="javascript:void(0);") Выставка Design & Decor St.Petersburg 2017
+                span.news__time 21.01.2018
+                p.news__desc С 13 по 15 сентября в Санкт-Петер&shy;бурге прошла  5-я международная выставка Design&Decor St.Petersburg – центральное событие для людей, работающих в сфере дизайна и декорирования.
+            li.news__item
+              a(href="javascript:void(0);")
+                img.news__img(src="img/news-img-2.jpg", alt="Тренды в дизайне интерьера 2017")
+              .news__info
+                h3.news__title
+                  a(href="javascript:void(0);") Тренды в дизайне интерьера 2017
+                span.news__time 21.01.2018
+                p.news__desc В рамках DesignWeek2017 в Санкт-Петербурге состоялась лекция Ирины Бириловой  «Тренды в дизайне интерьера 2017».
+            li.news__item
+              a(href="javascript:void(0);")
+                picture
+                  source(media="(max-width: 1024px)" srcset="img/news-img-3-tablet.jpg")
+                  img.news__img(src="img/news-img-3.jpg", alt="Игра структуры и цвета - новые коллекции Batimat 2017")
+              .news__info
+                h3.news__title
+                  a(href="javascript:void(0);") Игра структуры и цвета - новые коллекции Batimat 2017
+                span.news__time 21.01.2018
+                p.news__desc Презентуем коллекции, представленные на выставке Batimat 2017.
+          button.page-btn.page-btn--hollow.news__bottom-btn Показать ещё
+          ul.news__pagination.pagination
+            li.pagination__btn.pagination__btn--prev.pagination__btn--disabled
+              a(href="javascript:void(0);")
+            li.pagination__item
+              a.pagination__link.pagination__link--current(href="javascript:void(0);") 1
+            li.pagination__item
+              a.pagination__link(href="javascript:void(0);") 2
+            li.pagination__item
+              a.pagination__link(href="javascript:void(0);") 3
+            li.pagination__btn.pagination__btn--next
+              a(href="javascript:void(0);")
+    include ../modules/footer
+    button(type="button" class="back-to-top" title="Back to top") &uarr;
+
+
+

@@ -13,18 +13,33 @@
 
   &__logo {
     flex-shrink: 0;
+    position: relative;
     width: 209px;
     height: 80px;
     margin-right: 16px;
     padding: 62px 2px 10px 5px;
-    background: #676c73 url('../img/logo.png') no-repeat center 5px;
-    background-size: 180px 60px;
+    background-color: #676c73;
     color: #ffffff;
     font-family: "Century Gothic";
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
     text-align: center;
+
+    &:hover svg {
+      fill: $orange;
+    }
+
+    svg {
+      position: absolute;
+      width: 180px;
+      height: 60px;
+      top: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.1s linear;
+      fill: #fefefe;
+    }
   }
 
   &__link {
@@ -107,7 +122,7 @@
     }
 
     &__link {
-      padding: 5px 10px;
+      display: inline;
       font-size: 18px;
 
       &:hover {
@@ -117,7 +132,8 @@
     }
 
     &__item {
-      margin-bottom: 30px;
+      margin-bottom: 35px;
+      margin-right: 0;
       text-align: center;
     }
 
@@ -126,12 +142,11 @@
 
       &--show {
         display: block;
-        position: fixed;
+        position: absolute;
         padding: 80px 50px 50px;
         top: 0;
         left: 0;
         width: 70%;
-        height: 100vh;
         z-index: 50;
         background-color: rgba(255, 255, 255, 0.9);
         -webkit-box-shadow: -2px 0 43px #252525;
@@ -156,7 +171,26 @@
       margin: 0;
       padding: 0;
       font-size: 0;
-      background-size: 163px 54px;
+
+      svg {
+        width: 163px;
+        height: 54px;
+      }
+    }
+  }
+
+  .page-nav > ul > li:nth-last-child(2) {
+    margin-bottom: 40px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -17px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 286px;
+      height: 1px;
+      background: $white;
     }
   }
 
@@ -177,7 +211,9 @@
 
     &__list--show {
       width: 100%;
+      padding-top: 40px;
       box-shadow: none;
+      background-color: #f3f3f3;
     }
   }
 }
@@ -187,8 +223,8 @@
     min-height: 40px;
     padding: 0 10px;
 
-    &--menu-opened {
-      padding-left: 70px;
+    &__item {
+      margin-bottom: 30px;
     }
 
     &__search {
@@ -198,15 +234,12 @@
     &__logo {
       width: 120px;
       height: 40px;
-      background-size: 104px 35px;
+
+      svg {
+        width: 104px;
+        height: 35px;
+      }
     }
   }
 }
 
-@media (max-width: 375px)  {
-  .page-nav {
-    &--menu-opened {
-      padding-left: 73px;
-    }
-  }
-}

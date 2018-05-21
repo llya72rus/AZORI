@@ -1,4 +1,4 @@
-.about {
+.f-about {
   margin-bottom: 125px;
   box-shadow: 0 -15px 20px rgba(17, 17, 17, 0.1);
   // background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #c3c5c8 15%, #85898f 100%);
@@ -97,16 +97,16 @@
 }
 
 @media (max-width: 1258px) {
-  .about__slick::after {
+  .f-about__slick::after {
     width: 24%;
   }
 }
 
 @media (max-width: 1024px) {
-  .about {
+  .f-about {
     &__slick .slick-list {
       margin-bottom: 30px;
-  
+
       &::before {
         content: "";
         position: absolute;
@@ -117,7 +117,7 @@
         z-index: 1;
         background-color: rgba(0, 0, 0, 0.25);
       }
-  
+
       &::after {
         content: "";
         position: absolute;
@@ -129,7 +129,7 @@
         background-color: rgba(0, 0, 0, 0.25);
       }
     }
-    
+
     &__top-info {
       padding-left: 0;
     }
@@ -150,7 +150,7 @@
 }
 
 @media (max-width: 768px) {
-  .about {
+  .f-about {
     margin-bottom: 123px;
 
     &__slick .slick-list {
@@ -161,7 +161,7 @@
         width: 9.3%;
       }
     }
-  
+
     &__top-info {
       margin-bottom: 53px;
       padding-top: 22px;
@@ -197,7 +197,7 @@
 }
 
 @media (max-width: 767px) {
-  .about {
+  .f-about {
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #c3c5c8 60%, #85898f 100%);
     background-size: cover;
     &__top-info {
@@ -228,13 +228,13 @@
 }
 
 @media (max-width: 670px) {
-  .about {
+  .f-about {
     &__slick .slick-list {
 
       &::before {
         width: 45px;
       }
-  
+
       &::after {
         width: 45px;
       }
@@ -243,7 +243,7 @@
 }
 
 @media (max-width: 480px) {
-  .about {
+  .f-about {
     &__slick .slick-list {
       margin-bottom: 5px;
     }
@@ -251,7 +251,7 @@
 }
 
 @media (max-width: 375px) {
-  .about {
+  .f-about {
     margin-bottom: 90px;
 
     &__slick .slick-list {
@@ -265,7 +265,7 @@
         z-index: 1;
         background-color: rgba(0, 0, 0, 0.25);
       }
-  
+
       &::after {
         content: "";
         position: absolute;
@@ -277,7 +277,7 @@
         background-color: rgba(0, 0, 0, 0.25);
       }
     }
-    
+
     &__top-info {
       margin-bottom: 36px;
     }
@@ -324,17 +324,17 @@
     }
   }
 
-  .about__stats-item:last-child {
+  .f-about__stats-item:last-child {
     margin-bottom: 0;
   }
 
-  .about__stats-item:first-child {
-    .about__stats-number {
+  .f-about__stats-item:first-child {
+    .f-about__stats-number {
       margin-bottom: 32px;
     }
   }
 
-  .about__desc p:not(:last-child) {
+  .f-about__desc p:not(:last-child) {
     margin-bottom: 6px;
   }
 }

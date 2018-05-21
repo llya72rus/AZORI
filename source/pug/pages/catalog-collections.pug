@@ -28,7 +28,7 @@ block content
               a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
             li.breadcrumbs__item
               a.breadcrumbs__link.breadcrumbs__link--current Коллекции
-          .inner-header__bottom-wrapper.inner-header__bottom-wrapper--catalog
+          .inner-header__bottom-wrapper
             h1.inner-header__title Коллекции
             .inner-header__btn-wrapper.inner-header__btn-wrapper--catalog
               a.page-btn.page-btn--download-price-list.page-btn--hollow(href="javascript:void(0);") Скачать прайс-лист
@@ -189,7 +189,7 @@ block content
                   .card__color.card__color--beige
                 .card__info
                   .card__info-left
-                    h3.card__title 
+                    h3.card__title
                       a(href="javascript:void(0);") Eclipse
                     p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-extra руб./ м#[sup 2]]
                   .card__info-right
@@ -209,7 +209,7 @@ block content
                   .card__color.card__color--beige
                 .card__info
                   .card__info-left
-                    h3.card__title 
+                    h3.card__title
                       a(href="javascript:void(0);") Pandora
                     p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб./ м#[sup 2]]
               li.catalog__item.card#card-3
@@ -226,11 +226,13 @@ block content
                   .card__color.card__color--beige
                 .card__info
                   .card__info-left
-                    h3.card__title 
+                    h3.card__title
                       a(href="javascript:void(0);") Futuro
                     p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-old 2000] #[span.card__price-extra руб./ м#[sup 2]]
                   .card__info-right
-                    span.card__sale
+                    .card__sale
+                      svg(width="35" height="35")
+                        use(xlink:href="img/sprite.svg#sale")
                 li.catalog__item.card#card-4
                   .card__images
                     a.card__image-link(href="javascript:void(0);")
@@ -245,7 +247,7 @@ block content
                     .card__color.card__color--beige
                   .card__info
                     .card__info-left
-                      h3.card__title 
+                      h3.card__title
                         a(href="javascript:void(0);") Mallorca
                       p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб./ м#[sup 2]]
                 li.catalog__item.card#card-5
@@ -262,7 +264,7 @@ block content
                     .card__color.card__color--beige
                   .card__info
                     .card__info-left
-                      h3.card__title 
+                      h3.card__title
                         a(href="javascript:void(0);") Eclipse
                       p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-old 2000] #[span.card__price-extra руб./ м#[sup 2]]
 
@@ -280,12 +282,12 @@ block content
                     .card__color.card__color--beige
                   .card__info
                     .card__info-left
-                      h3.card__title 
+                      h3.card__title
                         a(href="javascript:void(0);") Pandora
                       p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб./ м#[sup 2]]
             button.catalog__show-more.page-btn.page-btn--hollow Показать еще
             ul.catalog__pagination.pagination
-              li.pagination__left-btn
+              li.pagination__btn.pagination__btn--prev
                 a(href="javascript:void(0);")
               li.pagination__item
                 a.pagination__link.pagination__link--current(href="javascript:void(0);") 1
@@ -293,7 +295,7 @@ block content
                 a.pagination__link(href="javascript:void(0);") 2
               li.pagination__item
                 a.pagination__link(href="javascript:void(0);") 3
-              li.pagination__right-btn
+              li.pagination__btn.pagination__btn--next
                 a(href="javascript:void(0);")
       article.page-text
         .container

@@ -58,7 +58,10 @@
     width: 35px;
     height: 35px;
     margin-left: auto;
-    background: url('../img/sale-icon.png');
+
+    svg {
+      fill: #ff7f00;
+    }
   }
 
   &__price-block {
@@ -112,21 +115,21 @@
 }
 
 .card__colors .slick-slide:last-of-type {
-  margin-right: 0;
-  margin-left: 6px;
+  margin-right: 0 !important;
+  margin-left: 6px !important;
 }
 
 .card__colors .slick-slide.slick-current:first-of-type {
-  margin-right: 2px;
+  margin-right: 2px !important;
 }
 
 .card__colors .slick-slide.slick-current:last-of-type {
-  margin-left: 2px;
+  margin-left: 2px !important;
 }
 
 .card__colors .slick-slide:first-of-type {
-  margin-left: 0;
-  margin-right: 6px;
+  margin-left: 0 !important;
+  margin-right: 6px !important;
 }
 
 .card__colors .slick-list {
@@ -148,7 +151,7 @@
   top: -2px;
   width: 44px !important;
   height: 44px !important;
-  margin: 0 1px;
+  margin: 0 1px !important;
   border: 2px solid #ff7f00;
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.7) 0%, rgba(231, 219, 198, 0.5) 100%);
 }

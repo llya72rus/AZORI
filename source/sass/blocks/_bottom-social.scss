@@ -12,6 +12,7 @@
 
 .bottom-social__link svg {
   fill: $white;
+  transition: 0.1s linear;
 }
 
 .bottom-social__link:hover svg {

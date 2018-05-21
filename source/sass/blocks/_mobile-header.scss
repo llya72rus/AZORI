@@ -5,17 +5,20 @@
 @media (max-width: 1024px) {
   .mobile-header {
     @include flex($align-items: flex-start);
+    height: 60px;
     padding-left: 24px;
     padding-right: 24px;
 
-    &--menu-show {
-      padding-left: 84px;
+    &--menu-opened {
+      padding-left: 90px;
     }
 
     &__logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       width: 220px;
       min-height: 85px;
-      margin: 0 auto;
       padding: 67px 10px 7px 10px;
       background-color: #676c73;
       background-image: url("../img/logo.png");
@@ -33,6 +36,7 @@
 
     &__language-option {
       margin-right: 22px;
+      margin-left: auto;
       padding-top: 15px;
       font-size: 14px;
       font-weight: 700;
@@ -50,6 +54,9 @@
 
 @media (max-width: 767px) {
   .mobile-header {
+    // &--menu-show {
+    //   padding-left: 70px;
+    // }
     &__logo {
       // width: 120px;
       min-height: 60px;
@@ -63,6 +70,14 @@
 
 @media (max-width: 480px) {
   .mobile-header {
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &--menu-opened {
+      padding-left: 70px;
+    }
+
     &__logo {
       width: 120px;
       min-height: 40px;
@@ -80,9 +95,10 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .mobile-header {
-    padding-left: 10px;
-    padding-right: 10px;
+    &--menu-opened {
+      padding-left: 73px;
+    }
   }
 }

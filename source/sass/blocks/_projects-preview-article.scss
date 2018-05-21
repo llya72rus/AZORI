@@ -1,0 +1,27 @@
+.projects-preview-article {
+  padding-bottom: 30px;
+  text-align: center;
+
+  &__slider {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  p {
+    margin-bottom: 20px;
+    line-height: 1.625;
+    letter-spacing: 0.8px;
+    text-align: left;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-preview-article__slider {
+    padding: 0 10px;
+  }
+}

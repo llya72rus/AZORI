@@ -1,0 +1,73 @@
+extends ../layout/main
+block title
+  | Контакты
+block content
+  body.inner-body
+    include ../modules/page-header
+
+    main.contacts
+      header.inner-header
+        .container
+          ul.breadcrumbs.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current Контакты
+          .inner-header__bottom-wrapper.inner-header__bottom-wrapper
+            h1.inner-header__title Контакты
+      section.contacts__top-map
+        .container
+          h2.contacts__title Управляющая компания «КераМир»
+          .contacts__address-wrapper
+            h3.contacts__subtitle Центральный офис
+            ul.contacts__list
+              li.contacts__item
+                span.contacts__key Адрес компании:
+                span.contacts__value г. Санкт-Петербург, Волхонское шоссе, д. 4.
+              li.contacts__item
+                span.contacts__key Телефон/факс:
+                span.contacts__value +7 (812) 
+                  span.contacts__phone 324-60-59
+              li.contacts__item
+                span.contacts__key Электронный адрес:
+                span.contacts__value office@keramir.com
+            h3.contacts__subtitle Производство
+            ul.contacts__list
+              li.contacts__item
+                span.contacts__key Телефон/факс:
+                span.contacts__value +7 (812) 
+                  span.contacts__phone 324-60-59
+              li.contacts__item
+                span.contacts__key Электронный адрес:
+                span.contacts__value office@keramir.com
+        .contacts__ya-map
+          iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A67505bb76c9974b58dfd2bdaa839b8162d2651ffaf97e50d0cd5afa2114935f0&amp;source=constructor" width="100%" height="100%" frameborder="0")
+      section.contacts__store
+        .container
+          h2.contacts__title Магазин "Петушок"
+          .contacts__row
+            .contacts__address-wrapper.contacts__address-wrapper--store
+              ul.contacts__list
+                li.contacts__item
+                  span.contacts__key Адрес компании:
+                  span.contacts__value г. Санкт-Петербург, Волхонское шоссе, д. 4.
+                li.contacts__item
+                  span.contacts__key Телефон/факс:
+                  span.contacts__value +7 (812) 
+                    span.contacts__phone 324-60-59
+                li.contacts__item
+                  span.contacts__key Электронный адрес:
+                  span.contacts__value office@keramir.com
+            .contacts__small-ya-map
+              iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A67505bb76c9974b58dfd2bdaa839b8162d2651ffaf97e50d0cd5afa2114935f0&amp;source=constructor" width="100%" height="100%" frameborder="0")
+      section.contacts__branches 
+        .container
+          h2.contacts__title.contacts__title--branches Региональные представительства
+          
+
+
+    include ../modules/footer
+    button(type="button" class="back-to-top" title="Back to top") &uarr;
+
+
+

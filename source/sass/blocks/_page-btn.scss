@@ -19,7 +19,6 @@
 
   &--download-price-list {
     padding: 15px 17px;
-    margin-left: 30px;
   }
 
   &--download-catalog {
@@ -28,7 +27,7 @@
   }
 
   &--hollow {
-    background-color: transparent;
+    background-color: $white;
     border: 2px solid $orange;
     color: $orange;
 
@@ -48,7 +47,7 @@
 }
 
 @media (max-width: 768px) {
-  
+
   .page-btn {
     padding-left: 25px;
     padding-right: 25px;
@@ -67,4 +66,20 @@
   .page-btn--download-catalog {
     margin-left: 7px;
   }
+}
+
+@media (max-width: 767px) {
+  .page-btn--download-price-list,
+  .page-btn--download-catalog {
+    margin-left: 0;
+  }
+
+  .page-btn--download-catalog {
+    min-width: 221.86px;
+  }
+
+  .page-btn--download-price-list {
+    margin-bottom: 10px;
+  }
+
 }

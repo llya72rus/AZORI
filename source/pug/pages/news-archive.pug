@@ -1,0 +1,131 @@
+extends ../layout/main
+block title
+  | Архив новостей
+block content
+  body.inner-body
+    include ../modules/page-header
+
+    main.inner-main.news-archive
+      header.inner-header.inner-header--btns-true
+        .container
+          ul.breadcrumbs.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link Новости
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current Архив новостей
+          .inner-header__bottom-wrapper
+            h1.inner-header__title Архив новостей
+            .inner-header__btn-wrapper.inner-header__btn-wrapper--archive
+              a.page-btn.news-archive__header-btn(href="javascript:void(0);") 2017
+              a.page-btn.page-btn--hollow.news-archive__header-btn(href="javascript:void(0);") 2016
+              a.page-btn.page-btn--hollow.news-archive__header-btn(href="javascript:void(0);") 2015
+      section.news-row.news-row--gray
+        .container
+          h2.news__main-title.inner-sect-title Декабрь
+          ul.news__list
+            li.news__item
+              a(href="javascript:void(0);")
+                img.news__img(src="img/news-img-1.jpg", alt="Выставка Design & Decor St.Petersburg 2017")
+              .news__info
+                h3.news__title
+                  a(href="javascript:void(0);") Выставка Design & Decor St.Petersburg 2017
+                span.news__time 21.01.2018
+                p.news__desc С 13 по 15 сентября в Санкт-Петер&shy;бурге прошла  5-я международная выставка Design&Decor St.Petersburg – центральное событие для людей, работающих в сфере дизайна и декорирования.
+            li.news__item
+              a(href="javascript:void(0);")
+                img.news__img(src="img/news-img-2.jpg", alt="Тренды в дизайне интерьера 2017")
+              .news__info
+                h3.news__title
+                  a(href="javascript:void(0);") Тренды в дизайне интерьера 2017
+                span.news__time 21.01.2018
+                p.news__desc В рамках DesignWeek2017 в Санкт-Петербурге состоялась лекция Ирины Бириловой  «Тренды в дизайне интерьера 2017».
+            li.news__item
+              a(href="javascript:void(0);")
+                picture
+                  source(media="(max-width: 1024px)" srcset="img/news-img-3-tablet.jpg")
+                  img.news__img(src="img/news-img-3.jpg", alt="Игра структуры и цвета - новые коллекции Batimat 2017")
+              .news__info
+                h3.news__title
+                  a(href="javascript:void(0);") Игра структуры и цвета - новые коллекции Batimat 2017
+                span.news__time 21.01.2018
+                p.news__desc Презентуем коллекции, представленные на выставке Batimat 2017.
+          button.page-btn.page-btn--hollow.news__bottom-btn Узнать больше
+      section.news-row
+        .container
+          h2.news__main-title.inner-sect-title Ноябрь
+          ul.news__list
+            li.news__item
+              a(href="javascript:void(0);")
+                img.news__img(src="img/news-img-1.jpg", alt="Выставка Design & Decor St.Petersburg 2017")
+              .news__info
+                h3.news__title
+                  a(href="javascript:void(0);") Выставка Design & Decor St.Petersburg 2017
+                span.news__time 21.01.2018
+                p.news__desc С 13 по 15 сентября в Санкт-Петер&shy;бурге прошла  5-я международная выставка Design&Decor St.Petersburg – центральное событие для людей, работающих в сфере дизайна и декорирования.
+            li.news__item
+              a(href="javascript:void(0);")
+                img.news__img(src="img/news-img-2.jpg", alt="Тренды в дизайне интерьера 2017")
+              .news__info
+                h3.news__title
+                  a(href="javascript:void(0);") Тренды в дизайне интерьера 2017
+                span.news__time 21.01.2018
+                p.news__desc В рамках DesignWeek2017 в Санкт-Петербурге состоялась лекция Ирины Бириловой  «Тренды в дизайне интерьера 2017». В рамках DesignWeek2017 в Санкт-Петербурге состоялась лекция Ирины Бириловой  «Тренды в дизайне интерьера 2017».
+            li.news__item
+              a(href="javascript:void(0);")
+                picture
+                  source(media="(max-width: 1024px)" srcset="img/news-img-3-tablet.jpg")
+                  img.news__img(src="img/news-img-3.jpg", alt="Игра структуры и цвета - новые коллекции Batimat 2017")
+              .news__info
+                h3.news__title
+                  a(href="javascript:void(0);") Игра структуры и цвета - новые коллекции Batimat 2017
+                span.news__time 21.01.2018
+                p.news__desc Презентуем коллекции, представленные на выставке Batimat 2017.
+        button.page-btn.page-btn--hollow.news__bottom-btn Узнать больше
+      section.news-row.news-row--gray
+          .container
+            h2.news__main-title.inner-sect-title Октябрь
+            ul.news__list
+              li.news__item
+                a(data-fancybox href="https://www.youtube.com/watch?v=fwfjsDsMuz8")
+                  img.news__img(src="img/news-img-1.jpg", alt="Выставка Design & Decor St.Petersburg 2017")
+                  svg(height="62" width="62" aria-hidden="true")
+                    use(xlink:href="img/sprite.svg#play-button")
+                .news__info
+                  h3.news__title
+                    a(href="javascript:void(0);") Выставка Design & Decor St.Petersburg 2017
+                  span.news__time 21.01.2018
+                  p.news__desc С 13 по 15 сентября в Санкт-Петер&shy;бурге прошла  5-я международная выставка Design&Decor St.Petersburg – центральное событие для людей, работающих в сфере дизайна и декорирования.
+              li.news__item
+                a(data-fancybox href="https://www.youtube.com/watch?v=a-GQDCtt1Vk")
+                  img.news__img(src="img/news-img-2.jpg", alt="Тренды в дизайне интерьера 2017")
+                  svg(height="62" width="62" aria-hidden="true")
+                    use(xlink:href="img/sprite.svg#play-button")
+                .news__info
+                  h3.news__title
+                    a(href="javascript:void(0);") Тренды в дизайне интерьера 2017
+                  span.news__time 21.01.2018
+                  p.news__desc В рамках DesignWeek2017 в Санкт-Петербурге состоялась лекция Ирины Бириловой  «Тренды в дизайне интерьера 2017».
+              li.news__item
+                a(data-fancybox href="https://www.youtube.com/watch?v=lsH2M6OcS_g")
+                  picture
+                    source(media="(max-width: 1024px)" srcset="img/news-img-3-tablet.jpg")
+                    img.news__img(src="img/news-img-3.jpg", alt="Игра структуры и цвета - новые коллекции Batimat 2017")
+                  svg(height="62" width="62" aria-hidden="true")
+                    use(xlink:href="img/sprite.svg#play-button")
+                .news__info
+                  h3.news__title
+                    a(href="javascript:void(0);") Игра структуры и цвета - новые коллекции Batimat 2017
+                  span.news__time 21.01.2018
+                  p.news__desc Презентуем коллекции, представленные на выставке Batimat 2017.
+            button.page-btn.page-btn--hollow.news__bottom-btn Узнать больше
+
+
+
+
+    include ../modules/footer
+    button(type="button" class="back-to-top" title="Back to top") &uarr;
+
+
+

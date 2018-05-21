@@ -1,0 +1,13 @@
+.news-archive {
+  &__header-btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -2,291 +2,180 @@ extends ../layout/main
 block title
   | Каталог
 block content
-  header.page-header
-    nav.page-nav
-      .menu-toggle
-        span
-        span
-        span
-        span
-      a.page-nav__logo(href="/") Вдохновляйся. Мечтай. Созидай.
-      ul.page-nav__list
-        li.page-nav__item
-          a.page-nav__link(href="javasctipt:void(0);") О бренде
-        li.page-nav__item
-          a.page-nav__link(href="javasctipt:void(0);") Коллекции
-        li.page-nav__item
-          a.page-nav__link(href="javasctipt:void(0);") Где купить
-        li.page-nav__item
-          a.page-nav__link(href="javasctipt:void(0);") Новости
-        li.page-nav__item
-          a.page-nav__link(href="javasctipt:void(0);") Контакты
-        li.page-nav__item
-          a.page-nav__link(href="javasctipt:void(0);") Партнерам
-        li.tablet-show
-          ul.top-menu-social
-            li.top-menu-social__item
-              a(href="javascript:void(0);")
-                img(src="img/mail-top-icons.png", alt="")
-            li.top-menu-social__item
-              a(href="javascript:void(0);")
-                img(src="img/vk-top-icons.png", alt="")
-            li.top-menu-social__item
-              a(href="javascript:void(0);")
-                img(src="img/fb-top-icons.png", alt="")
-            li.top-menu-social__item
-              a(href="javascript:void(0);")
-                img(src="img/insta-top-icons.png", alt="")
-      span.page-nav__lang-opt EN
-      a.page-nav__search
-        img(src="img/search-top-icons.png" alt="Поиск по сайту")
-      ul.page-nav__top-icons-panel.top-icons-panel
-        li.top-icons-panel__item.top-icons-panel__item--mail
-          a(href="javascript:voil(0);", aria-label="")
-            img(src="img/mail-top-icons.png", alt="")
-        li.top-icons-panel__item.top-icons-panel__item--vk
-          a(href="javascript:voil(0);", aria-label="")
-            img(src="img/vk-top-icons.png", alt="")
-        li.top-icons-panel__item.top-icons-panel__item--fb
-          a(href="javascript:voil(0);", aria-label="")
-            img(src="img/fb-top-icons.png", alt="")
-        li.top-icons-panel__item.top-icons-panel__item--insta
-          a(href="javascript:voil(0);", aria-label="")
-            img(src="img/insta-top-icons.png", alt="")
-  .catalog-top-slider
-    .catalog-top-slider__item
-      img(src="img/catalog-top-slider-img-1.jpg", alt="Картинка первого слайда")
-      .catalog-top-slider__info
-        span.catalog-top-slider__top-text Коллекция
-        span.catalog-top-slider__main-text Eclipse Ochra
-        a.page-btn(href="javasctipt:void(0);") Посмотреть
-    .catalog-top-slider__item
-      img(src="img/catalog-top-slider-img-2.jpg", alt="Картинка второго слайда")
-      .catalog-top-slider__info
-        span.catalog-top-slider__top-text Коллекция
-        span.catalog-top-slider__main-text Lorem Inpum 2
-        a.page-btn(href="javasctipt:void(0);") Посмотреть
-    .catalog-top-slider__item
-      img(src="img/catalog-top-slider-img-3.jpg", alt="Картинка третьего слайда")
-      .catalog-top-slider__info
-        span.catalog-top-slider__top-text Коллекция
-        span.catalog-top-slider__main-text Lorem Inpum 3
-        a.page-btn(href="javasctipt:void(0);") Посмотреть
-  main.inner-main
-    header.inner-header
-      .container
-        ul.breadcrumbs
-          li.breadcrumbs__item
-            a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
-          li.breadcrumbs__item
-            a.breadcrumbs__link.breadcrumbs__link--current Коллекции
-        h1.inner-header__title Коллекции
-        .inner-header__btn-wrapper
-          a.page-btn.page-btn--download-price-list.page-btn--hollow(href="javascript:void(0);") Скачать прайс-лист
-          a.page-btn.page-btn--download-catalog(href="javascript:void(0);") Скачать каталог
+  body.inner-body
+    include ../modules/page-header
+    .catalog-top-slider
+      .catalog-top-slider__item(style="background-image: url('img/catalog-top-slider-img-1.jpg')")
+        .catalog-top-slider__info
+          span.catalog-top-slider__top-text Коллекция
+          span.catalog-top-slider__main-text Eclipse Ochra
+          a.page-btn(href="javasctipt:void(0);") Посмотреть
+      .catalog-top-slider__item(style="background-image: url('img/catalog-top-slider-img-2.jpg')")
+        .catalog-top-slider__info
+          span.catalog-top-slider__top-text Коллекция
+          span.catalog-top-slider__main-text Lorem Inpum 2
+          a.page-btn(href="javasctipt:void(0);") Посмотреть
+      .catalog-top-slider__item(style="background-image: url('img/catalog-top-slider-img-3.jpg')")
+        .catalog-top-slider__info
+          span.catalog-top-slider__top-text Коллекция
+          span.catalog-top-slider__main-text Lorem Inpum 3
+          a.page-btn(href="javasctipt:void(0);") Посмотреть
+    main.inner-main
+      header.inner-header.inner-header--catalog
+        .container
+          ul.breadcrumbs.breadcrumbs--catalog
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current Коллекции
+          .inner-header__bottom-wrapper
+            h1.inner-header__title Коллекции
+            .inner-header__btn-wrapper.inner-header__btn-wrapper--catalog
+              a.page-btn.page-btn--download-price-list.page-btn--hollow(href="javascript:void(0);") Скачать прайс-лист
+              a.page-btn.page-btn--download-catalog(href="javascript:void(0);") Скачать каталог
 
-    section.catalog
-      .container
-        span.catalog__collapse-filter Скрыть фильтр
-        aside.acc-content-tablet
-          ul.catalog__filters-panel
-            li.catalog__filter
-              p.catalog__filter-name.catalog__filter-name--new
-                input.visually-hidden.catalog__input-new(type="checkbox" name="catalog-new" id="catalog-new")
-                label.catalog__label-new(for="catalog-new") Новинка
-              div.catalog__filters
-            li.catalog__filter
-              span.catalog__filter-name.acc-toggle Назначение
-              div.catalog__filters.catalog__filters--purpose.acc-content
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="oblic_plitka" id="oblic_plitka")
-                  label.catalog__label(for="oblic_plitka") Облицовочная
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="napol_plitka" id="napol_plitka")
-                  label.catalog__label(for="napol_plitka") Напольная
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="decor_plitka" id="decor_plitka")
-                  label.catalog__label(for="decor_plitka") Декоративная
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="border" id="border")
-                  label.catalog__label(for="border") Бордюр
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="panno" id="panno")
-                  label.catalog__label(for="panno") Панно
-            li.catalog__filter
-              span.catalog__filter-name.acc-toggle Размеры
-              div.catalog__filters.acc-content
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="100" id="100")
-                  label.catalog__label(for="100") 100x100
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="200" id="200")
-                  label.catalog__label(for="200") 200x200
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="300" id="300")
-                  label.catalog__label(for="300") 300x300
-            li.catalog__filter
-              span.catalog__filter-name.acc-toggle Цвет
-              div.catalog__filters.catalog__filters--color.acc-content
-                p.catalog__chboxes-color.catalog__chboxes-color--white
-                  input.visually-hidden.catalog__color-input.catalog__color-input--white(type="checkbox", name="white" id="white")
-                  label.catalog__color-label(for="white")
-                p.catalog__chboxes-color.catalog__chboxes-color--beige
-                  input.visually-hidden.catalog__color-input(type="checkbox", name="beige" id="beige")
-                  label.catalog__color-label(for="beige")
-                p.catalog__chboxes-color.catalog__chboxes-color--brown
-                  input.visually-hidden.catalog__color-input(type="checkbox", name="brown" id="brown")
-                  label.catalog__color-label(for="brown")
-                p.catalog__chboxes-color.catalog__chboxes-color--green
-                  input.visually-hidden.catalog__color-input(type="checkbox", name="green" id="green")
-                  label.catalog__color-label(for="green")
-                p.catalog__chboxes-color.catalog__chboxes-color--dark-grey
-                  input.visually-hidden.catalog__color-input(type="checkbox", name="dark-grey" id="dark-grey")
-                  label.catalog__color-label(for="dark-grey")
-                p.catalog__chboxes-color.catalog__chboxes-color--blue
-                  input.visually-hidden.catalog__color-input(type="checkbox", name="blue" id="blue")
-                  label.catalog__color-label(for="blue")
-                p.catalog__chboxes-color.catalog__chboxes-color--light-blue
-                  input.visually-hidden.catalog__color-input(type="checkbox", name="light-blue" id="light-blue")
-                  label.catalog__color-label(for="light-blue")
-                p.catalog__chboxes-color.catalog__chboxes-color--pink
-                  input.visually-hidden.catalog__color-input(type="checkbox", name="pink" id="pink")
-                  label.catalog__color-label(for="pink")
-            li.catalog__filter
-              span.catalog__filter-name.acc-toggle Фактура
-              div.catalog__filters.acc-content
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="wood" id="wood")
-                  label.catalog__label(for="wood") Дерево
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="stone" id="stone")
-                  label.catalog__label(for="stone") Камень
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="textile" id="textile")
-                  label.catalog__label(for="textile") Текстиль
-            li.catalog__filter
-              span.catalog__filter-name.acc-toggle Рельефность
-              div.catalog__filters.acc-content
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="relief" id="relief")
-                  label.catalog__label(for="relief") Рельефная
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="not-relief" id="not-relief")
-                  label.catalog__label(for="not-relief") Нерельефная
-            li.catalog__filter
-              span.catalog__filter-name.catalog__filter-name--surface.acc-toggle Поверхность
-              div.catalog__filters.acc-content
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="glossy" id="glossy")
-                  label.catalog__label(for="glossy") Глянцевая
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="matt" id="matt")
-                  label.catalog__label(for="matt") Матовая
-            li.catalog__filter
-              span.catalog__filter-name.catalog__filter-name--precious.acc-toggle
-                | Драгоценные
-                br
-                | металлы
-              div.catalog__filters.acc-content
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="gold" id="gold")
-                  label.catalog__label(for="gold") Золото
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="silver" id="silver")
-                  label.catalog__label(for="silver") Серебро
-            li.catalog__filter
-              span.catalog__filter-name.acc-toggle Название коллекции
-              div.catalog__filters.acc-content
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="agra" id="agra")
-                  label.catalog__label(for="agra") AGRA
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="pluto" id="pluto")
-                  label.catalog__label(for="pluto") Pluto
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="futuro" id="futuro")
-                  label.catalog__label(for="futuro") Futuro
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="eclipse" id="eclipse")
-                  label.catalog__label(for="eclipse") Eclipse
-                p.catalog__chboxes-wrapper
-                  input.visually-hidden.catalog__input(type="checkbox", name="pandora" id="pandora")
-                  label.catalog__label(for="pandora") Pandora
-          .catalog__filter-bottom-panel
-            button.page-btn.page-btn--hollow(type="button") Применить
-            button.catalog__reset-filters(type="button") Сбросить все фильтры
-        .catalog__products-wrapper
-          ul.catalog__products
-            li.catalog__item.card
-              .card__images
-                a.card__image-link(href="javascript:void(0);")
-                  img(src="img/first-card-img-1.png", alt="Плиточка")
-                a.card__image-link(href="javascript:void(0);")
-                  img(src="img/first-card-img-2.png", alt="Плиточка")
-                a.card__image-link(href="javascript:void(0);")
-                  img(src="img/first-card-img-3.png", alt="Плиточка")
-              .card__colors
-                .card__color.card__color--blue
-                .card__color.card__color--grey
-                .card__color.card__color--beige
-              .card__info
-                .card__info-left
-                  h3.card__title Eclipse
-                  p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-extra руб/м#[sup 2]]
-                .card__info-right
-                  span.card__new Новинка!
-
-            li.catalog__item.card
-              .card__images
-                a.card__image-link(href="javascript:void(0);")
-                  img(src="img/second-card-img-1.jpg", alt="Плиточка")
-                a.card__image-link(href="javascript:void(0);")
-                  img(src="img/second-card-img-2.jpg", alt="Плиточка")
-                a.card__image-link(href="javascript:void(0);")
-                  img(src="img/second-card-img-3.jpg", alt="Плиточка")
-              .card__colors
-                .card__color.card__color--blue
-                .card__color.card__color--grey
-                .card__color.card__color--beige
-              .card__info
-                .card__info-left
-                  h3.card__title Pandora
-                  p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб/м#[sup 2]]
-            li.catalog__item.card
-              .card__images
-                a.card__image-link(href="javascript:void(0);")
-                  img(src="img/third-card-img-1.jpg", alt="Плиточка")
-                a.card__image-link(href="javascript:void(0);")
-                  img(src="img/third-card-img-2.jpg", alt="Плиточка")
-                a.card__image-link(href="javascript:void(0);")
-                  img(src="img/third-card-img-3.jpg", alt="Плиточка")
-              .card__colors
-                .card__color.card__color--blue
-                .card__color.card__color--grey
-                .card__color.card__color--beige
-              .card__info
-                .card__info-left
-                  h3.card__title Futuro
-                  p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-old 2000] #[span.card__price-extra руб/м#[sup 2]]
-                .card__info-right
-                  span.card__sale
-              li.catalog__item.card
-                .card__images
-                  a.card__image-link(href="javascript:void(0);")
-                    img(src="img/fourth-card-img-1.jpg", alt="Плиточка")
-                  a.card__image-link(href="javascript:void(0);")
-                    img(src="img/fourth-card-img-2.jpg", alt="Плиточка")
-                  a.card__image-link(href="javascript:void(0);")
-                    img(src="img/fourth-card-img-3.jpg", alt="Плиточка")
-                .card__colors
-                  .card__color.card__color--blue
-                  .card__color.card__color--grey
-                  .card__color.card__color--beige
-                .card__info
-                  .card__info-left
-                    h3.card__title Mallorca
-                    p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб/м#[sup 2]]
-              li.catalog__item.card
+      section.catalog
+        .container
+          span.catalog__collapse-filter Раскрыть фильтр
+          aside.acc-content-tablet
+            ul.catalog__filters-panel
+              li.catalog__filter
+                p.catalog__filter-name.catalog__filter-name--new
+                  input.visually-hidden.catalog__input-new(type="checkbox" name="catalog-new" id="catalog-new")
+                  label.catalog__label-new(for="catalog-new") Новинка
+                div.catalog__filters
+              li.catalog__filter
+                span.catalog__filter-name.acc-toggle Назначение
+                div.catalog__filters.catalog__filters--purpose.acc-content
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="oblic_plitka" id="oblic_plitka")
+                    label.catalog__label(for="oblic_plitka") Облицовочная
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="napol_plitka" id="napol_plitka")
+                    label.catalog__label(for="napol_plitka") Напольная
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="decor_plitka" id="decor_plitka")
+                    label.catalog__label(for="decor_plitka") Декоративная
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="border" id="border")
+                    label.catalog__label(for="border") Бордюр
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="panno" id="panno")
+                    label.catalog__label(for="panno") Панно
+              li.catalog__filter
+                span.catalog__filter-name.acc-toggle Размеры
+                div.catalog__filters.acc-content
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="100" id="100")
+                    label.catalog__label(for="100") 100x100
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="200" id="200")
+                    label.catalog__label(for="200") 200x200
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="300" id="300")
+                    label.catalog__label(for="300") 300x300
+              li.catalog__filter
+                span.catalog__filter-name.acc-toggle Цвет
+                div.catalog__filters.catalog__filters--color.acc-content
+                  p.catalog__chboxes-color.catalog__chboxes-color--white
+                    input.visually-hidden.catalog__color-input.catalog__color-input--white(type="checkbox", name="white" id="white")
+                    label.catalog__color-label(for="white")
+                  p.catalog__chboxes-color.catalog__chboxes-color--beige
+                    input.visually-hidden.catalog__color-input(type="checkbox", name="beige" id="beige")
+                    label.catalog__color-label(for="beige")
+                  p.catalog__chboxes-color.catalog__chboxes-color--brown
+                    input.visually-hidden.catalog__color-input(type="checkbox", name="brown" id="brown")
+                    label.catalog__color-label(for="brown")
+                  p.catalog__chboxes-color.catalog__chboxes-color--green
+                    input.visually-hidden.catalog__color-input(type="checkbox", name="green" id="green")
+                    label.catalog__color-label(for="green")
+                  p.catalog__chboxes-color.catalog__chboxes-color--dark-grey
+                    input.visually-hidden.catalog__color-input(type="checkbox", name="dark-grey" id="dark-grey")
+                    label.catalog__color-label(for="dark-grey")
+                  p.catalog__chboxes-color.catalog__chboxes-color--red
+                    input.visually-hidden.catalog__color-input(type="checkbox", name="red" id="red")
+                    label.catalog__color-label(for="red")
+                  p.catalog__chboxes-color.catalog__chboxes-color--gold
+                    input.visually-hidden.catalog__color-input(type="checkbox", name="gold" id="gold")
+                    label.catalog__color-label(for="gold")
+                  p.catalog__chboxes-color.catalog__chboxes-color--violet
+                    input.visually-hidden.catalog__color-input(type="checkbox", name="violet" id="violet")
+                    label.catalog__color-label(for="violet")
+                  p.catalog__chboxes-color.catalog__chboxes-color--blue
+                    input.visually-hidden.catalog__color-input(type="checkbox", name="blue" id="blue")
+                    label.catalog__color-label(for="blue")
+                  p.catalog__chboxes-color.catalog__chboxes-color--light-blue
+                    input.visually-hidden.catalog__color-input(type="checkbox", name="light-blue" id="light-blue")
+                    label.catalog__color-label(for="light-blue")
+                  p.catalog__chboxes-color.catalog__chboxes-color--pink
+                    input.visually-hidden.catalog__color-input(type="checkbox", name="pink" id="pink")
+                    label.catalog__color-label(for="pink")
+              li.catalog__filter
+                span.catalog__filter-name.acc-toggle Фактура
+                div.catalog__filters.acc-content
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="wood" id="wood")
+                    label.catalog__label(for="wood") Дерево
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="stone" id="stone")
+                    label.catalog__label(for="stone") Камень
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="textile" id="textile")
+                    label.catalog__label(for="textile") Текстиль
+              li.catalog__filter
+                span.catalog__filter-name.acc-toggle Рельефность
+                div.catalog__filters.acc-content
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="relief" id="relief")
+                    label.catalog__label(for="relief") Рельефная
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="not-relief" id="not-relief")
+                    label.catalog__label(for="not-relief") Нерельефная
+              li.catalog__filter
+                span.catalog__filter-name.catalog__filter-name--surface.acc-toggle Поверхность
+                div.catalog__filters.acc-content
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="glossy" id="glossy")
+                    label.catalog__label(for="glossy") Глянцевая
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="matt" id="matt")
+                    label.catalog__label(for="matt") Матовая
+              li.catalog__filter
+                span.catalog__filter-name.catalog__filter-name--precious.acc-toggle
+                  | Драгоценные
+                  br
+                  | металлы
+                div.catalog__filters.acc-content
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="gold" id="gold")
+                    label.catalog__label(for="gold") Золото
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="silver" id="silver")
+                    label.catalog__label(for="silver") Серебро
+              li.catalog__filter
+                span.catalog__filter-name.acc-toggle Название коллекции
+                div.catalog__filters.acc-content
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="agra" id="agra")
+                    label.catalog__label(for="agra") AGRA
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="pluto" id="pluto")
+                    label.catalog__label(for="pluto") Pluto
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="futuro" id="futuro")
+                    label.catalog__label(for="futuro") Futuro
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="eclipse" id="eclipse")
+                    label.catalog__label(for="eclipse") Eclipse
+                  p.catalog__chboxes-wrapper
+                    input.visually-hidden.catalog__input(type="checkbox", name="pandora" id="pandora")
+                    label.catalog__label(for="pandora") Pandora
+            .catalog__filter-bottom-panel
+              button.page-btn.page-btn--hollow(type="button") Применить
+              button.catalog__reset-filters(type="button") Сбросить все фильтры
+          .catalog__products-wrapper
+            ul.catalog__products
+              li.catalog__item.card#card-1
                 .card__images
                   a.card__image-link(href="javascript:void(0);")
                     img(src="img/first-card-img-1.png", alt="Плиточка")
@@ -300,10 +189,13 @@ block content
                   .card__color.card__color--beige
                 .card__info
                   .card__info-left
-                    h3.card__title Eclipse
-                    p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-old 2000] #[span.card__price-extra руб/м#[sup 2]]
+                    h3.card__title
+                      a(href="javascript:void(0);") Eclipse
+                    p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-extra руб./ м#[sup 2]]
+                  .card__info-right
+                    span.card__new.tag-new Новинка!
 
-              li.catalog__item.card
+              li.catalog__item.card#card-2
                 .card__images
                   a.card__image-link(href="javascript:void(0);")
                     img(src="img/second-card-img-1.jpg", alt="Плиточка")
@@ -317,24 +209,100 @@ block content
                   .card__color.card__color--beige
                 .card__info
                   .card__info-left
-                    h3.card__title Pandora
-                    p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб/м#[sup 2]]
-          button.catalog__show-more.page-btn.page-btn--hollow Показать еще
-          ul.catalog__pagination.pagination
-            li.pagination__left-btn
-              a(href="javascript:void(0);")
-            li.pagination__item
-              a.pagination__link.pagination__link--current(href="javascript:void(0);") 1
-            li.pagination__item
-              a.pagination__link(href="javascript:void(0);") 2
-            li.pagination__item
-              a.pagination__link(href="javascript:void(0);") 3
-            li.pagination__right-btn
-              a(href="javascript:void(0);")
-    article.page-text
-      .container
-        p Мир красок, где каждый покупатель сможет найти коллекцию, которая сделает ванную комнату оригинальной и неповторимой. Комплектация коллекций разными форматами декоративных элементов позволяет выстраивать рисунок стен как вертикально, так и горизонтально, создавая в ванной комнате особый мир уюта и хорошего настроения.
+                    h3.card__title
+                      a(href="javascript:void(0);") Pandora
+                    p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб./ м#[sup 2]]
+              li.catalog__item.card#card-3
+                .card__images
+                  a.card__image-link(href="javascript:void(0);")
+                    img(src="img/third-card-img-1.jpg", alt="Плиточка")
+                  a.card__image-link(href="javascript:void(0);")
+                    img(src="img/third-card-img-2.jpg", alt="Плиточка")
+                  a.card__image-link(href="javascript:void(0);")
+                    img(src="img/third-card-img-3.jpg", alt="Плиточка")
+                .card__colors
+                  .card__color.card__color--blue
+                  .card__color.card__color--grey
+                  .card__color.card__color--beige
+                .card__info
+                  .card__info-left
+                    h3.card__title
+                      a(href="javascript:void(0);") Futuro
+                    p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-old 2000] #[span.card__price-extra руб./ м#[sup 2]]
+                  .card__info-right
+                    .card__sale
+                      svg(width="35" height="35")
+                        use(xlink:href="img/sprite.svg#sale")
+                li.catalog__item.card#card-4
+                  .card__images
+                    a.card__image-link(href="javascript:void(0);")
+                      img(src="img/fourth-card-img-1.jpg", alt="Плиточка")
+                    a.card__image-link(href="javascript:void(0);")
+                      img(src="img/fourth-card-img-2.jpg", alt="Плиточка")
+                    a.card__image-link(href="javascript:void(0);")
+                      img(src="img/fourth-card-img-3.jpg", alt="Плиточка")
+                  .card__colors
+                    .card__color.card__color--blue
+                    .card__color.card__color--grey
+                    .card__color.card__color--beige
+                  .card__info
+                    .card__info-left
+                      h3.card__title
+                        a(href="javascript:void(0);") Mallorca
+                      p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб./ м#[sup 2]]
+                li.catalog__item.card#card-5
+                  .card__images
+                    a.card__image-link(href="javascript:void(0);")
+                      img(src="img/first-card-img-1.png", alt="Плиточка")
+                    a.card__image-link(href="javascript:void(0);")
+                      img(src="img/first-card-img-2.png", alt="Плиточка")
+                    a.card__image-link(href="javascript:void(0);")
+                      img(src="img/first-card-img-3.png", alt="Плиточка")
+                  .card__colors
+                    .card__color.card__color--blue
+                    .card__color.card__color--grey
+                    .card__color.card__color--beige
+                  .card__info
+                    .card__info-left
+                      h3.card__title
+                        a(href="javascript:void(0);") Eclipse
+                      p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-old 2000] #[span.card__price-extra руб./ м#[sup 2]]
+
+                li.catalog__item.card#card-6
+                  .card__images
+                    a.card__image-link(href="javascript:void(0);")
+                      img(src="img/second-card-img-1.jpg", alt="Плиточка")
+                    a.card__image-link(href="javascript:void(0);")
+                      img(src="img/second-card-img-2.jpg", alt="Плиточка")
+                    a.card__image-link(href="javascript:void(0);")
+                      img(src="img/second-card-img-3.jpg", alt="Плиточка")
+                  .card__colors
+                    .card__color.card__color--blue
+                    .card__color.card__color--grey
+                    .card__color.card__color--beige
+                  .card__info
+                    .card__info-left
+                      h3.card__title
+                        a(href="javascript:void(0);") Pandora
+                      p.card__price-block #[span.card__price-from от] #[span.card__price 2 500] #[span.card__price-extra руб./ м#[sup 2]]
+            button.catalog__show-more.page-btn.page-btn--hollow Показать еще
+            ul.catalog__pagination.pagination
+              li.pagination__btn.pagination__btn--prev
+                a(href="javascript:void(0);")
+              li.pagination__item
+                a.pagination__link.pagination__link--current(href="javascript:void(0);") 1
+              li.pagination__item
+                a.pagination__link(href="javascript:void(0);") 2
+              li.pagination__item
+                a.pagination__link(href="javascript:void(0);") 3
+              li.pagination__btn.pagination__btn--next
+                a(href="javascript:void(0);")
+      article.page-text
+        .container
+          p Мир красок, где каждый покупатель сможет найти коллекцию, которая сделает ванную комнату оригинальной и неповторимой. Комплектация коллекций разными форматами декоративных элементов позволяет выстраивать рисунок стен как вертикально, так и горизонтально, создавая в ванной комнате особый мир уюта и хорошего настроения.
+
     include ../modules/footer
+    button(type="button" class="back-to-top" title="Back to top") &uarr;
 
 
 

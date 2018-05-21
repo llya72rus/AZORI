@@ -1,0 +1,165 @@
+extends ../layout/main
+block title
+  | Выставка Design&Decor St.Petersburg 2017
+block content
+  body.inner-body
+    include ../modules/page-header
+    main.inner-main
+      header.inner-header
+        .container
+          ul.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link Новости
+            li.breadcrumbs__item
+              a.breadcrumbs__link Последние новости
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current Выставка Design&Decor St.Petersburg 2017
+          .inner-header__bottom-wrapper.inner-header__bottom-wrapper--single-new
+            h1.inner-header__title.inner-header__title--single-new-title Выставка Design&Decor St.Petersburg 2017
+            .inner-header__news-top-panel
+              span.inner-header__date 21.01.2018
+              ul.inner-header__social.social
+                li.social__item
+                  a.social__link.social__link--orange(href="javascript:void(0);")
+                    svg(width="20" height="20")
+                      use(xlink:href="img/sprite.svg#mail")
+                li.social__item
+                  a.social__link.social__link--orange(href="javascript:void(0);")
+                    svg(width="20" height="20")
+                      use(xlink:href="img/sprite.svg#vk")
+                li.social__item
+                  a.social__link.social__link--orange(href="javascript:void(0);")
+                    svg(width="20" height="20")
+                      use(xlink:href="img/sprite.svg#fb")
+                li.social__item
+                  a.social__link.social__link--orange(href="javascript:void(0);")
+                    svg(width="20" height="20")
+                      use(xlink:href="img/sprite.svg#instagram")
+      section.single-new
+        .container.container--slipping-bg
+          .single-new__top-gallery.top-gallery
+            a(href="../img/single-new-img.jpg" data-fancybox="images")
+              img(src="../img/single-new-img.jpg")
+            a(href="../img/single-new-img.jpg" data-fancybox="images")
+              img(src="../img/single-new-img.jpg")
+            a(href="../img/single-new-img.jpg" data-fancybox="images")
+              img(src="../img/single-new-img.jpg")
+            a(href="../img/single-new-img.jpg" data-fancybox="images")
+              img(src="../img/single-new-img.jpg")
+            a(href="../img/single-new-img.jpg" data-fancybox="images")
+              img(src="../img/single-new-img.jpg")
+
+          .top-gallery__thumbs
+            .top-gallery__thumb
+              img(src="../img/top-gallery-thumb-1.jpg", alt="")
+            .top-gallery__thumb
+              img(src="../img/top-gallery-thumb-2.jpg", alt="")
+            .top-gallery__thumb
+              img(src="../img/top-gallery-thumb-3.jpg", alt="")
+            .top-gallery__thumb
+              img(src="../img/top-gallery-thumb-4.jpg", alt="")
+            .top-gallery__thumb
+              img(src="../img/top-gallery-thumb-4.jpg", alt="")
+        .container
+          .single-new__info
+            p С 13 по 15 сентября в Санкт-Петербурге прошла  5-я международная выставка Design&Decor St.Petersburg – центральное событие для людей, работающих в сфере дизайна и декорирования. Посетители cмогли ознакомиться с трендовыми коллекциями предметов и материалов для интерьера и посетить деловую программу. #[br] Предметы декора, освещения, текстиль, дорогие и изысканные материалы для отделки, а также простые, но стильные штучки для домашнего уюта - все это можно было увидеть на выставке. #[br]  Актуальные тренды дизайна интерьера были представлены в  «Тренд-зонах». Две тематические зоны, используя формат журнального коллажа, отражают такие тренды, как:
+            ul
+              li - Урбанистическая этника - соединение культурной эстетики в условиях мегаполиса
+              li - Деархивирование - переосмысление культурного наследия через возрождение архивов.
+          .single-new__info
+            p Одним из наиболее интересных и посещаемых на выставке оказался стенд «Керамическое ателье Яны Сушко». Это уникальная керамика ручной работы: керамическая плитка, декоративные панно и предметы интерьера. В основе - принципы классической итальянской школы в сочетании с современными тенденциями. Традиционные орнаменты соседствуют с необычными графическими решениями.
+          picture
+            source(media="(max-width: 480px)" srcset="img/single-new-img-phone.jpg")
+            source(media="(max-width: 768px)" srcset="img/single-new-img-tablet.jpg")
+            img.single-new__img-center(src="img/single-new-img.jpg", alt="")
+          .single-new__info
+            p Одним из наиболее интересных и посещаемых на выставке оказался стенд «Керамическое ателье Яны Сушко». Это уникальная керамика ручной работы: керамическая плитка, декоративные панно и предметы интерьера. В основе - принципы классической итальянской школы в сочетании с современными тенденциями. Традиционные орнаменты соседствуют с необычными графическими решениями.
+          a.single-new__back-to-parent-section.back-to-parent-section(href="javascript:void(0)") Вернуться в список новостей
+      article.preview.preview--gray
+        .container
+          h2.inner-sect-title Коллекции
+          .preview__slider
+            .preview__item.card#card-7
+              .card__images
+                a.card__image-link(href="javascript:void(0);")
+                  img(src="img/first-card-img-1.png", alt="Плиточка")
+                a.card__image-link(href="javascript:void(0);")
+                  img(src="img/first-card-img-2.png", alt="Плиточка")
+                a.card__image-link(href="javascript:void(0);")
+                  img(src="img/first-card-img-3.png", alt="Плиточка")
+              .card__colors
+                .card__color.card__color--blue
+                .card__color.card__color--grey
+                .card__color.card__color--beige
+              .card__info
+                .card__info-left
+                  h3.card__title
+                    a(href="javascript:void(0);") Eclipse
+                  p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-extra руб./ м#[sup 2]]
+                .card__info-right
+                  span.card__new.tag-new Новинка!
+            .preview__item.card#card-8
+              .card__images
+                a.card__image-link(href="javascript:void(0);")
+                  img(src="img/first-card-img-1.png", alt="Плиточка")
+                a.card__image-link(href="javascript:void(0);")
+                  img(src="img/first-card-img-2.png", alt="Плиточка")
+                a.card__image-link(href="javascript:void(0);")
+                  img(src="img/first-card-img-3.png", alt="Плиточка")
+              .card__colors
+                .card__color.card__color--blue
+                .card__color.card__color--grey
+                .card__color.card__color--beige
+              .card__info
+                .card__info-left
+                  h3.card__title
+                    a(href="javascript:void(0);") Eclipse
+                  p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-extra руб./ м#[sup 2]]
+                .card__info-right
+                  span.card__new.tag-new Новинка!
+            .preview__item.card#card-9
+              .card__images
+                a.card__image-link(href="javascript:void(0);")
+                  img(src="img/first-card-img-1.png", alt="Плиточка")
+                a.card__image-link(href="javascript:void(0);")
+                  img(src="img/first-card-img-2.png", alt="Плиточка")
+                a.card__image-link(href="javascript:void(0);")
+                  img(src="img/first-card-img-3.png", alt="Плиточка")
+              .card__colors
+                .card__color.card__color--blue
+                .card__color.card__color--grey
+                .card__color.card__color--beige
+              .card__info
+                .card__info-left
+                  h3.card__title
+                    a(href="javascript:void(0);") Eclipse
+                  p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-extra руб./ м#[sup 2]]
+                .card__info-right
+                  span.card__new.tag-new Новинка!
+            .preview__item.card#card-10
+              .card__images
+                a.card__image-link(href="javascript:void(0);")
+                  img(src="img/first-card-img-1.png", alt="Плиточка")
+                a.card__image-link(href="javascript:void(0);")
+                  img(src="img/first-card-img-2.png", alt="Плиточка")
+                a.card__image-link(href="javascript:void(0);")
+                  img(src="img/first-card-img-3.png", alt="Плиточка")
+              .card__colors
+                .card__color.card__color--blue
+                .card__color.card__color--grey
+                .card__color.card__color--beige
+              .card__info
+                .card__info-left
+                  h3.card__title
+                    a(href="javascript:void(0);") Eclipse
+                  p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-extra руб./ м#[sup 2]]
+                .card__info-right
+                  span.card__new.tag-new Новинка!
+
+    include ../modules/footer
+    button(type="button" class="back-to-top" title="Back to top") &uarr;
+
+
+

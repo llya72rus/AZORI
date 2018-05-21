@@ -1,29 +1,138 @@
 .inner-header {
-  padding: 11px 0 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
 
-  .container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  &--btns-true {
+    padding-bottom: 0;
+  }
+
+  .social li:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &--catalog {
+    padding-top: 11px;
+  }
+
+  &--collection {
+    margin-bottom: 30px;
   }
 
   &__title {
-    max-width: 620px;
-    margin: 0;
+    margin-bottom: 0;
+    margin-right: 0;
     color: #424141;
     font-size: 36px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.8px;
+
+    &--single-new-title {
+      text-transform: initial;
+      letter-spacing: 1.8px;
+    }
+  }
+
+  &__tag-new {
+    margin-left: 15px;
+  }
+
+  &__bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &--collection {
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+    }
+
+    &--single-new {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+  }
+
+  &__news-top-panel {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  &__date {
+    margin-right: 33px;
+    color: #ababab;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.35px;
   }
 
   &__btn-wrapper {
-    margin-left: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    &--archive {
+      margin-bottom: 10px;
+    }
   }
+}
+
+.inner-header--btns-true .inner-header__title {
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 @media (max-width: 1024px) {
   .inner-header {
-    padding-bottom: 23px;
+    &--catalog {
+      padding-bottom: 23px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  .inner-header {
+    &__bottom-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+
+      &--collection {
+        flex-direction: row;
+      }
+    }
+    &__btn-wrapper {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+
+      &--archive {
+        flex-direction: row;
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 480px) {
+  .inner-header {
+
+    &--catalog {
+      padding-top: 7px;
+      padding-bottom: 19px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
   }
 }

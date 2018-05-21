@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet"/>
     <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16"/>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/readmore.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/polyfill.js"></script>
+    <script>svg4everybody();</script>
     <script src="js/custom.js"></script>
     <title>Компания AZORI
     </title>
@@ -18,6 +23,12 @@
       <div class="main-header__top-header">
         <div class="mobile-header">
           <div class="menu-toggle"><span></span><span></span><span></span><span></span></div><a class="mobile-header__logo" href="javascript:void(0);">Вдохновляйся. Мечтай. Созидай.</a><span class="mobile-header__language-option">En</span><a class="mobile-header__search" href="javascript:void(0);"><img src="img/search-icon.png" alt="Поиск по сайту"/></a>
+          <div class="mobile-search">
+            <form action="javascript:void(0);">
+              <input class="mobile-search__form" type="text" placeholder="Найти..."/>
+              <button class="mobile-search__btn"><img src="img/search-icon.png" alt="Поиск по сайту"/></button>
+            </form>
+          </div>
         </div>
         <nav class="main-nav"><a class="main-nav__logo" href="javascript:void(0);">Вдохновляйся. Мечтай. Созидай.</a>
           <ul class="main-nav__list main-nav__list--left">
@@ -32,19 +43,66 @@
             <li class="main-nav__language-option"><a href="javascript:void(0);">En</a></li>
           </ul>
           <ul class="main-nav__top-icons-panel top-icons-panel">
-            <li class="top-icons-panel__item top-icons-panel__item--search"><a href="javascript:voil(0);" aria-label=""><img src="img/search-top-icons.png" alt=""/></a></li>
-            <li class="top-icons-panel__item top-icons-panel__item--mail"><a href="javascript:voil(0);" aria-label=""><img src="img/mail-top-icons.png" alt=""/></a></li>
-            <li class="top-icons-panel__item top-icons-panel__item--vk"><a href="javascript:voil(0);" aria-label=""><img src="img/vk-top-icons.png" alt=""/></a></li>
-            <li class="top-icons-panel__item top-icons-panel__item--fb"><a href="javascript:voil(0);" aria-label=""><img src="img/fb-top-icons.png" alt=""/></a></li>
-            <li class="top-icons-panel__item top-icons-panel__item--insta"><a href="javascript:voil(0);" aria-label=""><img src="img/insta-top-icons.png" alt=""/></a></li>
+            <li class="top-icons-panel__item top-icons-panel__item--search"><a href="javascript:void(0);" aria-label="">
+                <svg width="20" height="20">
+                  <title>Поиск по сайту</title>
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg></a>
+              <div class="top-icons-panel__input-wrapper">
+                <form>
+                  <input type="text" placeholder="Найти..."/>
+                  <button class="top-icons-panel__search-btn" type="button"><img src="img/search-top-icons.png" alt=""/></button>
+                </form>
+              </div>
+            </li>
+            <li class="top-icons-panel__item"><a href="javascript:void(0);" aria-label="">
+                <svg width="20" height="20">
+                  <title>Отправить сообщение</title>
+                  <use xlink:href="img/sprite.svg#mail"></use>
+                </svg></a></li>
+            <li class="top-icons-panel__item"><a href="javascript:void(0);" aria-label="">
+                <svg width="20" height="20">
+                  <title>Профиль компании "AZORI" ВКонтакте</title>
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="top-icons-panel__item"><a href="javascript:void(0);" aria-label="">
+                <svg width="20" height="20">
+                  <title>Профиль компании "AZORI" в Фейсбуке</title>
+                  <use xlink:href="img/sprite.svg#fb"></use>
+                </svg></a></li>
+            <li class="top-icons-panel__item"><a href="javascript:void(0);" aria-label="">
+                <svg width="20" height="20">
+                  <title>Профиль компании "AZORI" в Инстаграме</title>
+                  <use xlink:href="img/sprite.svg#instagram"></use>
+                </svg></a></li>
           </ul>
         </nav>
       </div>
       <div class="main-header__slick">
-        <div class="main-header__slider"><img src="img/top-slider-1.jpg" alt=""/></div>
-        <div class="main-header__slider"><img src="img/top-slider-1.jpg" alt=""/></div>
-        <div class="main-header__slider"><img src="img/top-slider-1.jpg" alt=""/></div>
-        <div class="main-header__slider"><img src="img/top-slider-1.jpg" alt=""/></div>
+        <div class="main-header__slider">
+          <picture>
+            <source media="(max-width: 480px)" srcset="img/top-slider-1-phone.jpg"/>
+            <source media="(max-width: 768px)" srcset="img/top-slider-1-tablet.jpg"/><img src="img/top-slider-1.jpg" alt=""/>
+          </picture>
+        </div>
+        <div class="main-header__slider">
+          <picture>
+            <source media="(max-width: 480px)" srcset="img/top-slider-1-phone.jpg"/>
+            <source media="(max-width: 768px)" srcset="img/top-slider-1-tablet.jpg"/><img src="img/top-slider-1.jpg" alt=""/>
+          </picture>
+        </div>
+        <div class="main-header__slider">
+          <picture>
+            <source media="(max-width: 480px)" srcset="img/top-slider-1-phone.jpg"/>
+            <source media="(max-width: 768px)" srcset="img/top-slider-1-tablet.jpg"/><img src="img/top-slider-1.jpg" alt=""/>
+          </picture>
+        </div>
+        <div class="main-header__slider">
+          <picture>
+            <source media="(max-width: 480px)" srcset="img/top-slider-1-phone.jpg"/>
+            <source media="(max-width: 768px)" srcset="img/top-slider-1-tablet.jpg"/><img src="img/top-slider-1.jpg" alt=""/>
+          </picture>
+        </div>
       </div>
       <div class="main-header__promo promo">
         <div class="container"><span class="promo__top-text">Коллекция</span><b class="promo__main-text">eclipse ochra</b>
@@ -53,20 +111,13 @@
       </div>
     </header>
     <main>
-      <section class="collections">
+      <section class="front-p-collections">
         <h2 class="visually-hidden">Коллекции керамической плитки Azori</h2>
         <div class="container">
-          <ul class="collections__list">
-            <li class="collections__item collections__item--all">
-              <div class="collections__title-wrapper"><a class="collections__title" href="javascript:void(0);">Все коллекции</a></div>
-            </li>
-            <li class="collections__item collections__item--new">
-              <div class="collections__title-wrapper"><a class="collections__title" href="javascript:void(0);">Новые коллекции</a></div>
-            </li>
-            <li class="collections__item collections__item--ceramic3d">
-              <div class="collections__title-wrapper"><a class="collections__title" href="javascript:void(0);">Ceramic 3d</a></div>
-            </li>
-          </ul>
+          <div class="front-p-collections__list"><a class="front-p-collections__item front-p-collections__item--all" href="javascript:void(0);">
+              <div class="front-p-collections__title-wrapper"><span class="front-p-collections__title">Все коллекции</span></div></a><a class="front-p-collections__item front-p-collections__item--new" href="javascript:void(0);">
+              <div class="front-p-collections__title-wrapper"><span class="front-p-collections__title">Новые коллекции</span></div></a><a class="front-p-collections__item front-p-collections__item--ceramic3d" href="javascript:void(0);">
+              <div class="front-p-collections__title-wrapper"><span class="front-p-collections__title">Ceramic 3d</span></div></a></div>
         </div>
       </section>
       <section class="advantages">
@@ -88,56 +139,59 @@
           </ul>
         </div>
       </section>
-      <section class="about">
+      <section class="f-about">
         <div class="container">
-          <div class="about__top-info"><img class="about__logo" src="img/about-logo.png"/>
-            <div class="about__desc">
+          <div class="f-about__top-info"><img class="f-about__logo" src="img/about-logo.png"/>
+            <div class="f-about__desc">
               <p>Мир красок, где каждый покупатель сможет найти коллекцию, которая сделает ванную комнату оригинальной и неповторимой. Комплектация коллекций разными форматами декоративных элементов позволяет выстраивать рисунок стен как вертикально, так и горизонтально, создавая в ванной комнате особый мир уюта и хорошего настроения.</p>
               <p>Коллекции керамической плитки AZORI (АЗОРИ) созданы итальянскими и российскими дизайнерами. В них находят отражение самые последние тенденции “керамической моды”: имитация натуральных материалов — дерева , камня и текстиля; широкое присутствие цветочных мотивов и геометрии в декоративных элементах; богатство цветовой палитры.</p>
             </div>
           </div>
-          <ul class="about__stats">
-            <li class="about__stats-item"><b class="about__stats-number">3,5</b><span class="about__stats-transcript">млн. в год</span><span class="about__stats-extra-info">объем производства</span></li>
-            <li class="about__stats-item"><b class="about__stats-number">30</b><span class="about__stats-transcript">тысяч</span><span class="about__stats-extra-info">коллекций</span></li>
-            <li class="about__stats-item"><b class="about__stats-number">108</b><span class="about__stats-transcript">магазинов</span><span class="about__stats-extra-info">по всей России</span></li>
+          <ul class="f-about__stats">
+            <li class="f-about__stats-item"><b class="f-about__stats-number">3,5</b><span class="f-about__stats-transcript">млн. в год</span><span class="f-about__stats-extra-info">объем производства</span></li>
+            <li class="f-about__stats-item"><b class="f-about__stats-number">30</b><span class="f-about__stats-transcript">тысяч</span><span class="f-about__stats-extra-info">коллекций</span></li>
+            <li class="f-about__stats-item"><b class="f-about__stats-number">108</b><span class="f-about__stats-transcript">магазинов</span><span class="f-about__stats-extra-info">по всей России</span></li>
           </ul>
         </div>
-        <div class="about__slick">
-          <div class="about__slick-item"><img class="about__slick-img" src="img/about-slick-img-1.jpg" alt="Azori"/></div>
-          <div class="about__slick-item"><img class="about__slick-img" src="img/about-slick-img-2.jpg" alt="Azori"/></div>
-          <div class="about__slick-item"><img class="about__slick-img" src="img/about-slick-img-3.jpg" alt="Azori"/></div>
-          <div class="about__slick-item"><img class="about__slick-img" src="img/about-slick-img-4.jpg" alt="Azori"/></div>
-          <div class="about__slick-item"><img class="about__slick-img" src="img/about-slick-img-4.jpg" alt="Azori"/></div>
-          <div class="about__slick-item"><img class="about__slick-img" src="img/about-slick-img-4.jpg" alt="Azori"/></div>
-          <div class="about__slick-item"><img class="about__slick-img" src="img/about-slick-img-4.jpg" alt="Azori"/></div>
-          <div class="about__slick-item"><img class="about__slick-img" src="img/about-slick-img-4.jpg" alt="Azori"/></div>
-        </div><a class="about__more page-btn page-btn--hollow" href="javascript:void(0);">Подробнее о компании</a>
+        <div class="f-about__slick">
+          <div class="f-about__slick-item"><img class="f-about__slick-img" src="img/about-slick-img-1.jpg" alt="Azori"/></div>
+          <div class="f-about__slick-item"><img class="f-about__slick-img" src="img/about-slick-img-2.jpg" alt="Azori"/></div>
+          <div class="f-about__slick-item"><img class="f-about__slick-img" src="img/about-slick-img-3.jpg" alt="Azori"/></div>
+          <div class="f-about__slick-item"><img class="f-about__slick-img" src="img/about-slick-img-4.jpg" alt="Azori"/></div>
+          <div class="f-about__slick-item"><img class="f-about__slick-img" src="img/about-slick-img-4.jpg" alt="Azori"/></div>
+          <div class="f-about__slick-item"><img class="f-about__slick-img" src="img/about-slick-img-4.jpg" alt="Azori"/></div>
+          <div class="f-about__slick-item"><img class="f-about__slick-img" src="img/about-slick-img-4.jpg" alt="Azori"/></div>
+          <div class="f-about__slick-item"><img class="f-about__slick-img" src="img/about-slick-img-4.jpg" alt="Azori"/></div>
+        </div><a class="f-about__more page-btn page-btn--hollow" href="javascript:void(0);">Подробнее о компании</a>
       </section>
       <section class="news">
         <div class="container">
           <h2 class="news__main-title section-title">Новости и акции</h2>
           <ul class="news__list">
-            <li class="news__item"><img class="news__img" src="img/news-img-1.jpg" alt="Выставка Design &amp; Decor St.Petersburg 2017"/>
+            <li class="news__item"><a href="javascript:void(0);"><img class="news__img" src="img/news-img-1.jpg" alt="Выставка Design &amp; Decor St.Petersburg 2017"/></a>
               <div class="news__info">
-                <h3 class="news__title">Выставка Design & Decor St.Petersburg 2017</h3><span class="news__time">21.01.2018</span>
-                <p class="news__desc">С 13 по 15 сентября в Санкт-Петер&shy;бурге прошла  5-я международная выставка Design&Decor St.Petersburg – центральное событие для людей, работающих в сфере дизайна и декорирования.</p>
+                <h3 class="news__title"><a href="javascript:void(0);">Выставка Design & Decor St.Petersburg 2017</a></h3><span class="news__time">21.01.2018</span>
+                <p class="news__desc">С 13 по 15 сентября в Санкт-Петер&shy;бурге прошла  5-я международная выставка Design&Decor St.Petersburg – центральное событие для людей, работающих в сфере дизайна и декорирования.С 13 по 15 сентября в Санкт-Петер&shy;бурге прошла  5-я международная выставка Design&Decor St.Petersburg – центральное событие для людей, работающих в сфере дизайна и декорирования.</p>
               </div>
             </li>
-            <li class="news__item"><img class="news__img" src="img/news-img-2.jpg" alt="Тренды в дизайне интерьера 2017"/>
+            <li class="news__item"><a href="javascript:void(0);"><img class="news__img" src="img/news-img-2.jpg" alt="Тренды в дизайне интерьера 2017"/></a>
               <div class="news__info">
-                <h3 class="news__title">Тренды в дизайне интерьера 2017</h3><span class="news__time">21.01.2018</span>
+                <h3 class="news__title"><a href="javascript:void(0);">Тренды в дизайне интерьера 2017</a></h3><span class="news__time">21.01.2018</span>
                 <p class="news__desc">В рамках DesignWeek2017 в Санкт-Петербурге состоялась лекция Ирины Бириловой  «Тренды в дизайне интерьера 2017».</p>
               </div>
             </li>
-            <li class="news__item"><img class="news__img" src="img/news-img-3.jpg" alt="Игра структуры и цвета - новые коллекции Batimat 2017"/>
+            <li class="news__item"><a href="javascript:void(0);">
+                <picture>
+                  <source media="(max-width: 1024px)" srcset="img/news-img-3-tablet.jpg"/><img class="news__img" src="img/news-img-3.jpg" alt="Игра структуры и цвета - новые коллекции Batimat 2017"/>
+                </picture></a>
               <div class="news__info">
-                <h3 class="news__title">Игра структуры и цвета - новые коллекции Batimat 2017</h3><span class="news__time">21.01.2018</span>
+                <h3 class="news__title"><a href="javascript:void(0);">Игра структуры и цвета - новые коллекции Batimat 2017</a></h3><span class="news__time">21.01.2018</span>
                 <p class="news__desc">Презентуем коллекции, представленные на выставке Batimat 2017.</p>
               </div>
             </li>
           </ul>
+          <button class="page-btn page-btn--hollow news__bottom-btn">Все новости</button>
         </div>
-        <button class="page-btn page-btn--hollow">Все новости</button>
       </section>
     </main>
     <footer class="main-footer">
@@ -151,9 +205,21 @@
               <button class="subscribe__btn page-btn" type="submit">Подписаться</button>
             </form>
             <ul class="subscribe__social bottom-social">
-              <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; ВКонтакте"><img src="img/vk-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; ВКонтакте"/></a></li>
-              <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Фейсбуке"><img src="img/fb-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; в Фейсбуке"/></a></li>
-              <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Инстаграмме"><img src="img/insta-icon-bottom-social.png" alt="Профиль компании &quot;Azori&quot; в Инстаграмме"/></a></li>
+              <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; ВКонтакте">
+                  <svg width="100%" height="100%" role="img">
+                    <title>Профиль компании "Azori" в Фейсбуке</title>
+                    <use xlink:href="img/sprite.svg#vk_white"></use>
+                  </svg></a></li>
+              <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Фейсбуке">
+                  <svg width="100%" height="100%" role="img">
+                    <title>Профиль компании "Azori" в Фейсбуке</title>
+                    <use xlink:href="img/sprite.svg#fb_white"></use>
+                  </svg></a></li>
+              <li class="bottom-social__item"><a class="bottom-social__link" href="javascript:void(0);" aria-label="Профиль компании &quot;Azori&quot; в Инстаграмме">
+                  <svg width="100%" height="100%" role="img">
+                    <title>Профиль компании "Azori" в Фейсбуке</title>
+                    <use xlink:href="img/sprite.svg#instagram_white"></use>
+                  </svg></a></li>
             </ul><small class="subscribe__agreement">Нажимая кнопку "Подписаться" вы соглашаетесь с  <a href="javascript:void(0);">Политикой обработки персональных данных</a></small>
           </div>
         </div>
@@ -174,10 +240,15 @@
       </div>
       <div class="main-footer__bottom">
         <div class="container">
-          <p class="main-footer__copyright">Azori © 2017</p>
-          <p class="main-footer__madeby">Разработка сайта:<a href="http://dev.trinet.ru/" target="_blank"><img src="img/trinet-logo.png" alt="Логотип компании &quot;Trinet Development&quot;"/> Trinet<br/>Development</a></p>
+          <p class="main-footer__copyright">Azori<span>© 2017</span></p>
+          <p class="main-footer__madeby">Разработка сайта:<a href="http://dev.trinet.ru/" target="_blank">
+              <svg height="28" width="28" aria-hidden="true">
+                <title>Компания "Тринет"</title>
+                <use xlink:href="img/sprite.svg#trinet"></use>
+              </svg> Trinet<br/>Development</a></p>
         </div>
       </div>
-    </footer><button type="button" class="back-to-top" title="Back to top">&uarr;</button>
+    </footer>
+    <button class="back-to-top" type="button" title="Back to top">&uarr;</button>
   </body>
 </html>

@@ -11,10 +11,9 @@
   list-style: none;
 }
 
-@mixin desktop-centerer ($max-width: 1200px, $padding: 0 15px, $margin: 0 auto) {
+@mixin desktop-centerer ($max-width: 1170px, $margin: 0 auto) {
   max-width: $max-width;
   margin: $margin;
-  padding: $padding;
 }
 
 @mixin pseudo-elem-centerer () {

@@ -1,16 +1,27 @@
 .modal {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   display: none;
-  height: 100vh;
   width: 100%;
   z-index: 15;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.8);
 
   &--show {
-    @include flex($just-cont: center);
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .modal {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 0 10px;
   }
 }

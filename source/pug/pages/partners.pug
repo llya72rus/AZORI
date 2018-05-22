@@ -1,0 +1,160 @@
+extends ../layout/main
+block title
+  | Партнерам
+block content
+  body.inner-body
+    include ../modules/page-header
+
+    main.partners
+      header.inner-header
+        .container
+          ul.breadcrumbs.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current Партнерам
+          .inner-header__bottom-wrapper.inner-header__bottom-wrapper
+            h1.inner-header__title Партнерам
+      section.coll-present
+        .container
+          h2.inner-sect-title Презентация коллекций
+          ul.coll-present__list
+            li.coll-present__item
+              a.coll-present__link(href="javascript:void(0);")
+                picture
+                  source(media="(max-width: 480px)" srcset="img/coll-present-img-1-phone.jpg")
+                  source(media="(max-width: 768px)" srcset="img/coll-present-img-1-tablet.jpg")
+                  img.coll-present__img(src="img/coll-present-img-1.jpg", alt="Коллекция Futuro")
+              h4.coll-present__subtitle Futuro
+            li.coll-present__item
+              a.coll-present__link(href="javascript:void(0);")
+                picture
+                  source(media="(max-width: 480px)" srcset="img/coll-present-img-2-phone.jpg")
+                  source(media="(max-width: 768px)" srcset="img/coll-present-img-2-tablet.jpg")
+                  img.coll-present__img(src="img/coll-present-img-2.jpg", alt="Коллекция Futuro")
+              h4.coll-present__subtitle Pandora
+            li.coll-present__item
+              a.coll-present__link(href="javascript:void(0);")
+                picture
+                  source(media="(max-width: 480px)" srcset="img/coll-present-img-3-phone.jpg")
+                  source(media="(max-width: 768px)" srcset="img/coll-present-img-3-tablet.jpg")
+                  img.coll-present__img(src="img/coll-present-img-3.jpg", alt="Коллекция Futuro")
+              h4.coll-present__subtitle Mallorca
+            li.coll-present__item
+              a.coll-present__link(href="javascript:void(0);")
+                picture
+                  source(media="(max-width: 480px)" srcset="img/coll-present-img-4-phone.jpg")
+                  source(media="(max-width: 768px)" srcset="img/coll-present-img-4-tablet.jpg")
+                  img.coll-present__img(src="img/coll-present-img-4.jpg", alt="Коллекция Futuro")
+              h4.coll-present__subtitle Eclipse
+          a.page-btn.page-btn--hollow.coll-present__btn Узнать больше
+      section.partners__sect.catalogs
+        .container
+          h2.inner-sect-title Каталоги
+        .catalogs__wrapper
+          .container
+            ul.catalogs__list
+              li.catalogs__item.download-block
+                a.download-block__link(href="javascript:void(0);")
+                  svg.download-block__svg(width="109" height="126")
+                    use(xlink:href="img/sprite.svg#pdf")
+                  span.download-block__text Скачать каталог 2017 года
+              li.catalogs__item.download-block
+                a.download-block__link(href="javascript:void(0);")
+                  svg.download-block__svg(width="109" height="126")
+                    use(xlink:href="img/sprite.svg#pdf")
+                  span.download-block__text Скачать каталог 2016 года
+              li.catalogs__item.download-block
+                a.download-block__link(href="javascript:void(0);")
+                  svg.download-block__svg(width="109" height="126")
+                    use(xlink:href="img/sprite.svg#pdf")
+                  span.download-block__text Скачать каталог 2016 года
+              li.catalogs__item.download-block
+                a.download-block__link(href="javascript:void(0);")
+                  svg.download-block__svg(width="109" height="126")
+                    use(xlink:href="img/sprite.svg#pdf")
+                  span.download-block__text Скачать каталог 2015 года
+        a.page-btn.page-btn--hollow.catalogs__btn Узнать больше
+      section.partners__sect.partners__sect--side-pd
+        .container
+          h2.inner-sect-title Дизайнерам
+        .coll-examples__bottom
+          .coll-examples__bottom-item.coll-examples__bottom-item--3d-ceramic
+            a(href="javascript:void(0);")
+              span.coll-examples__bottom-main-text Скачать 3D ceramic
+              p.coll-examples__bottom-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              span.coll-examples__go-to-page Перейти
+          .coll-examples__bottom-item.coll-examples__bottom-item--collaba-design
+           a(href="javascript:void(0);")
+              span.coll-examples__bottom-main-text Сотрудничество с дизайнерами
+              span.coll-examples__go-to-page Перейти
+      section.partners__sect.partners__sect--side-pd
+        .container
+          h2.inner-sect-title Мерчендайзинг
+        .coll-examples__bottom
+          .coll-examples__bottom-item.coll-examples__bottom-item--pos-rules
+            a(href="javascript:void(0);")
+              span.coll-examples__bottom-main-text Правила выкладки
+              p.coll-examples__bottom-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              span.coll-examples__go-to-page Перейти
+          .coll-examples__bottom-item.coll-examples__bottom-item--interiors
+           a(href="javascript:void(0);")
+              span.coll-examples__bottom-main-text Интерьеры коллекций
+              span.coll-examples__go-to-page Перейти
+      section.partners__sect.docs
+        .container
+          h2.inner-sect-title Документация
+          ul.docs__list
+            li.docs__item.download-block
+              a.download-block__link(href="javascript:void(0);")
+                svg.download-block__svg(width="109" height="126")
+                  use(xlink:href="img/sprite.svg#pdf")
+                span.download-block__text Технические характеристики
+            li.docs__item.download-block
+              a.download-block__link(href="javascript:void(0);")
+                svg.download-block__svg(width="109" height="126")
+                  use(xlink:href="img/sprite.svg#pdf")
+                span.download-block__text Рекомендации по эксплуатации
+            li.docs__item.download-block
+              a.download-block__link(href="javascript:void(0);")
+                svg.download-block__svg(width="109" height="126")
+                  use(xlink:href="img/sprite.svg#pdf")
+                span.download-block__text Тестовая инструкция для примера
+      section.partners__sect
+        .container
+          h2.inner-sect-title Наши партнеры
+          .partners-slider
+            .partners-slider__item
+              .partners-slider__img-wrapper
+                img.parntners-slider__img(src="img/partners-logo.png", alt="Логотип компании-партнера")
+              span.partners-slider__name Название партнера
+            .partners-slider__item
+              .partners-slider__img-wrapper
+                img.parntners-slider__img(src="img/partners-logo.png", alt="Логотип компании-партнера")
+              span.partners-slider__name Название партнера
+            .partners-slider__item
+              .partners-slider__img-wrapper
+                img.parntners-slider__img(src="img/partners-logo.png", alt="Логотип компании-партнера")
+              span.partners-slider__name Название партнера в две строки
+            .partners-slider__item
+              .partners-slider__img-wrapper
+                img.parntners-slider__img(src="img/partners-logo.png", alt="Логотип компании-партнера")
+              span.partners-slider__name Название партнера
+            .partners-slider__item
+              .partners-slider__img-wrapper
+                img.parntners-slider__img(src="img/partners-logo.png", alt="Логотип компании-партнера")
+              span.partners-slider__name Название партнера в две строки
+            .partners-slider__item
+              .partners-slider__img-wrapper
+                img.parntners-slider__img(src="img/partners-logo.png", alt="Логотип компании-партнера")
+              span.partners-slider__name Название партнера
+            
+
+
+
+
+    include ../modules/footer
+    button(type="button" class="back-to-top" title="Back to top") &uarr;
+
+
+

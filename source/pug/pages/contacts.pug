@@ -5,6 +5,7 @@ block content
   body.inner-body
     include ../modules/page-header
     script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    script(src="js/yandex-map.js")
 
     main.contacts
       header.inner-header
@@ -18,7 +19,8 @@ block content
             h1.inner-header__title Контакты
       section.contacts__top-map
         .container
-          h2.contacts__title Управляющая компания #[br] «КераМир»
+          h2.contacts__title.contacts__title--manage-company Управляющая компания #[br] «КераМир»
+        .container
           .contacts__address-wrapper
             h3.contacts__subtitle Центральный офис
             ul.contacts__list
@@ -46,7 +48,7 @@ block content
           //- <script>var myMap = new ymaps.Map('map', {center: [54.27650159, 68.77326451],zoom: 4,controls: []});</script>
       section.contacts__store
         .container
-          h2.contacts__title Магазин "Петушок"
+          h2.contacts__title Магазин "Название"
           .contacts__row
             ul.contacts__list.contacts__list--store
               li.contacts__item

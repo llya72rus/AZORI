@@ -1,0 +1,30 @@
+.partners-slider {
+
+  &__img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 198px;
+    background-color: #f5f6f6;
+  }
+
+  &__item {
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__name {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding: 17px 20px;
+    color: #252525;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.333;
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+    text-align: center;
+  }
+}

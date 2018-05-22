@@ -1,0 +1,91 @@
+.layout {
+  padding-bottom: 30px;
+  &__img-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &__wrapper {
+    margin-bottom: 20px;
+    padding: 40px 0;
+    background-color: #f5f6f6;
+  }
+
+  &__text {
+    max-width: 970px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 -15px;
+  }
+
+  &__item {
+    width: 31.623931%;
+    text-align: center;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    height: 446px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    // &::before {
+    //   display: none;
+    //   content: "";
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   z-index: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background: linear-gradient(-30deg, rgba(237, 140, 43, 0.5) 0%, rgba(238, 122, 39, 0.5) 100%);
+    // }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__eye {
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 55px;
+    height: 35px;
+    background: url('../img/eye-icon.png') no-repeat center 2px;
+    background-size: cover;
+    transition: 0.6s ease;
+    z-index: 0;
+  }
+
+  &__elem-name {
+    color: #252525;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.333;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+}
+
+.layout__img-wrapper{
+  box-shadow: inset 80px 0 555px red;
+}
+
+.layout__img-wrapper:hover .layout__eye {
+  display: block;
+}
+
+.layout__bottom-panel .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

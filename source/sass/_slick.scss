@@ -474,6 +474,23 @@
   width: 100%;
 }
 
+// Парнеры 
+
+.partners-slider .slick-slide {
+  margin: 15px;
+  min-height: 271px;
+  box-shadow: 0 5px 20px rgba(17, 17, 17, 0.1);
+  border-radius: 5px;
+}
+
+.partners-slider .slick-slide > div {
+  height: 100%;
+}
+
+.partners-slider .slick-list {
+  margin: 0 -15px;
+}
+
 @media (max-width: 1600px) {
   .catalog-top-slider__prev {
     left: 2%;
@@ -731,6 +748,19 @@
     margin: 0 -13px;
   }
 
+  .partners-slider .slick-list {
+    margin: 0 -15px;
+    padding-left: 0 !important;
+  }
+
+  .partners-slider .slick-slide {
+    margin: 15px 7.5px;
+  }
+
+  .partners-slider .slick-list {
+    margin: 0 -7.5px;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -919,6 +949,14 @@
   }
 
   .certificates__slider .slick-list {
+    margin: 0 -5.5px;
+  }
+
+  .partners-slider .slick-slide {
+    margin: 15px 5.5px;
+  }
+
+  .partners-slider .slick-list {
     margin: 0 -5.5px;
   }
 }

@@ -151,6 +151,10 @@ img {
   clear: both;
 }
 
+.partners__sect {
+  margin-bottom: 40px;
+}
+
 .orange-rounded-btn-next {
   position: absolute;
   top: 50%;
@@ -287,6 +291,10 @@ img {
     padding: 0;
     margin: 0 24px 30px;
   }
+
+  .partners__sect--side-pd {
+    padding: 0 24px;
+  }
 }
 
 // @media (max-width: 768px) {
@@ -327,5 +335,13 @@ img {
 
   .mobile-search input {
     height: 40px;
+  }
+
+  .partners__sect--side-pd {
+    padding: 0 10px;
+  }
+
+  .partners__sect {
+    margin-bottom: 30px;
   }
 }

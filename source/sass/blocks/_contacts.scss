@@ -114,7 +114,7 @@
     left: 0;
     top: 81px;
     width: 100%;
-    min-height: 575px;
+    height: 575px;
   }
 
   &__small-ya-map {
@@ -243,6 +243,10 @@
       width: 40%;
     }
 
+    &__address-wrapper {
+      width: 60%;
+    }
+
     &__ya-map {
       top: 125px;
       height: 590px;
@@ -256,8 +260,23 @@
       display: block;
     }
 
+    &__top-map {
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+    }
+
+    &__address-wrapper {
+      width: 100%;
+      margin-left: auto;
+      margin-top: 250px;
+    }
+
     &__list--store {
       width: 100%;
+    }
+
+    &__ya-map {
+      height: 320px;
     }
 
     &__small-ya-map {
@@ -275,12 +294,48 @@
       padding: 15px 10px 20px;
       border-width: 10px;
     }
+
+    &__ya-map {
+      top: 100px;
+    }
+
+
     &__title {
+      margin-bottom: 15px;
       font-size: 24px;
+
+      br {
+        display: none;
+      }
+
+      &--branches {
+        padding-left: 24px;
+
+        &::before {
+          top: 0;
+          left: -3px;
+          width: 20px;
+          height: 25px;
+        }
+      }
     }
 
     &__subtitle {
       font-size: 22px;
     }
+
+    &__city {
+      font-size: 24px;
+    }
+
+    &__branches-list {
+      grid-gap: 15px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .contacts__title--manage-company {
+    font-size: 23px;
   }
 }

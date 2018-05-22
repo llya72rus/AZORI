@@ -651,6 +651,77 @@ $(document).ready(function() {
     ]
   });
 
+  $('.partners-slider').slick({
+    speed: 500,
+    slidesToShow:  4,
+    slidesToScroll: 4,
+    infinite: false,
+    arrows: true,
+    nextArrow: '<button type="button" class="orange-rounded-btn-next">Следующий слайд</button>',
+    prevArrow: '<button type="button" class="orange-rounded-btn-prev">Предыдущий слайд</button>',
+    responsive: [
+
+      {
+        breakpoint: 1024,
+        settings: {
+          arrows: false,
+          dots: true,
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          centerPadding: '20%',
+          infinite: true
+        }
+      },
+
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          centerPadding: '10%',
+          infinite: true
+        }
+      },
+
+      {
+        breakpoint: 670,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          centerPadding: '20%',
+          infinite: true
+        }
+      },
+
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          centerPadding: '10.625%',
+          infinite: true
+        }
+      },
+
+    ]
+  });
+
   $('.ab-charcs__slider').slick({
     speed: 500,
     slidesToShow:  2,
@@ -810,46 +881,6 @@ $('.news__desc').each(function() {
   //   }
   // }
 
-  ymaps.ready(init);
-        var myMap,
-            myPlacemark;
-
-        function init(){
-            myMap = new ymaps.Map("map", {
-                center: [59.78627996, 30.17684996],
-                zoom: 15,
-                controls: []
-            });
-
-            myPlacemark = new ymaps.Placemark([59.78718856, 30.18766950], {
-              iconContent: 'Волхонское шоссе, д. 4',
-            },
-            {
-              preset: 'islands#darkOrangeStretchyIcon',
-              // Задаем цвет метки (в формате RGB).
-              // iconColor: '#ff0000'
-            });
-
-            var zoomControl = new ymaps.control.ZoomControl({
-              options: {
-                  size: "small",
-                  position: {
-                    right: 10,
-                    top: 50
-                  }
-              }
-          });
-            // myPlacemark.setIconContent("Щелкни меня");
-            myMap.geoObjects.add(myPlacemark);
-            myMap.controls.add(zoomControl);
-            myMap.controls.add('geolocationControl', {
-              float: 'right'
-          });
-            // myPlacemark.setIconContent("Щелкни меня");
-        }
-
-
-
   window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27 && collModal) {
       if (collModal.classList.contains('modal--show')) {
@@ -960,6 +991,25 @@ $('.mobile-search__btn').click(function () {
   //     $(collModal).removeClass('modal--show');
   //   }
   // });
+
+  var catalogList = document.querySelector('.catalogs__list');
+
+  if (catalogList) {
+
+    if ((window.matchMedia("(min-width: 1024px)").matches) && catalogList.children.length > 3) {
+      catalogList.classList.add('catalogs__list--f-start')
+    }
+  
+    // if ((window.matchMedia("(max-width: 1024px)").matches) && catalogList.children.length < 3) {
+    //   console.log('jdfkl');
+    // } else {
+    //   return false;
+    // }
+  }
+
+  
+
+
 
 
 

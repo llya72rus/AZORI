@@ -1,0 +1,286 @@
+.contacts {
+  &__top-map {
+    position: relative;
+    margin-bottom: 80px;
+    padding-top: 30px;
+    background-color: #f5f6f6;
+    z-index: 0;
+  }
+
+  &__store {
+    margin-bottom: 100px;
+  }
+
+  &__empty {
+    width: 651px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    color: #252525;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+
+    br {
+      display: none;
+    }
+
+    &--branches {
+      position: relative;
+      padding-left: 55px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -9px;
+        left: 0;
+        width: 32px;
+        height: 40px;
+        background: url('../img/svg/pin.svg') no-repeat center;
+      }
+    }
+  }
+
+  &__address-wrapper {
+    width: 519px;
+    z-index: 1;
+    padding: 20px 22px;
+    background-color: $white;
+    border: 25px solid #f5f6f5;
+    box-shadow: 0 5px 20px rgba(17, 17, 17, 0.07);
+
+    // &--store {
+    //   padding: 0;
+    //   padding-right: 40px;
+    //   border: none;
+    //   box-shadow: none;
+    // }
+  }
+
+  &__subtitle {
+    margin-bottom: 15px;
+    color: #252525;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+  }
+
+  &__list {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+    list-style: none;
+
+    &--store {
+      width: 27%;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__key {
+    display: block;
+    margin-bottom: 10px;
+    color: #ed8c2b;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.375;
+    letter-spacing: 0.8px;
+  }
+
+  &__value {
+    color: #252525;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375;
+    letter-spacing: 0.8px;
+  }
+
+  &__phone {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+  }
+
+  &__ya-map {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 81px;
+    width: 100%;
+    min-height: 575px;
+  }
+
+  &__small-ya-map {
+    width: 57.2649572%;
+    iframe {
+      height: 370px;
+    }
+
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__branches {
+    padding-bottom: 40px;
+    background: linear-gradient(to bottom, $white 11.77%, #f5f6f6 11.77%);
+  }
+
+  &__branches-item {
+    padding: 10px 20px 20px;
+    box-shadow: 0 5px 20px rgba(17, 17, 17, 0.1);
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+
+  &__city {
+    display: block;
+    margin-bottom: 10px;
+    color: #ed8c2b;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+  }
+
+  &__org {
+    display: block;
+    margin-bottom: 5px;
+    color: #252525;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.8888;
+    letter-spacing: 0.45px;
+  }
+}
+
+
+@supports (display: grid) {
+  .contacts {
+    &__branches-list {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      &__branches-item {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media all and (-ms-high-contrast:none) {
+  .contacts {
+    &__branches-item {
+      width: 31.623931623%;
+      margin-right: 30px;
+      margin-bottom: 30px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    &__branches-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+}
+
+// @media (max-width: 1400px) {
+//   .contacts {
+//     &__address-wrapper--store {
+//       width: auto;
+//     }
+//   }
+// }
+
+
+@media (max-width: 1024px) {
+  .contacts {
+    &__address-wrapper {
+      width: 54.306%;
+      margin-left: -24px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    &__small-ya-map iframe {
+      height: 250px;
+    }
+
+    &__store {
+      margin-bottom: 70px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .contacts {
+    &__title br {
+      display: inline;
+    }
+
+    &__list--store {
+      width: 40%;
+    }
+
+    &__ya-map {
+      top: 125px;
+      height: 590px;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .contacts {
+    &__row {
+      display: block;
+    }
+
+    &__list--store {
+      width: 100%;
+    }
+
+    &__small-ya-map {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts {
+
+    &__address-wrapper {
+      margin-left: 0;
+      width: 100%;
+      padding: 15px 10px 20px;
+      border-width: 10px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+
+    &__subtitle {
+      font-size: 22px;
+    }
+  }
+}

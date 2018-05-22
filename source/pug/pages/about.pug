@@ -5,7 +5,7 @@ block content
   body.inner-body
     include ../modules/page-header
 
-    main.inner-main
+    main.about-main
       header.inner-header
         .container
           ul.breadcrumbs.breadcrumbs
@@ -16,20 +16,22 @@ block content
           .inner-header__bottom-wrapper.inner-header__bottom-wrapper
             h1.inner-header__title О бренде
       section.about-sect.about-sect--history
+        h2.inner-sect-title.about-sect__title.about-sect__title--history История
+        picture
+          source(media="(max-width: 480px)" srcset="img/about-history-logo-phone.png")
+          img.about-sect__logo(src="img/about-history-logo.png" alt="Логотип компании \"AZORI\"")
         .container
-          h2.inner-sect-title.about-sect__title.about-sect__title--history История
-          img.about-sect__logo(src="img/about-history-2-logo.png" width="267" height="347" alt="Логотип компании \"AZORI\"")
           .about-sect__text-wrapper
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
-          a.page-btn.history__learn-more(href="javascript:void(0);") Узнать больше
+          a.page-btn.page-btn--hollow.about-sect__learn-more(href="javascript:void(0);") Узнать больше
       section.about-sect.about-sect--philosophy
         .container
           .about-sect__text-wrapper
             h3.inner-sect-title.about-sect__title Философия
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus
-          a.page-btn.about-sect__learn-more(href="javascript:void(0);") Узнать больше
+          a.page-btn.page-btn--hollow.about-sect__learn-more(href="javascript:void(0);") Узнать больше
       section.about-sect.about-sect--production
         .container
           .about-sect__text-wrapper
@@ -37,9 +39,82 @@ block content
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus
           a.page-btn.page-btn--hollow.about-sect__learn-more(href="javascript:void(0);") Узнать больше
-
-
-
+      article.certificates
+        .container.container-770
+          h2.inner-sect-title Сертификаты
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor
+          .certificates__slider
+            a.certificates__item(href="img/certificate-blank.png" data-fancybox="images")
+              img(src="img/certificate-blank.png", alt="Сертификат")
+            a.certificates__item(href="img/certificate-blank.png" data-fancybox="images")
+              img(src="img/certificate-blank.png", alt="Сертификат")
+            a.certificates__item(href="img/certificate-blank.png" data-fancybox="images")
+              img(src="img/certificate-blank.png", alt="Сертификат")
+            a.certificates__item(href="img/certificate-blank.png" data-fancybox="images")
+              img(src="img/certificate-blank.png", alt="Сертификат")
+            a.certificates__item(href="img/certificate-blank.png" data-fancybox="images")
+              img(src="img/certificate-blank.png", alt="Сертификат")
+      article.ab-charcs
+        .container
+          h2.inner-sect-title Техинические характеристики
+          .ab-charcs__top-info
+            img.ab-charcs__top-img(src="img/ab-charcs-top-image.jpg" alt="Технические характеристики")
+            .ab-charcs__top-text-wrapper
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+          .ab-charcs__block-wrapper
+            .ab-charcs__slider
+              ul.ab-charcs__list
+                li.ab-charcs__item.ab-charcs__item--wall
+                  h3.ab-charcs__subtitle Настенная
+                  p.ab-charcs__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                li.ab-charcs__item.ab-charcs__item--floor
+                  h3.ab-charcs__subtitle Напольная
+                  p.ab-charcs__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                li.ab-charcs__item.ab-charcs__item--decor
+                  h3.ab-charcs__subtitle Декоративная
+                  p.ab-charcs__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+              ul.ab-charcs__list
+                li.ab-charcs__item.ab-charcs__item--wall
+                  h3.ab-charcs__subtitle Настенная
+                  p.ab-charcs__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                li.ab-charcs__item.ab-charcs__item--floor
+                  h3.ab-charcs__subtitle Напольная
+                  p.ab-charcs__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                li.ab-charcs__item.ab-charcs__item--decor
+                  h3.ab-charcs__subtitle Декоративная
+                  p.ab-charcs__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+              ul.ab-charcs__list
+                li.ab-charcs__item.ab-charcs__item--wall
+                  h3.ab-charcs__subtitle Настенная
+                  p.ab-charcs__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                li.ab-charcs__item.ab-charcs__item--floor
+                  h3.ab-charcs__subtitle Напольная
+                  p.ab-charcs__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                li.ab-charcs__item.ab-charcs__item--decor
+                  h3.ab-charcs__subtitle Декоративная
+                  p.ab-charcs__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+      article.projects-preview-article
+        .container
+          h2.inner-sect-title Реализованные проекты
+          p Одним из наиболее интересных и посещаемых на выставке оказался стенд «Керамическое ателье Яны Сушко». Это уникальная керамика ручной работы: керамическая плитка, декоративные панно и предметы интерьера. В основе - принципы классической итальянской школы в сочетании с современными тенденциями. Традиционные орнаменты соседствуют с необычными графическими решениями.
+        .projects-preview.projects-preview-article__slider
+          a.projects-preview__slide(href="javascript:void(0);")
+            img(src="img/coll-examples-img-1.jpg", alt="")
+            .projects-preview__tooltip Плитка в большой ванной
+          a.projects-preview__slide(href="javascript:void(0);")
+            img(src="img/coll-examples-img-2.jpg", alt="")
+            .projects-preview__tooltip Плитка в большой ванной
+          a.projects-preview__slide(href="javascript:void(0);")
+            img(src="img/coll-examples-img-3.jpg", alt="")
+            .projects-preview__tooltip Плитка в большой ванной
+          a.projects-preview__slide(href="javascript:void(0);")
+            img(src="img/coll-examples-img-4.jpg", alt="")
+            .projects-preview__tooltip Плитка в большой ванной
+          a.projects-preview__slide(href="javascript:void(0);")
+            img(src="img/coll-examples-img-2.jpg", alt="")
+            .projects-preview__tooltip Плитка в большой ванной
+        a.page-btn.page-btn--hollow.projects-preview-title__learn-more(href="javascript:void(0);") Узнать больше
 
 
 

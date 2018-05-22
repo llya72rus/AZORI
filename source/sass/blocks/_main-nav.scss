@@ -101,6 +101,13 @@
   }
 }
 
+@media (max-width: 1366px) {
+
+  .main-nav__language-option {
+    right: -10%;
+  }
+}
+
 @media (max-width: 1300px) {
   .main-nav {
     justify-content: space-between;
@@ -118,7 +125,7 @@
     }
 
     &__language-option {
-      right: -10px;
+      right: 10px;
       cursor: pointer;
     }
 

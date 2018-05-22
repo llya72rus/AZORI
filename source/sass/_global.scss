@@ -145,14 +145,50 @@ img {
   }
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .orange-rounded-btn-next {
+  position: absolute;
+  top: 50%;
   right: -70px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 55px;
+  height: 55px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
   background: url('../img/orange-rounded-btn-next.png') no-repeat center;
+
+  &--ab-charcs {
+    right: -100px;
+  }
 }
 
 .orange-rounded-btn-prev {
+  position: absolute;
+  top: 50%;
   left: -70px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 55px;
+  height: 55px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
   background: url('../img/orange-rounded-btn-prev.png') no-repeat center;
+
+  &--ab-charcs {
+    left: -100px;
+  }
 }
 
 .color-square {
@@ -227,15 +263,19 @@ img {
   background: linear-gradient(to bottom, $white 12%, #f5f6f6 12%, #f5f6f6 88%, #ffffff 88%);
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1366px) {
   .container {
-    padding: 0 24px;
+    padding: 0 70px;
   }
 }
 
 @media (max-width: 1024px) {
   .inner-body {
     padding-top: 60px;
+  }
+
+  .container {
+    padding: 0 24px;
   }
 
   .back-to-top {

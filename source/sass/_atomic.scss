@@ -6,16 +6,10 @@
   display: none !important;
 }
 
-// .single-new__top-gallery .slick-dots.slick-dots-flex-start {
-//   justify-content: flex-start;
-//   padding-left: 33px;
-//   li {
-//     margin-bottom: 30px;
-//   }
-//   li:nth-child(5n) {
-//     margin-right: 0
-//   }
-// }
+.container-770 {
+  max-width: 770px;
+  margin: 0 auto;
+}
 
 @media (max-width: 1300px) {
   .single-new__top-gallery .slick-dots.slick-dots-flex-start {

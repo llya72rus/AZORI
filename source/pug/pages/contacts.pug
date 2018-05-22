@@ -1,0 +1,180 @@
+extends ../layout/main
+block title
+  | Контакты
+block content
+  body.inner-body
+    include ../modules/page-header
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+
+    main.contacts
+      header.inner-header
+        .container
+          ul.breadcrumbs.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current Контакты
+          .inner-header__bottom-wrapper.inner-header__bottom-wrapper
+            h1.inner-header__title Контакты
+      section.contacts__top-map
+        .container
+          h2.contacts__title Управляющая компания #[br] «КераМир»
+          .contacts__address-wrapper
+            h3.contacts__subtitle Центральный офис
+            ul.contacts__list
+              li.contacts__item
+                span.contacts__key Адрес компании:
+                span.contacts__value г. Санкт-Петербург, Волхонское шоссе, д. 4.
+              li.contacts__item
+                span.contacts__key Телефон/факс:
+                span.contacts__value +7 (812)
+                  span.contacts__phone 324-60-59
+              li.contacts__item
+                span.contacts__key Электронный адрес:
+                span.contacts__value office@keramir.com
+            h3.contacts__subtitle Производство
+            ul.contacts__list
+              li.contacts__item
+                span.contacts__key Телефон/факс:
+                span.contacts__value +7 (812)
+                  span.contacts__phone 324-60-59
+              li.contacts__item
+                span.contacts__key Электронный адрес:
+                span.contacts__value office@keramir.com
+        .contacts__ya-map#map
+          //- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3c0191ead45c8823c3d6ec1ac7afc58e0d1a1982faea718d580f7c841e0ab9bf&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+          //- <script>var myMap = new ymaps.Map('map', {center: [54.27650159, 68.77326451],zoom: 4,controls: []});</script>
+      section.contacts__store
+        .container
+          h2.contacts__title Магазин "Петушок"
+          .contacts__row
+            ul.contacts__list.contacts__list--store
+              li.contacts__item
+                span.contacts__key Адрес компании:
+                span.contacts__value г. Санкт-Петербург, Волхонское шоссе, д. 4.
+              li.contacts__item
+                span.contacts__key Телефон/факс:
+                span.contacts__value +7 (812)
+                  span.contacts__phone 324-60-59
+              li.contacts__item
+                span.contacts__key Электронный адрес:
+                span.contacts__value office@keramir.com
+            .contacts__small-ya-map
+              iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A67505bb76c9974b58dfd2bdaa839b8162d2651ffaf97e50d0cd5afa2114935f0&amp;source=constructor" width="100%" height="100%" frameborder="0")
+      section.contacts__branches
+        .container
+          h2.contacts__title.contacts__title--branches Региональные представительства
+          ul.contacts__branches-list
+            li.contacts__branches-item
+              span.contacts__city Москва
+              span.contacts__org ООО "ЛКК Северо-Запад"
+              ul.contacts__list
+                li.contacts__item
+                  span.contacts__key Электронный адрес:
+                  span.contacts__value office@keramir.com
+                li.contacts__item
+                  span.contacts__key Телефон:
+                  span.contacts__value +7 (812)
+                    span.contacts__phone 324-60-59
+                li.contacts__item
+                  span.contacts__key Факс:
+                  span.contacts__value +7 (812)
+                    span.contacts__phone 324-60-59
+            li.contacts__branches-item
+              span.contacts__city Санкт-Петербург
+              span.contacts__org ООО "ЛКК Северо-Запад"
+              ul.contacts__list
+                li.contacts__item
+                  span.contacts__key Электронный адрес:
+                  span.contacts__value office@keramir.com
+                li.contacts__item
+                  span.contacts__key Телефон:
+                  span.contacts__value +7 (812)
+                    span.contacts__phone 324-60-59
+                li.contacts__item
+                  span.contacts__key Факс:
+                  span.contacts__value +7 (812)
+                    span.contacts__phone 324-60-59
+            li.contacts__branches-item
+              span.contacts__city Самара
+              span.contacts__org ООО "ЛКК Северо-Запад"
+              ul.contacts__list
+                li.contacts__item
+                  span.contacts__key Электронный адрес:
+                  span.contacts__value office@keramir.com
+                li.contacts__item
+                  span.contacts__key Телефон:
+                  span.contacts__value +7 (812)
+                    span.contacts__phone 324-60-59
+                li.contacts__item
+                  span.contacts__key Факс:
+                  span.contacts__value +7 (812)
+                    span.contacts__phone 324-60-59
+            li.contacts__branches-item
+              span.contacts__city Казань
+              span.contacts__org ООО "ЛКК Северо-Запад"
+              ul.contacts__list
+                li.contacts__item
+                  span.contacts__key Электронный адрес:
+                  span.contacts__value office@keramir.com
+                li.contacts__item
+                  span.contacts__key Телефон:
+                  span.contacts__value +7 (812)
+                    span.contacts__phone 324-60-59
+                li.contacts__item
+                  span.contacts__key Факс:
+                  span.contacts__value +7 (812)
+                    span.contacts__phone 324-60-59
+            li.contacts__branches-item
+              span.contacts__city Краснодар
+              span.contacts__org ООО "ЛКК Северо-Запад"
+              ul.contacts__list
+                li.contacts__item
+                  span.contacts__key Электронный адрес:
+                  span.contacts__value office@keramir.com
+                li.contacts__item
+                  span.contacts__key Телефон:
+                  span.contacts__value +7 (812)
+                    span.contacts__phone 324-60-59
+                li.contacts__item
+                  span.contacts__key Факс:
+                  span.contacts__value +7 (812)
+                    span.contacts__phone 324-60-59
+            li.contacts__branches-item
+              span.contacts__city Челябинск
+              span.contacts__org ООО "ЛКК Северо-Запад"
+              ul.contacts__list
+                  li.contacts__item
+                    span.contacts__key Электронный адрес:
+                    span.contacts__value office@keramir.com
+                  li.contacts__item
+                    span.contacts__key Телефон:
+                    span.contacts__value +7 (812)
+                      span.contacts__phone 324-60-59
+                  li.contacts__item
+                    span.contacts__key Факс:
+                    span.contacts__value +7 (812)
+                      span.contacts__phone 324-60-59
+            li.contacts__branches-item
+              span.contacts__city Новосибирск
+              span.contacts__org ООО "ЛКК Северо-Запад"
+              ul.contacts__list
+                  li.contacts__item
+                    span.contacts__key Электронный адрес:
+                    span.contacts__value office@keramir.com
+                  li.contacts__item
+                    span.contacts__key Телефон:
+                    span.contacts__value +7 (812)
+                      span.contacts__phone 324-60-59
+                  li.contacts__item
+                    span.contacts__key Факс:
+                    span.contacts__value +7 (812)
+                      span.contacts__phone 324-60-59
+
+
+
+    include ../modules/footer
+    button(type="button" class="back-to-top" title="Back to top") &uarr;
+
+
+

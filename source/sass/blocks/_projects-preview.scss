@@ -1,0 +1,43 @@
+.projects-preview {
+
+  &__slide {
+    display: block !important;
+    height: 100%;
+    position: relative;
+  }
+
+  &__tooltip {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    min-height: 170px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: $white;
+    color: #252525;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    text-align: center;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 1px;
+      margin: 0 auto 10px;
+      background: $orange;
+    }
+  }
+}
+
+.projects-preview .slick-slide:hover .projects-preview__tooltip {
+  display: flex;
+}

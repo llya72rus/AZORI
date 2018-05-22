@@ -77,10 +77,10 @@
   }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1800px) {
   .page-nav {
     &__top-icons-panel {
-      right: 3%;
+      right: 2%;
     }
   }
 }
@@ -165,6 +165,7 @@
     &__logo {
       position: absolute;
       left: 50%;
+      top: 0;
       transform: translateX(-50%);
       width: 193px;
       height: 60px;

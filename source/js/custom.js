@@ -323,8 +323,8 @@ $(document).ready(function() {
     centerPadding: '21.2%',
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: '<button type="button" class="main-header__slick-next">Next</button>',
-    prevArrow: '<button type="button" class="main-header__slick-prev">Previous</button>',
+    nextArrow: '<button type="button" class="main-header__slick-next">Следующий слайд</button>',
+    prevArrow: '<button type="button" class="main-header__slick-prev">Предыдущий слайд</button>',
     responsive: [
       {
         breakpoint: 1600,
@@ -383,8 +383,8 @@ $(document).ready(function() {
   $('.catalog-top-slider').slick({
     speed: 500,
     useTransform: false,
-    nextArrow: '<button type="button" class="catalog-top-slider__next">Next</button>',
-    prevArrow: '<button type="button" class="catalog-top-slider__prev">Previous</button>',
+    nextArrow: '<button type="button" class="catalog-top-slider__next">Следующий слайд</button>',
+    prevArrow: '<button type="button" class="catalog-top-slider__prev">Предыдущий слайд</button>',
   });
 
   $('.collection__gallery').slick({
@@ -393,8 +393,8 @@ $(document).ready(function() {
     slidesToScroll: 1,
     infinite: true,
     arrows: true,
-    nextArrow: '<button type="button" class="top-gallery__next">Next</button>',
-    prevArrow: '<button type="button" class="top-gallery__prev">Previous</button>'
+    nextArrow: '<button type="button" class="top-gallery__next">Следующий слайд</button>',
+    prevArrow: '<button type="button" class="top-gallery__prev">Предыдущий слайд</button>'
   });
 
   $('.single-new__top-gallery').slick({
@@ -404,8 +404,8 @@ $(document).ready(function() {
     infinite: false,
     arrows: true,
     asNavFor: '.top-gallery__thumbs',
-    nextArrow: '<button type="button" class="top-gallery__next">Next</button>',
-    prevArrow: '<button type="button" class="top-gallery__prev">Previous</button>',
+    nextArrow: '<button type="button" class="top-gallery__next">Следующий слайд</button>',
+    prevArrow: '<button type="button" class="top-gallery__prev">Предыдущий слайд</button>',
   });
 
   $('.top-gallery__thumbs').slick({
@@ -481,22 +481,21 @@ $(document).ready(function() {
 
   // })();
 
-
-
-  $('.coll-examples__slider').slick({
+  $('.projects-preview').slick({
     speed: 500,
     slidesToShow:  4,
-    slidesToScroll: 1,
-    infinite: true,
+    slidesToScroll: 4,
+    infinite: false,
     arrows: true,
-    nextArrow: '<button type="button" class="coll-examples__slide-next">Next</button>',
-    prevArrow: '<button type="button" class="coll-examples__slide-prev">Previous</button>',
+    nextArrow: '<button type="button" class="projects-preview__slide-next">Следующий слайд</button>',
+    prevArrow: '<button type="button" class="projects-preview__slide-prev">Предыдущий слайд</button>',
     responsive: [
 
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 3
+          slidesToShow: 3,
+          slidesToScroll: 3
         }
       },
 
@@ -504,6 +503,7 @@ $(document).ready(function() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 2,
           dots: true,
           arrows: false
         }
@@ -513,6 +513,7 @@ $(document).ready(function() {
         breakpoint: 670,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
           arrows: false,
           dots: true,
         }
@@ -527,8 +528,8 @@ $(document).ready(function() {
     slidesToScroll: 1,
     infinite: false,
     arrows: true,
-    nextArrow: '<button type="button" class="orange-rounded-btn-next">Next</button>',
-    prevArrow: '<button type="button" class="orange-rounded-btn-prev">Previous</button>',
+    nextArrow: '<button type="button" class="orange-rounded-btn-next">Следующий слайд</button>',
+    prevArrow: '<button type="button" class="orange-rounded-btn-prev">Предыдущий слайд</button>',
     responsive: [
 
       {
@@ -567,8 +568,8 @@ $(document).ready(function() {
     slidesToScroll: 1,
     infinite: true,
     arrows: true,
-    nextArrow: '<button type="button" class="orange-rounded-btn-next">Next</button>',
-    prevArrow: '<button type="button" class="orange-rounded-btn-prev">Previous</button>',
+    nextArrow: '<button type="button" class="orange-rounded-btn-next">Следующий слайд</button>',
+    prevArrow: '<button type="button" class="orange-rounded-btn-prev">Предыдущий слайд</button>',
     responsive: [
 
       {
@@ -618,6 +619,76 @@ $(document).ready(function() {
   $(".collection__colors-list .slick-slide").click(function() {
     $(".collection__colors-list .slick-slide").removeClass('collection__slick-active');
     $(this).addClass('collection__slick-active');
+  });
+
+  $('.certificates__slider').slick({
+    speed: 500,
+    slidesToShow:  4,
+    slidesToScroll: 4,
+    infinite: false,
+    arrows: true,
+    nextArrow: '<button type="button" class="orange-rounded-btn-next">Следующий слайд</button>',
+    prevArrow: '<button type="button" class="orange-rounded-btn-prev">Предыдущий слайд</button>',
+    responsive: [
+
+      {
+        breakpoint: 1024,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      },
+
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true
+        }
+      }
+
+    ]
+  });
+
+  $('.ab-charcs__slider').slick({
+    speed: 500,
+    slidesToShow:  2,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: true,
+    nextArrow: '<button type="button" class="orange-rounded-btn-next orange-rounded-btn-next--ab-charcs">Следующий слайд</button>',
+    prevArrow: '<button type="button" class="orange-rounded-btn-prev orange-rounded-btn-prev--ab-charcs">Предыдущий слайд</button>',
+    responsive: [
+
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+
+      {
+        breakpoint: 1366,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 2,
+          arrows: false,
+          dots: true
+        }
+      },
+
+      {
+        breakpoint: 670,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+        }
+      }
+
+    ]
   });
 
 
@@ -738,6 +809,46 @@ $('.news__desc').each(function() {
   //     });
   //   }
   // }
+
+  ymaps.ready(init);
+        var myMap,
+            myPlacemark;
+
+        function init(){
+            myMap = new ymaps.Map("map", {
+                center: [59.78627996, 30.17684996],
+                zoom: 15,
+                controls: []
+            });
+
+            myPlacemark = new ymaps.Placemark([59.78718856, 30.18766950], {
+              iconContent: 'Волхонское шоссе, д. 4',
+            },
+            {
+              preset: 'islands#darkOrangeStretchyIcon',
+              // Задаем цвет метки (в формате RGB).
+              // iconColor: '#ff0000'
+            });
+
+            var zoomControl = new ymaps.control.ZoomControl({
+              options: {
+                  size: "small",
+                  position: {
+                    right: 10,
+                    top: 50
+                  }
+              }
+          });
+            // myPlacemark.setIconContent("Щелкни меня");
+            myMap.geoObjects.add(myPlacemark);
+            myMap.controls.add(zoomControl);
+            myMap.controls.add('geolocationControl', {
+              float: 'right'
+          });
+            // myPlacemark.setIconContent("Щелкни меня");
+        }
+
+
 
   window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27 && collModal) {

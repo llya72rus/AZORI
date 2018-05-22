@@ -244,13 +244,17 @@
   border-radius: 5px;
 }
 
-.coll-examples .slick-slide {
+.projects-preview .slick-slide {
   margin: 10px 5px 0;
   transition: all 0.2s linear;
   &:hover {
     transform: translateY(-10px);
     box-shadow: 0 5px 20px rgba(17, 17, 17, 0.1);
   }
+}
+
+.projects-preview .slick-slide > div {
+  height: 100%;
 }
 
 .preview .slick-slide,
@@ -308,13 +312,14 @@
   padding: 0 15px;
 }
 
-.coll-examples__slide img {
+.projects-preview img {
   width: 100%;
+  height: 100%;
 }
 
 
 .top-gallery .slick-arrow,
-.coll-examples__slider .slick-arrow {
+.projects-preview .slick-arrow {
   position: absolute;
   width: 60px;
   height: 65px;
@@ -335,7 +340,7 @@
 }
 
 .top-gallery__prev,
-.coll-examples__slide-prev {
+.projects-preview__slide-prev {
   background-image: url('../img/orange-arrow-left.png');
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
@@ -345,12 +350,12 @@
   left: 3%;
 }
 
-.coll-examples__slide-prev {
+.projects-preview__slide-prev {
   left: 1%;
 }
 
 .top-gallery__next,
-.coll-examples__slide-next {
+.projects-preview__slide-next {
   background-image: url('../img/orange-arrow-right.png');
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
@@ -360,26 +365,9 @@
   right: 3%;
 }
 
-.coll-examples__slide-next {
+.projects-preview__slide-next {
   right: 1%;
 }
-
-// Кнопки в секции "Рекомендуемые товары" и "Вы уже просмотрели"
-
-.preview .slick-arrow,
-.viewed .slick-arrow {
-  position: absolute;
-  top: 50%;
-  transform : translateY(-50%);
-  z-index: 1;
-  width: 55px;
-  height: 55px;
-  border: none;
-  margin: 0;
-  padding: 0;
-  font-size: 0;
-}
-
 
 // Слайдер "Цвета коллекции"
 
@@ -472,7 +460,19 @@
   box-shadow: 0 0 0 2px #ff7f00;
 }
 
+// Сертификаты 
 
+.certificates__slider .slick-slide {
+  margin: 0 15px;
+}
+
+.certificates__slider .slick-list {
+  margin: 0 -15px;
+}
+
+.certificates__slider .slick-slide img {
+  width: 100%;
+}
 
 @media (max-width: 1600px) {
   .catalog-top-slider__prev {
@@ -526,7 +526,7 @@
 }
 
 @media (max-width: 1366px) {
-  .coll-examples__slide img {
+  .projects-preview img {
     min-height: 260px;
   }
 
@@ -634,7 +634,7 @@
     min-height: 450px;
   }
 
-  .coll-examples__slider .slick-dots {
+  .projects-preview .slick-dots {
     display: flex;
     justify-content: center;
     margin-top: 10px;
@@ -643,7 +643,7 @@
     font-size: 0;
   }
 
-  .coll-examples__slider .slick-dots button {
+  .projects-preview .slick-dots button {
     position: relative;
     width: 14px;
     height: 14px;
@@ -654,15 +654,15 @@
     border-radius: 50%;
   }
 
-  .coll-examples__slider .slick-dots li {
+  .projects-preview .slick-dots li {
     margin-right: 15px;
   }
 
-  .coll-examples__slider .slick-dots li:last-child {
+  .projects-preview .slick-dots li:last-child {
     margin-right: 0;
   }
 
-  .coll-examples__slider .slick-dots li.slick-active button::before {
+  .projects-preview .slick-dots li.slick-active button::before {
     content: "";
     position: absolute;
     top: 2px;
@@ -673,7 +673,7 @@
     border-radius: 50%;
   }
 
-  .coll-examples__slider .slick-list {
+  .projects-preview .slick-list {
     padding: 10px 0;
   }
 
@@ -721,6 +721,14 @@
 
   .collection__colors-list .slick-slide:hover {
     box-shadow: 0 3px 10px rgba(237, 117, 46, 0.2);
+  }
+
+  .certificates__slider .slick-slide {
+    margin: 0 13px;
+  }
+
+  .certificates__slider .slick-list {
+    margin: 0 -13px;
   }
 
 }
@@ -816,7 +824,7 @@
   }
 
   .collection__colors-list .slick-list {
-    margin: 0 -10px;
+    margin: 0 -5px;
   }
 
 }
@@ -831,7 +839,7 @@
     max-width: unset;
   }
 
-  .coll-examples .slick-slide {
+  .projects-preview .slick-slide {
     margin: 0 5px;
     &:hover {
       transform: translateY(0);
@@ -904,6 +912,14 @@
     .slick-list {
       margin: 0 -5px;
     }
+  }
+
+  .certificates__slider .slick-slide {
+    margin: 0 5.5px;
+  }
+
+  .certificates__slider .slick-list {
+    margin: 0 -5.5px;
   }
 }
 

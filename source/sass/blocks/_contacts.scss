@@ -63,55 +63,17 @@
     box-shadow: 0 5px 20px rgba(17, 17, 17, 0.07);
   }
 
-  &__subtitle {
-    margin-bottom: 15px;
-    color: #252525;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 0.6px;
-  }
-
   &__list {
-    margin: 0;
     margin-bottom: 15px;
-    padding: 0;
-    list-style: none;
+
+    
+  &:last-child {
+    margin-bottom: 0;
+  }
 
     &--store {
       width: 27%;
     }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &__item:not(:last-child) {
-    margin-bottom: 15px;
-  }
-
-  &__key {
-    display: block;
-    margin-bottom: 10px;
-    color: #ed8c2b;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.375;
-    letter-spacing: 0.8px;
-  }
-
-  &__value {
-    color: #252525;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.375;
-    letter-spacing: 0.8px;
-  }
-
-  &__phone {
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 0.9px;
   }
 
   &__ya-map {
@@ -133,10 +95,10 @@
 
   &__small-ya-map {
     width: 57.2649572%;
+
     iframe {
       height: 370px;
     }
-
   }
 
   &__row {
@@ -293,7 +255,6 @@
 
 @media (max-width: 480px) {
   .contacts {
-
     &__address-wrapper {
       margin-left: 0;
       width: 100%;
@@ -324,10 +285,6 @@
           height: 25px;
         }
       }
-    }
-
-    &__subtitle {
-      font-size: 22px;
     }
 
     &__city {

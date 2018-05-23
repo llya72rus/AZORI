@@ -186,6 +186,28 @@
   background-color: $white;
 }
 
+.img-slider {
+  margin-bottom: 60px;
+}
+
+.img-slider .slick-slide {
+  max-height: 375px;
+  padding: 0 15px;
+}
+
+.img-slider .slick-list {
+  margin: 0 -15px;
+}
+
+.img-slider .slick-slide > div {
+  height: 100%;
+}
+
+.img-slider img {
+  display: block !important;
+  height: 100%;
+}
+
 .f-about__slick .slick-slide {
   margin: 0 5px;
 }
@@ -400,7 +422,7 @@
 .slick-dots {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 15px;
   padding: 0;
   list-style: none;
   font-size: 0;
@@ -720,6 +742,10 @@
     }
   }
 
+  .img-slider {
+    margin-bottom: 30px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -760,6 +786,10 @@
 
   .partners-slider .slick-list {
     margin: 0 -7.5px;
+  }
+
+  .img-slider .slick-slide {
+    height: 375px;
   }
 
 }

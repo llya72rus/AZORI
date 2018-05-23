@@ -1,0 +1,84 @@
+extends ../layout/main
+block title
+  | Реализованные проекты
+block content
+  body.inner-body
+    include ../modules/page-header
+
+    main
+      header.inner-header
+        .container
+          ul.breadcrumbs.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current Реализованные проекты
+          .inner-header__bottom-wrapper.inner-header__bottom-wrapper
+            h1.inner-header__title Реализованные проекты
+      section.projects
+        .container
+          p.projects__info-text Мир красок, где каждый покупатель сможет найти коллекцию, которая сделает ванную комнату оригинальной и неповторимой. Комплектация коллекций разными форматами декоративных элементов позволяет выстраивать рисунок стен как вертикально, так и горизонтально, создавая в ванной комнате особый мир уюта и хорошего настроения.
+        .projects__grey-bg-wrapper
+          .container
+            ul.projects__list
+              li.projects__item
+                a.projects__link(href="javascript:void(0);" style="background-image: url('img/layout-1.jpg')")
+                  .projects__title-wrapper
+                    h3.projects__title Облицовка большой ванной комнаты
+                    span.projects__goto Перейти
+                      svg(width="20" height="15")
+                        use(xlink:href="img/sprite.svg#arrow_right_orange_large")
+              li.projects__item
+                a.projects__link(href="javascript:void(0);" style="background-image: url('img/projects-2.jpg')")
+                  .projects__title-wrapper
+                    h3.projects__title Облицовка большой ванной комнаты
+                    span.projects__goto Перейти
+                      svg(width="20" height="15")
+                        use(xlink:href="img/sprite.svg#arrow_right_orange_large")
+              li.projects__item
+                a.projects__link(href="javascript:void(0);" style="background-image: url('img/projects-3.jpg')")
+                  .projects__title-wrapper
+                    h3.projects__title Облицовка большой ванной комнаты
+                    span.projects__goto Перейти
+                      svg(width="20" height="15")
+                        use(xlink:href="img/sprite.svg#arrow_right_orange_large")
+              li.projects__item
+                a.projects__link(href="javascript:void(0);" style="background-image: url('img/projects-4.jpg')")
+                  .projects__title-wrapper
+                    h3.projects__title Облицовка большой ванной комнаты
+                    span.projects__goto Перейти
+                      svg(width="20" height="15")
+                        use(xlink:href="img/sprite.svg#arrow_right_orange_large")
+              li.projects__item
+                a.projects__link(href="javascript:void(0);" style="background-image: url('img/projects-5.jpg')")
+                  .projects__title-wrapper
+                    h3.projects__title Облицовка большой ванной комнаты
+                    span.projects__goto Перейти
+                      svg(width="20" height="15")
+                        use(xlink:href="img/sprite.svg#arrow_right_orange_large")
+              li.projects__item
+                a.projects__link(href="javascript:void(0);" style="background-image: url('img/projects-6.jpg')")
+                  .projects__title-wrapper
+                    h3.projects__title Облицовка большой ванной комнаты
+                    span.projects__goto Перейти
+                      svg(width="20" height="15")
+                        use(xlink:href="img/sprite.svg#arrow_right_orange_large")
+            button.page-btn.page-btn--hollow.projects__show-more(href="javascript:void(0);") Показать еще
+            ul.projects__pagination.pagination
+              li.pagination__btn.pagination__btn--prev
+                a(href="javascript:void(0);")
+              li.pagination__item
+                a.pagination__link.pagination__link--current(href="javascript:void(0);") 1
+              li.pagination__item
+                a.pagination__link(href="javascript:void(0);") 2
+              li.pagination__item
+                a.pagination__link(href="javascript:void(0);") 3
+              li.pagination__btn.pagination__btn--next
+                a(href="javascript:void(0);")
+        .infotext.container
+          p Мир красок, где каждый покупатель сможет найти коллекцию, которая сделает ванную комнату оригинальной и неповторимой. Комплектация коллекций разными форматами декоративных элементов позволяет выстраивать рисунок стен как вертикально, так и горизонтально, создавая в ванной комнате особый мир уюта и хорошего настроения.
+    include ../modules/footer
+    button(type="button" class="back-to-top" title="В начало") &uarr;
+
+
+

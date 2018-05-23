@@ -397,7 +397,9 @@ $(document).ready(function() {
     prevArrow: '<button type="button" class="top-gallery__prev">Предыдущий слайд</button>'
   });
 
-  $('.single-new__top-gallery').slick({
+  
+
+  $('.top-gallery:not(".collection__gallery")').slick({
     speed: 500,
     slidesToShow:  1,
     slidesToScroll: 1,
@@ -405,7 +407,7 @@ $(document).ready(function() {
     arrows: true,
     asNavFor: '.top-gallery__thumbs',
     nextArrow: '<button type="button" class="top-gallery__next">Следующий слайд</button>',
-    prevArrow: '<button type="button" class="top-gallery__prev">Предыдущий слайд</button>',
+    prevArrow: '<button type="button" class="top-gallery__prev">Предыдущий слайд</button>'
   });
 
   $('.top-gallery__thumbs').slick({
@@ -414,9 +416,8 @@ $(document).ready(function() {
     slidesToScroll: 4,
     focusOnSelect: true,
     infinite: false,
-    animate: false,
     arrows: false,
-    asNavFor: '.single-new__top-gallery',
+    asNavFor: '.top-gallery',
     dots: true,
 
     responsive: [
@@ -786,6 +787,51 @@ $(document).ready(function() {
           dots: true,
         }
       }
+
+    ]
+  });
+
+  $('.img-slider').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: true,
+    nextArrow: '<button type="button" class="orange-rounded-btn-next">Следующий слайд</button>',
+    prevArrow: '<button type="button" class="orange-rounded-btn-prev">Предыдущий слайд</button>',
+    responsive: [
+
+      {
+        breakpoint: 1280,
+        settings: {
+          arrows: false,
+          dots: true,
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true,
+          infinite: false
+        }
+      },
+
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          centerPadding: '10.625%',
+          infinite: true
+        }
+      },
 
     ]
   });

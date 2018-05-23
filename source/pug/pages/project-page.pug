@@ -1,0 +1,117 @@
+extends ../layout/main
+block title
+  | Страницы отдельного проекта
+block content
+  body.inner-body
+    include ../modules/page-header
+    main.project-page
+      header.inner-header
+        .container
+          ul.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link Реализованные проекты
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current Облицовка большой ванной комнаты
+          .inner-header__bottom-wrapper
+            h1.inner-header__title Облицовка большой ванной комнаты
+      section
+        .container.container--slipping-bg
+          .top-gallery
+            a(href="../img/single-new-img.jpg" data-fancybox="images")
+              img(src="../img/single-new-img.jpg")
+            a(href="../img/single-new-img.jpg" data-fancybox="images")
+              img(src="../img/single-new-img.jpg")
+            a(href="../img/single-new-img.jpg" data-fancybox="images")
+              img(src="../img/single-new-img.jpg")
+            a(href="../img/single-new-img.jpg" data-fancybox="images")
+              img(src="../img/single-new-img.jpg")
+            a(href="../img/single-new-img.jpg" data-fancybox="images")
+              img(src="../img/single-new-img.jpg")
+
+          .top-gallery__thumbs
+            .top-gallery__thumb
+              img(src="../img/top-gallery-thumb-1.jpg", alt="")
+            .top-gallery__thumb
+              img(src="../img/top-gallery-thumb-2.jpg", alt="")
+            .top-gallery__thumb
+              img(src="../img/top-gallery-thumb-3.jpg", alt="")
+            .top-gallery__thumb
+              img(src="../img/top-gallery-thumb-4.jpg", alt="")
+            .top-gallery__thumb
+              img(src="../img/top-gallery-thumb-4.jpg", alt="")
+        .container
+          .single-new__info
+            p  Это цветовая палитра полупрозрачных тонов на глянцевой глазури, сосредоточенных на оттенках бирюзы, свекольного сока и светлого коралла на фоне которых, акцентами становятся плотный солнечный и графито-коричневый.
+            p Воздушность и прозрачность, лёгкость в новой своей интерпретации, удивит вас орнаментальными решениями декоративных элементов - Aurora, Selena, и заставит творить, следуя правилам цифрового искусства.
+
+      section.coll-elems
+        .container
+          h2.coll-elems__sect-title.inner-sect-title Используемые элементы #[br] коллекции
+          ul.coll-elems__list
+            li.coll-elems__item
+              .coll-elems__img-wrapper
+                img(src="img/coll-elems-1.png", alt="Панно AGRA GREY DALILA")
+              h3.coll-elems__title Панно AGRA GREY DALILA
+              .coll-elems__info
+                ul.coll-elems__charcs.charcs
+                  li.coll-elems__charcs-item.charcs__item.charcs__item--size 502 х 709 мм
+                  li.coll-elems__charcs-item.charcs__item.charcs__item--thickness 70 мм
+                  li.coll-elems__charcs-item.charcs__item.charcs__item--surface Матовая
+                .coll-elems__info-right
+                  .coll-elems__color-square.color-square
+                  p.coll-elems__price #[span 705] руб./ м2
+            li.coll-elems__item
+              .coll-elems__img-wrapper
+                img(src="img/coll-elems-2.png", alt="Бордюр AGRA GREY DALILA")
+              h3.coll-elems__title Бордюр AGRA GREY DALILA
+              .coll-elems__info
+                ul.coll-elems__charcs.charcs
+                  li.coll-elems__charcs-item.charcs__item.charcs__item--size 251 х 80 мм
+                  li.coll-elems__charcs-item.charcs__item.charcs__item--thickness 70 мм
+                  li.coll-elems__charcs-item.charcs__item.charcs__item--surface Матовая
+                .coll-elems__info-right
+                  .coll-elems__color-square.color-square
+                  p.coll-elems__price #[span 705] руб./ м2
+            li.coll-elems__item
+              .coll-elems__img-wrapper
+                img(src="img/coll-elems-3.png", alt="Плитка облицовочная AGRA LIGHT")
+              h3.coll-elems__title Плитка облицовочная AGRA LIGHT
+              .coll-elems__info
+                ul.coll-elems__charcs.charcs
+                  li.coll-elems__charcs-item.charcs__item.charcs__item--size 251 х 80 мм
+                  li.coll-elems__charcs-item.charcs__item.charcs__item--thickness 70 мм
+                  li.coll-elems__charcs-item.charcs__item.charcs__item--surface Матовая
+                .coll-elems__info-right
+                  .coll-elems__color-square.color-square
+                  p.coll-elems__price #[span 705] руб./ м2
+      .project-page__bottom-panel            
+        .container
+          a.back-to-parent-section(href="javascript:void(0);") Вернуться в коллекцию
+          
+    include ../modules/footer
+    button(type="button" class="back-to-top" title="Back to top") &uarr;
+    .modal
+      .coll-popup
+        button.coll-popup__close-btn
+        .coll-popup__img-wrapper
+          img.coll-popup__img(src="img/popup-img-desktop.png", alt="Img")
+        .coll-popup__info
+          h3.coll-popup__item-title Плитка настенная Eclipse Biege Arabesco
+          ul.coll-popup__charcs.charcs
+            li.coll-popup__charcs-item.charcs__item.charcs__item--size 251 х 709 мм
+            li.coll-popup__charcs-item.charcs__item.charcs__item--thickness 70 мм
+            li.coll-popup__charcs-item.charcs__item.charcs__item--surface Матовая
+          .coll-popup__color-square.color-square
+          a.coll-popup__link(href="javascript:void(0);") Коллекция #[strong &laquo;Eclipse&raquo;]
+          .coll-popup__price-wrapper
+            .coll-popup__price-text-wrapper
+              span.coll-popup__price-name Цена в магазине
+              p.coll-popup__price от #[span.coll-popup__price-number 705] руб/м#[sup 2]
+            a.coll-popup__where-buy.page-btn.page-btn--hollow(href="javascript:void(0);") Где купить
+          p.coll-popup__note Оттенок и рисунок поставляемой керамической плитки в связи с технологическими особенностями её производства может отличаться от представленного
+
+
+
+

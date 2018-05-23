@@ -22,31 +22,31 @@ block content
           h2.contacts__title.contacts__title--manage-company Управляющая компания #[br] «КераМир»
         .container
           .contacts__address-wrapper
-            h3.contacts__subtitle Центральный офис
-            ul.contacts__list
-              li.contacts__item
-                span.contacts__key Адрес компании:
-                span.contacts__value г. Санкт-Петербург, Волхонское шоссе, д. 4.
-              li.contacts__item
-                span.contacts__key Телефон/факс:
-                span.contacts__value +7 (812)
+            h3.contacts-subtitle Центральный офис
+            ul.contacts__list.contacts-list
+              li.contacts-list__item
+                span.contacts-list__key Адрес компании:
+                span.contacts-list__value г. Санкт-Петербург, Волхонское шоссе, д. 4.
+              li.contacts-list__item
+                span.contacts-list__key Телефон/факс:
+                span.contacts-list__value +7 (812)
                   span.contacts__phone 324-60-59
               li.contacts__item
-                span.contacts__key Телефон/факс:
-                span.contacts__value +7 (812)
-                  span.contacts__phone 324-60-59
-              li.contacts__item
-                span.contacts__key Электронный адрес:
+                span.contacts-list__key Телефон/факс:
+                span.contacts-list__value +7 (812)
+                  span.contacts-list__phone 324-60-59
+              li.contacts-list__item
+                span.contacts-list__key Электронный адрес:
                 span.contacts__value office@keramir.com
-            h3.contacts__subtitle Производство
-            ul.contacts__list
-              li.contacts__item
-                span.contacts__key Телефон/факс:
-                span.contacts__value +7 (812)
-                  span.contacts__phone 324-60-59
-              li.contacts__item
-                span.contacts__key Электронный адрес:
-                span.contacts__value office@keramir.com
+            h3.contacts-subtitle Производство
+            ul.contacts-list.contacts__list
+              li.contacts-list__item
+                span.contacts-list__key Телефон/факс:
+                span.contacts-list__value +7 (812)
+                  span.contacts-list__phone 324-60-59
+              li.contacts-list__item
+                span.contacts-list__key Электронный адрес:
+                span.contacts-list__value office@keramir.com
           .contacts__ya-map#map
           //- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3c0191ead45c8823c3d6ec1ac7afc58e0d1a1982faea718d580f7c841e0ab9bf&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
           //- <script>var myMap = new ymaps.Map('map', {center: [54.27650159, 68.77326451],zoom: 4,controls: []});</script>
@@ -54,17 +54,17 @@ block content
         .container
           h2.contacts__title Магазин "Название"
           .contacts__row
-            ul.contacts__list.contacts__list--store
-              li.contacts__item
-                span.contacts__key Адрес компании:
+            ul.contacts__list.contacts__list--store.contacts-list
+              li.contacts-list__item
+                span.contacts-list__key Адрес компании:
                 span.contacts__value г. Санкт-Петербург, Волхонское шоссе, д. 4.
-              li.contacts__item
-                span.contacts__key Телефон/факс:
+              li.contacts-list__item
+                span.contacts-list__key Телефон/факс:
                 span.contacts__value +7 (812)
                   span.contacts__phone 324-60-59
-              li.contacts__item
-                span.contacts__key Электронный адрес:
-                span.contacts__value office@keramir.com
+              li.contacts-list__item
+                span.contacts-list__key Электронный адрес:
+                span.contacts-list__value office@keramir.com
             .contacts__small-ya-map
               iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A67505bb76c9974b58dfd2bdaa839b8162d2651ffaf97e50d0cd5afa2114935f0&amp;source=constructor" width="100%" height="100%" frameborder="0")
       section.contacts__branches

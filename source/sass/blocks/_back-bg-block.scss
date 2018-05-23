@@ -1,0 +1,43 @@
+.back-bg-block {
+  padding-top: 40px;
+  background: linear-gradient(to top, $white 36px, #f5f6f6 36px);
+
+  .container {
+    padding-top: 209px;
+    background-repeat: no-repeat;
+    background-size: 100% 470px;
+  }
+
+  &__text-wrapper {
+    max-width: 770px;
+    margin: 0 auto;
+    padding: 35px 40px;
+    box-shadow: 0 5px 15px rgba(17, 17, 17, 0.1);
+    border-radius: 5px;
+    background-color: #ffffff;
+
+    p {
+      margin-bottom: 25px;
+      line-height: 1.625;
+      letter-spacing: 0.8px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.eng-page__back-bg-block {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .back-bg-block {
+    background: linear-gradient(to top, $white 16px, #f5f6f6 16px);
+
+    &__text-wrapper {
+      margin: 0;
+      padding: 30px 15px;
+    }
+  }
+}

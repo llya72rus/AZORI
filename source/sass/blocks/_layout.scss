@@ -4,11 +4,24 @@
     width: 100%;
     height: 100%;
     display: block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      visibility: hidden;
+      left: 0;
+      top: 0;
+      z-index: 0;
+      transition: visibility 0.1s ease;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-30deg, rgba(237, 140, 43, 0.5) 0%, rgba(238, 122, 39, 0.5) 100%);
+    }
   }
 
   &__wrapper {
     margin-bottom: 20px;
-    padding: 40px 0;
+    padding: 40px 0 10px;
     background-color: #f5f6f6;
   }
 
@@ -19,11 +32,14 @@
   &__list {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin: 0 -15px;
   }
 
   &__item {
     width: 31.623931%;
+    margin-bottom: 30px;
+    flex-shrink: 0;
     text-align: center;
   }
 
@@ -34,17 +50,7 @@
     border-radius: 5px;
     overflow: hidden;
 
-    // &::before {
-    //   display: none;
-    //   content: "";
-    //   position: absolute;
-    //   left: 0;
-    //   top: 0;
-    //   z-index: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   background: linear-gradient(-30deg, rgba(237, 140, 43, 0.5) 0%, rgba(238, 122, 39, 0.5) 100%);
-    // }
+
   }
 
   &__img {
@@ -63,7 +69,6 @@
     background: url('../img/eye-icon.png') no-repeat center 2px;
     background-size: cover;
     transition: 0.6s ease;
-    z-index: 0;
   }
 
   &__elem-name {
@@ -76,9 +81,6 @@
   }
 }
 
-.layout__img-wrapper{
-  box-shadow: inset 80px 0 555px red;
-}
 
 .layout__img-wrapper:hover .layout__eye {
   display: block;
@@ -88,4 +90,44 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.layout__img-link:hover::before {
+  visibility: visible;
+}
+
+
+@media (max-width: 1024px) {
+  .layout {
+    &__item {
+      width: 46%;
+    }
+  }
+}
+
+
+@media (max-width: 670px) {
+  .layout {
+    &__list {
+      display: block;
+      margin: 0;
+    }
+
+    &__item {
+      width: 65.5%;
+      margin: 0 auto 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 480px) {
+  .layout {
+    &__item {
+      width: 300px;
+    }
+  }
 }

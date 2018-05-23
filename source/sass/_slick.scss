@@ -247,6 +247,7 @@
 .projects-preview .slick-slide {
   margin: 10px 5px 0;
   transition: all 0.2s linear;
+  max-height: 350px;
   &:hover {
     transform: translateY(-10px);
     box-shadow: 0 5px 20px rgba(17, 17, 17, 0.1);
@@ -460,7 +461,7 @@
   box-shadow: 0 0 0 2px #ff7f00;
 }
 
-// Сертификаты 
+// Сертификаты
 
 .certificates__slider .slick-slide {
   margin: 0 15px;
@@ -474,12 +475,12 @@
   width: 100%;
 }
 
-// Парнеры 
+// Парнеры
 
 .partners-slider .slick-slide {
   margin: 15px;
   min-height: 271px;
-  box-shadow: 0 5px 20px rgba(17, 17, 17, 0.1);
+  box-shadow: 0 2px 17px rgba(17, 17, 17, 0.1);
   border-radius: 5px;
 }
 

@@ -5,15 +5,24 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 -15px;
+    justify-content: flex-start;
+    margin: 0;
     padding: 0;
     list-style: none;
+
+    &--d-center {
+      justify-content: center;
+    }
   }
 
   &__item {
     width: 30.833333333%;
+    margin-right: 30px;
     margin-bottom: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 }
 

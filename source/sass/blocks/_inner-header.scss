@@ -1,9 +1,13 @@
 .inner-header {
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding-top: 33px;
+  padding-bottom: 24px;
 
   &--btns-true {
     padding-bottom: 0;
+  }
+
+  &--projects {
+    padding-bottom: 16px;
   }
 
   .social li:not(:last-child) {
@@ -92,8 +96,14 @@
 
 @media (max-width: 1024px) {
   .inner-header {
+    padding-top: 23px;
     &--catalog {
       padding-bottom: 23px;
+    }
+
+    &__title {
+      font-size: 32px;
+      letter-spacing: 1.6px;
     }
   }
 }
@@ -125,10 +135,17 @@
 
 @media (max-width: 480px) {
   .inner-header {
+    padding-top: 20px;
+    padding-bottom: 15px;
 
     &--catalog {
       padding-top: 7px;
       padding-bottom: 19px;
+    }
+
+    &--projects {
+      padding-top: 20px;
+      padding-bottom: 11px;
     }
 
     &__title {

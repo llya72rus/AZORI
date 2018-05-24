@@ -5,7 +5,8 @@
   .container {
     padding-top: 209px;
     background-repeat: no-repeat;
-    background-size: 100% 470px;
+    background-position: center top;
+    background-size: 1030px 470px;
   }
 
   &__text-wrapper {
@@ -21,23 +22,43 @@
       line-height: 1.625;
       letter-spacing: 0.8px;
 
-      &:last-of-type {
+      &:last-child {
         margin-bottom: 0;
       }
     }
   }
 }
 .eng-page__back-bg-block {
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 }
 
 @media (max-width: 768px) {
   .back-bg-block {
     background: linear-gradient(to top, $white 16px, #f5f6f6 16px);
 
+    .container {
+      background-size: 100% 470px;
+    }
+
     &__text-wrapper {
       margin: 0;
-      padding: 30px 15px;
+      padding: 25px 15px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .back-bg-block {
+    margin-bottom: 25px;
+    padding-top: 15px;
+
+    .container {
+      padding-top: 100px;
+      background-size: 100% 250px;
+    }
+
+    &__text-wrapper {
+      padding: 9px 10px;
     }
   }
 }

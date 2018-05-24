@@ -397,7 +397,7 @@ $(document).ready(function() {
     prevArrow: '<button type="button" class="top-gallery__prev">Предыдущий слайд</button>'
   });
 
-  
+
 
   $('.top-gallery:not(".collection__gallery")').slick({
     speed: 500,
@@ -822,14 +822,11 @@ $(document).ready(function() {
       },
 
       {
-        breakpoint: 480,
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
           arrows: false,
           dots: true,
-          centerMode: true,
-          centerPadding: '10.625%',
-          infinite: true
         }
       },
 

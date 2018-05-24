@@ -46,6 +46,7 @@
 
 @media (max-width: 1024px) {
   .breadcrumbs {
+    margin-bottom: 25px;
     &--catalog {
       margin-bottom: 11px;
     }
@@ -55,8 +56,6 @@
 
 @media (max-width: 480px) {
   .breadcrumbs {
-    &--catalog {
-      margin-bottom: 18px;
-    }
+    display: none;
   }
 }

@@ -47,7 +47,7 @@
   }
 }
 .slick-slide {
-  display: flex;
+
 
   img {
       display: block;
@@ -57,7 +57,6 @@
       display: none;
   }
 
-  display: none;
 
   &.dragging img {
       pointer-events: none;
@@ -83,7 +82,6 @@
 }
 
 .catalog-top-slider .slick-slide {
-  // max-height: 420px;
   min-height: 420px;
 }
 
@@ -117,11 +115,6 @@
   background: url('../img/top-slider-arrow-right.png') no-repeat center 2px;
   transform: translateY(-50%) rotate(-180deg) ;
 }
-
-// .main-header__slick .slick-slide img {
-//   width: 100%;
-// }
-
 
 .slick-arrow.slick-hidden {
   display: none;
@@ -260,11 +253,10 @@
   background: url('../img/arrow-right.png');
 }
 
-
-
 .top-gallery .slick-list {
   border-radius: 5px;
 }
+
 
 .projects-preview .slick-slide {
   margin: 10px 5px 0;
@@ -370,7 +362,7 @@
 }
 
 .top-gallery__prev {
-  left: 3%;
+  left: 2.7%;
 }
 
 .projects-preview__slide-prev {
@@ -385,7 +377,7 @@
 }
 
 .top-gallery__next {
-  right: 3%;
+  right: 2.7%;
 }
 
 .projects-preview__slide-next {
@@ -422,7 +414,7 @@
 .slick-dots {
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 20px;
   padding: 0;
   list-style: none;
   font-size: 0;
@@ -466,12 +458,25 @@
 
   .slick-slide {
     height: 130px;
-    margin: 5px 15px;
+    margin: 10px 15px;
     padding: 0;
     border-radius: 5px;
     transition: transform 0.2s ease;
     cursor: pointer;
   }
+
+}
+
+.top-gallery .slick-slide {
+  max-height: 570px;
+}
+
+.top-gallery .slick-slide > div {
+  height: 100%;
+}
+
+.top-gallery__thumbs--pr-page .slick-slide {
+  height: 175px;
 }
 
 .top-gallery__thumbs .slick-slide > div {
@@ -479,7 +484,7 @@
 }
 
 .top-gallery__thumb-active {
-  transform: scale(1.01);
+  transform: translateY(-5px);
   box-shadow: 0 0 0 2px #ff7f00;
 }
 
@@ -743,7 +748,7 @@
   }
 
   .img-slider {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
 }
@@ -925,11 +930,28 @@
     margin-top: 10px;
   }
 
+  .img-slider .slick-slide {
+    width: 300px;
+    height: 320px;
+    padding: 0 10px;
+  }
+
+  .img-slider .slick-list {
+    margin: 0 -10px;
+  }
+
+
 }
 
 @media (max-width: 576px) {
   .collection__colors-list .slick-slide {
     margin: 0 5px;
+  }
+
+  .img-slider .slick-list {
+    width: 80%;
+    min-width: 300px;
+    margin: 0 auto;
   }
 }
 
@@ -1015,6 +1037,11 @@
 
   .news__list .slick-dots li:not(:last-child) {
     margin-right: 21px;
+  }
+
+  .img-slider .slick-list {
+    width: auto;
+    margin: 0 -10px;
   }
 
 }

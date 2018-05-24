@@ -165,4 +165,7 @@
   .full-p-two-cols__item a:hover .full-p-two-cols__go-to-page {
     display: none;
   }
+  .full-p-two-cols__item:first-child {
+    margin-bottom: 15px;
+  }
 }

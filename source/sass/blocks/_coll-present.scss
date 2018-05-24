@@ -1,6 +1,6 @@
 .coll-present {
   margin-bottom: 40px;
-  padding: 40px 0;
+  padding: 38px 0;
   background-color: #f5f6f6;
   text-align: center;
   &__list {
@@ -28,11 +28,13 @@
 
   &__link {
     display: block;
+    height: 218px;
   }
 
   &__img {
     display: block;
     width: 100%;
+    height: 100%;
   }
 
   &__subtitle {
@@ -94,6 +96,8 @@
 
 @media (max-width: 768px) {
   .coll-present {
+    padding: 35px 0;
+
     &__list {
       width: auto;
       justify-content: space-around;
@@ -109,6 +113,10 @@
       margin-right: 0;
     }
 
+    &__btn {
+      margin-top: 3px;
+    }
+
   }
 }
 
@@ -116,6 +124,7 @@
   .coll-present {
     &__list {
       display: block;
+      margin: 0;
     }
 
     &__item {
@@ -132,8 +141,21 @@
 
 @media (max-width: 480px) {
   .coll-present {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 17px;
+    padding-bottom: 18px;
     margin-bottom: 30px;
+
+    &__subtitle {
+      padding-left: 10px;
+      padding-right: 45px;
+
+      &::after {
+        right: 10px;
+      }
+    }
+
+    &__sect-title {
+      margin-bottom: 17px;
+    }
   }
 }

@@ -5,30 +5,41 @@ block content
   body.inner-body
     include ../modules/page-header
     main.project-page
-      header.inner-header
+      header.inner-header.project-page__inner-header
         .container
-          ul.breadcrumbs
+          ul.breadcrumbs.project-page__breadcrumbs
             li.breadcrumbs__item
               a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
             li.breadcrumbs__item
               a.breadcrumbs__link Реализованные проекты
             li.breadcrumbs__item
               a.breadcrumbs__link.breadcrumbs__link--current Облицовка большой ванной комнаты
+          a.inner-header__back(href="/projects") Назад
           .inner-header__bottom-wrapper
-            h1.inner-header__title Облицовка большой ванной комнаты
+            h1.inner-header__title.inner-header__title--pr-page Облицовка большой ванной комнаты
       section
-        .container.container--slipping-bg
-          .top-gallery
+        .container.container--slipping-bg.pr-page-t-gallery-wrapper
+          .top-gallery.top-gallery--pr-page
             a(href="img/pr-page-top-gallery-1.jpg" data-fancybox="images")
-              img(src="img/pr-page-top-gallery-1.jpg")
+              picture
+                source(media="(max-width: 480px)" srcset="img/project-page-img-top-gallery-phone.jpg")
+                source(media="(max-width: 768px)" srcset="img/project-page-img-top-gallery-tablet.jpg")
+                img(src="img/pr-page-top-gallery-1.jpg")
             a(href="img/pr-page-top-gallery-1.jpg" data-fancybox="images")
-              img(src="img/pr-page-top-gallery-1.jpg")
+              picture
+                source(media="(max-width: 480px)" srcset="img/project-page-img-top-gallery-phone.jpg")
+                source(media="(max-width: 768px)" srcset="img/project-page-img-top-gallery-tablet.jpg")
+                img(src="img/pr-page-top-gallery-1.jpg")
             a(href="img/pr-page-top-gallery-1.jpg" data-fancybox="images")
-              img(src="img/pr-page-top-gallery-1.jpg")
+              picture
+                source(media="(max-width: 480px)" srcset="img/project-page-img-top-gallery-phone.jpg")
+                source(media="(max-width: 768px)" srcset="img/project-page-img-top-gallery-tablet.jpg")
+                img(src="img/pr-page-top-gallery-1.jpg")
             a(href="img/pr-page-top-gallery-1.jpg" data-fancybox="images")
-              img(src="../img/pr-page-top-gallery-1.jpg")
-            a(href="img/pr-page-top-gallery-1.jpg" data-fancybox="images")
-              img(src="img/pr-page-top-gallery-1.jpg")
+              picture
+                source(media="(max-width: 480px)" srcset="img/project-page-img-top-gallery-phone.jpg")
+                source(media="(max-width: 768px)" srcset="img/project-page-img-top-gallery-tablet.jpg")
+                img(src="img/pr-page-top-gallery-1.jpg")
 
           .top-gallery__thumbs.top-gallery__thumbs--pr-page
             .top-gallery__thumb
@@ -39,12 +50,10 @@ block content
               img(src="../img/top-gallery-thumb-3.jpg", alt="")
             .top-gallery__thumb
               img(src="../img/top-gallery-thumb-4.jpg", alt="")
-            .top-gallery__thumb
-              img(src="../img/top-gallery-thumb-4.jpg", alt="")
-        .container
-          .single-new__info
-            p  Это цветовая палитра полупрозрачных тонов на глянцевой глазури, сосредоточенных на оттенках бирюзы, свекольного сока и светлого коралла на фоне которых, акцентами становятся плотный солнечный и графито-коричневый.
-            p Воздушность и прозрачность, лёгкость в новой своей интерпретации, удивит вас орнаментальными решениями декоративных элементов - Aurora, Selena, и заставит творить, следуя правилам цифрового искусства.
+
+        .container.page-info
+          p  Это цветовая палитра полупрозрачных тонов на глянцевой глазури, сосредоточенных на оттенках бирюзы, свекольного сока и светлого коралла на фоне которых, акцентами становятся плотный солнечный и графито-коричневый.
+          p Воздушность и прозрачность, лёгкость в новой своей интерпретации, удивит вас орнаментальными решениями декоративных элементов - Aurora, Selena, и заставит творить, следуя правилам цифрового искусства.
 
       section.coll-elems
         .container
@@ -88,7 +97,7 @@ block content
                   p.coll-elems__price #[span 705] руб./ м2
       .project-page__bottom-panel
         .container
-          a.back-to-parent-section(href="javascript:void(0);") Вернуться в коллекцию
+          a.back-to-parent-section(href="javascript:void(0);") Вернуться в список проектов
 
     include ../modules/footer
     button(type="button" class="back-to-top" title="Back to top") &uarr;

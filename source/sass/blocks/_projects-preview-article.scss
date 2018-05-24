@@ -1,10 +1,14 @@
 .projects-preview-article {
-  padding-bottom: 30px;
+  padding-bottom: 60px;
   text-align: center;
 
+  &__sect-title {
+    margin-bottom: 17px;
+  }
+
   &__slider {
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 22px;
+    margin-bottom: 44px;
     text-align: left;
   }
 
@@ -17,6 +21,18 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-preview-article {
+    padding-bottom: 72px;
+  }
+  
+  .projects-preview-article__slider {
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 30px;
   }
 }
 

@@ -124,7 +124,7 @@ img {
 .inner-sect-title {
   color: #424141;
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.6px;
   text-align: center;
@@ -138,6 +138,7 @@ img {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 1.625;
   letter-spacing: 0.8px;
 
   &::before {
@@ -229,6 +230,17 @@ img {
   background-color: #f5f6f6;
 }
 
+.pr-page-t-gallery-wrapper {
+  margin-bottom: 26px;
+}
+
+.page-info {
+  margin-bottom: 34px;
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .single-new {
   padding-bottom: 40px;
 
@@ -250,7 +262,7 @@ img {
 }
 
 .project-page__bottom-panel {
-  padding: 30px 0;
+  padding: 29px 0;
 }
 
 .project-page__bottom-panel .container {
@@ -289,11 +301,11 @@ img {
 }
 
 .container--slipping-bg {
-  margin-bottom: 35px;  background: linear-gradient(to bottom, $white 8.5%, #f5f6f6 8.5%, #f5f6f6 88%, #ffffff 88%);
+  background: linear-gradient(to bottom, $white 8.5%, #f5f6f6 8.5%, #f5f6f6 91.3%, #ffffff 91.3%);
 }
 
 .contacts-subtitle {
-  margin-bottom: 25px;
+  margin-bottom: 21px;
   color: #252525;
   font-size: 24px;
   font-weight: 600;
@@ -302,6 +314,10 @@ img {
   &--eng {
     margin-bottom: 26px;
   }
+}
+
+.partners-preview__sect-title {
+  margin-bottom: 7px;
 }
 
 @media (max-width: 1366px) {
@@ -324,9 +340,13 @@ img {
     right: 20px;
   }
 
-  .container--slipping-bg {
+  .pr-page-t-gallery-wrapper {
+    margin: 0 24px 21px;
     padding: 0;
-    margin: 0 24px 30px;
+  }
+
+  .page-info p {
+    margin-bottom: 0;
   }
 
   .partners__sect--side-pd {
@@ -351,15 +371,20 @@ img {
 @media (max-width: 480px) {
   .container {
     padding: 0 10px;
+  }
 
-    &--slipping-bg {
-      margin: 0;
-      padding: 0 10px;
-    }
+  .pr-page-t-gallery-wrapper {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0 10px;
   }
 
   .eng-page__text-container {
     margin-bottom: 14px;
+  }
+
+  .contacts-subtitle {
+    margin-bottom: 9px;
   }
 
   .contacts-subtitle--eng {
@@ -392,5 +417,13 @@ img {
 
   .contacts-subtitle {
     font-size: 22px;
+  }
+
+  .project-page__bottom-panel {
+    padding: 20px 0;
+  }
+
+  .full-p-two-cols-title {
+    margin-bottom: 14px;
   }
 }

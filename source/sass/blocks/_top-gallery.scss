@@ -1,8 +1,18 @@
 .top-gallery {
+  margin-bottom: 16px;
   padding-right: 5.983%;
   padding-left: 5.983%;
 
+  &--pr-page {
+    margin-bottom: 10px;
+  }
+
   &__thumbs {
+
+    width: 770px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
 
     img {
       width: 100%;
@@ -24,6 +34,10 @@
   .top-gallery {
     padding-left: 4.445%;
     padding-right: 4.445%;
+
+    &--pr-page {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -51,6 +65,10 @@
 @media (max-width: 480px) {
   .top-gallery {
     padding: 0;
+
+    &--pr-page {
+      margin-bottom: 14px;
+    }
 
     &__thumbs {
       width: 100%;

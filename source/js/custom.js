@@ -413,7 +413,7 @@ $(document).ready(function() {
   $('.top-gallery__thumbs').slick({
     speed: 500,
     slidesToShow:  4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     focusOnSelect: true,
     infinite: false,
     arrows: false,
@@ -425,14 +425,14 @@ $(document).ready(function() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 4
         }
       },
 
       {
         breakpoint: 670,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 3
         }
       }
     ]
@@ -751,7 +751,7 @@ $(document).ready(function() {
     ]
   });
 
-  $('.ab-charcs__slider').slick({
+  $('.ab-charcs_slider').slick({
     speed: 500,
     slidesToShow:  2,
     slidesToScroll: 1,

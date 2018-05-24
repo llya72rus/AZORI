@@ -7,6 +7,10 @@
     background-size: cover;
   }
 
+  &__sect-title {
+    margin-bottom: 20px;
+  }
+
   &__list {
     display: flex;
     justify-content: center;
@@ -73,6 +77,11 @@
       margin: 0 -15px;
     }
 
+    &__wrapper {
+      padding-top: 60px;
+      padding-bottom: 28px;
+    }
+
     &__item {
       width: 29.0678%;
       // width: 218px;
@@ -85,6 +94,7 @@
 
 @media (max-width: 767px) {
   .catalogs {
+
     &__item {
       width: 45%;
     }
@@ -98,8 +108,16 @@
 @media (max-width: 480px) {
   .catalogs {
 
+    &__sect-title {
+      margin-bottom: 14px;
+    }
+
     &__wrapper {
       padding: 20px 0 5px;
+    }
+
+    &__btn {
+      margin-top: 20px;
     }
 
     &__list {
@@ -109,6 +127,7 @@
 
     &__item {
       width: 100%;
+      padding: 0;
       margin-bottom: 15px;
     }
   }

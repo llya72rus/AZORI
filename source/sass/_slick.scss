@@ -257,6 +257,10 @@
   border-radius: 5px;
 }
 
+.top-gallery .slick-slide img {
+  width: 100%;
+}
+
 
 .projects-preview .slick-slide {
   margin: 10px 5px 0;
@@ -447,10 +451,6 @@
 }
 
 .top-gallery__thumbs {
-  width: 770px;
-  margin: 16px auto 0;
-  padding: 0;
-  list-style: none;
 
   .slick-list {
     margin: 0 -15px;
@@ -476,7 +476,7 @@
 }
 
 .top-gallery__thumbs--pr-page .slick-slide {
-  height: 175px;
+  min-height: 175px;
 }
 
 .top-gallery__thumbs .slick-slide > div {
@@ -682,7 +682,7 @@
   .projects-preview .slick-dots {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 25px;
     padding: 0;
     list-style: none;
     font-size: 0;
@@ -719,7 +719,11 @@
   }
 
   .projects-preview .slick-list {
-    padding: 10px 0;
+    margin: 0 -5px;
+  }
+
+  .projects-preview-article__slider .slick-slide {
+    min-height: 300px;
   }
 
   .f-about__slick .slick-slide.slick-current::before {
@@ -751,6 +755,14 @@
     margin-bottom: 25px;
   }
 
+  .top-gallery__thumbs--pr-page .slick-slide {
+    min-height: 155px;
+  }
+
+  .top-gallery--pr-page .slick-slide {
+    max-height: 450px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -773,11 +785,11 @@
   }
 
   .certificates__slider .slick-slide {
-    margin: 0 13px;
+    margin: 0 6.5px;
   }
 
   .certificates__slider .slick-list {
-    margin: 0 -13px;
+    margin: 0 -6.5px;
   }
 
   .partners-slider .slick-list {
@@ -874,10 +886,6 @@
 
   .catalog-top-slider__prev {
     display: none !important;
-  }
-
-  .top-gallery .slick-slide img {
-    min-height: 280px;
   }
 
   .preview .slick-slide,
@@ -986,6 +994,25 @@
     background-color: rgba(255, 255, 255, 0.5);
   }
 
+  .top-gallery .slick-slide img {
+    min-height: 280px;
+    max-height: 280px;
+  }
+
+  .top-gallery .slick-slide {
+    max-height: 280px;
+  }
+
+  .top-gallery__next {
+    right: -10px;
+    background-position-x: 30% !important;
+  }
+
+  .top-gallery__prev {
+    left: -10px;
+    background-position-x: 76% !important;
+  }
+
   .top-gallery__thumbs {
     .slick-slide {
       margin-left: 5px;
@@ -997,7 +1024,13 @@
     }
   }
 
+  .top-gallery__thumbs--pr-page .slick-slide {
+    min-height: 100px;
+    max-height: 100px;
+}
+
   .certificates__slider .slick-slide {
+    max-height: 210px;
     margin: 0 5.5px;
   }
 
@@ -1011,6 +1044,10 @@
 
   .partners-slider .slick-list {
     margin: 0 -5.5px;
+  }
+
+  .top-gallery__thumbs .slick-dots {
+    margin-top: 10px;
   }
 }
 

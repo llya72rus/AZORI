@@ -85,12 +85,12 @@
     <main class="about-main">
       <header class="inner-header">
         <div class="container">
-          <ul class="breadcrumbs breadcrumbs">
+          <ul class="breadcrumbs about-main__breadcrumbs">
             <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--home" href="javascript:void(0);">Главная</a></li>
             <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current">О бренде</a></li>
           </ul>
           <div class="inner-header__bottom-wrapper inner-header__bottom-wrapper">
-            <h1 class="inner-header__title">О бренде</h1>
+            <h1 class="inner-header__title inner-header__title--about">О бренде</h1>
           </div>
         </div>
       </header>
@@ -120,21 +120,27 @@
           <div class="about-sect__text-wrapper">
             <h3 class="inner-sect-title about-sect__title">Производство</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum,</p>
           </div><a class="page-btn page-btn--hollow about-sect__learn-more" href="javascript:void(0);">Узнать больше</a>
         </div>
       </section>
       <article class="certificates">
         <div class="container container-770">
-          <h2 class="inner-sect-title">Сертификаты</h2>
+          <h2 class="inner-sect-title certificates__sect-title">Сертификаты</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor</p>
           <div class="certificates__slider"><a class="certificates__item" href="img/certificate-blank.png" data-fancybox="images"><img src="img/certificate-blank.png" alt="Сертификат"/></a><a class="certificates__item" href="img/certificate-blank.png" data-fancybox="images"><img src="img/certificate-blank.png" alt="Сертификат"/></a><a class="certificates__item" href="img/certificate-blank.png" data-fancybox="images"><img src="img/certificate-blank.png" alt="Сертификат"/></a><a class="certificates__item" href="img/certificate-blank.png" data-fancybox="images"><img src="img/certificate-blank.png" alt="Сертификат"/></a><a class="certificates__item" href="img/certificate-blank.png" data-fancybox="images"><img src="img/certificate-blank.png" alt="Сертификат"/></a></div>
         </div>
       </article>
       <article class="ab-charcs">
         <div class="container">
-          <h2 class="inner-sect-title">Техинические характеристики</h2>
-          <div class="ab-charcs__top-info"><img class="ab-charcs__top-img" src="img/ab-charcs-top-image.jpg" alt="Технические характеристики"/>
+          <h2 class="inner-sect-title ab-charcs__sect-title">Технические характеристики</h2>
+          <div class="ab-charcs__top-info">
+            <div class="ab-charcs__top-img-wrapper">
+              <picture>
+                <source media="(max-width: 480px)" srcset="img/ab-charcs-top-image-phone.jpg"/>
+                <source media="(max-width: 768px)" srcset="img/ab-charcs-top-image-tablet.jpg"/><img class="ab-charcs__top-img" src="img/ab-charcs-top-image.jpg" alt="Технические характеристики"/>
+              </picture>
+            </div>
             <div class="ab-charcs__top-text-wrapper">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque</p>
@@ -184,19 +190,33 @@
                   <p class="ab-charcs__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
                 </li>
               </ul>
+              <ul class="ab-charcs__list">
+                <li class="ab-charcs__item ab-charcs__item--wall">
+                  <h3 class="ab-charcs__subtitle">Настенная</h3>
+                  <p class="ab-charcs__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+                </li>
+                <li class="ab-charcs__item ab-charcs__item--floor">
+                  <h3 class="ab-charcs__subtitle">Напольная</h3>
+                  <p class="ab-charcs__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+                </li>
+                <li class="ab-charcs__item ab-charcs__item--decor">
+                  <h3 class="ab-charcs__subtitle">Декоративная</h3>
+                  <p class="ab-charcs__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </article>
       <article class="projects-preview-article">
         <div class="container">
-          <h2 class="inner-sect-title">Реализованные проекты</h2>
+          <h2 class="inner-sect-title projects-preview-article__sect-title">Реализованные проекты</h2>
           <p>Одним из наиболее интересных и посещаемых на выставке оказался стенд «Керамическое ателье Яны Сушко». Это уникальная керамика ручной работы: керамическая плитка, декоративные панно и предметы интерьера. В основе - принципы классической итальянской школы в сочетании с современными тенденциями. Традиционные орнаменты соседствуют с необычными графическими решениями.</p>
         </div>
         <div class="projects-preview projects-preview-article__slider"><a class="projects-preview__slide" href="javascript:void(0);"><img src="img/coll-examples-img-1.jpg" alt=""/>
-            <div class="projects-preview__tooltip">Плитка в большой ванной</div></a><a class="projects-preview__slide" href="javascript:void(0);"><img src="img/coll-examples-img-2.jpg" alt=""/>
-            <div class="projects-preview__tooltip">Плитка в большой ванной</div></a><a class="projects-preview__slide" href="javascript:void(0);"><img src="img/coll-examples-img-3.jpg" alt=""/>
-            <div class="projects-preview__tooltip">Плитка в большой ванной</div></a><a class="projects-preview__slide" href="javascript:void(0);"><img src="img/coll-examples-img-4.jpg" alt=""/>
+            <div class="projects-preview__tooltip">Плитка <br/> в большой ванной</div></a><a class="projects-preview__slide" href="javascript:void(0);"><img src="img/coll-examples-img-2.jpg" alt=""/>
+            <div class="projects-preview__tooltip">Плитка <br/> в большой ванной</div></a><a class="projects-preview__slide" href="javascript:void(0);"><img src="img/coll-examples-img-3.jpg" alt=""/>
+            <div class="projects-preview__tooltip">Плитка <br/> в большой ванной</div></a><a class="projects-preview__slide" href="javascript:void(0);"><img src="img/coll-examples-img-4.jpg" alt=""/>
             <div class="projects-preview__tooltip">Плитка в большой ванной</div></a><a class="projects-preview__slide" href="javascript:void(0);"><img src="img/coll-examples-img-2.jpg" alt=""/>
             <div class="projects-preview__tooltip">Плитка в большой ванной</div></a></div><a class="page-btn page-btn--hollow projects-preview-title__learn-more" href="javascript:void(0);">Узнать больше</a>
       </article>

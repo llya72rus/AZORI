@@ -34,7 +34,12 @@
       myMap.controls.add(zoomControl);
       myMap.controls.add('geolocationControl', {
         float: 'right'
-    });
+      });
+      
+      myMap.behaviors.disable('scrollZoom')
+      myMap.events.add('click', function(){
+        myMap.behaviors.enable('scrollZoom')
+      })
       // myPlacemark.setIconContent("Щелкни меня");
   }
 

@@ -1,0 +1,136 @@
+extends ../layout/main
+block title
+  | Где купить Тверь
+block content
+  body.inner-body
+    include ../modules/page-header
+
+    main.wtb-city
+      header.inner-header.inner-header--wtb
+        .container
+          ul.breadcrumbs.wtb__breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--home(href="/") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current Где купить
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current Тверь
+          .inner-header__bottom-wrapper.inner-header__bottom-wrapper
+            h1.inner-header__title.inner-header__title--where-buy Тверь
+      section.city-search.wtb-city__city-search
+        .container
+          form.city-search__form(method="get" action="#" name="city-search-form")
+            .city-search__input-wrapper
+              input.city-search__input(type="search" placeholder="Укажите город" value="Тверь")
+              button.city-search__btn.page-btn Найти
+            .city-search__chbox-wrapper
+              input.visually-hidden.city-search__chbox#city-search-wholesale(type="checkbox", name="sale-type")
+              label.city-search__label(for="city-search-wholesale") Оптовая продажа
+            .city-search__chbox-wrapper
+              input.visually-hidden.city-search__chbox#city-search-retail(type="checkbox" name="sale-type")
+              label.city-search__label(for="city-search-retail") Розничная продажа
+        .city-search__map
+          iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A67505bb76c9974b58dfd2bdaa839b8162d2651ffaf97e50d0cd5afa2114935f0&amp;source=constructor" width="100%" height="100%" frameborder="0")
+            
+      section.branches.wtb__branches
+        .container
+          h2.branches__title Оптовая продажа
+          ul.branches__list
+            li.branches__item
+              span.branches__org ООО "ЛКК Северо-Запад"
+              ul.contacts-list
+                li.contacts-list__item
+                  span.contacts-list__key Адрес компании:
+                  span.contacts-list__value г. Санкт-Петербург, Волхонское шоссе, д. 4.
+                li.contacts-list__item
+                  span.contacts-list__key Электронный адрес:
+                  span.contacts-list__value office@keramir.com
+                li.contacts-list__item
+                  span.contacts-list__key Телефон:
+                  span.contacts-list__value +7 (812)
+                    span.contacts-list__phone 324-60-59
+              button.branches__on-map На карте
+            li.branches__item
+              span.branches__org ООО "ЛКК Северо-Запад"
+              ul.contacts-list
+                li.contacts-list__item
+                  span.contacts-list__key Адрес компании:
+                  span.contacts-list__value г. Санкт-Петербург, Волхонское шоссе, д. 4.
+                li.contacts-list__item
+                  span.contacts-list__key Электронный адрес:
+                  span.contacts-list__value office@keramir.com
+                li.contacts-list__item
+                  span.contacts-list__key Телефон:
+                  span.contacts-list__value +7 (812)
+                    span.contacts-list__phone 324-60-59
+              button.branches__on-map На карте
+            li.branches__item
+              span.branches__org ООО "ЛКК Северо-Запад"
+              ul.contacts-list
+                li.contacts-list__item
+                  span.contacts-list__key Адрес компании:
+                  span.contacts-list__value г. Санкт-Петербург, Волхонское шоссе, д. 4.
+                li.contacts-list__item
+                  span.contacts-list__key Электронный адрес:
+                  span.contacts-list__value office@keramir.com
+                li.contacts-list__item
+                  span.contacts-list__key Телефон:
+                  span.contacts-list__value +7 (812)
+                    span.contacts-list__phone 324-60-59
+              button.branches__on-map На карте
+
+      section.branches.wtb__branches
+        .container
+          h2.branches__title Розничная продажа
+          ul.branches__list
+            li.branches__item
+              span.branches__org ООО "ЛКК Северо-Запад"
+              ul.contacts-list
+                li.contacts-list__item
+                  span.contacts-list__key Адрес компании:
+                  span.contacts-list__value г. Санкт-Петербург, Волхонское шоссе, д. 4.
+                li.contacts-list__item
+                  span.contacts-list__key Электронный адрес:
+                  span.contacts-list__value office@keramir.com
+                li.contacts-list__item
+                  span.contacts-list__key Телефон:
+                  span.contacts-list__value +7 (812)
+                    span.contacts-list__phone 324-60-59
+              button.branches__on-map На карте
+            li.branches__item
+              span.branches__org ООО "ЛКК Северо-Запад"
+              ul.contacts-list
+                li.contacts-list__item
+                  span.contacts-list__key Адрес компании:
+                  span.contacts-list__value г. Санкт-Петербург, Волхонское шоссе, д. 4.
+                li.contacts-list__item
+                  span.contacts-list__key Электронный адрес:
+                  span.contacts-list__value office@keramir.com
+                li.contacts-list__item
+                  span.contacts-list__key Телефон:
+                  span.contacts-list__value +7 (812)
+                    span.contacts-list__phone 324-60-59
+              button.branches__on-map На карте
+            li.branches__item
+              span.branches__org ООО "ЛКК Северо-Запад"
+              ul.contacts-list
+                li.contacts-list__item
+                  span.contacts-list__key Адрес компании:
+                  span.contacts-list__value г. Санкт-Петербург, Волхонское шоссе, д. 4.
+                li.contacts-list__item
+                  span.contacts-list__key Электронный адрес:
+                  span.contacts-list__value office@keramir.com
+                li.contacts-list__item
+                  span.contacts-list__key Телефон:
+                  span.contacts-list__value +7 (812)
+                    span.contacts-list__phone 324-60-59
+              button.branches__on-map На карте
+                 
+
+
+
+    include ../modules/footer
+    button(type="button" class="back-to-top" title="Наверх") &uarr;
+
+
+

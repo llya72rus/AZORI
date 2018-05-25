@@ -15,7 +15,7 @@
     <script src="js/polyfill.js"></script>
     <script>svg4everybody();</script>
     <script src="js/custom.js"></script>
-    <title>Контакты
+    <title>Где купить Тверь
     </title>
   </head>
   <body class="inner-body">
@@ -82,110 +82,98 @@
         </ul>
       </nav>
     </header>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script src="js/yandex-map.js"></script>
-    <main class="contacts">
-      <header class="inner-header contacts__inner-header">
+    <main class="wtb-city">
+      <header class="inner-header inner-header--wtb">
         <div class="container">
-          <ul class="breadcrumbs contacts__breadcrumbs">
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--home" href="javascript:void(0);">Главная</a></li>
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current">Контакты</a></li>
+          <ul class="breadcrumbs wtb__breadcrumbs">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--home" href="/">Главная</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current">Где купить</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current">Тверь</a></li>
           </ul>
-          <div class="inner-header__bottom-wrapper">
-            <h1 class="inner-header__title inner-header__title--contacts">Контакты</h1>
+          <div class="inner-header__bottom-wrapper inner-header__bottom-wrapper">
+            <h1 class="inner-header__title inner-header__title--where-buy">Тверь</h1>
           </div>
         </div>
       </header>
-      <section class="contacts__top-map">
+      <section class="city-search wtb-city__city-search">
         <div class="container">
-          <h2 class="contacts__title contacts__title--manage-company">Управляющая компания <br/> «КераМир»</h2>
+          <form class="city-search__form" method="get" action="#" name="city-search-form">
+            <div class="city-search__input-wrapper">
+              <input class="city-search__input" type="search" placeholder="Укажите город" value="Тверь"/>
+              <button class="city-search__btn page-btn">Найти</button>
+            </div>
+            <div class="city-search__chbox-wrapper">
+              <input class="visually-hidden city-search__chbox" id="city-search-wholesale" type="checkbox" name="sale-type"/>
+              <label class="city-search__label" for="city-search-wholesale">Оптовая продажа</label>
+            </div>
+            <div class="city-search__chbox-wrapper">
+              <input class="visually-hidden city-search__chbox" id="city-search-retail" type="checkbox" name="sale-type"/>
+              <label class="city-search__label" for="city-search-retail">Розничная продажа</label>
+            </div>
+          </form>
         </div>
-        <div class="container">
-          <div class="contacts__address-wrapper">
-            <h3 class="contacts-subtitle">Центральный офис:</h3>
-            <ul class="contacts__list contacts-list">
-              <li class="contacts-list__item"><span class="contacts-list__key">Адрес компании:</span><span class="contacts-list__value">г. Санкт-Петербург, Волхонское шоссе, д. 4.</span></li>
-              <li class="contacts-list__item"><span class="contacts-list__key">Телефон/факс:</span><span class="contacts-list__value">+7 (812)<span class="contacts__phone">324-60-59</span></span></li>
-              <li class="contacts-list__item"><span class="contacts-list__key">Электронный адрес:</span><span class="contacts__value">office@keramir.com</span></li>
-            </ul>
-            <h3 class="contacts-subtitle">Производство:</h3>
-            <ul class="contacts-list contacts__list">
-              <li class="contacts-list__item"><span class="contacts-list__key">Телефон/факс:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
-              <li class="contacts-list__item"><span class="contacts-list__key">Электронный адрес:</span><span class="contacts-list__value">office@keramir.com</span></li>
-            </ul>
-          </div>
-          <div class="contacts__ya-map" id="map"></div>
+        <div class="city-search__map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A67505bb76c9974b58dfd2bdaa839b8162d2651ffaf97e50d0cd5afa2114935f0&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
         </div>
       </section>
-      <section class="contacts__store">
+      <section class="branches wtb__branches">
         <div class="container">
-          <h2 class="contacts__title">Магазин &laquo;Название&raquo;</h2>
-          <div class="contacts__row">
-            <div class="contacts__text-column">
-              <ul class="contacts__list contacts-list">
-                <li class="contacts-list__item"><span class="contacts-list__key">Адрес компании:</span><span class="contacts__value">г. Санкт-Петербург, Волхонское шоссе, д. 4.</span></li>
-                <li class="contacts-list__item"><span class="contacts-list__key">Телефон/факс:</span><span class="contacts__value">+7 (812)<span class="contacts__phone">324-60-59</span></span></li>
+          <h2 class="branches__title">Оптовая продажа</h2>
+          <ul class="branches__list">
+            <li class="branches__item"><span class="branches__org">ООО "ЛКК Северо-Запад"</span>
+              <ul class="contacts-list">
+                <li class="contacts-list__item"><span class="contacts-list__key">Адрес компании:</span><span class="contacts-list__value">г. Санкт-Петербург, Волхонское шоссе, д. 4.</span></li>
                 <li class="contacts-list__item"><span class="contacts-list__key">Электронный адрес:</span><span class="contacts-list__value">office@keramir.com</span></li>
+                <li class="contacts-list__item"><span class="contacts-list__key">Телефон:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
               </ul>
-            </div>
-            <div class="contacts__small-ya-map">
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A67505bb76c9974b58dfd2bdaa839b8162d2651ffaf97e50d0cd5afa2114935f0&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-            </div>
-          </div>
+              <button class="branches__on-map">На карте</button>
+            </li>
+            <li class="branches__item"><span class="branches__org">ООО "ЛКК Северо-Запад"</span>
+              <ul class="contacts-list">
+                <li class="contacts-list__item"><span class="contacts-list__key">Адрес компании:</span><span class="contacts-list__value">г. Санкт-Петербург, Волхонское шоссе, д. 4.</span></li>
+                <li class="contacts-list__item"><span class="contacts-list__key">Электронный адрес:</span><span class="contacts-list__value">office@keramir.com</span></li>
+                <li class="contacts-list__item"><span class="contacts-list__key">Телефон:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
+              </ul>
+              <button class="branches__on-map">На карте</button>
+            </li>
+            <li class="branches__item"><span class="branches__org">ООО "ЛКК Северо-Запад"</span>
+              <ul class="contacts-list">
+                <li class="contacts-list__item"><span class="contacts-list__key">Адрес компании:</span><span class="contacts-list__value">г. Санкт-Петербург, Волхонское шоссе, д. 4.</span></li>
+                <li class="contacts-list__item"><span class="contacts-list__key">Электронный адрес:</span><span class="contacts-list__value">office@keramir.com</span></li>
+                <li class="contacts-list__item"><span class="contacts-list__key">Телефон:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
+              </ul>
+              <button class="branches__on-map">На карте</button>
+            </li>
+          </ul>
         </div>
       </section>
-      <section class="contacts__branches branches">
+      <section class="branches wtb__branches">
         <div class="container">
-          <h2 class="branches__title">Региональные представительства</h2>
-          <ul class="contacts__branches-list branches__list">
-            <li class="branches__item"><span class="branches__city">Москва</span><span class="branches__org">ООО "ЛКК Северо-Запад"</span>
-              <ul class="contacts-list contacts__list">
+          <h2 class="branches__title">Розничная продажа</h2>
+          <ul class="branches__list">
+            <li class="branches__item"><span class="branches__org">ООО "ЛКК Северо-Запад"</span>
+              <ul class="contacts-list">
+                <li class="contacts-list__item"><span class="contacts-list__key">Адрес компании:</span><span class="contacts-list__value">г. Санкт-Петербург, Волхонское шоссе, д. 4.</span></li>
                 <li class="contacts-list__item"><span class="contacts-list__key">Электронный адрес:</span><span class="contacts-list__value">office@keramir.com</span></li>
                 <li class="contacts-list__item"><span class="contacts-list__key">Телефон:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
-                <li class="contacts-list__item"><span class="contacts-list__key">Факс:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
               </ul>
+              <button class="branches__on-map">На карте</button>
             </li>
-            <li class="branches__item"><span class="branches__city">Санкт-Петербург</span><span class="branches__org">ООО "ЛКК Северо-Запад"</span>
-              <ul class="contacts-list contacts__list">
+            <li class="branches__item"><span class="branches__org">ООО "ЛКК Северо-Запад"</span>
+              <ul class="contacts-list">
+                <li class="contacts-list__item"><span class="contacts-list__key">Адрес компании:</span><span class="contacts-list__value">г. Санкт-Петербург, Волхонское шоссе, д. 4.</span></li>
                 <li class="contacts-list__item"><span class="contacts-list__key">Электронный адрес:</span><span class="contacts-list__value">office@keramir.com</span></li>
                 <li class="contacts-list__item"><span class="contacts-list__key">Телефон:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
-                <li class="contacts-list__item"><span class="contacts-list__key">Факс:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
               </ul>
+              <button class="branches__on-map">На карте</button>
             </li>
-            <li class="branches__item"><span class="branches__city">Самара</span><span class="branches__org">ООО "ЛКК Северо-Запад"</span>
-              <ul class="contacts-list contacts__list">
+            <li class="branches__item"><span class="branches__org">ООО "ЛКК Северо-Запад"</span>
+              <ul class="contacts-list">
+                <li class="contacts-list__item"><span class="contacts-list__key">Адрес компании:</span><span class="contacts-list__value">г. Санкт-Петербург, Волхонское шоссе, д. 4.</span></li>
                 <li class="contacts-list__item"><span class="contacts-list__key">Электронный адрес:</span><span class="contacts-list__value">office@keramir.com</span></li>
                 <li class="contacts-list__item"><span class="contacts-list__key">Телефон:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
-                <li class="contacts-list__item"><span class="contacts-list__key">Факс:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
               </ul>
-            </li>
-            <li class="branches__item"><span class="branches__city">Казань</span><span class="branches__org">ООО "ЛКК Северо-Запад"</span>
-              <ul class="contacts-list contacts__list">
-                <li class="contacts-list__item"><span class="contacts-list__key">Электронный адрес:</span><span class="contacts-list__value">office@keramir.com</span></li>
-                <li class="contacts-list__item"><span class="contacts-list__key">Телефон:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
-                <li class="contacts-list__item"><span class="contacts-list__key">Факс:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
-              </ul>
-            </li>
-            <li class="branches__item"><span class="branches__city">Краснодар</span><span class="branches__org">ООО "ЛКК Северо-Запад"</span>
-              <ul class="contacts-list contacts__list">
-                <li class="contacts-list__item"><span class="contacts-list__key">Электронный адрес:</span><span class="contacts-list__value">office@keramir.com</span></li>
-                <li class="contacts-list__item"><span class="contacts-list__key">Телефон:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
-                <li class="contacts-list__item"><span class="contacts-list__key">Факс:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
-              </ul>
-            </li>
-            <li class="branches__item"><span class="branches__city">Челябинск</span><span class="branches__org">ООО "ЛКК Северо-Запад"</span>
-              <ul class="contacts-list contacts__list">
-                <li class="contacts-list__item"><span class="contacts-list__key">Электронный адрес:</span><span class="contacts-list__value">office@keramir.com</span></li>
-                <li class="contacts-list__item"><span class="contacts-list__key">Телефон:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
-                <li class="contacts-list__item"><span class="contacts-list__key">Факс:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
-              </ul>
-            </li>
-            <li class="branches__item"><span class="branches__city">Новосибирск</span><span class="branches__org">ООО "ЛКК Северо-Запад"</span>
-              <ul class="contacts-list contacts__list">
-                <li class="contacts-list__item"><span class="contacts-list__key">Электронный адрес:</span><span class="contacts-list__value">office@keramir.com</span></li>
-                <li class="contacts-list__item"><span class="contacts-list__key">Телефон:</span><span class="contacts-list__value">+7 (812)<span class="contacts-list__phone">324-60-59</span></span></li>
-                <li class="contacts-list__item"><span class="contacts-list__key">Факс:</span><span class="contacts-list__value">+7 (812)<span class="contacts__phone">324-60-59</span></span></li>
-              </ul>
+              <button class="branches__on-map">На карте</button>
             </li>
           </ul>
         </div>
@@ -246,6 +234,6 @@
         </div>
       </div>
     </footer>
-    <button class="back-to-top" type="button" title="Back to top">&uarr;</button>
+    <button class="back-to-top" type="button" title="Наверх">&uarr;</button>
   </body>
 </html>

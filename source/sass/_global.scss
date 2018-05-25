@@ -244,6 +244,10 @@ img {
   padding-top: 80px;
 }
 
+.wtb-city {
+  padding-bottom: 56px;
+}
+
 .news-sect {
   padding: 40px 0;
   text-align: center;
@@ -372,6 +376,10 @@ img {
   .partners__sect--side-pd {
     padding: 0 24px;
   }
+
+  .wtb-city {
+    padding-bottom: 62px;
+  }
 }
 
 @media (max-width: 670px) {
@@ -445,5 +453,9 @@ img {
 
   .full-p-two-cols-title {
     margin-bottom: 14px;
+  }
+
+  .wtb-city {
+    padding-bottom: 30px;
   }
 }

@@ -8,7 +8,7 @@ block content
     script(src="js/yandex-map.js")
 
     main.contacts
-      header.inner-header
+      header.inner-header.contacts__inner-header
         .container
           ul.breadcrumbs.contacts__breadcrumbs
             li.breadcrumbs__item
@@ -62,28 +62,13 @@ block content
                   span.contacts-list__value office@keramir.com
             .contacts__small-ya-map
               iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A67505bb76c9974b58dfd2bdaa839b8162d2651ffaf97e50d0cd5afa2114935f0&amp;source=constructor" width="100%" height="100%" frameborder="0")
-      section.contacts__branches
+      section.contacts__branches.branches
         .container
-          h2.contacts__title.contacts__title--branches Региональные представительства
-          ul.contacts__branches-list
-            li.contacts__branches-item
-              span.contacts__city Москва
-              span.contacts__org ООО "ЛКК Северо-Запад"
-              ul.contacts-list.contacts__list
-                li.contacts-list__item
-                  span.contacts-list__key Электронный адрес:
-                  span.contacts-list__value office@keramir.com
-                li.contacts-list__item
-                  span.contacts-list__key Телефон:
-                  span.contacts-list__value +7 (812)
-                    span.contacts__phone 324-60-59
-                li.contacts-list__item
-                  span.contacts-list__key Факс:
-                  span.contacts-list__value +7 (812)
-                    span.contacts-list__phone 324-60-59
-            li.contacts__branches-item
-              span.contacts__city Санкт-Петербург
-              span.contacts__org ООО "ЛКК Северо-Запад"
+          h2.branches__title Региональные представительства
+          ul.contacts__branches-list.branches__list
+            li.branches__item
+              span.branches__city Москва
+              span.branches__org ООО "ЛКК Северо-Запад"
               ul.contacts-list.contacts__list
                 li.contacts-list__item
                   span.contacts-list__key Электронный адрес:
@@ -96,9 +81,9 @@ block content
                   span.contacts-list__key Факс:
                   span.contacts-list__value +7 (812)
                     span.contacts-list__phone 324-60-59
-            li.contacts__branches-item
-              span.contacts__city Самара
-              span.contacts__org ООО "ЛКК Северо-Запад"
+            li.branches__item
+              span.branches__city Санкт-Петербург
+              span.branches__org ООО "ЛКК Северо-Запад"
               ul.contacts-list.contacts__list
                 li.contacts-list__item
                   span.contacts-list__key Электронный адрес:
@@ -111,9 +96,9 @@ block content
                   span.contacts-list__key Факс:
                   span.contacts-list__value +7 (812)
                     span.contacts-list__phone 324-60-59
-            li.contacts__branches-item
-              span.contacts__city Казань
-              span.contacts__org ООО "ЛКК Северо-Запад"
+            li.branches__item
+              span.branches__city Самара
+              span.branches__org ООО "ЛКК Северо-Запад"
               ul.contacts-list.contacts__list
                 li.contacts-list__item
                   span.contacts-list__key Электронный адрес:
@@ -126,9 +111,9 @@ block content
                   span.contacts-list__key Факс:
                   span.contacts-list__value +7 (812)
                     span.contacts-list__phone 324-60-59
-            li.contacts__branches-item
-              span.contacts__city Краснодар
-              span.contacts__org ООО "ЛКК Северо-Запад"
+            li.branches__item
+              span.branches__city Казань
+              span.branches__org ООО "ЛКК Северо-Запад"
               ul.contacts-list.contacts__list
                 li.contacts-list__item
                   span.contacts-list__key Электронный адрес:
@@ -141,9 +126,24 @@ block content
                   span.contacts-list__key Факс:
                   span.contacts-list__value +7 (812)
                     span.contacts-list__phone 324-60-59
-            li.contacts__branches-item
-              span.contacts__city Челябинск
-              span.contacts__org ООО "ЛКК Северо-Запад"
+            li.branches__item
+              span.branches__city Краснодар
+              span.branches__org ООО "ЛКК Северо-Запад"
+              ul.contacts-list.contacts__list
+                li.contacts-list__item
+                  span.contacts-list__key Электронный адрес:
+                  span.contacts-list__value office@keramir.com
+                li.contacts-list__item
+                  span.contacts-list__key Телефон:
+                  span.contacts-list__value +7 (812)
+                    span.contacts-list__phone 324-60-59
+                li.contacts-list__item
+                  span.contacts-list__key Факс:
+                  span.contacts-list__value +7 (812)
+                    span.contacts-list__phone 324-60-59
+            li.branches__item
+              span.branches__city Челябинск
+              span.branches__org ООО "ЛКК Северо-Запад"
               ul.contacts-list.contacts__list
                   li.contacts-list__item
                     span.contacts-list__key Электронный адрес:
@@ -156,9 +156,9 @@ block content
                     span.contacts-list__key Факс:
                     span.contacts-list__value +7 (812)
                       span.contacts-list__phone 324-60-59
-            li.contacts__branches-item
-              span.contacts__city Новосибирск
-              span.contacts__org ООО "ЛКК Северо-Запад"
+            li.branches__item
+              span.branches__city Новосибирск
+              span.branches__org ООО "ЛКК Северо-Запад"
               ul.contacts-list.contacts__list
                   li.contacts-list__item
                     span.contacts-list__key Электронный адрес:

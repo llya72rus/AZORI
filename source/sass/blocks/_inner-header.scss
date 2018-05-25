@@ -97,6 +97,10 @@
   }
 }
 
+.contacts__inner-header {
+  padding-bottom: 24px;
+}
+
 .inner-header--btns-true .inner-header__title {
   margin-bottom: 20px;
   margin-right: 20px;
@@ -109,9 +113,15 @@
       padding-bottom: 23px;
     }
 
+    &--wtb {
+      padding-top: 21px;
+    }
+
     &__title {
       font-size: 32px;
       letter-spacing: 1.6px;
+      font-size: 36px;
+      letter-spacing: 1.8px;
 
       &--contacts {
         font-size: 36px;

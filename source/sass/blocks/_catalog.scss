@@ -146,7 +146,8 @@
     &::before {
       content: "";
       position: absolute;
-      top: -5px;
+      top: 50%;
+      transform: translateY(-50%);
       left: 0;
       width: 20px;
       height: 20px;
@@ -248,11 +249,12 @@
 .catalog__input:checked + label::after {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 6px;
   width: 10px;
   height: 7px;
-  background: url('../img/checked.png') no-repeat center;
+  background: url('../img/svg/checked.svg') no-repeat center;
   background-size: cover;
 }
 .catalog .acc-content {

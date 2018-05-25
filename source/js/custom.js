@@ -256,6 +256,222 @@ $(document).ready(function() {
     focusOnSelect: true,
   });
 
+  $('#card-15 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-15 .card__colors'
+  });
+
+  $('#card-15 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-15 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-16 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-16 .card__colors'
+  });
+
+  $('#card-16 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-16 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-17 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-17 .card__colors'
+  });
+
+  $('#card-17 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-17 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-18 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-18 .card__colors'
+  });
+
+  $('#card-18 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-18 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-19 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-149 .card__colors'
+  });
+
+  $('#card-19 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-19 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-20 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-20 .card__colors'
+  });
+
+  $('#card-20 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-20 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-21 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-21 .card__colors'
+  });
+
+  $('#card-21 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-21 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-22 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-22 .card__colors'
+  });
+
+  $('#card-22 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-22 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-23 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-23 .card__colors'
+  });
+
+  $('#card-23 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-23 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-24 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-24 .card__colors'
+  });
+
+  $('#card-24 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-24 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-25 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-25 .card__colors'
+  });
+
+  $('#card-25 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-25 .card__images',
+    focusOnSelect: true,
+  });
+
+  $('#card-26 .card__images').slick({
+    speed: 500,
+    arrows: false,
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    asNavFor: '#card-26 .card__colors'
+  });
+
+  $('#card-26 .card__colors').slick({
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    draggable: false,
+    asNavFor: '#card-26 .card__images',
+    focusOnSelect: true,
+  });
+
   /*
       Конец  очень-очень плохого кода
   */
@@ -1078,11 +1294,6 @@ $('.mobile-search__btn').click(function () {
     //   return false;
     // }
   }
-
-
-
-
-
 
 
   // Функционал кнопки "Наверх"

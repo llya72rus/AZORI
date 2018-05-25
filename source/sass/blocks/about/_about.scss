@@ -72,7 +72,7 @@
     margin-bottom: 35px;
     padding-top: 147px;
     padding-bottom: 15px;
-    background: url('../img/philosophy-bg.png') center top no-repeat, 
+    background: url('../img/philosophy-bg.png') center top no-repeat,
                 linear-gradient(to bottom, #ffffff 40px, #f5f6f6 40px);
     background-size: 1030px 470px, auto;
 
@@ -86,7 +86,7 @@
     margin-bottom: 0;
     padding-top: 147px;
     padding-bottom: 15px;
-    background: url('../img/about-production-bg.png') center top no-repeat, 
+    background: url('../img/about-production-bg.png') center top no-repeat,
                 linear-gradient(to bottom, #ffffff 40px, #f5f6f6 40px);
     background-size: 1030px 470px, auto;
 
@@ -222,7 +222,7 @@
   .about-sect {
 
     &--history {
-      background: url('../img/about-logo-bg-tablet.png') no-repeat center 93px, 
+      background: url('../img/about-logo-bg-tablet.png') no-repeat center 93px,
       linear-gradient(to bottom, #f5f6f6 63%, $white 63%);
     }
 
@@ -307,7 +307,7 @@
     &::before {
       top: 19px;
     }
-    
+
     &--history {
       margin-bottom: -18px;
       padding-top: 17px;
@@ -353,9 +353,9 @@
 
     &__top-img-wrapper {
       width: 100%;
-      margin-bottom: 10px;
+      margin: 0 auto 10px;
       padding-top: 0;
-      display: block;
+      text-align: center;
     }
 
     &__top-info {
@@ -382,7 +382,18 @@
     &__list {
       width: 100%;
       padding: 0;
+      padding-bottom: 20px;
       margin-bottom: 20px;
+      border-top: none;
+      border-bottom: 2px solid rgba(255, 191, 127, 0.5);
+
+
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
     }
 
     &__item {

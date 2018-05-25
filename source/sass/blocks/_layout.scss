@@ -1,5 +1,6 @@
 .layout {
-  padding-bottom: 30px;
+  margin-bottom: 61px;
+
   &__img-link {
     width: 100%;
     height: 100%;
@@ -21,24 +22,32 @@
 
   &__wrapper {
     margin-bottom: 20px;
-    padding: 40px 0 10px;
+    padding: 33px 0 7px;
     background-color: #f5f6f6;
   }
 
   &__text {
     max-width: 970px;
+    margin-bottom: 34px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #252525;
   }
 
   &__list {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
     margin: 0 -15px;
   }
 
+  &__where-to-buy {
+    min-width: 175px;
+  }
+
   &__item {
-    width: 31.623931%;
-    margin-bottom: 30px;
+    width: 33.33333%;
+    padding: 0 15px;
+    margin-bottom: 23px;
     flex-shrink: 0;
     text-align: center;
   }
@@ -46,10 +55,9 @@
   &__img-wrapper {
     position: relative;
     height: 446px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     border-radius: 5px;
     overflow: hidden;
-
 
   }
 
@@ -99,10 +107,25 @@
 
 @media (max-width: 1024px) {
   .layout {
+
+    &__wrapper {
+      padding-bottom: 12px;
+    }
+
+    &__list {
+      justify-content: space-around;
+    }
+
     &__item {
-      width: 46%;
+      width: 50%;
+    }
+
+    &__img-wrapper {
+      height: 411px;
     }
   }
+
+
 }
 
 
@@ -126,8 +149,37 @@
 
 @media (max-width: 480px) {
   .layout {
+    margin-bottom: 27px;
+
+    &__wrapper {
+      margin-bottom: 16px;
+      padding-top: 16px;
+      padding-bottom: 15px;
+    }
+
     &__item {
       width: 300px;
+      margin-bottom: 15px;
+      padding: 0;
+    }
+
+    &__text {
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    &__img-wrapper {
+      height: 350px;
+      margin-bottom: 11px;
+    }
+
+    &__where-to-buy {
+      margin-top: 14px;
     }
   }
+
+  .layout__bottom-panel .container {
+    flex-direction: column;
+  }
+
 }

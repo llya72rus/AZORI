@@ -1,6 +1,6 @@
 .inner-header {
   padding-top: 33px;
-  padding-bottom: 24px;
+  padding-bottom: 29px;
 
   &--btns-true {
     padding-bottom: 0;
@@ -126,6 +126,11 @@
       &--about {
         font-size: 36px;
         letter-spacing: 1.8px;
+      }
+
+      &--example {
+        font-size: 36px;
+        letter-spacing: 1.3px;
       }
 
       &--pr-page {

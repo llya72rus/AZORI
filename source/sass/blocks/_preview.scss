@@ -1,6 +1,5 @@
 .preview {
   padding-top: 40px;
-  padding-bottom: 20px;
 
   &--gray {
     background-color: #f5f6f6;
@@ -10,9 +9,17 @@
     height: 100%;
   }
 
+  &__title {
+    margin-bottom: 11px;
+  }
+
   &__slider {
     margin: 0 -15px;
   }
+}
+
+.layout-example__preview {
+  margin-bottom: 40px;
 }
 
 @media (max-width: 1400px) {
@@ -30,6 +37,9 @@
       width: auto;
       margin: 0 -15px;
     }
+  }
+  .layout-example__preview {
+    margin-bottom: 62px;
   }
 }
 
@@ -53,9 +63,19 @@
 
 @media (max-width: 480px) {
   .preview {
+    padding-top: 11px;
+
+    &__title {
+      margin-bottom: 2px;
+    }
+
     &__slider {
       width: auto;
       margin: 0 -10px;
     }
+  }
+
+  .layout-example__preview {
+    margin-bottom: 30px;
   }
 }

@@ -145,6 +145,8 @@ img {
     content: "";
     position: absolute;
     left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 20px;
     height: 15px;
     background: url('../img/back-top-parent-sect-arrow.png') no-repeat center;
@@ -171,6 +173,8 @@ img {
 .partners__sect {
   margin-bottom: 40px;
 }
+
+
 
 .orange-rounded-btn-next {
   position: absolute;
@@ -210,6 +214,22 @@ img {
   &--ab-charcs {
     left: -100px;
   }
+}
+
+.preview__orange-rounded-btn-next {
+  right: -60px;
+}
+
+.preview__orange-rounded-btn-prev {
+  left: -60px;
+}
+
+.viewed__orange-rounded-btn-next {
+  right: -90px;
+}
+
+.viewed__orange-rounded-btn-prev {
+  left: -90px;
 }
 
 .color-square {

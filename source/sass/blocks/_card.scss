@@ -29,7 +29,7 @@
     margin-top: auto;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 8px;
   }
 
   &__info-left {
@@ -45,12 +45,11 @@
 
 
   &__title {
-    margin-bottom: 5px;
+    margin-bottom: 0;
     font-size: 32px;
     font-weight: 500;
     letter-spacing: 0.8px;
     word-break: break-all;
-    // word-wrap: break-word;
   }
 
   &__sale {
@@ -195,6 +194,14 @@
 @media (max-width: 480px) {
   .card {
     width: 100px;
+
+    &__price-block {
+      line-height: normal;
+    }
+
+    &__colors {
+      margin-bottom: 8px;
+    }
 
     &__images {
       margin-bottom: 12px;

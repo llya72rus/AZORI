@@ -5,10 +5,10 @@ block content
   body.inner-body
     include ../modules/page-header
 
-    main.partners
+    main.layout-example
       header.inner-header
         .container
-          ul.breadcrumbs.breadcrumbs
+          ul.breadcrumbs.layout-example__breadcrumbs
             li.breadcrumbs__item
               a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
             li.breadcrumbs__item
@@ -16,7 +16,7 @@ block content
             li.breadcrumbs__item
               a.breadcrumbs__link.breadcrumbs__link--current Eclipse Gray
           .inner-header__bottom-wrapper.inner-header__bottom-wrapper
-            h1.inner-header__title Пример выкладки Eclipse Gray
+            h1.inner-header__title.inner-header__title--example Пример выкладки Eclipse Gray
 
       section.layout
         .layout__wrapper
@@ -44,11 +44,11 @@ block content
         .layout__bottom-panel
           .container
             a.back-to-parent-section(href="javascript:void(0);") Вернуться в коллекцию
-            a.page-btn(href="javascript:void(0);") Где купить
-      article.projects-preview-article
+            a.page-btn.layout__where-to-buy(href="javascript:void(0);") Где купить
+      article.projects-preview-article.layout-example__projects-preview
         .container
-          h2.inner-sect-title Реализованные проекты
-        .projects-preview.projects-preview-article__slider
+          h2.inner-sect-title.layout-example__projects-preview-title Примеры готовых решений
+        .projects-preview.layout-example__projects-preview-slider
           a.projects-preview__slide(href="javascript:void(0);")
             img(src="img/coll-examples-img-1.jpg", alt="")
             .projects-preview__tooltip Плитка в большой ванной
@@ -64,9 +64,9 @@ block content
           a.projects-preview__slide(href="javascript:void(0);")
             img(src="img/coll-examples-img-2.jpg", alt="")
             .projects-preview__tooltip Плитка в большой ванной
-      article.preview
+      article.preview.layout-example__preview
         .container
-          h2.inner-sect-title Рекомендуем посмотреть:
+          h2.inner-sect-title.preview__title Рекомендуем посмотреть:
           .preview__slider
             .preview__item.card#card-7
               .card__images
@@ -144,9 +144,9 @@ block content
                   p.card__price-block #[span.card__price-from от] #[span.card__price 1 500] #[span.card__price-extra руб./ м#[sup 2]]
                 .card__info-right
                   span.card__new.tag-new Новинка!
-      article.viewed
+      article.viewed.layout-example__viewed
         .container
-          h2.inner-sect-title.viewed__sect-title Вы уже смотрели:
+          h2.inner-sect-title.viewed__title Вы уже смотрели:
           .viewed__wrapper
             .viewed__item.card#card-11
               .card__images

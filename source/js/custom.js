@@ -557,8 +557,8 @@ $(document).ready(function() {
     slidesToScroll: 1,
     infinite: false,
     arrows: true,
-    nextArrow: '<button type="button" class="orange-rounded-btn-next">Следующий слайд</button>',
-    prevArrow: '<button type="button" class="orange-rounded-btn-prev">Предыдущий слайд</button>',
+    nextArrow: '<button type="button" class="orange-rounded-btn-next preview__orange-rounded-btn-next">Следующий слайд</button>',
+    prevArrow: '<button type="button" class="orange-rounded-btn-prev preview__orange-rounded-btn-prev">Предыдущий слайд</button>',
     responsive: [
 
       {
@@ -597,8 +597,8 @@ $(document).ready(function() {
     slidesToScroll: 1,
     infinite: true,
     arrows: true,
-    nextArrow: '<button type="button" class="orange-rounded-btn-next">Следующий слайд</button>',
-    prevArrow: '<button type="button" class="orange-rounded-btn-prev">Предыдущий слайд</button>',
+    nextArrow: '<button type="button" class="orange-rounded-btn-next viewed__orange-rounded-btn-next">Следующий слайд</button>',
+    prevArrow: '<button type="button" class="orange-rounded-btn-prev viewed__orange-rounded-btn-prev">Предыдущий слайд</button>',
     responsive: [
 
       {
@@ -669,7 +669,7 @@ $(document).ready(function() {
       },
 
       {
-        breakpoint: 767,
+        breakpoint: 576,
         settings: {
           slidesToShow: 2,
           arrows: false,

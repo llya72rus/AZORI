@@ -1,0 +1,57 @@
+.search-result {
+  &__top {
+    margin-bottom: 20px;
+    padding: 25px 0;
+    background: #f5f6f6;
+  }
+
+  &__list {
+    max-width: 870px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__notification {
+    margin-bottom: 27px;
+    color: #252525;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.8888;
+    letter-spacing: 0.45px;
+  }
+
+  &__query {
+    color: #ed8c2b;
+  }
+
+  &__art-title {
+    margin-bottom: 10px;
+    color: #252525;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.416666;
+    letter-spacing: 0.6px;
+  }
+
+  &__art-date {
+    display: block;
+    margin-bottom: 13px;
+    color: #ababab;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.35px;
+  }
+
+  &__art-text {
+    margin: 0;
+    color: #252525;
+    font-size: 16px;
+    line-height: 1.375;
+    letter-spacing: 0.8px;
+  }
+}

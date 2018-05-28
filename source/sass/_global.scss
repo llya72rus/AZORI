@@ -174,7 +174,9 @@ img {
   margin-bottom: 40px;
 }
 
-
+.hidden {
+  display: none;
+}
 
 .orange-rounded-btn-next {
   position: absolute;
@@ -189,7 +191,8 @@ img {
   margin: 0;
   padding: 0;
   font-size: 0;
-  background: url('../img/orange-rounded-btn-next.png') no-repeat center;
+  background: url('../img/svg/arrow-right-orange.svg') no-repeat center;
+  background-size: cover;
 
   &--ab-charcs {
     right: -100px;
@@ -209,11 +212,31 @@ img {
   margin: 0;
   padding: 0;
   font-size: 0;
-  background: url('../img/orange-rounded-btn-prev.png') no-repeat center;
+  background: url('../img/svg/arrow-left-orange.svg') no-repeat center;
+  background-size: cover;
 
   &--ab-charcs {
     left: -100px;
   }
+}
+.subscribe-success-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.subscribe-success-modal__message {
+  background: $white;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid $orange;
 }
 
 .preview__orange-rounded-btn-next {
@@ -248,10 +271,18 @@ img {
   padding-bottom: 56px;
 }
 
+.catalog-collections {
+  padding-bottom: 58px;
+}
+
 .news-sect {
   padding: 40px 0;
   text-align: center;
   background-color: #f5f6f6;
+}
+
+.search-result-main {
+  padding-bottom: 64px;
 }
 
 .pr-page-t-gallery-wrapper {
@@ -274,8 +305,9 @@ img {
   }
 }
 
+
 .news-row {
-  padding: 40px 0;
+  padding: 33px 0 40px;
   text-align: center;
 
   background: linear-gradient(to bottom, $white 19.25%, #f5f6f6 19.25%, #f5f6f6 79%, $white 79%);
@@ -324,8 +356,13 @@ img {
   }
 }
 
-.container--slipping-bg {
+.slipping-bg {
   background: linear-gradient(to bottom, $white 8.5%, #f5f6f6 8.5%, #f5f6f6 91.3%, #ffffff 91.3%);
+}
+
+.collection__slipping-bg {
+  margin-bottom: 40px;
+  background: linear-gradient(to bottom, $white 8.5%, #f5f6f6 8.5%, #f5f6f6 84.8%, #ffffff 84.8%);
 }
 
 .contacts-subtitle {
@@ -441,6 +478,10 @@ img {
 
   .partners__sect {
     margin-bottom: 30px;
+  }
+
+  .catalog-collections {
+    padding-bottom: 38px;
   }
 
   .contacts-subtitle {

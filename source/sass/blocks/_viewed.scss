@@ -1,9 +1,10 @@
 .viewed {
   padding: 33px 0 27px;
+  padding: 33px 0 20px;
   background-color: #f5f6f6;
 
-  &__title {
-    margin-bottom: 8px;
+  &__sect-title {
+    margin-bottom: 17px;
   }
 
   &__wrapper {
@@ -21,6 +22,10 @@
     &__wrapper {
       width: auto;
       margin: 0 -15px;
+    }
+
+    &__sect-title {
+      margin-bottom: 12px;
     }
   }
 
@@ -48,12 +53,13 @@
 
 @media (max-width: 480px) {
   .viewed {
+    padding-top: 16px;
     &__wrapper {
       width: auto;
       margin: 0 -10px;
     }
 
-    &__title {
+    &__sect-title {
       margin-bottom: 2px;
     }
   }

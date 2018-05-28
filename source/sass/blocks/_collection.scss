@@ -2,7 +2,7 @@
   padding-bottom: 60px;
 
   &__gallery {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 
   &__colors-list {
@@ -19,6 +19,7 @@
   }
 
   &__colors-title {
+    margin-bottom: 24px;
     color: #252525;
     font-size: 18px;
     font-weight: 500;
@@ -77,7 +78,7 @@
   &__desc p {
     margin-bottom: 20px;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.65;
   }
 
   &__desc p:last-child {
@@ -101,7 +102,7 @@
   }
 
   &__params-main-title {
-    margin-bottom: 30px;
+    margin-bottom: 22px;
     color: #252525;
     font-size: 18px;
     font-weight: 500;
@@ -110,7 +111,7 @@
   }
 
   &__params-type-name {
-    margin-bottom: 15px;
+    margin-bottom: 19px;
     color: #252525;
     font-size: 16px;
     font-weight: 500;
@@ -160,7 +161,7 @@
   &__params-item {
     position: relative;
     margin-bottom: 20px;
-    padding-left: 49px;
+    padding-left: 44px;
 
     &:last-child {
       margin-bottom: 0;
@@ -209,7 +210,7 @@
 
   &__where-to-buy {
     min-width: 195px;
-    margin: 30px auto 0;
+    margin: 21px auto 0;
   }
 }
 
@@ -244,7 +245,7 @@
 
     &__desc {
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       text-align: left;
     }
 
@@ -262,6 +263,19 @@
     margin-right: 30px;
   }
 
+}
+
+@media (max-width: 768px) {
+  .collection__desc p {
+    margin-bottom: 14px;
+  }
+  .collection__params-type {
+    margin-bottom: 28px;
+  }
+
+  .collection__gallery {
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -305,11 +319,40 @@
     padding-bottom: 30px;
 
     &__gallery {
+      margin-bottom: 19px;
       padding: 0;
     }
 
+    &__desc {
+      margin-bottom: 12px;
+    }
+
     &__colors-title {
+      margin-bottom: 11px;
       font-size: 16px;
+    }
+
+    &__params-main-title {
+      margin-bottom: 13px;
+    }
+
+    &__params-type {
+      margin-bottom: 23px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__where-to-buy {
+      margin-top: 17px;
+    }
+
+  }
+
+  .collection__desc p {
+    margin-bottom: 2px;
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 

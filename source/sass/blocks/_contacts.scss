@@ -80,10 +80,11 @@
 
   &__small-ya-map {
     width: 57.2649572%;
+    height: 370px;
 
-    iframe {
-      height: 370px;
-    }
+    // iframe {
+    //   height: 370px;
+    // }
   }
 
   &__row {
@@ -197,7 +198,7 @@
 }
 
 @media (max-width: 480px) {
-  
+
   .contacts {
     &__address-wrapper {
       margin-left: 0;

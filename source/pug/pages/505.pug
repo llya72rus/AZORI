@@ -1,0 +1,25 @@
+extends ../layout/main
+block title
+  | Результаты поиска
+block content
+  body.inner-body
+    script(src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8")
+    script.
+      var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});
+    include ../modules/page-header
+
+    main.site-error
+      .site-error__wrapper
+        .site-error__block
+          span.site-error__top-text 505
+          span.site-error__middle-text ошибка
+          span.site-error__bottom-text Нет соединения с сервером, #[br] но мы уже работаем над этим :)
+
+
+
+
+    include ../modules/footer
+    button(type="button" class="back-to-top" title="Наверх") &uarr;
+
+
+

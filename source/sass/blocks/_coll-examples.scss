@@ -1,10 +1,16 @@
 .coll-examples {
-  margin-bottom: 20px;
-
   &__slider {
     margin-bottom: 10px;
   }
 
+  &__sect-title {
+    margin-bottom: 20px;
+  }
+
+}
+
+.single-card-main__coll-examples {
+  margin-bottom: 16px;
 }
 
 @media (max-width: 1366px) {

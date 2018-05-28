@@ -3,18 +3,21 @@ block title
   | О бренде
 block content
   body.inner-body
+    script(src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8")
+    script.
+      var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});
     include ../modules/page-header
 
     main.about-main
       header.inner-header
         .container
-          ul.breadcrumbs.about-main__breadcrumbs
+          ul.breadcrumbs
             li.breadcrumbs__item
               a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
             li.breadcrumbs__item
               a.breadcrumbs__link.breadcrumbs__link--current О бренде
           .inner-header__bottom-wrapper.inner-header__bottom-wrapper
-            h1.inner-header__title.inner-header__title--about О бренде
+            h1.inner-header__title О бренде
       section.about-sect.about-sect--history
         h2.inner-sect-title.about-sect__title.about-sect__title--history История
         picture

@@ -36,15 +36,29 @@
     min-height: 114px;
     padding: 92px 25px 7px 33px;
     background-color: #676c73;
-    background-image: url("../img/logo.png");
-    background-repeat: no-repeat;
-    background-position: center 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
     color: #ffffff;
     font-family: $century;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.1;
+
+    &:hover svg {
+      fill: $orange;
+    }
+
+    svg {
+      position: absolute;
+      width: 250px;
+      height: 84px;
+      top: 4px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      -webkit-transition: 0.1s linear;
+      transition: 0.1s linear;
+      fill: #fefefe;
+    }
   }
 
   &__item {
@@ -144,14 +158,15 @@
 
 @media (max-width: 1024px) {
   .main-nav {
-    display: none;
-    position: fixed;
+    display: block;
+    position: absolute;
     padding: 70px 50px 50px;
     top: 0;
-    left: 0;
-    width: 64.1244%;
+    left: -100%;
+    width: 64.259%;
     height: 100vh;
     z-index: 50;
+    transition: 0.5s ease;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: -2px 0 43px $primary-color;
 
@@ -179,6 +194,7 @@
     }
 
     &__link {
+      display: inline;
       font-size: 18px;
       padding: 0;
 
@@ -189,7 +205,7 @@
     }
 
     &--show {
-      display: block;
+      left: 0;
     }
   }
 

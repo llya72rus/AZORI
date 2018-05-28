@@ -19,6 +19,8 @@
     </title>
   </head>
   <body class="inner-body">
+    <script src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8"></script>
+    <script>var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});</script>
     <header class="page-header">
       <nav class="page-nav">
         <div class="menu-toggle"><span></span><span></span><span></span><span></span></div><a class="page-nav__logo" href="/">Вдохновляйся. Мечтай. Созидай.
@@ -29,7 +31,7 @@
         <ul class="page-nav__list">
           <li class="page-nav__item"><a class="page-nav__link" href="/about.html">О бренде</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/catalog-collections.html">Коллекции</a></li>
-          <li class="page-nav__item"><a class="page-nav__link" href="javasctipt:void(0);">Где купить</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="/where-to-buy.html">Где купить</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/news.html">Новости</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/contacts.html">Контакты</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/partners.html">Партнерам</a></li>
@@ -136,7 +138,7 @@
           <h2 class="subscribe__title">Подписка на новости</h2>
           <p class="subscribe__desc">Всегда свежая информация о скидках, акциях, полезные статьи и новости компании</p>
           <div class="subscribe__bottom-wrapper">
-            <form class="subscribe__form" action="#" method="post">
+            <form class="subscribe__form">
               <input class="subscribe__input" type="email" required="required" placeholder="Ваш e-mail"/>
               <button class="subscribe__btn page-btn" type="submit">Подписаться</button>
             </form>
@@ -183,6 +185,9 @@
                 <use xlink:href="img/sprite.svg#trinet"></use>
               </svg> Trinet<br/>Development</a></p>
         </div>
+      </div>
+      <div class="subscribe-success-modal hidden">
+        <div class="subscribe-success-modal__message">Спасибо, что интересуетесь нами!</div>
       </div>
     </footer>
     <button class="back-to-top" type="button" title="Back to top">&uarr;</button>

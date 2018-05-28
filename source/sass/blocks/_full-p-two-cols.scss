@@ -55,6 +55,7 @@
   }
 
   &__main-text {
+    max-width: 100%;
     color: #ffffff;
     font-size: 24px;
     font-weight: 700;
@@ -63,6 +64,7 @@
   }
 
   &__desc {
+    max-width: 100%;
     margin: 0;
     margin-top: 20px;
     font-size: 18px;

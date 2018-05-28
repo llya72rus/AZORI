@@ -112,14 +112,8 @@
 
 @media (max-width: 1024px) {
   .page-nav {
-    min-height: 60px;
+    height: 60px;
     padding: 0 24px;
-
-    &--menu-opened {
-      .page-nav__logo {
-        opacity: 0;
-      }
-    }
 
     &__link {
       display: inline;
@@ -138,19 +132,21 @@
     }
 
     &__list {
-      display: none;
+      display: block;
+      width: 63%;
+      position: absolute;
+      top: 0;
+      padding: 40px 50px 50px;
+      left: -100%;
+      z-index: 50;
+      transition: 0.7s ease;
+      background-color: #f3f3f3;
+      -webkit-box-shadow: -2px 0 43px #252525;
+      box-shadow: -2px 0 43px #252525;
 
       &--show {
-        display: block;
-        position: absolute;
-        padding: 80px 50px 50px;
-        top: 0;
         left: 0;
-        width: 70%;
-        z-index: 50;
-        background-color: rgba(255, 255, 255, 0.9);
-        -webkit-box-shadow: -2px 0 43px #252525;
-        box-shadow: -2px 0 43px #252525;
+        top: 0;
       }
     }
 
@@ -203,12 +199,12 @@
 @media (max-width: 767px) {
   .page-nav {
 
-    &--menu-opened {
-      .page-nav__lang-opt,
-      .page-nav__search {
-        opacity: 0;
-      }
-    }
+    // &--menu-opened {
+    //   .page-nav__lang-opt,
+    //   .page-nav__search {
+    //     opacity: 0;
+    //   }
+    // }
 
     &__list--show {
       width: 100%;
@@ -221,7 +217,7 @@
 
 @media (max-width: 480px) {
   .page-nav {
-    min-height: 40px;
+    height: 40px;
     padding: 0 10px;
 
     &__item {

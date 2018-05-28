@@ -3,6 +3,9 @@ block title
   | Страницы отдельного проекта
 block content
   body.inner-body
+    script(src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8")
+    script.
+      var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});
     include ../modules/page-header
     main.project-page
       header.inner-header.project-page__inner-header
@@ -20,22 +23,22 @@ block content
       section
         .container.container--slipping-bg.pr-page-t-gallery-wrapper
           .top-gallery.top-gallery--pr-page
-            a(href="img/pr-page-top-gallery-1.jpg" data-fancybox="images")
+            a.top-gallery__slide(href="img/pr-page-top-gallery-1.jpg" data-fancybox="images")
               picture
                 source(media="(max-width: 480px)" srcset="img/project-page-img-top-gallery-phone.jpg")
                 source(media="(max-width: 768px)" srcset="img/project-page-img-top-gallery-tablet.jpg")
                 img(src="img/pr-page-top-gallery-1.jpg")
-            a(href="img/pr-page-top-gallery-1.jpg" data-fancybox="images")
+            a.top-gallery__slide(href="img/pr-page-top-gallery-1.jpg" data-fancybox="images")
               picture
                 source(media="(max-width: 480px)" srcset="img/project-page-img-top-gallery-phone.jpg")
                 source(media="(max-width: 768px)" srcset="img/project-page-img-top-gallery-tablet.jpg")
                 img(src="img/pr-page-top-gallery-1.jpg")
-            a(href="img/pr-page-top-gallery-1.jpg" data-fancybox="images")
+            a.top-gallery__slide(href="img/pr-page-top-gallery-1.jpg" data-fancybox="images")
               picture
                 source(media="(max-width: 480px)" srcset="img/project-page-img-top-gallery-phone.jpg")
                 source(media="(max-width: 768px)" srcset="img/project-page-img-top-gallery-tablet.jpg")
                 img(src="img/pr-page-top-gallery-1.jpg")
-            a(href="img/pr-page-top-gallery-1.jpg" data-fancybox="images")
+            a.top-gallery__slide(href="img/pr-page-top-gallery-1.jpg" data-fancybox="images")
               picture
                 source(media="(max-width: 480px)" srcset="img/project-page-img-top-gallery-phone.jpg")
                 source(media="(max-width: 768px)" srcset="img/project-page-img-top-gallery-tablet.jpg")

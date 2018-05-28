@@ -19,6 +19,11 @@
     </title>
   </head>
   <body class="inner-body">
+    <script src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8"></script>
+    <script>
+      var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});
+      
+    </script>
     <header class="page-header">
       <nav class="page-nav">
         <div class="menu-toggle"><span></span><span></span><span></span><span></span></div><a class="page-nav__logo" href="/">Вдохновляйся. Мечтай. Созидай.
@@ -29,7 +34,7 @@
         <ul class="page-nav__list">
           <li class="page-nav__item"><a class="page-nav__link" href="/about.html">О бренде</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/catalog-collections.html">Коллекции</a></li>
-          <li class="page-nav__item"><a class="page-nav__link" href="javasctipt:void(0);">Где купить</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="/where-to-buy.html">Где купить</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/news.html">Новости</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/contacts.html">Контакты</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/partners.html">Партнерам</a></li>
@@ -96,8 +101,8 @@
         </div>
       </header>
       <section class="collection">
-        <div class="container container--slipping-bg">
-          <div class="collection__gallery top-gallery"><a href="img/collection-gallery-img-1.jpg" data-fancybox="images"><img src="img/collection-gallery-img-1.jpg"/></a><a href="img/collection-gallery-img-2.jpg" data-fancybox="images"><img src="img/collection-gallery-img-2.jpg"/></a><a href="img/collection-gallery-img-3.jpg" data-fancybox="images"><img src="img/collection-gallery-img-3.jpg"/></a></div>
+        <div class="container collection__slipping-bg">
+          <div class="collection__gallery top-gallery"><a class="top-gallery__slide" href="img/collection-gallery-img-1.jpg" data-fancybox="images"><img src="img/collection-gallery-img-1.jpg"/></a><a class="top-gallery__slide" href="img/collection-gallery-img-2.jpg" data-fancybox="images"><img src="img/collection-gallery-img-2.jpg"/></a><a class="top-gallery__slide" href="img/collection-gallery-img-3.jpg" data-fancybox="images"><img src="img/collection-gallery-img-3.jpg"/></a></div>
           <h3 class="collection__colors-title">Цвета коллекции</h3>
           <ul class="collection__colors-list">
             <li class="collection__colors-item"><a class="collection__colors-link collection__colors-link--current" href="javascript:void(0);">
@@ -243,7 +248,7 @@
           </ul>
         </div>
       </section>
-      <section class="coll-examples">
+      <section class="coll-examples single-card-main__coll-examples">
         <h2 class="coll-examples__sect-title inner-sect-title">Примеры готовых решений</h2>
         <div class="coll-examples__slider projects-preview"><a class="projects-preview__slide" href="javascript:void(0);"><img src="img/coll-examples-img-1.jpg" alt=""/>
             <div class="projects-preview__tooltip">Плитка в большой ванной</div></a><a class="projects-preview__slide" href="javascript:void(0);"><img src="img/coll-examples-img-2.jpg" alt=""/>
@@ -257,9 +262,9 @@
               <p class="full-p-two-cols__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p><span class="full-p-two-cols__go-to-page">Перейти</span></a></div>
         </div>
       </section>
-      <article class="preview">
+      <article class="preview single-card-main__preview">
         <div class="container">
-          <h2 class="inner-sect-title">Рекомендуем посмотреть:</h2>
+          <h2 class="inner-sect-title preview__title">Рекомендуем посмотреть:</h2>
           <div class="preview__slider">
             <div class="preview__item card" id="card-7">
               <div class="card__images"><a class="card__image-link" href="javascript:void(0);"><img src="img/first-card-img-1.png" alt="Плиточка"/></a><a class="card__image-link" href="javascript:void(0);"><img src="img/first-card-img-2.png" alt="Плиточка"/></a><a class="card__image-link" href="javascript:void(0);"><img src="img/first-card-img-3.png" alt="Плиточка"/></a></div>
@@ -398,7 +403,7 @@
           <h2 class="subscribe__title">Подписка на новости</h2>
           <p class="subscribe__desc">Всегда свежая информация о скидках, акциях, полезные статьи и новости компании</p>
           <div class="subscribe__bottom-wrapper">
-            <form class="subscribe__form" action="#" method="post">
+            <form class="subscribe__form">
               <input class="subscribe__input" type="email" required="required" placeholder="Ваш e-mail"/>
               <button class="subscribe__btn page-btn" type="submit">Подписаться</button>
             </form>
@@ -445,6 +450,9 @@
                 <use xlink:href="img/sprite.svg#trinet"></use>
               </svg> Trinet<br/>Development</a></p>
         </div>
+      </div>
+      <div class="subscribe-success-modal hidden">
+        <div class="subscribe-success-modal__message">Спасибо, что интересуетесь нами!</div>
       </div>
     </footer>
     <button class="back-to-top" type="button" title="Back to top">&uarr;</button>

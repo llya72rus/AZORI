@@ -3,6 +3,10 @@ block title
   | Выставка Design&Decor St.Petersburg 2017
 block content
   body.inner-body
+    script(src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8")
+    script.
+      var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});
+    script(src="https://yastatic.net/share2/share.js" async="async")
     include ../modules/page-header
     main.inner-main
       header.inner-header
@@ -20,35 +24,36 @@ block content
             h1.inner-header__title.inner-header__title--single-new-title Выставка Design&Decor St.Petersburg 2017
             .inner-header__news-top-panel
               span.inner-header__date 21.01.2018
-              ul.inner-header__social.social
-                li.social__item
-                  a.social__link.social__link--orange(href="javascript:void(0);")
-                    svg(width="20" height="20")
-                      use(xlink:href="img/sprite.svg#mail")
-                li.social__item
-                  a.social__link.social__link--orange(href="javascript:void(0);")
-                    svg(width="20" height="20")
-                      use(xlink:href="img/sprite.svg#vk")
-                li.social__item
-                  a.social__link.social__link--orange(href="javascript:void(0);")
-                    svg(width="20" height="20")
-                      use(xlink:href="img/sprite.svg#fb")
-                li.social__item
-                  a.social__link.social__link--orange(href="javascript:void(0);")
-                    svg(width="20" height="20")
-                      use(xlink:href="img/sprite.svg#instagram")
+              .ya-share2(data-services="vkontakte,facebook,telegram" data-counter data-bare)
+              //- ul.inner-header__social.social
+              //-   li.social__item
+              //-     a.social__link.social__link--orange(href="javascript:void(0);")
+              //-       svg(width="20" height="20")
+              //-         use(xlink:href="img/sprite.svg#mail")
+              //-   li.social__item
+              //-     a.social__link.social__link--orange(href="javascript:void(0);")
+              //-       svg(width="20" height="20")
+              //-         use(xlink:href="img/sprite.svg#vk")
+              //-   li.social__item
+              //-     a.social__link.social__link--orange(href="javascript:void(0);")
+              //-       svg(width="20" height="20")
+              //-         use(xlink:href="img/sprite.svg#fb")
+              //-   li.social__item
+              //-     a.social__link.social__link--orange(href="javascript:void(0);")
+              //-       svg(width="20" height="20")
+              //-         use(xlink:href="img/sprite.svg#instagram")
       section.single-new
         .container.container--slipping-bg
           .single-new__top-gallery.top-gallery
-            a(href="../img/single-new-img.jpg" data-fancybox="images")
+            a.top-gallery__slide(href="../img/single-new-img.jpg" data-fancybox="images")
               img(src="../img/single-new-img.jpg")
-            a(href="../img/single-new-img.jpg" data-fancybox="images")
+            a.top-gallery__slide(href="../img/single-new-img.jpg" data-fancybox="images")
               img(src="../img/single-new-img.jpg")
-            a(href="../img/single-new-img.jpg" data-fancybox="images")
+            a.top-gallery__slide(href="../img/single-new-img.jpg" data-fancybox="images")
               img(src="../img/single-new-img.jpg")
-            a(href="../img/single-new-img.jpg" data-fancybox="images")
+            a.top-gallery__slide(href="../img/single-new-img.jpg" data-fancybox="images")
               img(src="../img/single-new-img.jpg")
-            a(href="../img/single-new-img.jpg" data-fancybox="images")
+            a.top-gallery__slide(href="../img/single-new-img.jpg" data-fancybox="images")
               img(src="../img/single-new-img.jpg")
 
           .top-gallery__thumbs

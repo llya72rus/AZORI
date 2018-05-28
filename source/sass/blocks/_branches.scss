@@ -1,54 +1,21 @@
-
-@supports (display: grid) {
-  .branches {
-    &__list {
-      display: grid;
-      grid-gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-      margin: 0;
-      padding: 0;
-      list-style: none;
-
-      &__item {
-        width: auto;
-      }
-    }
-  }
-}
-  
-@media all and (-ms-high-contrast:none) {
-  .branches {
-    &__item {
-      width: 31.623931623%;
-      margin-right: 30px;
-      margin-bottom: 30px;
-
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
-    }
-
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-  }
-}
-
-.contacts__branches {
-  padding-bottom: 40px;
-  background: linear-gradient(to bottom, $white 110px, #f5f6f6 110px);
-}
-
-.wtb__branches:not(:last-child) {
-  margin-bottom: 69px;
-}
-
 .branches {
   &__item {
+    display: flex;
+    width: 33.33333%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__inner {
+    width: 100%;
     padding: 13px 20px 20px;
     box-shadow: 0 5px 20px rgba(17, 17, 17, 0.1);
     border-radius: 5px;
@@ -112,7 +79,17 @@
       background: url('../img/svg/pin.svg') no-repeat center;
     }
   }
-} 
+}
+
+.contacts__branches {
+  padding-bottom: 40px;
+  background: linear-gradient(to bottom, $white 110px, #f5f6f6 110px);
+}
+
+.wtb__branches:not(:last-child) {
+  margin-bottom: 69px;
+}
+
 
 .branches__item .contacts-list__key {
   margin-bottom: 6px;
@@ -125,7 +102,7 @@
 @media (max-width: 1024px) {
   .branches {
     &__item {
-      padding-right: 10px;
+      width: 50%;
     }
   }
   .wtb__branches:not(:last-child) {
@@ -134,10 +111,18 @@
 }
 
 
-@media (max-width: 670px) {
+@media (max-width: 700px) {
   .branches {
+
+    &__list {
+      display: block;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     &__item {
-      padding-right: 20px;
+      width: 100%;
     }
   }
 }
@@ -145,13 +130,19 @@
 @media (max-width: 480px) {
   .branches {
     &__item {
+      margin-bottom: 15px;
+    }
+
+    &__inner {
       padding-bottom: 15px;
       padding-right: 10px;
       padding-left: 10px;
     }
 
     &__list {
-      grid-gap: 15px;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
     }
 
     &__city {
@@ -188,7 +179,7 @@
   .wtb__branches:not(:last-child) {
     margin-bottom: 20px;
   }
-  
+
   .branches__item .contacts-list__item:not(:last-child) {
       margin-bottom: 8px;
   }

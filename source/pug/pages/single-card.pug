@@ -3,6 +3,9 @@ block title
   | Коллекция Eclipse
 block content
   body.inner-body
+    script(src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8")
+    script.
+      var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});
 
     include ../modules/page-header
 
@@ -20,13 +23,13 @@ block content
             h1.inner-header__title.inner-header__title Eclipse
             span.inner-header__tag-new.tag-new Новинка
       section.collection
-        .container.container--slipping-bg
+        .container.collection__slipping-bg
           .collection__gallery.top-gallery
-            a(href="img/collection-gallery-img-1.jpg" data-fancybox="images")
+            a.top-gallery__slide(href="img/collection-gallery-img-1.jpg" data-fancybox="images")
               img(src="img/collection-gallery-img-1.jpg")
-            a(href="img/collection-gallery-img-2.jpg" data-fancybox="images")
+            a.top-gallery__slide(href="img/collection-gallery-img-2.jpg" data-fancybox="images")
               img(src="img/collection-gallery-img-2.jpg")
-            a(href="img/collection-gallery-img-3.jpg" data-fancybox="images")
+            a.top-gallery__slide(href="img/collection-gallery-img-3.jpg" data-fancybox="images")
               img(src="img/collection-gallery-img-3.jpg")
           h3.collection__colors-title Цвета коллекции
           ul.collection__colors-list
@@ -170,7 +173,7 @@ block content
                 .coll-elems__info-right
                   .coll-elems__color-square.color-square
                   p.coll-elems__price #[span 705] руб./ м2
-      section.coll-examples
+      section.coll-examples.single-card-main__coll-examples
         h2.coll-examples__sect-title.inner-sect-title Примеры готовых решений
         .coll-examples__slider.projects-preview
           a.projects-preview__slide(href="javascript:void(0);")
@@ -198,9 +201,9 @@ block content
                 span.full-p-two-cols__main-text Создать макет
                 p.full-p-two-cols__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 span.full-p-two-cols__go-to-page Перейти
-      article.preview
+      article.preview.single-card-main__preview
         .container
-          h2.inner-sect-title Рекомендуем посмотреть:
+          h2.inner-sect-title.preview__title Рекомендуем посмотреть:
           .preview__slider
             .preview__item.card#card-7
               .card__images

@@ -534,6 +534,8 @@ $(document).ready(function() {
     dots: true,
     arrows: true,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     speed: 600,
     centerMode: true,
     centerPadding: '21.2%',
@@ -598,7 +600,7 @@ $(document).ready(function() {
 
   $('.catalog-top-slider').slick({
     speed: 500,
-    useTransform: false,
+    // useTransform: false,
     nextArrow: '<button type="button" class="catalog-top-slider__next">Следующий слайд</button>',
     prevArrow: '<button type="button" class="catalog-top-slider__prev">Предыдущий слайд</button>',
   });
@@ -1054,7 +1056,8 @@ $(document).ready(function() {
 
   (function () {
 
-    $('.main-header .menu-toggle').click(function() {
+    $('.main-header .menu-toggle').click(function(e) {
+      e.stopPropagation();
       $(this).toggleClass('open');
       $('.main-nav').toggleClass('main-nav--show');
       $('.mobile-header').toggleClass('mobile-header--menu-opened');
@@ -1069,14 +1072,17 @@ $(document).ready(function() {
       $('.page-nav__list').toggleClass('page-nav__list--show');
     });
 
+
     $(window).click(function(e) {
-      var target = e.target
-      if($('.page-nav__list').hasClass('page-nav__list--show') && target != $('.page-nav__link')) {
-        $('.page-nav').removeClass('page-nav--menu-opened');
+      var target = $(e.target);
+      if ($('.page-nav__list').hasClass('page-nav__list--show') && target.is('.page-nav__link')) {
+        return;
+      } else {
         $('.page-nav__list').removeClass('page-nav__list--show');
-        $('.menu-toggle').removeClass('open');
+        $('.page-nav .menu-toggle').removeClass('open');
       }
     });
+
   })();
 
 $('.news__desc').each(function() {
@@ -1207,19 +1213,36 @@ $('.top-icons-panel__item--search a').click(function (evt) {
     evt.stopPropagation();
     $('.top-icons-panel__input-wrapper input').css('display', 'block');
     $( ".top-icons-panel__input-wrapper").animate({
-      width: "+=300"
+      width: "+=300px"
     },  500);
+    $(window).click(function () {
+      $( ".top-icons-panel__input-wrapper").animate({
+        width: "-=300px"
+      }, 500, function () {
+        $('.top-icons-panel__input-wrapper input').css('display', 'none');
+      }
+    );
+    })
 });
 
 
-$('.top-icons-panel__search-btn').click(function () {
-
+$('.top-icons-panel__search-btn').click(function (e) {
+  e.stopPropagation();
   $( ".top-icons-panel__input-wrapper").animate({
-    width: "-=300"
+    width: "-=300px"
   }, 500, function () {
     $('.top-icons-panel__input-wrapper input').css('display', 'none');
   }
 );
+});
+
+$('.subscribe__form').submit(function () {
+  if($(this).find('.subscribe__input').val().length > 2 ) {
+    $('.subscribe-success-modal').removeClass('hidden');
+    setTimeout("$('.subscribe-success-modal').fadeOut(); ", 3000);
+  } else {
+    console.log('bla bla bla');
+  }
 });
 
 
@@ -1330,6 +1353,22 @@ $(window).scroll(function() {
     $('.main-header__top-header').removeClass('main-header__top-header--white-bg');
   }
 
+});
+
+
+// Табы
+$('.city-choise__regions').each(function(){
+  $(this).children('.city-choise__region').eq(0).addClass("city-choise__region--current");
+});
+$('.city-choise__lists').each(function(){
+  $(this).children('.city-choise__cities-wrapper').not(":first").hide();
+});
+$(".city-choise__region").click(function() {
+  var ind = $(this).index();
+  if(!$(this).hasClass('city-choise__region--current')){
+      $(this).parent('.city-choise__regions').children('.city-choise__region').removeClass("city-choise__region--current").eq(ind).addClass("city-choise__region--current");
+      $(this).parent('.city-choise__regions').next('.city-choise__lists').children('.city-choise__cities-wrapper').hide().eq(ind).fadeIn(300);
+  }
 });
 
 });

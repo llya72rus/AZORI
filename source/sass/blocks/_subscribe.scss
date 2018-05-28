@@ -74,7 +74,7 @@
 
   &__agreement {
     display: block;
-    flex-basis: 100%;
+    width: 100%;
     margin-top: 28px;
     padding: 0 26%;
     font-size: 14px;
@@ -86,6 +86,12 @@
     a {
       text-decoration: underline;
     }
+  }
+}
+
+@media all and (-ms-high-contrast:none) {
+  .subscribe__input {
+    padding-bottom: 14px;
   }
 }
 
@@ -128,24 +134,6 @@
     &__social {
       margin-top: 22px;
     }
-  }
-}
-
-@media (max-width: 767px) {
-  .subscribe {
-
-    // &__form {
-    //   left: 0;
-    //   align-self: stretch;
-    // }
-    // &__btn {
-    //   position: absolute;
-    //   right: 0;
-    //   padding-left: 7px;
-    //   padding-right: 7px;
-    // }
-
-
   }
 }
 

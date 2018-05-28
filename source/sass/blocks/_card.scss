@@ -19,7 +19,7 @@
   }
 
   &__colors {
-    margin-bottom: 22px;
+    margin-bottom: 19px;
   }
 
   &__info {
@@ -38,7 +38,7 @@
   }
 
   &__info-right {
-    flex-basis: 26%;
+    width: auto;
     text-align: right;
     flex-shrink: 0;
   }
@@ -169,10 +169,6 @@
     &__info {
       padding-left: 10px;
       padding-right: 10px;
-    }
-
-    &__info-right {
-      flex-basis: 20%;
     }
 
     &__title {

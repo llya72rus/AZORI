@@ -19,6 +19,10 @@
     </title>
   </head>
   <body class="inner-body">
+    <script src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8"></script>
+    <script>var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});</script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/yandex-map.js"></script>
     <header class="page-header">
       <nav class="page-nav">
         <div class="menu-toggle"><span></span><span></span><span></span><span></span></div><a class="page-nav__logo" href="/">Вдохновляйся. Мечтай. Созидай.
@@ -29,7 +33,7 @@
         <ul class="page-nav__list">
           <li class="page-nav__item"><a class="page-nav__link" href="/about.html">О бренде</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/catalog-collections.html">Коллекции</a></li>
-          <li class="page-nav__item"><a class="page-nav__link" href="javasctipt:void(0);">Где купить</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="/where-to-buy.html">Где купить</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/news.html">Новости</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/contacts.html">Контакты</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/partners.html">Партнерам</a></li>
@@ -83,7 +87,7 @@
       </nav>
     </header>
     <main class="wtb">
-      <header class="inner-header inner-header--wtb">
+      <header class="inner-header">
         <div class="container">
           <ul class="breadcrumbs wtb__breadcrumbs">
             <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--home" href="javascript:void(0);">Главная</a></li>
@@ -97,9 +101,9 @@
       <section class="city-search">
         <div class="container">
           <form class="city-search__form" method="get" action="#" name="city-search-form">
-            <div class="city-search__input-wrapper">
-              <input class="city-search__input" type="search" placeholder="Укажите город"/>
-              <button class="city-search__btn page-btn">Найти</button>
+            <div class="city-search__input-wrapper search-bar">
+              <input class="search-bar__input" type="search" placeholder="Укажите город"/>
+              <button class="search-bar__btn page-btn">Найти</button>
             </div>
             <div class="city-search__chbox-wrapper">
               <input class="visually-hidden city-search__chbox" id="city-search-wholesale" type="checkbox" name="sale-type"/>
@@ -111,119 +115,321 @@
             </div>
           </form>
         </div>
-        <div class="city-search__map">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A67505bb76c9974b58dfd2bdaa839b8162d2651ffaf97e50d0cd5afa2114935f0&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-        </div>
+        <div class="city-search__map" id="map3"></div>
       </section>
       <section class="city-choise">
         <div class="container">
           <ul class="city-choise__regions">
-            <li class="city-choise__region city-choise__region--current">Россия</li>
+            <li class="city-choise__region">Россия</li>
             <li class="city-choise__region">СНГ</li>
             <li class="city-choise__region">Европа</li>
           </ul>
-          <div class="city-choise__cities-wrapper">
-            <div class="city-choise__letter-cities">
-              <div class="city-choise__letter">А</div>
-              <div class="city-choise__cols">
-                <ul class="city-choise__col">
-                  <li class="city-choise__city-name"> <span>Абакан</span></li>
-                  <li class="city-choise__city-name"><span>Адлер</span></li>
-                  <li class="city-choise__city-name city-choise__city-name--current"><span>Азнакаево</span></li>
-                  <li class="city-choise__city-name"> <span>Аксай</span></li>
-                  <li class="city-choise__city-name"> <span>Актау</span></li>
-                  <li class="city-choise__city-name"> <span>Актобе</span></li>
-                  <li class="city-choise__city-name"> <span>Алапаевск</span></li>
-                  <li class="city-choise__city-name"> <span>Александров</span></li>
-                  <li class="city-choise__city-name"> <span>Алексеевка</span></li>
-                  <li class="city-choise__city-name"> <span>Алексеевск</span></li>
-                  <li class="city-choise__city-name"> <span>Алматы</span></li>
-                  <li class="city-choise__city-name"> <span>Алупка</span></li>
-                </ul>
-                <ul class="city-choise__col">
-                  <li class="city-choise__city-name"> <span>Альметьевск</span></li>
-                  <li class="city-choise__city-name"> <span>Анапа</span></li>
-                  <li class="city-choise__city-name"> <span>Ангарск</span></li>
-                  <li class="city-choise__city-name"> <span>Арамиль</span></li>
-                  <li class="city-choise__city-name"> <span>Армавир</span></li>
-                  <li class="city-choise__city-name"> <span>Арсеньев</span></li>
-                  <li class="city-choise__city-name"> <span>Артем</span></li>
-                  <li class="city-choise__city-name"> <span>Архангельск</span></li>
-                  <li class="city-choise__city-name"> <span>Астана</span></li>
-                  <li class="city-choise__city-name"> <span>Астрахань</span></li>
-                  <li class="city-choise__city-name"> <span>Атырау</span></li>
-                  <li class="city-choise__city-name"> <span>Ахтубинск</span></li>
-                </ul>
+          <div class="city-choise__lists">
+            <div class="city-choise__cities-wrapper">
+              <div class="city-choise__letter-cities">
+                <div class="city-choise__letter">А</div>
+                <div class="city-choise__cols">
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Абакан</span></li>
+                    <li class="city-choise__city-name"><span>Адлер</span></li>
+                    <li class="city-choise__city-name city-choise__city-name--current"><span>Азнакаево</span></li>
+                    <li class="city-choise__city-name"><span>Аксай</span></li>
+                    <li class="city-choise__city-name"><span>Актау</span></li>
+                    <li class="city-choise__city-name"><span>Актобе</span></li>
+                    <li class="city-choise__city-name"><span>Алапаевск</span></li>
+                    <li class="city-choise__city-name"><span>Александров</span></li>
+                    <li class="city-choise__city-name"><span>Алексеевка</span></li>
+                    <li class="city-choise__city-name"><span>Алексеевск</span></li>
+                    <li class="city-choise__city-name"><span>Алматы</span></li>
+                    <li class="city-choise__city-name"><span>Залупинск</span></li>
+                  </ul>
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Альметьевск</span></li>
+                    <li class="city-choise__city-name"><span>Анапа</span></li>
+                    <li class="city-choise__city-name"><span>Ангарск</span></li>
+                    <li class="city-choise__city-name"><span>Арамиль</span></li>
+                    <li class="city-choise__city-name"><span>Армавир</span></li>
+                    <li class="city-choise__city-name"><span>Арсеньев</span></li>
+                    <li class="city-choise__city-name"><span>Артем</span></li>
+                    <li class="city-choise__city-name"><span>Архангельск</span></li>
+                    <li class="city-choise__city-name"><span>Астана</span></li>
+                    <li class="city-choise__city-name"><span>Астрахань</span></li>
+                    <li class="city-choise__city-name"><span>Атырау</span></li>
+                    <li class="city-choise__city-name"><span>Ахтубинск</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="city-choise__letter-cities">
+                <div class="city-choise__letter">Б</div>
+                <div class="city-choise__cols">
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Баймак</span></li>
+                    <li class="city-choise__city-name"><span>Баку</span></li>
+                    <li class="city-choise__city-name"><span>Балаково</span></li>
+                    <li class="city-choise__city-name"><span>Балашиха</span></li>
+                    <li class="city-choise__city-name"><span>Балашов</span></li>
+                    <li class="city-choise__city-name"><span>Балыкчи</span></li>
+                    <li class="city-choise__city-name"><span>Барнаул</span></li>
+                    <li class="city-choise__city-name"><span>Барыш</span></li>
+                    <li class="city-choise__city-name"><span>Батайск</span></li>
+                    <li class="city-choise__city-name"><span>Батарево</span></li>
+                    <li class="city-choise__city-name"><span>Бахчисарай</span></li>
+                    <li class="city-choise__city-name"><span>Белгород</span></li>
+                  </ul>
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Белебей</span></li>
+                    <li class="city-choise__city-name"><span>Беловодск</span></li>
+                    <li class="city-choise__city-name"><span>Белогорск</span></li>
+                    <li class="city-choise__city-name"><span>Белорецк</span></li>
+                    <li class="city-choise__city-name"><span>Белореченск</span></li>
+                    <li class="city-choise__city-name"><span>Бердск</span></li>
+                    <li class="city-choise__city-name"><span>Березники</span></li>
+                    <li class="city-choise__city-name"><span>Березовский</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="city-choise__letter-cities">
+                <div class="city-choise__letter">В</div>
+                <div class="city-choise__cols">
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Валуйки</span></li>
+                    <li class="city-choise__city-name"><span>Великие Луки</span></li>
+                    <li class="city-choise__city-name"><span>Великий Новгород</span></li>
+                    <li class="city-choise__city-name"><span>Верхний <br/> Тагил</span></li>
+                    <li class="city-choise__city-name"><span>Витебск</span></li>
+                    <li class="city-choise__city-name"><span>Владивосток</span></li>
+                    <li class="city-choise__city-name"><span>Волгоград</span></li>
+                    <li class="city-choise__city-name"><span>Волгодонск</span></li>
+                    <li class="city-choise__city-name"><span>Волжск</span></li>
+                    <li class="city-choise__city-name"><span>Волжский</span></li>
+                    <li class="city-choise__city-name"><span>Вологда</span></li>
+                    <li class="city-choise__city-name"><span>Вольск</span></li>
+                  </ul>
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Воронеж</span></li>
+                    <li class="city-choise__city-name"><span>Всеволожск</span></li>
+                    <li class="city-choise__city-name"><span>Выборг</span></li>
+                    <li class="city-choise__city-name"><span>Выселки</span></li>
+                    <li class="city-choise__city-name"><span>Вятские поляны</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="city-choise__letter-cities">
+                <div class="city-choise__letter">Г</div>
+                <div class="city-choise__cols">
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Гатчина</span></li>
+                    <li class="city-choise__city-name"><span>Гдов</span></li>
+                    <li class="city-choise__city-name"><span>Геленджик</span></li>
+                    <li class="city-choise__city-name"><span>Глазов</span></li>
+                    <li class="city-choise__city-name"><span>Горячий Ключ</span></li>
+                    <li class="city-choise__city-name"><span>Грязи</span></li>
+                    <li class="city-choise__city-name"><span>Губаха</span></li>
+                    <li class="city-choise__city-name"><span>Гусь-Хрустальный</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="city-choise__letter-cities">
-              <div class="city-choise__letter">Б</div>
-              <div class="city-choise__cols">
-                <ul class="city-choise__col">
-                  <li class="city-choise__city-name"> <span>Баймак</span></li>
-                  <li class="city-choise__city-name"><span>Баку</span></li>
-                  <li class="city-choise__city-name"> <span>Балаково</span></li>
-                  <li class="city-choise__city-name"> <span>Балашиха</span></li>
-                  <li class="city-choise__city-name"> <span>Балашов</span></li>
-                  <li class="city-choise__city-name"> <span>Балыкчи</span></li>
-                  <li class="city-choise__city-name"> <span>Барнаул</span></li>
-                  <li class="city-choise__city-name"> <span>Барыш</span></li>
-                  <li class="city-choise__city-name"> <span>Батайск</span></li>
-                  <li class="city-choise__city-name"> <span>Батарево</span></li>
-                  <li class="city-choise__city-name"> <span>Бахчисарай</span></li>
-                  <li class="city-choise__city-name"> <span>Белгород</span></li>
-                </ul>
-                <ul class="city-choise__col">
-                  <li class="city-choise__city-name"> <span>Белебей</span></li>
-                  <li class="city-choise__city-name"> <span>Беловодск</span></li>
-                  <li class="city-choise__city-name"> <span>Белогорск</span></li>
-                  <li class="city-choise__city-name"> <span>Белорецк</span></li>
-                  <li class="city-choise__city-name"> <span>Белореченск</span></li>
-                  <li class="city-choise__city-name"> <span>Бердск</span></li>
-                  <li class="city-choise__city-name"> <span>Березники</span></li>
-                  <li class="city-choise__city-name"> <span>Березовский</span></li>
-                </ul>
+            <div class="city-choise__cities-wrapper hidden">
+              <div class="city-choise__letter-cities">
+                <div class="city-choise__letter">А</div>
+                <div class="city-choise__cols">
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Ашхабад2</span></li>
+                    <li class="city-choise__city-name"><span>Антверпен2</span></li>
+                    <li class="city-choise__city-name city-choise__city-name--current"><span>Анкара2</span></li>
+                    <li class="city-choise__city-name"><span>Атырау2</span></li>
+                    <li class="city-choise__city-name"><span>Альбукерке2</span></li>
+                    <li class="city-choise__city-name"><span>Альмерия2</span></li>
+                    <li class="city-choise__city-name"><span>Анахайм2</span></li>
+                    <li class="city-choise__city-name"><span>Амстердам2</span></li>
+                  </ul>
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Альметьевск2</span></li>
+                    <li class="city-choise__city-name"><span>Анапа2</span></li>
+                    <li class="city-choise__city-name"><span>Ангарск2</span></li>
+                    <li class="city-choise__city-name"><span>Арамиль2</span></li>
+                    <li class="city-choise__city-name"><span>Армавир2</span></li>
+                    <li class="city-choise__city-name"><span>Арсеньев2</span></li>
+                    <li class="city-choise__city-name"><span>Артем2</span></li>
+                    <li class="city-choise__city-name"><span>Архангельск2</span></li>
+                    <li class="city-choise__city-name"><span>Астана2</span></li>
+                    <li class="city-choise__city-name"><span>Астрахань2</span></li>
+                    <li class="city-choise__city-name"><span>Атырау2</span></li>
+                    <li class="city-choise__city-name"><span>Ахтубинск2</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="city-choise__letter-cities">
+                <div class="city-choise__letter">Б</div>
+                <div class="city-choise__cols">
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Баймак2</span></li>
+                    <li class="city-choise__city-name"><span>Баку2</span></li>
+                    <li class="city-choise__city-name"><span>Балаково2</span></li>
+                    <li class="city-choise__city-name"><span>Балашиха2</span></li>
+                    <li class="city-choise__city-name"><span>Балашов2</span></li>
+                    <li class="city-choise__city-name"><span>Балыкчи2</span></li>
+                    <li class="city-choise__city-name"><span>Барнаул2</span></li>
+                    <li class="city-choise__city-name"><span>Барыш2</span></li>
+                    <li class="city-choise__city-name"><span>Батайск2</span></li>
+                    <li class="city-choise__city-name"><span>Батарево2</span></li>
+                    <li class="city-choise__city-name"><span>Бахчисарай2</span></li>
+                    <li class="city-choise__city-name"><span>Белгород2</span></li>
+                  </ul>
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Белебей2</span></li>
+                    <li class="city-choise__city-name"><span>Беловодск2</span></li>
+                    <li class="city-choise__city-name"><span>Белогорск2</span></li>
+                    <li class="city-choise__city-name"><span>Белорецк2</span></li>
+                    <li class="city-choise__city-name"><span>Белореченск2</span></li>
+                    <li class="city-choise__city-name"><span>Бердск2</span></li>
+                    <li class="city-choise__city-name"><span>Березники2</span></li>
+                    <li class="city-choise__city-name"><span>Березовский2</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="city-choise__letter-cities">
+                <div class="city-choise__letter">В</div>
+                <div class="city-choise__cols">
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Валуйки2</span></li>
+                    <li class="city-choise__city-name"><span>Великие Луки2</span></li>
+                    <li class="city-choise__city-name"><span>Великий Новгород2</span></li>
+                    <li class="city-choise__city-name"><span>Верхний <br/> Тагил2</span></li>
+                    <li class="city-choise__city-name"><span>Витебск2</span></li>
+                    <li class="city-choise__city-name"><span>Владивосток2</span></li>
+                    <li class="city-choise__city-name"><span>Волгоград2</span></li>
+                    <li class="city-choise__city-name"><span>Волгодонск2</span></li>
+                    <li class="city-choise__city-name"><span>Волжск2</span></li>
+                    <li class="city-choise__city-name"><span>Волжский2</span></li>
+                    <li class="city-choise__city-name"><span>Вологда2</span></li>
+                    <li class="city-choise__city-name"><span>Вольск2</span></li>
+                  </ul>
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Воронеж2</span></li>
+                    <li class="city-choise__city-name"><span>Всеволожск2</span></li>
+                    <li class="city-choise__city-name"><span>Выборг2</span></li>
+                    <li class="city-choise__city-name"><span>Выселки2</span></li>
+                    <li class="city-choise__city-name"><span>Вятские поляны2</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="city-choise__letter-cities">
+                <div class="city-choise__letter">Г</div>
+                <div class="city-choise__cols">
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Гатчина2</span></li>
+                    <li class="city-choise__city-name"><span>Гдов2</span></li>
+                    <li class="city-choise__city-name"><span>Геленджик2</span></li>
+                    <li class="city-choise__city-name"><span>Глазов2</span></li>
+                    <li class="city-choise__city-name"><span>Горячий Ключ2</span></li>
+                    <li class="city-choise__city-name"><span>Грязи2</span></li>
+                    <li class="city-choise__city-name"><span>Губаха2</span></li>
+                    <li class="city-choise__city-name"><span>Гусь-Хрустальный2</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="city-choise__letter-cities">
-              <div class="city-choise__letter">В</div>
-              <div class="city-choise__cols">
-                <ul class="city-choise__col">
-                  <li class="city-choise__city-name"> <span>Валуйки</span></li>
-                  <li class="city-choise__city-name"><span>Великие Луки</span></li>
-                  <li class="city-choise__city-name"> <span>Великий Новгород</span></li>
-                  <li class="city-choise__city-name"> <span>Верхний <br/> Тагил</span></li>
-                  <li class="city-choise__city-name"> <span>Витебск</span></li>
-                  <li class="city-choise__city-name"> <span>Владивосток</span></li>
-                  <li class="city-choise__city-name"> <span>Волгоград</span></li>
-                  <li class="city-choise__city-name"> <span>Волгодонск</span></li>
-                  <li class="city-choise__city-name"> <span>Волжск</span></li>
-                  <li class="city-choise__city-name"> <span>Волжский</span></li>
-                  <li class="city-choise__city-name"> <span>Вологда</span></li>
-                  <li class="city-choise__city-name"> <span>Вольск</span></li>
-                </ul>
-                <ul class="city-choise__col">
-                  <li class="city-choise__city-name"> <span>Воронеж</span></li>
-                  <li class="city-choise__city-name"> <span>Всеволожск</span></li>
-                  <li class="city-choise__city-name"> <span>Выборг</span></li>
-                  <li class="city-choise__city-name"> <span>Выселки</span></li>
-                  <li class="city-choise__city-name"> <span>Вятские поляны</span></li>
-                </ul>
+            <div class="city-choise__cities-wrapper hidden">
+              <div class="city-choise__letter-cities">
+                <div class="city-choise__letter">А</div>
+                <div class="city-choise__cols">
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Ашхабад3</span></li>
+                    <li class="city-choise__city-name"><span>Антверпен3</span></li>
+                    <li class="city-choise__city-name city-choise__city-name--current"><span>Анкара3</span></li>
+                    <li class="city-choise__city-name"><span>Атырау3</span></li>
+                    <li class="city-choise__city-name"><span>Альбукерке3</span></li>
+                    <li class="city-choise__city-name"><span>Альмерия3</span></li>
+                    <li class="city-choise__city-name"><span>Анахайм3</span></li>
+                    <li class="city-choise__city-name"><span>Амстердам3</span></li>
+                  </ul>
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Альметьевск3</span></li>
+                    <li class="city-choise__city-name"><span>Анапа3</span></li>
+                    <li class="city-choise__city-name"><span>Ангарск3</span></li>
+                    <li class="city-choise__city-name"><span>Арамиль3</span></li>
+                    <li class="city-choise__city-name"><span>Армавир3</span></li>
+                    <li class="city-choise__city-name"><span>Арсеньев3</span></li>
+                    <li class="city-choise__city-name"><span>Артем3</span></li>
+                    <li class="city-choise__city-name"><span>Архангельск3</span></li>
+                    <li class="city-choise__city-name"><span>Астана3</span></li>
+                    <li class="city-choise__city-name"><span>Астрахань3</span></li>
+                    <li class="city-choise__city-name"><span>Атырау3</span></li>
+                    <li class="city-choise__city-name"><span>Ахтубинск3</span></li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="city-choise__letter-cities">
-              <div class="city-choise__letter">Г</div>
-              <div class="city-choise__cols">
-                <ul class="city-choise__col">
-                  <li class="city-choise__city-name"> <span>Гатчина</span></li>
-                  <li class="city-choise__city-name"><span>Гдов</span></li>
-                  <li class="city-choise__city-name"> <span>Геленджик</span></li>
-                  <li class="city-choise__city-name"> <span>Глазов</span></li>
-                  <li class="city-choise__city-name"> <span>Горячий Ключ</span></li>
-                  <li class="city-choise__city-name"> <span>Грязи</span></li>
-                  <li class="city-choise__city-name"> <span>Губаха</span></li>
-                  <li class="city-choise__city-name"> <span>Гусь-Хрустальный</span></li>
-                </ul>
+              <div class="city-choise__letter-cities">
+                <div class="city-choise__letter">Б</div>
+                <div class="city-choise__cols">
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Баймак3</span></li>
+                    <li class="city-choise__city-name"><span>Баку3</span></li>
+                    <li class="city-choise__city-name"><span>Балаково3</span></li>
+                    <li class="city-choise__city-name"><span>Балашиха3</span></li>
+                    <li class="city-choise__city-name"><span>Балашов3</span></li>
+                    <li class="city-choise__city-name"><span>Балыкчи3</span></li>
+                    <li class="city-choise__city-name"><span>Барнаул3</span></li>
+                    <li class="city-choise__city-name"><span>Барыш3</span></li>
+                    <li class="city-choise__city-name"><span>Батайск3</span></li>
+                    <li class="city-choise__city-name"><span>Батарево3</span></li>
+                    <li class="city-choise__city-name"><span>Бахчисарай3</span></li>
+                    <li class="city-choise__city-name"><span>Белгород3</span></li>
+                  </ul>
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Белебей3</span></li>
+                    <li class="city-choise__city-name"><span>Беловодск3</span></li>
+                    <li class="city-choise__city-name"><span>Белогорск3</span></li>
+                    <li class="city-choise__city-name"><span>Белорецк3</span></li>
+                    <li class="city-choise__city-name"><span>Белореченск3</span></li>
+                    <li class="city-choise__city-name"><span>Бердск3</span></li>
+                    <li class="city-choise__city-name"><span>Березники3</span></li>
+                    <li class="city-choise__city-name"><span>Березовский3</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="city-choise__letter-cities">
+                <div class="city-choise__letter">В</div>
+                <div class="city-choise__cols">
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Валуйки3</span></li>
+                    <li class="city-choise__city-name"><span>Великие Луки3</span></li>
+                    <li class="city-choise__city-name"><span>Великий Новгород3</span></li>
+                    <li class="city-choise__city-name"><span>Верхний <br/> Тагил2</span></li>
+                    <li class="city-choise__city-name"><span>Витебск3</span></li>
+                    <li class="city-choise__city-name"><span>Владивосток3</span></li>
+                    <li class="city-choise__city-name"><span>Волгоград3</span></li>
+                    <li class="city-choise__city-name"><span>Волгодонск3</span></li>
+                    <li class="city-choise__city-name"><span>Волжск3</span></li>
+                    <li class="city-choise__city-name"><span>Волжский3</span></li>
+                    <li class="city-choise__city-name"><span>Вологда3</span></li>
+                    <li class="city-choise__city-name"><span>Вольск3</span></li>
+                  </ul>
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Воронеж3</span></li>
+                    <li class="city-choise__city-name"><span>Всеволожск3</span></li>
+                    <li class="city-choise__city-name"><span>Выборг3</span></li>
+                    <li class="city-choise__city-name"><span>Выселки3</span></li>
+                    <li class="city-choise__city-name"><span>Вятские поляны3</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="city-choise__letter-cities">
+                <div class="city-choise__letter">Г</div>
+                <div class="city-choise__cols">
+                  <ul class="city-choise__col">
+                    <li class="city-choise__city-name"><span>Гатчина3</span></li>
+                    <li class="city-choise__city-name"><span>Гдов3</span></li>
+                    <li class="city-choise__city-nam3"><span>Геленджик3</span></li>
+                    <li class="city-choise__city-name"><span>Глазов3</span></li>
+                    <li class="city-choise__city-name"><span>Горячий Ключ3</span></li>
+                    <li class="city-choise__city-name"><span>Грязи3</span></li>
+                    <li class="city-choise__city-name"><span>Губаха3</span></li>
+                    <li class="city-choise__city-name"><span>Гусь-Хрустальный3</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -236,7 +442,7 @@
           <h2 class="subscribe__title">Подписка на новости</h2>
           <p class="subscribe__desc">Всегда свежая информация о скидках, акциях, полезные статьи и новости компании</p>
           <div class="subscribe__bottom-wrapper">
-            <form class="subscribe__form" action="#" method="post">
+            <form class="subscribe__form">
               <input class="subscribe__input" type="email" required="required" placeholder="Ваш e-mail"/>
               <button class="subscribe__btn page-btn" type="submit">Подписаться</button>
             </form>
@@ -283,6 +489,9 @@
                 <use xlink:href="img/sprite.svg#trinet"></use>
               </svg> Trinet<br/>Development</a></p>
         </div>
+      </div>
+      <div class="subscribe-success-modal hidden">
+        <div class="subscribe-success-modal__message">Спасибо, что интересуетесь нами!</div>
       </div>
     </footer>
     <button class="back-to-top" type="button" title="Наверх">&uarr;</button>

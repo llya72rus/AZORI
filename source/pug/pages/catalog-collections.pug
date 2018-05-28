@@ -3,6 +3,12 @@ block title
   | Каталог
 block content
   body.inner-body
+    script(src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8")
+    script.
+      var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});
+    script(src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8")
+    script.
+      var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});
     include ../modules/page-header
     .catalog-top-slider
       .catalog-top-slider__item(style="background-image: url('img/catalog-top-slider-img-1.jpg')")
@@ -20,8 +26,8 @@ block content
           span.catalog-top-slider__top-text Коллекция
           span.catalog-top-slider__main-text Lorem Inpum 3
           a.page-btn(href="javasctipt:void(0);") Посмотреть
-    main.inner-main
-      header.inner-header.inner-header--catalog
+    main.catalog-collections
+      header.inner-header.inner-header--catalog.inner-header--btns-true
         .container
           ul.breadcrumbs.breadcrumbs--catalog
             li.breadcrumbs__item
@@ -48,7 +54,7 @@ block content
                 span.catalog__filter-name.acc-toggle Назначение
                 div.catalog__filters.catalog__filters--purpose.acc-content
                   p.catalog__chboxes-wrapper
-                    input.visually-hidden.catalog__input(type="checkbox", name="oblic_plitka" id="oblic_plitka")
+                    input.visually-hidden.catalog__input(type="checkbox" name="oblic_plitka" id="oblic_plitka")
                     label.catalog__label(for="oblic_plitka") Облицовочная
                   p.catalog__chboxes-wrapper
                     input.visually-hidden.catalog__input(type="checkbox", name="napol_plitka" id="napol_plitka")
@@ -101,15 +107,6 @@ block content
                   p.catalog__chboxes-color.catalog__chboxes-color--violet
                     input.visually-hidden.catalog__color-input(type="checkbox", name="violet" id="violet")
                     label.catalog__color-label(for="violet")
-                  p.catalog__chboxes-color.catalog__chboxes-color--blue
-                    input.visually-hidden.catalog__color-input(type="checkbox", name="blue" id="blue")
-                    label.catalog__color-label(for="blue")
-                  p.catalog__chboxes-color.catalog__chboxes-color--light-blue
-                    input.visually-hidden.catalog__color-input(type="checkbox", name="light-blue" id="light-blue")
-                    label.catalog__color-label(for="light-blue")
-                  p.catalog__chboxes-color.catalog__chboxes-color--pink
-                    input.visually-hidden.catalog__color-input(type="checkbox", name="pink" id="pink")
-                    label.catalog__color-label(for="pink")
               li.catalog__filter
                 span.catalog__filter-name.acc-toggle Фактура
                 div.catalog__filters.acc-content
@@ -297,7 +294,7 @@ block content
                 a.pagination__link(href="javascript:void(0);") 3
               li.pagination__btn.pagination__btn--next
                 a(href="javascript:void(0);")
-      article.page-text
+      article.page-text.page-text--catalog
         .container
           p Мир красок, где каждый покупатель сможет найти коллекцию, которая сделает ванную комнату оригинальной и неповторимой. Комплектация коллекций разными форматами декоративных элементов позволяет выстраивать рисунок стен как вертикально, так и горизонтально, создавая в ванной комнате особый мир уюта и хорошего настроения.
 

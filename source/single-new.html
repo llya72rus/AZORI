@@ -19,6 +19,9 @@
     </title>
   </head>
   <body class="inner-body">
+    <script src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8"></script>
+    <script>var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});</script>
+    <script src="https://yastatic.net/share2/share.js" async="async"></script>
     <header class="page-header">
       <nav class="page-nav">
         <div class="menu-toggle"><span></span><span></span><span></span><span></span></div><a class="page-nav__logo" href="/">Вдохновляйся. Мечтай. Созидай.
@@ -29,7 +32,7 @@
         <ul class="page-nav__list">
           <li class="page-nav__item"><a class="page-nav__link" href="/about.html">О бренде</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/catalog-collections.html">Коллекции</a></li>
-          <li class="page-nav__item"><a class="page-nav__link" href="javasctipt:void(0);">Где купить</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="/where-to-buy.html">Где купить</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/news.html">Новости</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/contacts.html">Контакты</a></li>
           <li class="page-nav__item"><a class="page-nav__link" href="/partners.html">Партнерам</a></li>
@@ -94,31 +97,14 @@
           <div class="inner-header__bottom-wrapper inner-header__bottom-wrapper--single-new">
             <h1 class="inner-header__title inner-header__title--single-new-title">Выставка Design&Decor St.Petersburg 2017</h1>
             <div class="inner-header__news-top-panel"><span class="inner-header__date">21.01.2018</span>
-              <ul class="inner-header__social social">
-                <li class="social__item"><a class="social__link social__link--orange" href="javascript:void(0);">
-                    <svg width="20" height="20">
-                      <use xlink:href="img/sprite.svg#mail"></use>
-                    </svg></a></li>
-                <li class="social__item"><a class="social__link social__link--orange" href="javascript:void(0);">
-                    <svg width="20" height="20">
-                      <use xlink:href="img/sprite.svg#vk"></use>
-                    </svg></a></li>
-                <li class="social__item"><a class="social__link social__link--orange" href="javascript:void(0);">
-                    <svg width="20" height="20">
-                      <use xlink:href="img/sprite.svg#fb"></use>
-                    </svg></a></li>
-                <li class="social__item"><a class="social__link social__link--orange" href="javascript:void(0);">
-                    <svg width="20" height="20">
-                      <use xlink:href="img/sprite.svg#instagram"></use>
-                    </svg></a></li>
-              </ul>
+              <div class="ya-share2" data-services="vkontakte,facebook,telegram" data-counter="data-counter" data-bare="data-bare"></div>
             </div>
           </div>
         </div>
       </header>
       <section class="single-new">
         <div class="container container--slipping-bg">
-          <div class="single-new__top-gallery top-gallery"><a href="../img/single-new-img.jpg" data-fancybox="images"><img src="../img/single-new-img.jpg"/></a><a href="../img/single-new-img.jpg" data-fancybox="images"><img src="../img/single-new-img.jpg"/></a><a href="../img/single-new-img.jpg" data-fancybox="images"><img src="../img/single-new-img.jpg"/></a><a href="../img/single-new-img.jpg" data-fancybox="images"><img src="../img/single-new-img.jpg"/></a><a href="../img/single-new-img.jpg" data-fancybox="images"><img src="../img/single-new-img.jpg"/></a></div>
+          <div class="single-new__top-gallery top-gallery"><a class="top-gallery__slide" href="../img/single-new-img.jpg" data-fancybox="images"><img src="../img/single-new-img.jpg"/></a><a class="top-gallery__slide" href="../img/single-new-img.jpg" data-fancybox="images"><img src="../img/single-new-img.jpg"/></a><a class="top-gallery__slide" href="../img/single-new-img.jpg" data-fancybox="images"><img src="../img/single-new-img.jpg"/></a><a class="top-gallery__slide" href="../img/single-new-img.jpg" data-fancybox="images"><img src="../img/single-new-img.jpg"/></a><a class="top-gallery__slide" href="../img/single-new-img.jpg" data-fancybox="images"><img src="../img/single-new-img.jpg"/></a></div>
           <div class="top-gallery__thumbs">
             <div class="top-gallery__thumb"><img src="../img/top-gallery-thumb-1.jpg" alt=""/></div>
             <div class="top-gallery__thumb"><img src="../img/top-gallery-thumb-2.jpg" alt=""/></div>
@@ -221,7 +207,7 @@
           <h2 class="subscribe__title">Подписка на новости</h2>
           <p class="subscribe__desc">Всегда свежая информация о скидках, акциях, полезные статьи и новости компании</p>
           <div class="subscribe__bottom-wrapper">
-            <form class="subscribe__form" action="#" method="post">
+            <form class="subscribe__form">
               <input class="subscribe__input" type="email" required="required" placeholder="Ваш e-mail"/>
               <button class="subscribe__btn page-btn" type="submit">Подписаться</button>
             </form>
@@ -268,6 +254,9 @@
                 <use xlink:href="img/sprite.svg#trinet"></use>
               </svg> Trinet<br/>Development</a></p>
         </div>
+      </div>
+      <div class="subscribe-success-modal hidden">
+        <div class="subscribe-success-modal__message">Спасибо, что интересуетесь нами!</div>
       </div>
     </footer>
     <button class="back-to-top" type="button" title="Наверх">&uarr;</button>

@@ -10,7 +10,7 @@
   }
 
   &__title {
-    margin-bottom: 11px;
+    margin-bottom: 16px;
   }
 
   &__slider {
@@ -20,6 +20,10 @@
 
 .layout-example__preview {
   margin-bottom: 40px;
+}
+
+.single-card-main__preview {
+  margin-bottom: 39px;
 }
 
 @media (max-width: 1400px) {
@@ -36,6 +40,10 @@
     &__slider {
       width: auto;
       margin: 0 -15px;
+    }
+
+    &__title {
+      margin-bottom: 12px;
     }
   }
   .layout-example__preview {
@@ -77,5 +85,9 @@
 
   .layout-example__preview {
     margin-bottom: 30px;
+  }
+
+  .single-card-main__preview {
+    margin-bottom: 34px;
   }
 }

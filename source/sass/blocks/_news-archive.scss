@@ -1,7 +1,6 @@
 .news-archive {
   &__header-btn {
     margin-right: 10px;
-    margin-bottom: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 5px;
@@ -9,5 +8,12 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .news-archive__header-btn {
+    padding-right: 18px;
+    padding-left: 18px;
   }
 }

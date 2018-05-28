@@ -1,7 +1,4 @@
 .page-text {
-  padding-top: 54px;
-  padding-bottom: 58px;
-
   p {
     max-width: 1000px;
     padding-left: 100px;
@@ -13,6 +10,12 @@
 
   p:last-of-type {
     margin-bottom: 0;
+  }
+}
+
+.page-text--catalog {
+  p {
+    padding-left: 100px;
   }
 }
 

@@ -1,7 +1,11 @@
 .top-gallery {
-  margin-bottom: 16px;
+  // margin-bottom: 16px;
   padding-right: 5.983%;
   padding-left: 5.983%;
+
+  &__slide {
+    height: 100%;
+  }
 
   &--pr-page {
     margin-bottom: 10px;
@@ -26,7 +30,7 @@
 
   img {
     display: block;
-    // height: 100%;
+    height: 100%;
   }
 }
 
@@ -53,12 +57,12 @@
 
 @media (max-width: 768px) {
   .top-gallery {
-    max-height: 450px;
 
     &__thumbs {
       width: 100%;
     }
   }
+
 }
 
 

@@ -3,10 +3,15 @@ block title
   | Где купить
 block content
   body.inner-body
+    script(src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8")
+    script.
+      var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    script(src="js/yandex-map.js")
     include ../modules/page-header
 
     main.wtb
-      header.inner-header.inner-header--wtb
+      header.inner-header
         .container
           ul.breadcrumbs.wtb__breadcrumbs
             li.breadcrumbs__item
@@ -18,183 +23,483 @@ block content
       section.city-search
         .container
           form.city-search__form(method="get" action="#" name="city-search-form")
-            .city-search__input-wrapper
-              input.city-search__input(type="search" placeholder="Укажите город")
-              button.city-search__btn.page-btn Найти
+            .city-search__input-wrapper.search-bar
+              input.search-bar__input(type="search" placeholder="Укажите город")
+              button.search-bar__btn.page-btn Найти
             .city-search__chbox-wrapper
               input.visually-hidden.city-search__chbox#city-search-wholesale(type="checkbox", name="sale-type")
               label.city-search__label(for="city-search-wholesale") Оптовая продажа
             .city-search__chbox-wrapper
               input.visually-hidden.city-search__chbox#city-search-retail(type="checkbox" name="sale-type")
               label.city-search__label(for="city-search-retail") Розничная продажа
-        .city-search__map
-          iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A67505bb76c9974b58dfd2bdaa839b8162d2651ffaf97e50d0cd5afa2114935f0&amp;source=constructor" width="100%" height="100%" frameborder="0")
-            
+        .city-search__map#map3
+
       section.city-choise
         .container
           ul.city-choise__regions
-            li.city-choise__region.city-choise__region--current Россия
+            li.city-choise__region Россия
             li.city-choise__region СНГ
             li.city-choise__region Европа
-          .city-choise__cities-wrapper
-            .city-choise__letter-cities
-              .city-choise__letter А
-              .city-choise__cols
-                ul.city-choise__col
-                  li.city-choise__city-name 
-                    span Абакан
-                  li.city-choise__city-name
-                    span Адлер
-                  li.city-choise__city-name.city-choise__city-name--current
-                    span Азнакаево
-                  li.city-choise__city-name 
-                    span Аксай
-                  li.city-choise__city-name 
-                    span Актау
-                  li.city-choise__city-name 
-                    span Актобе
-                  li.city-choise__city-name 
-                    span Алапаевск
-                  li.city-choise__city-name 
-                    span Александров
-                  li.city-choise__city-name 
-                    span Алексеевка
-                  li.city-choise__city-name 
-                    span Алексеевск
-                  li.city-choise__city-name 
-                    span Алматы
-                  li.city-choise__city-name 
-                    span Алупка
-                ul.city-choise__col
-                  li.city-choise__city-name 
-                    span Альметьевск
-                  li.city-choise__city-name 
-                    span Анапа
-                  li.city-choise__city-name 
-                    span Ангарск
-                  li.city-choise__city-name 
-                    span Арамиль
-                  li.city-choise__city-name 
-                    span Армавир
-                  li.city-choise__city-name 
-                    span Арсеньев
-                  li.city-choise__city-name 
-                    span Артем
-                  li.city-choise__city-name 
-                    span Архангельск
-                  li.city-choise__city-name 
-                    span Астана
-                  li.city-choise__city-name 
-                    span Астрахань
-                  li.city-choise__city-name 
-                    span Атырау
-                  li.city-choise__city-name 
-                    span Ахтубинск
-            .city-choise__letter-cities
-              .city-choise__letter Б
-              .city-choise__cols
-                ul.city-choise__col
-                  li.city-choise__city-name 
-                      span Баймак
-                  li.city-choise__city-name
-                    span Баку
-                  li.city-choise__city-name 
-                    span Балаково
-                  li.city-choise__city-name 
-                    span Балашиха
-                  li.city-choise__city-name 
-                    span Балашов
-                  li.city-choise__city-name 
-                    span Балыкчи
-                  li.city-choise__city-name 
-                    span Барнаул
-                  li.city-choise__city-name 
-                    span Барыш
-                  li.city-choise__city-name 
-                    span Батайск
-                  li.city-choise__city-name 
-                    span Батарево
-                  li.city-choise__city-name 
-                    span Бахчисарай
-                  li.city-choise__city-name 
-                    span Белгород
-                ul.city-choise__col
-                  li.city-choise__city-name 
-                    span Белебей
-                  li.city-choise__city-name 
-                    span Беловодск
-                  li.city-choise__city-name 
-                    span Белогорск
-                  li.city-choise__city-name 
-                    span Белорецк
-                  li.city-choise__city-name 
-                    span Белореченск
-                  li.city-choise__city-name 
-                    span Бердск
-                  li.city-choise__city-name 
-                    span Березники
-                  li.city-choise__city-name 
-                    span Березовский
-            .city-choise__letter-cities
-              .city-choise__letter В
-              .city-choise__cols
-                ul.city-choise__col
-                  li.city-choise__city-name 
-                    span Валуйки
-                  li.city-choise__city-name
-                    span Великие Луки
-                  li.city-choise__city-name 
-                    span Великий Новгород
-                  li.city-choise__city-name 
-                    span Верхний #[br] Тагил
-                  li.city-choise__city-name 
-                    span Витебск
-                  li.city-choise__city-name 
-                    span Владивосток
-                  li.city-choise__city-name 
-                    span Волгоград
-                  li.city-choise__city-name 
-                    span Волгодонск
-                  li.city-choise__city-name 
-                    span Волжск
-                  li.city-choise__city-name 
-                    span Волжский
-                  li.city-choise__city-name 
-                    span Вологда
-                  li.city-choise__city-name 
-                    span Вольск
-                ul.city-choise__col
-                  li.city-choise__city-name 
-                    span Воронеж
-                  li.city-choise__city-name 
-                    span Всеволожск
-                  li.city-choise__city-name 
-                    span Выборг
-                  li.city-choise__city-name 
-                    span Выселки
-                  li.city-choise__city-name 
-                    span Вятские поляны
-            .city-choise__letter-cities
-              .city-choise__letter Г
-              .city-choise__cols
-                ul.city-choise__col
-                  li.city-choise__city-name 
-                    span Гатчина
-                  li.city-choise__city-name
-                    span Гдов
-                  li.city-choise__city-name 
-                    span Геленджик
-                  li.city-choise__city-name 
-                    span Глазов
-                  li.city-choise__city-name 
-                    span Горячий Ключ
-                  li.city-choise__city-name 
-                    span Грязи
-                  li.city-choise__city-name 
-                    span Губаха
-                  li.city-choise__city-name 
-                    span Гусь-Хрустальный
-                 
+          .city-choise__lists
+            .city-choise__cities-wrapper
+              .city-choise__letter-cities
+                .city-choise__letter А
+                .city-choise__cols
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Абакан
+                    li.city-choise__city-name
+                      span Адлер
+                    li.city-choise__city-name.city-choise__city-name--current
+                      span Азнакаево
+                    li.city-choise__city-name
+                      span Аксай
+                    li.city-choise__city-name
+                      span Актау
+                    li.city-choise__city-name
+                      span Актобе
+                    li.city-choise__city-name
+                      span Алапаевск
+                    li.city-choise__city-name
+                      span Александров
+                    li.city-choise__city-name
+                      span Алексеевка
+                    li.city-choise__city-name
+                      span Алексеевск
+                    li.city-choise__city-name
+                      span Алматы
+                    li.city-choise__city-name
+                      span Залупинск
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Альметьевск
+                    li.city-choise__city-name
+                      span Анапа
+                    li.city-choise__city-name
+                      span Ангарск
+                    li.city-choise__city-name
+                      span Арамиль
+                    li.city-choise__city-name
+                      span Армавир
+                    li.city-choise__city-name
+                      span Арсеньев
+                    li.city-choise__city-name
+                      span Артем
+                    li.city-choise__city-name
+                      span Архангельск
+                    li.city-choise__city-name
+                      span Астана
+                    li.city-choise__city-name
+                      span Астрахань
+                    li.city-choise__city-name
+                      span Атырау
+                    li.city-choise__city-name
+                      span Ахтубинск
+              .city-choise__letter-cities
+                .city-choise__letter Б
+                .city-choise__cols
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                        span Баймак
+                    li.city-choise__city-name
+                      span Баку
+                    li.city-choise__city-name
+                      span Балаково
+                    li.city-choise__city-name
+                      span Балашиха
+                    li.city-choise__city-name
+                      span Балашов
+                    li.city-choise__city-name
+                      span Балыкчи
+                    li.city-choise__city-name
+                      span Барнаул
+                    li.city-choise__city-name
+                      span Барыш
+                    li.city-choise__city-name
+                      span Батайск
+                    li.city-choise__city-name
+                      span Батарево
+                    li.city-choise__city-name
+                      span Бахчисарай
+                    li.city-choise__city-name
+                      span Белгород
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Белебей
+                    li.city-choise__city-name
+                      span Беловодск
+                    li.city-choise__city-name
+                      span Белогорск
+                    li.city-choise__city-name
+                      span Белорецк
+                    li.city-choise__city-name
+                      span Белореченск
+                    li.city-choise__city-name
+                      span Бердск
+                    li.city-choise__city-name
+                      span Березники
+                    li.city-choise__city-name
+                      span Березовский
+              .city-choise__letter-cities
+                .city-choise__letter В
+                .city-choise__cols
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Валуйки
+                    li.city-choise__city-name
+                      span Великие Луки
+                    li.city-choise__city-name
+                      span Великий Новгород
+                    li.city-choise__city-name
+                      span Верхний #[br] Тагил
+                    li.city-choise__city-name
+                      span Витебск
+                    li.city-choise__city-name
+                      span Владивосток
+                    li.city-choise__city-name
+                      span Волгоград
+                    li.city-choise__city-name
+                      span Волгодонск
+                    li.city-choise__city-name
+                      span Волжск
+                    li.city-choise__city-name
+                      span Волжский
+                    li.city-choise__city-name
+                      span Вологда
+                    li.city-choise__city-name
+                      span Вольск
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Воронеж
+                    li.city-choise__city-name
+                      span Всеволожск
+                    li.city-choise__city-name
+                      span Выборг
+                    li.city-choise__city-name
+                      span Выселки
+                    li.city-choise__city-name
+                      span Вятские поляны
+              .city-choise__letter-cities
+                .city-choise__letter Г
+                .city-choise__cols
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Гатчина
+                    li.city-choise__city-name
+                      span Гдов
+                    li.city-choise__city-name
+                      span Геленджик
+                    li.city-choise__city-name
+                      span Глазов
+                    li.city-choise__city-name
+                      span Горячий Ключ
+                    li.city-choise__city-name
+                      span Грязи
+                    li.city-choise__city-name
+                      span Губаха
+                    li.city-choise__city-name
+                      span Гусь-Хрустальный
+            .city-choise__cities-wrapper.hidden
+              .city-choise__letter-cities
+                .city-choise__letter А
+                .city-choise__cols
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Ашхабад2
+                    li.city-choise__city-name
+                      span Антверпен2
+                    li.city-choise__city-name.city-choise__city-name--current
+                      span Анкара2
+                    li.city-choise__city-name
+                      span Атырау2
+                    li.city-choise__city-name
+                      span Альбукерке2
+                    li.city-choise__city-name
+                      span Альмерия2
+                    li.city-choise__city-name
+                      span Анахайм2
+                    li.city-choise__city-name
+                      span Амстердам2
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Альметьевск2
+                    li.city-choise__city-name
+                      span Анапа2
+                    li.city-choise__city-name
+                      span Ангарск2
+                    li.city-choise__city-name
+                      span Арамиль2
+                    li.city-choise__city-name
+                      span Армавир2
+                    li.city-choise__city-name
+                      span Арсеньев2
+                    li.city-choise__city-name
+                      span Артем2
+                    li.city-choise__city-name
+                      span Архангельск2
+                    li.city-choise__city-name
+                      span Астана2
+                    li.city-choise__city-name
+                      span Астрахань2
+                    li.city-choise__city-name
+                      span Атырау2
+                    li.city-choise__city-name
+                      span Ахтубинск2
+              .city-choise__letter-cities
+                .city-choise__letter Б
+                .city-choise__cols
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                        span Баймак2
+                    li.city-choise__city-name
+                      span Баку2
+                    li.city-choise__city-name
+                      span Балаково2
+                    li.city-choise__city-name
+                      span Балашиха2
+                    li.city-choise__city-name
+                      span Балашов2
+                    li.city-choise__city-name
+                      span Балыкчи2
+                    li.city-choise__city-name
+                      span Барнаул2
+                    li.city-choise__city-name
+                      span Барыш2
+                    li.city-choise__city-name
+                      span Батайск2
+                    li.city-choise__city-name
+                      span Батарево2
+                    li.city-choise__city-name
+                      span Бахчисарай2
+                    li.city-choise__city-name
+                      span Белгород2
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Белебей2
+                    li.city-choise__city-name
+                      span Беловодск2
+                    li.city-choise__city-name
+                      span Белогорск2
+                    li.city-choise__city-name
+                      span Белорецк2
+                    li.city-choise__city-name
+                      span Белореченск2
+                    li.city-choise__city-name
+                      span Бердск2
+                    li.city-choise__city-name
+                      span Березники2
+                    li.city-choise__city-name
+                      span Березовский2
+              .city-choise__letter-cities
+                .city-choise__letter В
+                .city-choise__cols
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Валуйки2
+                    li.city-choise__city-name
+                      span Великие Луки2
+                    li.city-choise__city-name
+                      span Великий Новгород2
+                    li.city-choise__city-name
+                      span Верхний #[br] Тагил2
+                    li.city-choise__city-name
+                      span Витебск2
+                    li.city-choise__city-name
+                      span Владивосток2
+                    li.city-choise__city-name
+                      span Волгоград2
+                    li.city-choise__city-name
+                      span Волгодонск2
+                    li.city-choise__city-name
+                      span Волжск2
+                    li.city-choise__city-name
+                      span Волжский2
+                    li.city-choise__city-name
+                      span Вологда2
+                    li.city-choise__city-name
+                      span Вольск2
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Воронеж2
+                    li.city-choise__city-name
+                      span Всеволожск2
+                    li.city-choise__city-name
+                      span Выборг2
+                    li.city-choise__city-name
+                      span Выселки2
+                    li.city-choise__city-name
+                      span Вятские поляны2
+              .city-choise__letter-cities
+                .city-choise__letter Г
+                .city-choise__cols
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Гатчина2
+                    li.city-choise__city-name
+                      span Гдов2
+                    li.city-choise__city-name
+                      span Геленджик2
+                    li.city-choise__city-name
+                      span Глазов2
+                    li.city-choise__city-name
+                      span Горячий Ключ2
+                    li.city-choise__city-name
+                      span Грязи2
+                    li.city-choise__city-name
+                      span Губаха2
+                    li.city-choise__city-name
+                      span Гусь-Хрустальный2
+            .city-choise__cities-wrapper.hidden
+              .city-choise__letter-cities
+                .city-choise__letter А
+                .city-choise__cols
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Ашхабад3
+                    li.city-choise__city-name
+                      span Антверпен3
+                    li.city-choise__city-name.city-choise__city-name--current
+                      span Анкара3
+                    li.city-choise__city-name
+                      span Атырау3
+                    li.city-choise__city-name
+                      span Альбукерке3
+                    li.city-choise__city-name
+                      span Альмерия3
+                    li.city-choise__city-name
+                      span Анахайм3
+                    li.city-choise__city-name
+                      span Амстердам3
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Альметьевск3
+                    li.city-choise__city-name
+                      span Анапа3
+                    li.city-choise__city-name
+                      span Ангарск3
+                    li.city-choise__city-name
+                      span Арамиль3
+                    li.city-choise__city-name
+                      span Армавир3
+                    li.city-choise__city-name
+                      span Арсеньев3
+                    li.city-choise__city-name
+                      span Артем3
+                    li.city-choise__city-name
+                      span Архангельск3
+                    li.city-choise__city-name
+                      span Астана3
+                    li.city-choise__city-name
+                      span Астрахань3
+                    li.city-choise__city-name
+                      span Атырау3
+                    li.city-choise__city-name
+                      span Ахтубинск3
+              .city-choise__letter-cities
+                .city-choise__letter Б
+                .city-choise__cols
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                        span Баймак3
+                    li.city-choise__city-name
+                      span Баку3
+                    li.city-choise__city-name
+                      span Балаково3
+                    li.city-choise__city-name
+                      span Балашиха3
+                    li.city-choise__city-name
+                      span Балашов3
+                    li.city-choise__city-name
+                      span Балыкчи3
+                    li.city-choise__city-name
+                      span Барнаул3
+                    li.city-choise__city-name
+                      span Барыш3
+                    li.city-choise__city-name
+                      span Батайск3
+                    li.city-choise__city-name
+                      span Батарево3
+                    li.city-choise__city-name
+                      span Бахчисарай3
+                    li.city-choise__city-name
+                      span Белгород3
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Белебей3
+                    li.city-choise__city-name
+                      span Беловодск3
+                    li.city-choise__city-name
+                      span Белогорск3
+                    li.city-choise__city-name
+                      span Белорецк3
+                    li.city-choise__city-name
+                      span Белореченск3
+                    li.city-choise__city-name
+                      span Бердск3
+                    li.city-choise__city-name
+                      span Березники3
+                    li.city-choise__city-name
+                      span Березовский3
+              .city-choise__letter-cities
+                .city-choise__letter В
+                .city-choise__cols
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Валуйки3
+                    li.city-choise__city-name
+                      span Великие Луки3
+                    li.city-choise__city-name
+                      span Великий Новгород3
+                    li.city-choise__city-name
+                      span Верхний #[br] Тагил2
+                    li.city-choise__city-name
+                      span Витебск3
+                    li.city-choise__city-name
+                      span Владивосток3
+                    li.city-choise__city-name
+                      span Волгоград3
+                    li.city-choise__city-name
+                      span Волгодонск3
+                    li.city-choise__city-name
+                      span Волжск3
+                    li.city-choise__city-name
+                      span Волжский3
+                    li.city-choise__city-name
+                      span Вологда3
+                    li.city-choise__city-name
+                      span Вольск3
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Воронеж3
+                    li.city-choise__city-name
+                      span Всеволожск3
+                    li.city-choise__city-name
+                      span Выборг3
+                    li.city-choise__city-name
+                      span Выселки3
+                    li.city-choise__city-name
+                      span Вятские поляны3
+              .city-choise__letter-cities
+                .city-choise__letter Г
+                .city-choise__cols
+                  ul.city-choise__col
+                    li.city-choise__city-name
+                      span Гатчина3
+                    li.city-choise__city-name
+                      span Гдов3
+                    li.city-choise__city-nam3
+                      span Геленджик3
+                    li.city-choise__city-name
+                      span Глазов3
+                    li.city-choise__city-name
+                      span Горячий Ключ3
+                    li.city-choise__city-name
+                      span Грязи3
+                    li.city-choise__city-name
+                      span Губаха3
+                    li.city-choise__city-name
+                      span Гусь-Хрустальный3
+
 
 
 

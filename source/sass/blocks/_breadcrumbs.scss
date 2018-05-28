@@ -46,9 +46,10 @@
 
 @media (max-width: 1024px) {
   .breadcrumbs {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
+
     &--catalog {
-      margin-bottom: 11px;
+      margin-bottom: 13px;
     }
 
   }
@@ -69,13 +70,6 @@
     margin-bottom: 34px;
   }
 
-  .about-main__breadcrumbs {
-    margin-bottom: 35px;
-  }
-
-  .wtb__breadcrumbs {
-    margin-bottom: 35px;
-  }
 }
 
 @media (max-width: 480px) {

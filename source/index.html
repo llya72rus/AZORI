@@ -19,10 +19,16 @@
     </title>
   </head>
   <body>
+    <script src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8"></script>
+    <script>var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});</script>
     <header class="main-header">
       <div class="main-header__top-header">
         <div class="mobile-header">
-          <div class="menu-toggle"><span></span><span></span><span></span><span></span></div><a class="mobile-header__logo" href="javascript:void(0);">Вдохновляйся. Мечтай. Созидай.</a><span class="mobile-header__language-option">En</span><a class="mobile-header__search" href="javascript:void(0);"><img src="img/search-icon.png" alt="Поиск по сайту"/></a>
+          <div class="menu-toggle"><span></span><span></span><span></span><span></span></div><a class="mobile-header__logo" href="javascript:void(0);">Вдохновляйся. Мечтай. Созидай.
+            <svg width="100%" height="100%">
+              <title>Логотип компании "AZORI"</title>
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg></a><span class="mobile-header__language-option">En</span><a class="mobile-header__search" href="javascript:void(0);"><img src="img/search-icon.png" alt="Поиск по сайту"/></a>
           <div class="mobile-search">
             <form action="javascript:void(0);">
               <input class="mobile-search__form" type="text" placeholder="Найти..."/>
@@ -30,7 +36,11 @@
             </form>
           </div>
         </div>
-        <nav class="main-nav"><a class="main-nav__logo" href="javascript:void(0);">Вдохновляйся. Мечтай. Созидай.</a>
+        <nav class="main-nav"><a class="main-nav__logo" href="javascript:void(0);">Вдохновляйся. Мечтай. Созидай.
+            <svg width="100%" height="100%">
+              <title>Логотип компании "AZORI"</title>
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg></a>
           <ul class="main-nav__list main-nav__list--left">
             <li class="main-nav__item"><a class="main-nav__link" href="/about.html">О бренде</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="/catalog-collections.html">Коллекции</a></li>
@@ -200,7 +210,7 @@
           <h2 class="subscribe__title">Подписка на новости</h2>
           <p class="subscribe__desc">Всегда свежая информация о скидках, акциях, полезные статьи и новости компании</p>
           <div class="subscribe__bottom-wrapper">
-            <form class="subscribe__form" action="#" method="post">
+            <form class="subscribe__form">
               <input class="subscribe__input" type="email" required="required" placeholder="Ваш e-mail"/>
               <button class="subscribe__btn page-btn" type="submit">Подписаться</button>
             </form>
@@ -247,6 +257,9 @@
                 <use xlink:href="img/sprite.svg#trinet"></use>
               </svg> Trinet<br/>Development</a></p>
         </div>
+      </div>
+      <div class="subscribe-success-modal hidden">
+        <div class="subscribe-success-modal__message">Спасибо, что интересуетесь нами!</div>
       </div>
     </footer>
     <button class="back-to-top" type="button" title="Back to top">&uarr;</button>

@@ -1,7 +1,9 @@
 .catalog {
+  margin-bottom: 53px;
   padding-top: 30px;
   padding-bottom: 45px;
   background-color: #f5f6f6;
+
 
   .container {
     display: flex;
@@ -11,6 +13,10 @@
   aside {
     width: 23.08%;
     text-align: center;
+
+    p {
+      line-height: 1.15;
+    }
   }
 
   &__item {
@@ -27,13 +33,13 @@
   }
 
   &__filter:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
 
   &__filter-name {
     width: 100%;
     text-align: left;
-    padding: 12px 16px 14px;
+    padding: 13px 16px 14px;
     color: #252525;
     font-size: 18px;
     font-weight: 500;
@@ -45,6 +51,7 @@
     cursor: pointer;
 
     &--new {
+      margin-bottom: 0;
       padding-top: 20px;
       padding-bottom: 20px;
     }
@@ -78,7 +85,7 @@
     height: 40px;
     margin-right: 7px;
     margin-bottom: 7px;
-    
+
     label {
       border-radius: 3px;
     }
@@ -304,7 +311,7 @@
   &__products {
     @include flex($align-items: stretch);
     @include reset-list();
-    margin-bottom: 40px;
+    margin-bottom: 43px;
   }
 
   &__item {
@@ -328,6 +335,7 @@
 
 @media (max-width: 1024px) {
   .catalog {
+    padding-top: 32px;
     padding-bottom: 40px;
 
     &__item {
@@ -401,7 +409,7 @@
       border-bottom-right-radius: 5px;
     }
     .acc-content-tablet {
-      padding: 0 10px 0 15px;
+      padding: 0 10px 3px 15px;
       background: $white;
       display: none;
       box-shadow: 0 14px 20px rgba(17, 17, 17, 0.1);
@@ -499,6 +507,10 @@
     padding-right: 0;
     box-shadow: none;
   }
+
+  .catalog__filter-name--precious br {
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -539,7 +551,9 @@
 
 @media (max-width: 480px) {
   .catalog {
+    margin-bottom: 23px;
     padding-top: 15px;
+    padding-bottom: 30px;
 
     &__item {
       width: 100%;
@@ -567,9 +581,14 @@
       margin-top: 15px;
     }
 
+    &__show-more {
+      margin-bottom: 22px;
+    }
+
     aside {
       left: 10px;
       right: 10px;
     }
   }
+
 }

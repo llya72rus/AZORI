@@ -1,0 +1,49 @@
+extends ../layout/main
+block title
+  | Результаты поиска
+block content
+  body.inner-body
+    script(src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8")
+    script.
+      var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});
+    include ../modules/page-header
+
+    main.search-result-main
+      header.inner-header
+        .container
+          ul.breadcrumbs.wtb__breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current Результаты поиска
+          .inner-header__bottom-wrapper.inner-header__bottom-wrapper
+            h1.inner-header__title.inner-header__title--where-buy Результаты поиска
+      section.search-result
+        .search-result__top
+          .container
+            form.search-result__form(method="get" action="#" name="city-search-form")
+              .search-bar
+                input.search-bar__input(type="search" value="Плитка настенная")
+                button.search-bar__btn.page-btn Найти
+        .search-result__content
+          .container
+            p.search-result__notification По запросу #[span.search-result__query &laquo;Плитка настенная&raquo;] найдено #[span.search-result__amount 2] записи
+            ul.search-result__list
+              li.search-result__item
+                h3.search-result__art-title
+                  a(href="javascript:void(0);") Как выбрать керамическую плитку
+                span.search-result__art-date 21.01.2018
+                p.search-result__art-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+              li.search-result__item
+                h3.search-result__art-title
+                  a(href="javascript:void(0);") О бренде
+                span.search-result__art-date 21.01.2018
+                p.search-result__art-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+
+
+    include ../modules/footer
+    button(type="button" class="back-to-top" title="Наверх") &uarr;
+
+
+

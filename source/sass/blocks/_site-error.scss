@@ -1,0 +1,28 @@
+.site-error {
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    background-color: #f5f6f6;
+  }
+
+  &__block {
+    max-width: 570px;
+    min-height: 198px;
+    box-shadow: 0 5px 20px rgba(17, 17, 17, 0.1);
+    border-radius: 5px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+  &__top-text {
+    display: block;
+    color: #ff7f00;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 40.61px;
+    letter-spacing: 3.69px;
+  }
+}

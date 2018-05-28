@@ -1,6 +1,6 @@
 extends ../layout/main
 block title
-  | Результаты поиска
+  | Ошибка 404
 block content
   body.inner-body
     script(src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8")
@@ -11,9 +11,9 @@ block content
     main.site-error
       .site-error__wrapper
         .site-error__block
-          span.site-error__top-text 505
+          span.site-error__top-text 404
           span.site-error__middle-text ошибка
-          span.site-error__bottom-text Нет соединения с сервером, #[br] но мы уже работаем над этим :)
+          span.site-error__bottom-text Страница не найдена, вы можете #[br] #[a.page-link(href="javasctipt:void(0);") вернуться на Главную]
 
 
 

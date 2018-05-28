@@ -493,7 +493,7 @@
   height: 100%;
 }
 
-.top-gallery__thumb-active {
+.top-gallery__thumb--active {
   transform: translateY(-5px);
   box-shadow: 0 0 0 2px #ff7f00;
 }
@@ -856,7 +856,7 @@
     }
   }
 
-  .news__list .slick-slide {
+  .news__list .slick-slide{
     padding: 0 10px;
   }
 

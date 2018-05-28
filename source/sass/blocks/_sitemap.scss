@@ -1,0 +1,65 @@
+.sitemap {
+
+  a:hover {
+    opacity: 0.6;
+  }
+
+  &__home-link {
+    display: block;
+    width: intrinsic;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    margin-bottom: 18px;
+    color: #ff7f00;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 1.2px;
+  }
+
+  &__1level-list {
+    margin: 0;
+    padding-left: 18px;
+    list-style: none;
+    width: intrinsic;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    max-width: 100%;
+  }
+
+  &__2level-list {
+    margin: 0;
+    margin-top: 5px;
+    padding-left: 30px;
+    list-style: none;
+    width: intrinsic;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    max-width: 100%;
+  }
+
+  &__1level-list-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  // &__2level-list-item:not(:last-child) {
+  //   margin-bottom: 10px;
+  // }
+
+  &__1level-list-link {
+    color: #252525;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.666666;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+  }
+
+  &__2level-list-link {
+    color: #252525;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.9px;
+  }
+}

@@ -1,0 +1,41 @@
+.ya-share2 {
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+  }
+
+  &__title {
+    font-size: 0;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__item {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_service_vkontakte {
+      background-image: url('../img/svg/vk_orange.svg');
+    }
+
+    &_service_facebook {
+      background-image: url('../img/svg/fb_orange.svg');
+    }
+
+    &_service_telegram {
+      background-image: url('../img/svg/telegram_orange.svg');
+    }
+  }
+}

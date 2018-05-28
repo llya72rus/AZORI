@@ -13,21 +13,21 @@ block content
     main.wtb-city
       header.inner-header.inner-header--wtb
         .container
-          ul.breadcrumbs.wtb__breadcrumbs
+          ul.breadcrumbs
             li.breadcrumbs__item
               a.breadcrumbs__link.breadcrumbs__link--home(href="/") Главная
             li.breadcrumbs__item
-              a.breadcrumbs__link.breadcrumbs__link--current Где купить
+              a.breadcrumbs__link(href="javascript:void(0);") Где купить
             li.breadcrumbs__item
               a.breadcrumbs__link.breadcrumbs__link--current Тверь
-          .inner-header__bottom-wrapper.inner-header__bottom-wrapper
-            h1.inner-header__title.inner-header__title--where-buy Тверь
+          .inner-header__bottom-wrapper
+            h1.inner-header__title Тверь
       section.city-search.wtb-city__city-search
         .container
           form.city-search__form(method="get" action="#" name="city-search-form")
-            .city-search__input-wrapper
-              input.city-search__input(type="search" placeholder="Укажите город" value="Тверь")
-              button.city-search__btn.page-btn Найти
+            .city-search__input-wrapper.search-bar
+              input.search-bar__input(type="search" placeholder="Укажите город" value="Тверь")
+              button.search-bar__btn.page-btn Найти
             .city-search__chbox-wrapper
               input.visually-hidden.city-search__chbox#city-search-wholesale(type="checkbox", name="sale-type")
               label.city-search__label(for="city-search-wholesale") Оптовая продажа
@@ -69,7 +69,7 @@ block content
                     span.contacts-list__key Телефон:
                     span.contacts-list__value +7 (812)
                       span.contacts-list__phone 324-60-59
-                  button.branches__on-map На карте
+                button.branches__on-map На карте
             li.branches__item
               .branches__inner
                 span.branches__org ООО "ЛКК Северо-Запад"

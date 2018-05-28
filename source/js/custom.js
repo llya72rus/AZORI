@@ -256,21 +256,22 @@ $(document).ready(function() {
     focusOnSelect: true,
   });
 
-  $('#card-15 .card__images').slick({
+  $('#card-images-15').slick({
     speed: 500,
     arrows: false,
     slidesToShow:  1,
     slidesToScroll: 1,
-    asNavFor: '#card-15 .card__colors'
+    focusOnSelect: true,
+    asNavFor: '#card-colors-15'
   });
 
-  $('#card-15 .card__colors').slick({
+  $('#card-colors-15').slick({
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: false,
     draggable: false,
-    asNavFor: '#card-15 .card__images',
+    asNavFor: '#card-images-15',
     focusOnSelect: true,
   });
 
@@ -587,6 +588,7 @@ $(document).ready(function() {
     mobileFirst: true,
     arrows: false,
     dots: true,
+    infinite: false,
     // fade: true,
     responsive: [
 
@@ -622,6 +624,7 @@ $(document).ready(function() {
     slidesToShow:  1,
     slidesToScroll: 1,
     infinite: false,
+    draggable: false,
     arrows: true,
     asNavFor: '.top-gallery__thumbs',
     nextArrow: '<button type="button" class="top-gallery__next">Следующий слайд</button>',
@@ -656,9 +659,18 @@ $(document).ready(function() {
     ]
   });
 
+  $('.top-gallery__thumbs').each(function(){
+    $(this).find('.slick-slide').eq(0).addClass("top-gallery__thumb--active");
+  });
+
+  $('.single-new__top-gallery .slick-arrow').click(function () {
+    $(".top-gallery__thumbs .slick-slide").removeClass('top-gallery__thumb--active');
+    $('.top-gallery__thumbs .slick-current').addClass('top-gallery__thumb--active');
+  });
+
   $(".top-gallery__thumbs .slick-slide").click(function() {
-    $(".top-gallery__thumbs .slick-slide").removeClass('top-gallery__thumb-active');
-    $(this).addClass('top-gallery__thumb-active');
+    $(".top-gallery__thumbs .slick-slide").removeClass('top-gallery__thumb--active');
+    $(this).addClass('top-gallery__thumb--active');
   });
 
   // Добавление инлайновых стилей для элементов верхней галлереи на странице отдельной новости
@@ -1087,10 +1099,31 @@ $(document).ready(function() {
 
 $('.news__desc').each(function() {
     var ths = $(this);
-   if(ths.height()>130){
+   if(ths.height()>132){
        ths.addClass('news__desc--ellipsis');
    }
 });
+$('.news__desc').change(function () {
+  if($(this).height()>130) {
+    console.log('bla')
+  }
+});
+
+$('.search-result__art-text').each(function() {
+  var ths = $(this);
+ if(ths.height()>88){
+     ths.addClass('search-result__art-text--clipped');
+ }
+});
+
+
+
+// $('.about-sect__text-wrapper').each(function() {
+//   var ths = $(this);
+//  if(ths.height()>422){
+//     ths.addClass('about-sect__text-wrapper--clipped');
+//  }
+// });
   // Аккордион
 
   (function () {

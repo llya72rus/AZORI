@@ -77,14 +77,15 @@
   }
 
   &__news-top-panel {
-    flex-basis: 100%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 14px;
   }
 
   &__date {
     margin-right: 33px;
+    padding-top: 4px;
     color: #ababab;
     font-size: 14px;
     font-weight: 400;
@@ -104,6 +105,10 @@
 
 .contacts__inner-header {
   padding-bottom: 24px;
+}
+
+.sitemap-main__inner-header {
+  padding-bottom: 17px;
 }
 
 .inner-header--btns-true .inner-header__title {
@@ -250,6 +255,10 @@
     &--projects {
       padding-top: 20px;
       padding-bottom: 11px;
+    }
+
+    &--single-new {
+      padding-top: 11px;
     }
 
     &__title {

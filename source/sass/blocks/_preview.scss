@@ -35,6 +35,12 @@
   }
 }
 
+@media (max-width: 1366px) {
+  .single-new-main__preview {
+    padding-bottom: 40px;
+  }
+}
+
 @media (max-width: 1024px) {
   .preview {
     &__slider {
@@ -81,6 +87,10 @@
       width: auto;
       margin: 0 -10px;
     }
+  }
+
+  .single-new-main__preview {
+    padding-bottom: 20px;
   }
 
   .layout-example__preview {

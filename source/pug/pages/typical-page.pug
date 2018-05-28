@@ -1,0 +1,42 @@
+extends ../layout/main
+block title
+  | Типовая страница
+block content
+  body.inner-body
+    script(src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8")
+    script.
+      var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});
+    include ../modules/page-header
+    main.eng-page
+      header.inner-header
+        .container
+          ul.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--home(href="javascript:void(0);") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--current Типовая страница
+          .inner-header__bottom-wrapper
+            h1.inner-header__title Типовая страница
+      .container      
+        .page-text
+          p С 13 по 15 сентября в Санкт-Петербурге прошла  5-я международная выставка Design&Decor St.Petersburg – центральное событие для людей, работающих в сфере дизайна и декорирования. Посетители cмогли ознакомиться с трендовыми коллекциями предметов и материалов для интерьера и посетить деловую программу. #[br] Предметы декора, освещения, текстиль, дорогие и изысканные материалы для отделки, а также простые, но стильные штучки для домашнего уюта - все это можно было увидеть на выставке. #[br]  Актуальные тренды дизайна интерьера были представлены в  «Тренд-зонах». Две тематические зоны, используя формат журнального коллажа, отражают такие тренды, как:
+          ul
+            li - Урбанистическая этника - соединение культурной эстетики в условиях мегаполиса
+            li - Деархивирование - переосмысление культурного наследия через возрождение архивов.
+        .page-text
+          p Одним из наиболее интересных и посещаемых на выставке оказался стенд «Керамическое ателье Яны Сушко». Это уникальная керамика ручной работы: керамическая плитка, декоративные панно и предметы интерьера. В основе - принципы классической итальянской школы в сочетании с современными тенденциями. Традиционные орнаменты соседствуют с необычными графическими решениями.
+        .img-slider
+          img(src="img/img-slider-1.jpg", alt="Картинка 1")
+          img(src="img/img-slider-2.jpg", alt="Картинка 2")
+          img(src="img/img-slider-3.jpg", alt="Картинка 3")
+          img(src="img/img-slider-2.jpg", alt="Картинка 4")
+        .page-text
+          p Одним из наиболее интересных и посещаемых на выставке оказался стенд «Керамическое ателье Яны Сушко». Это уникальная керамика ручной работы: керамическая плитка, декоративные панно и предметы интерьера. В основе - принципы классической итальянской школы в сочетании с современными тенденциями. Традиционные орнаменты соседствуют с необычными графическими решениями.
+      
+
+    include ../modules/footer
+    button(type="button" class="back-to-top" title="Back to top") &uarr;
+
+
+
+

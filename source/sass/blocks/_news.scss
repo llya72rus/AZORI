@@ -19,7 +19,7 @@
   }
 
   &__list {
-    @include flex($just-cont: space-around, $align-items: stretch);
+    @include flex($just-cont: flex-start, $align-items: stretch);
     @include reset-list();
     margin-left: -15px;
     margin-right: -15px;
@@ -29,7 +29,10 @@
   &__item {
     display: flex;
     flex-direction: column;
-    width: 30.834%;
+    width: 33.333333%;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
     border-radius: 5px;
 
     a {
@@ -62,7 +65,7 @@
   }
 
   &__bottom-btn {
-    margin-top: 40px;
+    margin-top: 10px;
   }
 
   &__info {
@@ -140,11 +143,12 @@
 
 @media (max-width: 1024px) {
   .news {
+    &__list {
+      justify-content: space-around;
+    }
+    
     &__item {
       width: 45%;
-      &:last-child {
-        margin-top: 30px;
-      }
     }
   }
 
@@ -166,10 +170,6 @@
   .news {
     padding-bottom: 40px;
 
-    .news__bottom-btn {
-      margin-top: 32px;
-    }
-
     &__list {
       justify-content: space-between;
       margin-left: 0;
@@ -181,12 +181,10 @@
       font-size: 36px;
     }
 
-    &__bottom-btn {
-      margin-top: 30px;
-    }
-
     &__item {
       width: 47.918%;
+      padding-left: 0;
+      padding-right: 0;
 
       &:nth-child(3n) {
         width: 100%;
@@ -254,8 +252,13 @@
     font-weight: 500;
   }
 
+  .news__bottom-btn {
+    margin-top: 30px;
+  }
+
   .news__item {
     width: 100%;
+    margin-bottom: 0;
 
     &:last-child {
       margin-top: 0;
@@ -264,12 +267,14 @@
 
   .news__item:last-child .news__info,
   .news__item .news__info {
+    min-height: 290px;
     padding-left: 15px;
     padding-right: 15px;
   }
-  // .news__item:last-child {
-  //   margin: 0;
-  // }
+
+  .news-category .news__info {
+    min-height: initial;
+  }
 
   .news__info {
     margin-bottom: 15px;
@@ -282,17 +287,18 @@
   .news-main .inner-header--btns-true {
     padding-bottom: 22px;
   }
+
 }
 
 @media (max-width: 480px) {
-  .news__list {
+  .news .news__list {
     width: auto;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: -10px;
+    margin-right: -10px;
   }
 
-  .news .container {
-    padding: 0;
+  .news__list {
+    width: auto;
   }
 
   .news__list--full .news__item:not(:last-child) {

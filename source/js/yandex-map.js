@@ -99,6 +99,58 @@
 
 })();
 
+// Карта со страницы "Typical Eng"
+
+(function () {
+
+
+  ymaps.ready(init);
+  var myMap,
+      myPlacemark;
+
+  function init() {
+    var map5 = document.querySelector('#map5');
+
+      if (map5) {
+      myMap = new ymaps.Map("map5", {
+          center: [59.7875,30.1801],
+          zoom: 15,
+          controls: []
+      });
+
+      myPlacemark = new ymaps.Placemark([59.7872,30.1877], {
+        iconContent: 'Волхонское шоссе, д. 4',
+      },
+      {
+        preset: 'islands#darkOrangeStretchyIcon',
+      });
+
+      var zoomControl = new ymaps.control.ZoomControl({
+        options: {
+            size: "small",
+            position: {
+              right: 10,
+              top: 50
+            }
+        }
+    });
+      myMap.geoObjects.add(myPlacemark);
+      myMap.controls.add(zoomControl);
+      myMap.controls.add('geolocationControl', {
+        float: 'right'
+      });
+
+      myMap.behaviors.disable(['scrollZoom', 'drag'])
+      myMap.events.add('mouseup', function(){
+        myMap.behaviors.enable(['scrollZoom', 'drag'])
+      });
+      // myMap.setBounds(myMap.geoObjects.getBounds());
+  }
+}
+
+
+})();
+
 // Карта со страницы "Где купить"
 
 (function () {
@@ -138,14 +190,23 @@
       float: 'right'
     });
 
-    myMap.behaviors.disable('scrollZoom')
+    myMap.behaviors.disable(['scrollZoom', 'drag'])
     myMap.events.add('mouseup', function(){
-      myMap.behaviors.enable('scrollZoom')
+      myMap.behaviors.enable(['scrollZoom', 'drag'])
     });
     // myMap.setBounds(myMap.geoObjects.getBounds());
     }
 
   }
+
+  // Попытался добавить возможность зумить и двигать карту при двойном клике на разрешениях < 1024px. Хуй в нос! Ничего не получилось!
+
+  // if ((window.matchMedia("(max-width: 1024px)").matches)) {
+  //   myMap.behaviors.disable(['scrollZoom', 'drag'])
+  //   myMap.events.add('dbclick', function(){
+  //     myMap.behaviors.enable(['scrollZoom', 'drag'])
+  //   });
+  // }
 
 })();
 

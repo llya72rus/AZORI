@@ -199,6 +199,22 @@ img {
   }
 }
 
+.page-link {
+  color: #ff7f00;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-decoration: underline;
+}
+
+.page-link:hover {
+  text-decoration: none;
+}
+
+.page-link:visited {
+  color: #676c73;
+}
+
 .orange-rounded-btn-prev {
   position: absolute;
   top: 50%;
@@ -268,7 +284,11 @@ img {
 }
 
 .wtb-city {
-  padding-bottom: 56px;
+  padding-bottom: 29px;
+}
+
+.sitemap-main {
+  padding-bottom: 100px;
 }
 
 .catalog-collections {
@@ -301,7 +321,7 @@ img {
 
   &__img-center {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 30px;
   }
 }
 
@@ -365,6 +385,18 @@ img {
   background: linear-gradient(to bottom, $white 8.5%, #f5f6f6 8.5%, #f5f6f6 84.8%, #ffffff 84.8%);
 }
 
+.single-new__slipping-bg {
+  margin-bottom: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(8.5%, #ffffff), color-stop(8.5%, #f5f6f6), color-stop(84.8%, #f5f6f6), color-stop(84.8%, #ffffff));
+  background: linear-gradient(to bottom, #ffffff 8.5%, #f5f6f6 8.5%, #f5f6f6 84.8%, #ffffff 84.8%);
+}
+
+.project-page__slipping-bg {
+  margin-bottom: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(8.5%, #ffffff), color-stop(8.5%, #f5f6f6), color-stop(84.8%, #f5f6f6), color-stop(84.8%, #ffffff));
+  background: linear-gradient(to bottom, #ffffff 8.5%, #f5f6f6 8.5%, #f5f6f6 84.8%, #ffffff 84.8%);
+}
+
 .contacts-subtitle {
   margin-bottom: 21px;
   color: #252525;
@@ -415,7 +447,7 @@ img {
   }
 
   .wtb-city {
-    padding-bottom: 62px;
+    padding-bottom: 35px;
   }
 }
 

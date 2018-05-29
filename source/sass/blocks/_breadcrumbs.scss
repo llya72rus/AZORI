@@ -25,6 +25,10 @@
       font-weight: 300;
       text-decoration: none;
     }
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 .breadcrumbs__link:not(.breadcrumbs__link--current) {

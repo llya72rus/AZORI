@@ -68,6 +68,7 @@
   &__search {
     margin-left: 5.5%;
     padding-top: 6px;
+    position: relative;
   }
 
   &__top-icons-panel {
@@ -121,7 +122,7 @@
 
       &:hover {
         color: $orange;
-        background-color: unset;
+        background-color: transparent;
       }
     }
 

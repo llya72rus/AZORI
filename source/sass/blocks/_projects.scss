@@ -172,7 +172,6 @@
 @media (max-width: 670px) {
   .projects {
     &__list {
-      display: block;
       margin: 0;
     }
 
@@ -182,6 +181,10 @@
 
     &__show-more {
       margin-top: 20px;
+    }
+
+    &__title-wrapper {
+      padding-top: 40px;
     }
 
     &__item {
@@ -198,6 +201,14 @@
 
   .projects__link:hover .projects__goto {
     display: none;
+  }
+}
+
+@supports (display: grid) {
+  @media (max-width: 670px) {
+    .projects__title-wrapper {
+      padding-top: 8px;
+    }
   }
 }
 

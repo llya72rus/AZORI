@@ -477,7 +477,13 @@ $(document).ready(function() {
       Конец  очень-очень плохого кода
   */
 
-  // Слайдеры
+ $('.card').each(function() {
+  var ths = $(this);
+  var ind = $(this).index();
+  ths.attr("data-number", ind);
+});
+
+  // Вакханалия слайдеров
 
   $('.f-about__slick').slick({
     dots: false,
@@ -589,7 +595,6 @@ $(document).ready(function() {
     arrows: false,
     dots: true,
     infinite: false,
-    // fade: true,
     responsive: [
 
       {
@@ -616,7 +621,6 @@ $(document).ready(function() {
     nextArrow: '<button type="button" class="top-gallery__next">Следующий слайд</button>',
     prevArrow: '<button type="button" class="top-gallery__prev">Предыдущий слайд</button>'
   });
-
 
 
   $('.top-gallery:not(".collection__gallery")').slick({
@@ -659,19 +663,7 @@ $(document).ready(function() {
     ]
   });
 
-  $('.top-gallery__thumbs').each(function(){
-    $(this).find('.slick-slide').eq(0).addClass("top-gallery__thumb--active");
-  });
 
-  $('.single-new__top-gallery .slick-arrow').click(function () {
-    $(".top-gallery__thumbs .slick-slide").removeClass('top-gallery__thumb--active');
-    $('.top-gallery__thumbs .slick-current').addClass('top-gallery__thumb--active');
-  });
-
-  $(".top-gallery__thumbs .slick-slide").click(function() {
-    $(".top-gallery__thumbs .slick-slide").removeClass('top-gallery__thumb--active');
-    $(this).addClass('top-gallery__thumb--active');
-  });
 
   // Добавление инлайновых стилей для элементов верхней галлереи на странице отдельной новости
 
@@ -1063,6 +1055,31 @@ $(document).ready(function() {
     ]
   });
 
+  // Рамка для активного thumb в блоках top-gallery
+
+  $('.top-gallery__thumbs').each(function(){
+    $(this).find('.slick-slide').eq(0).addClass("top-gallery__thumb--active");
+  });
+
+  // Исчезает рамка при ресайзе, сделал пока так:
+
+  $(window).resize(function() {
+    $('.top-gallery__thumbs').each(function(){
+      $(this).find('.slick-slide').eq(0).addClass("top-gallery__thumb--active");
+    });
+  });
+
+
+  $('.top-gallery .slick-arrow').click(function () {
+    $(".top-gallery__thumbs .slick-slide").removeClass('top-gallery__thumb--active');
+    $('.top-gallery__thumbs .slick-current').addClass('top-gallery__thumb--active');
+  });
+
+  $(".top-gallery__thumbs .slick-slide").click(function() {
+    $(".top-gallery__thumbs .slick-slide").removeClass('top-gallery__thumb--active');
+    $(this).addClass('top-gallery__thumb--active');
+  });
+
 
    // Мобильное меню
 
@@ -1087,7 +1104,7 @@ $(document).ready(function() {
 
     $(window).click(function(e) {
       var target = $(e.target);
-      if ($('.page-nav__list').hasClass('page-nav__list--show') && target.is('.page-nav__link')) {
+      if ($('.page-nav__list').hasClass('page-nav__list--show') && target.is('.page-nav__list a')) {
         return;
       } else {
         $('.page-nav__list').removeClass('page-nav__list--show');
@@ -1096,6 +1113,8 @@ $(document).ready(function() {
     });
 
   })();
+
+// Обрезание текста, если его дох*я
 
 $('.news__desc').each(function() {
     var ths = $(this);
@@ -1117,14 +1136,7 @@ $('.search-result__art-text').each(function() {
 });
 
 
-
-// $('.about-sect__text-wrapper').each(function() {
-//   var ths = $(this);
-//  if(ths.height()>422){
-//     ths.addClass('about-sect__text-wrapper--clipped');
-//  }
-// });
-  // Аккордион
+// Аккордион в каталоге
 
   (function () {
 
@@ -1165,7 +1177,7 @@ $('.search-result__art-text').each(function() {
     }
   });
 
-  // Закрываем всплывающее окно на странице отдельной коллекции
+  // Попап на страницах отдельного элемента коллекции
 
   function openModal () {
     collModal.classList.add('modal--show');
@@ -1174,8 +1186,6 @@ $('.search-result__art-text').each(function() {
   function closeModal () {
     collModal.classList.remove('modal--show');
   }
-
-
 
   var collModal = document.querySelector('.modal');
   var closeCollModalBtn = document.querySelector('.coll-popup__close-btn');
@@ -1203,23 +1213,26 @@ $('.search-result__art-text').each(function() {
     }
   });
 
-  $('.search-input-wrap a').on('click', function(e) {
-    e.preventDefault();
-    var par = $(this).parents('.search-nav');
-    var input = par.find('input[type="text"]');
-    if (par.hasClass('focused') && input.val().length>0){
-      input.parents('form').submit();
-    } else {
-      par.toggleClass('focused');
-      input.focus();
-    }
-  });
+
+
+  // $('.search-input-wrap a').on('click', function(e) {
+  //   e.preventDefault();
+  //   var par = $(this).parents('.search-nav');
+  //   var input = par.find('input[type="text"]');
+  //   if (par.hasClass('focused') && input.val().length>0){
+  //     input.parents('form').submit();
+  //   } else {
+  //     par.toggleClass('focused');
+  //     input.focus();
+  //   }
+  // });
+
+
+//  Центрирование модального окна в зависимости величины скролла страницы
 
 var pageHeight = $(document).height();
 
 $('.modal').css('height', pageHeight);
-
-
 
 var topScroll;
 
@@ -1233,6 +1246,10 @@ $('.coll-elems__item').click(function () {
   $('.coll-popup').css('top', topScroll);
 });
 
+
+
+// Верхний вертикальный отступ для body в зависимости от высоты шапки
+
 var innerHeaderHeight = $('.page-header').height();
 $('.inner-body').css('padding-top', innerHeaderHeight);
 
@@ -1241,6 +1258,8 @@ $(window).resize(function() {
   $('.inner-body').css('padding-top', innerHeaderHeight);
 });
 
+
+// Выезжающая строка поиска на главной (разрешение > 1024px)
 
 $('.top-icons-panel__item--search a').click(function (evt) {
     evt.stopPropagation();
@@ -1269,15 +1288,7 @@ $('.top-icons-panel__search-btn').click(function (e) {
 );
 });
 
-$('.subscribe__form').submit(function () {
-  if($(this).find('.subscribe__input').val().length > 2 ) {
-    $('.subscribe-success-modal').removeClass('hidden');
-    setTimeout("$('.subscribe-success-modal').fadeOut(); ", 3000);
-  } else {
-    console.log('bla bla bla');
-  }
-});
-
+// Выезжающая строка поиска на главной (разрешение < 1024px)
 
 $('.mobile-header__search').click(function (evt) {
   evt.stopPropagation();
@@ -1297,28 +1308,22 @@ $('.mobile-search__btn').click(function () {
 );
 });
 
-// $(window).click(function () {
-//   if (active) {
-//     $(".mobile-search").hide();
-//     active = false;
-//   } else {
-//     return;
-//   }
-// })
+
+// Оповещение при успешной подписки на новости в подвале
+
+$('.subscribe__form').submit(function () {
+  if($(this).find('.subscribe__input').val().length > 2 ) {
+    $('.subscribe-success-modal').removeClass('hidden');
+    setTimeout("$('.subscribe-success-modal').fadeOut(); ", 3000);
+  } else {
+    console.log('bla bla bla');
+  }
+});
 
 
-  // $('.coll-elems__item').click(function () {
-  //   $('.modal').addClass('modal--show');
-  // })
-
-  // $('body').mouseup(function() {
-  //   if ((!$(this.target).is('.coll-popup')) && (collModal.hasClass('modal--show'))) {
-  //     $(collModal).removeClass('modal--show');
-  //   }
-  // });
+  // Страница "Партнеры". Изменение стилей блоков в зависимости от их кол-ва
 
   var catalogList = document.querySelector('.catalogs__list');
-
 
   if (catalogList) {
 
@@ -1343,16 +1348,10 @@ $('.mobile-search__btn').click(function () {
         docsList.classList.add('docs__list--d-center')
       }
     }
-
-    // if ((window.matchMedia("(max-width: 1024px)").matches) && catalogList.children.length < 3) {
-    //   console.log('jdfkl');
-    // } else {
-    //   return false;
-    // }
   }
 
 
-  // Функционал кнопки "Наверх"
+  // Кнопка "Наверх"
 
   if ($('.back-to-top').length) {
     var scrollTrigger = 800, // px
@@ -1389,7 +1388,7 @@ $(window).scroll(function() {
 });
 
 
-// Табы
+// Табы на странице "Где купить"
 $('.city-choise__regions').each(function(){
   $(this).children('.city-choise__region').eq(0).addClass("city-choise__region--current");
 });

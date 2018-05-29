@@ -8,7 +8,78 @@ block content
       var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"16.12","chrome":"62","ie":"10","opera":"49","safari":"9.1","fx":"57","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});
     script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
     script(src="js/yandex-map.js")
-    include ../modules/page-header
+    header.page-header
+      nav.page-nav
+        .menu-toggle
+          span
+          span
+          span
+          span
+        a.page-nav__logo(href="/") Inspire. Dream. Create
+          svg(width="100%" height="100%")
+            title Логотип компании "AZORI"
+            use(xlink:href="img/sprite.svg#logo")
+        ul.page-nav__list
+          li.page-nav__item
+            a.page-nav__link(href="/about.html") About
+          li.page-nav__item
+            a.page-nav__link(href="/catalog-collections.html") Collections
+          li.page-nav__item
+            a.page-nav__link(href="/where-to-buy.html") Where to buy
+          li.page-nav__item
+            a.page-nav__link(href="/news.html") News
+          li.page-nav__item
+            a.page-nav__link(href="/contacts.html") Contact
+          li.page-nav__item
+            a.page-nav__link(href="/partners.html") Partners
+          li.tablet-show
+            ul.top-menu-social
+              li.top-menu-social__item
+                a(href="javascript:void(0);")
+                  svg(width="25" height="25")
+                    title Отправить сообщение
+                    use(xlink:href="img/sprite.svg#mail")
+              li.top-menu-social__item
+                a(href="javascript:void(0);")
+                  svg(width="25" height="25")
+                    title Профиль компании "AZORI" Вконтакте
+                    use(xlink:href="img/sprite.svg#vk")
+              li.top-menu-social__item
+                a(href="javascript:void(0);")
+                  svg(width="25" height="25")
+                    title Профиль компании "AZORI" в Фейсбуке
+                    use(xlink:href="img/sprite.svg#fb")
+              li.top-menu-social__item
+                a(href="javascript:void(0);")
+                  svg(width="25" height="25")
+                    title Профиль компании "AZORI" в Инстаграме
+                    use(xlink:href="img/sprite.svg#instagram")
+        a.page-nav__lang-opt(href="javascript:void(0);") RU
+        a.page-nav__search(href="javascript:void(0);")
+          img(src="img/search-top-icons.png" alt="Поиск по сайту")
+
+        ul.page-nav__top-icons-panel.top-icons-panel
+          li.top-icons-panel__item
+            a(href="javascript:void(0);")
+              svg(width="18" height="14")
+                title Отправить сообщение
+                use(xlink:href="img/sprite.svg#mail")
+          li.top-icons-panel__item
+            a(href="javascript:void(0);")
+              svg(width="18" height="12")
+                title Профиль компании "AZORI" Вконтакте
+                use(xlink:href="img/sprite.svg#vk")
+          li.top-icons-panel__item
+            a(href="javascript:void(0);")
+              svg(width="9" height="18")
+                title Профиль компании "AZORI" в Фейсбуке
+                use(xlink:href="img/sprite.svg#fb")
+          li.top-icons-panel__item
+            a(href="javascript:void(0);")
+              svg(width="20" height="20")
+                title Профиль компании "AZORI" в Инстаграме
+                use(xlink:href="img/sprite.svg#instagram")
+
     main.eng-page
       header.inner-header
         .container

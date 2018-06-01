@@ -39,6 +39,10 @@
     margin-bottom: 23px;
     text-align: center;
 
+    &--search {
+      position: relative;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }

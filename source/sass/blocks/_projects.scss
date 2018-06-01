@@ -94,6 +94,7 @@
     text-transform: uppercase;
     letter-spacing: 0.9px;
     text-align: center;
+    word-break: break-all;
 
     &::before {
       content: "";
@@ -184,6 +185,7 @@
     }
 
     &__title-wrapper {
+      position: static;
       padding-top: 40px;
     }
 
@@ -199,9 +201,9 @@
     }
   }
 
-  .projects__link:hover .projects__goto {
-    display: none;
-  }
+  // .projects__link:hover .projects__goto {
+  //   display: none;
+  // }
 }
 
 @supports (display: grid) {

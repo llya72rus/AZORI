@@ -406,7 +406,8 @@ $(document).ready(function() {
     arrows: false,
     slidesToShow:  1,
     slidesToScroll: 1,
-    asNavFor: '#card-23 .card__colors'
+    asNavFor: '#card-23 .card__colors',
+    focusOnSelect: true
   });
 
   $('#card-23 .card__colors').slick({
@@ -416,7 +417,7 @@ $(document).ready(function() {
     infinite: false,
     draggable: false,
     asNavFor: '#card-23 .card__images',
-    focusOnSelect: true,
+    focusOnSelect: true
   });
 
   $('#card-24 .card__images').slick({
@@ -1080,6 +1081,20 @@ $(document).ready(function() {
     $(this).addClass('top-gallery__thumb--active');
   });
 
+  new ScrollFlow();
+
+  // $.scrollify({
+  //   section : ".f-about__stats",
+  //   sectionName : "section-name",
+  //   interstitialSection : "",
+  //   easing: "easeOutExpo",
+  //   scrollSpeed: 1100,
+  //   offset : 0,
+  //   scrollbars: true,
+  //   standardScrollElements: "",
+   
+  // });
+
 
    // Мобильное меню
 
@@ -1112,9 +1127,19 @@ $(document).ready(function() {
       }
     });
 
+    $(window).click(function(e) {
+      var target = $(e.target);
+      if ($('.main-nav').hasClass('main-nav--show') && target.is('.main-nav a')) {
+        return;
+      } else {
+        $('.main-nav').removeClass('main-nav--show');
+        $('.main-nav .menu-toggle').removeClass('open');
+      }
+    });
+
   })();
 
-// Обрезание текста, если его дох*я
+// Обрезание текста, если его много
 
 $('.news__desc').each(function() {
     var ths = $(this);
@@ -1259,23 +1284,61 @@ $(window).resize(function() {
 });
 
 
-// Выезжающая строка поиска на главной (разрешение > 1024px)
+// Блок поиска на главной (разрешение > 1024px)
 
-$('.top-icons-panel__item--search a').click(function (evt) {
-    evt.stopPropagation();
-    $('.top-icons-panel__input-wrapper input').css('display', 'block');
-    $( ".top-icons-panel__input-wrapper").animate({
-      width: "+=300px"
-    },  500);
-    $(window).click(function () {
-      $( ".top-icons-panel__input-wrapper").animate({
-        width: "-=300px"
-      }, 500, function () {
-        $('.top-icons-panel__input-wrapper input').css('display', 'none');
-      }
-    );
-    })
+$(".top-icons-panel__item--search a").click(function(evt) {
+  evt.stopPropagation();
+  $(".search-box").toggleClass('search-box--show');
+  $("input[type='text']").focus();
 });
+
+  $(window).click(function (evt) {
+    var target = $(evt.target);
+    var searchBox = $(".search-box")
+    if(searchBox.hasClass('search-box--show') && (target !== searchBox)) {
+      searchBox.removeClass('search-box--show');
+    } else {
+      return;
+    } 
+  });
+
+
+
+$(document).keyup(function(e) {
+  var searchBox = $(".search-box")
+  if (e.keyCode === 27) {
+    searchBox.removeClass('search-box--show');
+  } 
+});
+
+$('.mobile-header__search').click(function (evt) {
+  evt.stopPropagation();
+  $(".search-box").toggleClass('search-box--show');
+  $("input[type='text']").focus();
+});
+
+$('.page-nav__search').click(function (evt) {
+  evt.preventDefault();
+  evt.stopPropagation();
+  $(".search-box").toggleClass('search-box--show');
+  $("input[type='text']").focus();
+});
+
+// $('.top-icons-panel__item--search a').click(function (evt) {
+//     evt.stopPropagation();
+//     $('.top-icons-panel__input-wrapper input').css('display', 'block');
+//     $( ".top-icons-panel__input-wrapper").animate({
+//       width: "+=300px"
+//     },  500);
+//     $(window).click(function () {
+//       $( ".top-icons-panel__input-wrapper").animate({
+//         width: "-=300px"
+//       }, 500, function () {
+//         $('.top-icons-panel__input-wrapper input').css('display', 'none');
+//       }
+//     );
+//     })
+// });
 
 
 $('.top-icons-panel__search-btn').click(function (e) {
@@ -1315,6 +1378,16 @@ $('.subscribe__form').submit(function () {
   if($(this).find('.subscribe__input').val().length > 2 ) {
     $('.subscribe-success-modal').removeClass('hidden');
     setTimeout("$('.subscribe-success-modal').fadeOut(); ", 3000);
+  } else {
+    console.log('bla bla bla');
+  }
+});
+
+
+$('.subscribe__btn').click(function () {
+  if($('.subscribe__input').val().length > 2 ) {
+    $('.subscribe-success-modal').removeClass('hidden');
+    setTimeout("$('.subscribe-success-modal').addClass('hidden'); ", 3000);
   } else {
     console.log('bla bla bla');
   }

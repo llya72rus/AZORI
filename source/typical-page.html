@@ -10,8 +10,9 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16"/>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="js/readmore.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/scrollflow.min.js"></script>
+    <script src="js/scrollify.js"></script>
     <script src="js/polyfill.js"></script>
     <script>svg4everybody();</script>
     <script src="js/custom.js"></script>
@@ -59,13 +60,15 @@
                   </svg></a></li>
             </ul>
           </li>
-        </ul><a class="page-nav__lang-opt" href="javascript:void(0);">EN</a><a class="page-nav__search" href="javascript:void(0);"><img src="img/search-top-icons.png" alt="Поиск по сайту"/>
-          <div class="inner-page-search">
-            <form action="javascript:void(0);">
-              <input class="inner-page-search__form" type="text" placeholder="Найти..."/>
-              <button class="inner-page-search__btn"><img src="img/search-icon.png" alt="Поиск по сайту"/></button>
-            </form>
-          </div></a>
+        </ul><a class="page-nav__lang-opt" href="javascript:void(0);">EN</a><a class="page-nav__search" href="javascript:void(0);">
+          <svg width="20" height="20">
+            <title>Поиск по сайту</title>
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg></a>
+        <div class="search-box">
+          <input type="text" placeholder=""/>
+          <button type="button">Найти</button>
+        </div>
         <ul class="page-nav__top-icons-panel top-icons-panel">
           <li class="top-icons-panel__item"><a href="javascript:void(0);">
               <svg width="18" height="14">
@@ -113,7 +116,7 @@
         <div class="page-text">
           <p>Одним из наиболее интересных и посещаемых на выставке оказался стенд «Керамическое ателье Яны Сушко». Это уникальная керамика ручной работы: керамическая плитка, декоративные панно и предметы интерьера. В основе - принципы классической итальянской школы в сочетании с современными тенденциями. Традиционные орнаменты соседствуют с необычными графическими решениями.</p>
         </div>
-        <div class="img-slider"><img src="img/img-slider-1.jpg" alt="Картинка 1"/><img src="img/img-slider-2.jpg" alt="Картинка 2"/><img src="img/img-slider-3.jpg" alt="Картинка 3"/><img src="img/img-slider-2.jpg" alt="Картинка 4"/></div>
+        <div class="img-slider"><a href="img/img-slider-1.jpg" data-fancybox="images"><img src="img/img-slider-1.jpg" alt="Картинка 1"/></a><a href="img/img-slider-2.jpg" data-fancybox="images"><img src="img/img-slider-2.jpg" alt="Картинка 2"/></a><a href="img/img-slider-3.jpg" data-fancybox="images"><img src="img/img-slider-3.jpg" alt="Картинка 3"/></a><a href="img/img-slider-2.jpg" data-fancybox="images"><img src="img/img-slider-2.jpg" alt="Картинка 4"/></a></div>
         <div class="page-text">
           <p>Одним из наиболее интересных и посещаемых на выставке оказался стенд «Керамическое ателье Яны Сушко». Это уникальная керамика ручной работы: керамическая плитка, декоративные панно и предметы интерьера. В основе - принципы классической итальянской школы в сочетании с современными тенденциями. Традиционные орнаменты соседствуют с необычными графическими решениями.</p>
         </div>

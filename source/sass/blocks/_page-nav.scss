@@ -1,4 +1,5 @@
 .page-nav {
+  position: relative;
   @include flex();
   flex-wrap: nowrap;
   max-width: 1170px;
@@ -73,7 +74,8 @@
 
   &__top-icons-panel {
     position: absolute;
-    right: 15.35%;
+    right: -74px;
+    right: -6.4%;
     top: 98px;
   }
 }
@@ -81,7 +83,7 @@
 @media (max-width: 1800px) {
   .page-nav {
     &__top-icons-panel {
-      right: 2%;
+      right: 0;
     }
   }
 }
@@ -101,7 +103,6 @@
     }
 
     &__link {
-      padding: 5px;
       font-size: 15px;
     }
 

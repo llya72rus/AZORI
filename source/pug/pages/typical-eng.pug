@@ -56,8 +56,12 @@ block content
                     use(xlink:href="img/sprite.svg#instagram")
         a.page-nav__lang-opt(href="javascript:void(0);") RU
         a.page-nav__search(href="javascript:void(0);")
-          img(src="img/search-top-icons.png" alt="Поиск по сайту")
-
+          svg(width="20" height="20")
+            title Поиск по сайту
+            use(xlink:href="img/sprite.svg#search")
+        .search-box
+          input(type="text" placeholder="")
+          button(type="button") Найти
         ul.page-nav__top-icons-panel.top-icons-panel
           li.top-icons-panel__item
             a(href="javascript:void(0);")
@@ -98,10 +102,14 @@ block content
       .container.eng-page__text-container
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. #[br] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
       .img-slider.container
-        img(src="img/img-slider-1.jpg", alt="Картинка 1")
-        img(src="img/img-slider-2.jpg", alt="Картинка 2")
-        img(src="img/img-slider-3.jpg", alt="Картинка 3")
-        img(src="img/img-slider-2.jpg", alt="Картинка 4")
+        a(href="img/img-slider-1.jpg" data-fancybox="images")
+          img(src="img/img-slider-1.jpg", alt="Картинка 1")
+        a(href="img/img-slider-2.jpg" data-fancybox="images")
+          img(src="img/img-slider-2.jpg", alt="Картинка 2")
+        a(href="img/img-slider-3.jpg" data-fancybox="images")
+          img(src="img/img-slider-3.jpg", alt="Картинка 3")
+        a(href="img/img-slider-2.jpg" data-fancybox="images")
+          img(src="img/img-slider-2.jpg", alt="Картинка 4")
       .eng-contacts
         .container
           h2.eng-contacts__title Contacts

@@ -47,12 +47,12 @@ header.page-header
     a.page-nav__lang-opt(href="javascript:void(0);") EN
 
     a.page-nav__search(href="javascript:void(0);")
-      img(src="img/search-top-icons.png" alt="Поиск по сайту")
-      .inner-page-search
-        form(action="javascript:void(0);")
-          input(type="text" placeholder="Найти...").inner-page-search__form
-          button.inner-page-search__btn
-            img(src="img/search-icon.png", alt="Поиск по сайту")
+      svg(width="20" height="20")
+        title Поиск по сайту
+        use(xlink:href="img/sprite.svg#search")
+    .search-box
+      input(type="text" placeholder="")
+      button(type="button") Найти
 
     ul.page-nav__top-icons-panel.top-icons-panel
       li.top-icons-panel__item

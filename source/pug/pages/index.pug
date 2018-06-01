@@ -1,6 +1,6 @@
 extends ../layout/main
 block title
-  | Компания AZORI
+  | Главная
 block content
   body
     script(src="https://static.yandex.net/browser-updater/v1/script.js" charset="utf-8")
@@ -20,12 +20,12 @@ block content
               use(xlink:href="img/sprite.svg#logo")
           span.mobile-header__language-option En
           a.mobile-header__search(href="javascript:void(0);")
-            img(src="img/search-icon.png", alt="Поиск по сайту")
-          .mobile-search
-            form(action="javascript:void(0);")
-              input(type="text" placeholder="Найти...").mobile-search__form
-              button.mobile-search__btn
-                img(src="img/search-icon.png", alt="Поиск по сайту")
+            svg(width="20" height="20")
+              title Поиск по сайту
+              use(xlink:href="img/sprite.svg#search")
+            .search-box
+              input(type="text" placeholder="")
+              button(type="button") Найти
         nav.main-nav
           a.main-nav__logo(href="javascript:void(0);") Вдохновляйся. Мечтай. Созидай.
             svg(width="100%" height="100%")
@@ -53,11 +53,9 @@ block content
                 svg(width="20" height="20")
                   title Поиск по сайту
                   use(xlink:href="img/sprite.svg#search")
-              .top-icons-panel__input-wrapper
-                form
-                  input(type="text" placeholder="Найти...")
-                  button(type="button").top-icons-panel__search-btn
-                    img(src="img/search-top-icons.png", alt="")
+              .search-box
+                input(type="text" placeholder="")
+                button(type="button") Найти
             li.top-icons-panel__item
               a(href="javascript:void(0);")
                 svg(width="20" height="20")
@@ -134,7 +132,7 @@ block content
       section.f-about
         .container
           .f-about__top-info
-            img.f-about__logo(src="img/about-logo.png")
+            img.f-about__logo.scrollflow.-slide-right.-opacity(src="img/about-logo.png")
             .f-about__desc
               p Мир красок, где каждый покупатель сможет найти коллекцию, которая сделает ванную комнату оригинальной и неповторимой. Комплектация коллекций разными форматами декоративных элементов позволяет выстраивать рисунок стен как вертикально, так и горизонтально, создавая в ванной комнате особый мир уюта и хорошего настроения.
               p Коллекции керамической плитки AZORI (АЗОРИ) созданы итальянскими и российскими дизайнерами. В них находят отражение самые последние тенденции “керамической моды”: имитация натуральных материалов — дерева , камня и текстиля; широкое присутствие цветочных мотивов и геометрии в декоративных элементах; богатство цветовой палитры.

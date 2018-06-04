@@ -1092,7 +1092,7 @@ $(document).ready(function() {
   //   offset : 0,
   //   scrollbars: true,
   //   standardScrollElements: "",
-   
+
   // });
 
 
@@ -1114,6 +1114,7 @@ $(document).ready(function() {
       $(this).toggleClass('open');
       $('.page-nav').toggleClass('page-nav--menu-opened');
       $('.page-nav__list').toggleClass('page-nav__list--show');
+      $('.page-nav__logo').toggleClass('page-nav__logo--transparent')
     });
 
 
@@ -1124,6 +1125,7 @@ $(document).ready(function() {
       } else {
         $('.page-nav__list').removeClass('page-nav__list--show');
         $('.page-nav .menu-toggle').removeClass('open');
+        $('.page-nav .page-nav__logo').removeClass('page-nav__logo--transparent');
       }
     });
 
@@ -1147,6 +1149,7 @@ $('.news__desc').each(function() {
        ths.addClass('news__desc--ellipsis');
    }
 });
+
 $('.news__desc').change(function () {
   if($(this).height()>130) {
     console.log('bla')
@@ -1299,7 +1302,7 @@ $(".top-icons-panel__item--search a").click(function(evt) {
       searchBox.removeClass('search-box--show');
     } else {
       return;
-    } 
+    }
   });
 
 
@@ -1308,7 +1311,7 @@ $(document).keyup(function(e) {
   var searchBox = $(".search-box")
   if (e.keyCode === 27) {
     searchBox.removeClass('search-box--show');
-  } 
+  }
 });
 
 $('.mobile-header__search').click(function (evt) {
@@ -1436,9 +1439,25 @@ $('.subscribe__btn').click(function () {
                 $('.back-to-top').removeClass('show');
             }
         };
+
+        moveVerticalMenu = function () {
+          var scrollTop = $(window).scrollTop();
+          var verticalMenu = $('.page-nav__top-icons-panel');
+          if (scrollTop > 10) {
+            // console.log(verticalMenu);
+            verticalMenu.hide();
+          }
+
+          if (scrollTop > 500) {
+            verticalMenu.addClass('page-nav__top-icons-panel--center-vertical');
+            verticalMenu.show();
+          }
+
+        };
     backToTop();
     $(window).on('scroll', function () {
         backToTop();
+        moveVerticalMenu();
     });
     $('.back-to-top').on('click', function (e) {
         e.preventDefault();

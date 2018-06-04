@@ -22,6 +22,10 @@
   &__logo {
     margin-right: 25px;
     flex-shrink: 0;
+
+    &:hover {
+      opacity: 0.4;
+    }
     img {
       display: block;
     }

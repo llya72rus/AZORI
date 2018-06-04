@@ -86,7 +86,7 @@
 
   &__price-name {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: #ed8c2b;
     letter-spacing: 0.8px;
   }
@@ -107,6 +107,7 @@
 
   &__where-buy {
     flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(17, 17, 17, 0.3);
   }
 
   &__note {

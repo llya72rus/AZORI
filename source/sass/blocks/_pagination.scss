@@ -20,6 +20,12 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 16px;
+    transition: 0.3s;
+
+    &:hover {
+      border: 1px solid #ff7f00;
+      color: #ff7f00;
+    }
   }
 }
 
@@ -53,6 +59,6 @@
   }
 
   &--disabled {
-    
+
   }
 }

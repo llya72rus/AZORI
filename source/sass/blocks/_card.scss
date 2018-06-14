@@ -118,11 +118,11 @@
   margin-left: 6px !important;
 }
 
-.card__colors .slick-slide.slick-current:first-of-type {
+.card__colors .slick-slide.active:first-of-type {
   margin-right: 2px !important;
 }
 
-.card__colors .slick-slide.slick-current:last-of-type {
+.card__colors .slick-slide.active:last-of-type {
   margin-left: 2px !important;
 }
 
@@ -145,7 +145,7 @@
   height: 100%;
 }
 
-.card__colors .slick-current {
+.card__colors .active {
   position: relative;
   top: -2px;
   width: 44px !important;

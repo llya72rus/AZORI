@@ -129,8 +129,33 @@
   }
 }
 
+@media (max-width: 1150px) {
+  .city-choise {
+    &__cities-wrapper {
+      padding-right: 0;
+    }
 
-@media (max-width: 1024px) {
+    &__letter-cities {
+      flex-direction: column;
+    }
+
+    &__letter {
+      margin-bottom: 20px;
+    }
+
+    &__col {
+      width: 48%;
+      margin-right: 0;
+    }
+
+    &__cols {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (max-width: 768px) {
   .city-choise {
     padding-bottom: 125px;
 
@@ -138,6 +163,7 @@
       padding-right: 19%;
       flex-direction: column;
     }
+
 
     &__col {
       width: 42%;
@@ -156,6 +182,7 @@
 
     &__letter-cities {
       width: 100%;
+      flex-direction: row;
       margin-bottom: 40px;
 
       &:last-child {

@@ -13,6 +13,17 @@
     outline: none;
   }
 
+  &--center-vertical {
+    top: calc(50vh - 75px);
+    
+    a {
+      opacity: 0.25;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
   &__input-wrapper {
     float: right;
     position: absolute;;
@@ -75,7 +86,38 @@
     &__item {
       margin-bottom: 0;
       margin-right: 15px;
-      opacity: 0.6;
+
+      a {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      svg {
+        fill: #b1b1b1;
+      }
+  
+      &--mail svg {
+        width: 34px;
+        height: 26px;
+      }
+  
+      &--vk svg {
+        width: 36px;
+        height: 22px;
+      }
+  
+      &--fb svg {
+        width: 17px;
+        height: 35px;
+      }
+  
+      &--insta svg {
+        width: 40px;
+        height: 40px;
+      }
 
       &:last-child {
         margin-right: 0;

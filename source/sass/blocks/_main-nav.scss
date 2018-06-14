@@ -167,12 +167,13 @@
     padding: 70px 50px 50px;
     top: 0;
     left: -100%;
-    width: 64.259%;
+    width: 63%;
     height: 100vh;
+    overflow-y: auto;
     z-index: 50;
-    transition: 0.5s ease;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: -2px 0 43px $primary-color;
+    transition: 0.7s ease;
+    box-shadow: 5px 0 20px rgba(17, 17, 17, 0.1);
+    background:rgba(245, 246, 246, 0.9);
 
     &__logo {
       display: none;
@@ -183,8 +184,24 @@
       width: 100%;
       padding: 0;
 
+      &--left {
+        margin-bottom: 30px;
+      }
+
       &--right {
-        margin-bottom: 40px;
+        margin-bottom: 75px;
+        position: relative;
+        
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -40px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 286px;
+          height: 1px;
+          background: $white;
+        }
       }
     }
 
@@ -195,11 +212,15 @@
     &__item {
       margin-bottom: 30px;
       text-align: center;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     &__link {
       display: inline;
-      font-size: 18px;
+      font-size: 16px;
       padding: 0;
 
       &:hover {

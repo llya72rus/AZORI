@@ -335,7 +335,7 @@ $('.card').each(function() {
 
     ]
   });
-  
+
 $('.preview__slider .card__images, .viewed__item .card__images').each(function(){
   $(this).slick({
     speed: 500,
@@ -568,7 +568,7 @@ $( window ).resize(setActiveSlideColor);
     ]
   });
 
-  
+
   // Рамка для активного thumb в блоках top-gallery
 
   $('.top-gallery__thumbs').each(function(){e
@@ -655,9 +655,13 @@ $( window ).resize(setActiveSlideColor);
 
     $(window).click(function(e) {
       var target = $(e.target);
-      var targetIsNavLink = target.is('.main-nav__link')
-      if (!targetIsNavLink) {
-        console.log('bla');
+      var targetIsNavLink = target.is('.main-nav__link');
+      var targetIsSocial = target.is('.top-icons-panel');
+
+      var g = $('.top-icons-panel').find('*');
+      var targetIsSocialElems = target.is(g);
+      if (!targetIsNavLink && !targetIsSocialElems) {
+        console.log(target);
         $('.main-nav').removeClass('main-nav--show');
         $('.mobile-header__logo').removeClass('transparent');
         $('.mobile-header .menu-toggle').removeClass('open');
@@ -789,11 +793,11 @@ var pageHeight = $(document).height();
 
 $('.modal').css('height', pageHeight);
 
-var topScroll;
+// var topScroll;
 
-$(document).scroll(function() {
-  var topScroll = $(document).scrollTop();
-});
+// $(document).scroll(function() {
+//   var topScroll = $(document).scrollTop();
+// });
 
 $('.coll-elems__item').click(function () {
   $('.modal').addClass('modal--show');
@@ -958,22 +962,28 @@ $('.subscribe__btn').click(function () {
             var scrollTop = $(window).scrollTop();
             var verticalMenu = $('.top-icons-panel');
             if (scrollTop > 10) {
-              // console.log(verticalMenu);
               verticalMenu.hide();
             }
-  
+
             if (scrollTop > 500) {
               verticalMenu.addClass('top-icons-panel--center-vertical');
               verticalMenu.show();
             }
+          } else {
+            return false;
           }
 
         };
+
     backToTop();
+
     $(window).on('scroll', function () {
         backToTop();
         moveVerticalMenu();
     });
+
+    $(window).on('resize', moveVerticalMenu);
+
     $('.back-to-top').on('click', function (e) {
         e.preventDefault();
         $('html,body').animate({
